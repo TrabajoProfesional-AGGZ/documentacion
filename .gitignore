@@ -1,0 +1,21 @@
+# =========================================
+# Ignorar archivos compilados de LaTeX
+# =========================================
+*.aux
+*.bbl
+*.bcf
+*.blg
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.run.xml
+*.synctex.gz
+*.toc
+*.lot
+*.lof
+*.atfi
+
+# Ignorar carpetas del sistema operativo.
+.DS_Store
+Thumbs.db

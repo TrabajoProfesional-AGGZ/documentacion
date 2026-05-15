@@ -77,7 +77,7 @@
 
 \renewcommand{\headrulewidth}{1pt}
 \renewcommand{\footrulewidth}{1pt}
-\rhead{\footnotesize \textsc {Trabajo práctico\\ Modelación Numérica - Griggio}} % Trabajo práctico
+\rhead{\footnotesize \textsc {Trabajo Profesional\\ TITULO}} % Trabajo práctico
 \lhead{\includegraphics[width=2.5cm]{logo}}
 \cfoot{\small \textsc {Página \thepage\ de \pageref*{LastPage}}}
 
@@ -101,31 +101,35 @@
 \thispagestyle{firststyle}
 \begin{center}
 \includegraphics[width=7cm]{logo}
-\\[1cm]
-	{ \huge \bfseries Anteproyecto de Trabajo Profesional de Ingenieria}\\[0.3cm]      % Título
-	{\large 1er Cuatrimestre 2026  \\[0.4cm]}
-    {\large TITULO\\}
-    {\large DESCRIPCION\\}% Fecha
- \\[2cm]
- \begin{center}
+\vspace{1cm}
+
+{ \huge \bfseries Anteproyecto de Trabajo Profesional de Ingenieria\\[0.3cm]}      % Título
+{\large Año lectivo: 2026  \\[0.4cm]}
+{\large TITULO\\[0.2cm]}
+{\large DESCRIPCION}
+
+\vspace{2cm}
+
+\begin{center}
     \large
     \renewcommand{\arraystretch}{1.5} % Hace las filas más altas
-        \begin{tabular}{ccc}
-            \textbf{Ascencio, Felipe Santino} & 110675 & fascencio@fi.uba.ar \\
-            \textbf{Ghosn, Lautaro Gabriel}   & 106998 & lghosn@fi.uba.ar    \\
-            \textbf{Guerrero, Martin}         & 107774 & mguerrero@fi.uba.ar \\
-            \textbf{Zielonka, Axel}           & 110310 & azielonka@fi.uba.ar
-        \end{tabular}
- \end{center}
- \\[1cm]
- \begin{center}
+    \begin{tabular}{ccc}
+        \textbf{Ascencio, Felipe Santino} & 110675 & fascencio@fi.uba.ar \\
+        \textbf{Ghosn, Lautaro Gabriel}   & 106998 & lghosn@fi.uba.ar    \\
+        \textbf{Guerrero, Martin}         & 107774 & mguerrero@fi.uba.ar \\
+        \textbf{Zielonka, Axel}           & 110310 & azielonka@fi.uba.ar
+    \end{tabular}
+\end{center}
+
+\vspace{1cm} % <--- ACÁ ESTABA EL ERROR
+
+\begin{center}
     \large
     \renewcommand{\arraystretch}{2} % Hace las filas más altas
     \begin{tabular}{ccc}
-        
-        \textbf{Tutor}   & Mg. Ing. Gabriel Piñeiro & gpineiro@fi.uba.ar \\
+        \textbf{Tutor} & Mag. Ing. Gabriel Piñeiro & gpineiro@fi.uba.ar \\
         \textbf{Tutor} & Ing. Agustín Perrota     & aperrota@fi.uba.ar
     \end{tabular}
- \end{center}
+\end{center}
 \end{center}
 }

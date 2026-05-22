@@ -105,8 +105,8 @@
 
 { \huge \bfseries Anteproyecto de Trabajo Profesional de Ingenieria\\[0.3cm]}      % Título
 {\large Año lectivo: 2026  \\[0.4cm]}
-{\large TITULO\\[0.2cm]}
-{\large DESCRIPCION}
+{\large SocioUnido\\[0.2cm]}
+{\large Plataforma inteligente de gestión y fidelización para clubes de fútbol}
 
 \vspace{2cm}
 

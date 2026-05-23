@@ -77,8 +77,8 @@
 
 \renewcommand{\headrulewidth}{1pt}
 \renewcommand{\footrulewidth}{1pt}
-\rhead{\footnotesize \textsc {Trabajo Profesional\\ TITULO}} % Trabajo práctico
-\lhead{\includegraphics[width=2.5cm]{logo}}
+\rhead{\includegraphics[width=2.5cm]{img/logo-socio-header.png}}
+\lhead{\includegraphics[width=2.5cm]{img/logo}}
 \cfoot{\small \textsc {Página \thepage\ de \pageref*{LastPage}}}
 
 \fancypagestyle{firststyle}
@@ -100,35 +100,38 @@
 \renewcommand*{\maketitle}{
 \thispagestyle{firststyle}
 \begin{center}
-\includegraphics[width=7cm]{logo}
-\vspace{1cm}
+\includegraphics[width=9cm]{img/logo}
+\vspace{0.2cm}
 
-{ \huge \bfseries Anteproyecto de Trabajo Profesional de Ingenieria\\[0.3cm]}      % Título
-{\large Año lectivo: 2026  \\[0.4cm]}
-{\large SocioUnido\\[0.2cm]}
+{ \huge \bfseries Anteproyecto del Trabajo Profesional\\[0.4cm]}      % Título
+\includegraphics[width=12cm]{img/logo-socio} \\
 {\large Plataforma inteligente de gestión y fidelización para clubes de fútbol}
 
-\vspace{2cm}
+\vspace{1cm}
 
 \begin{center}
     \large
     \renewcommand{\arraystretch}{1.5} % Hace las filas más altas
     \begin{tabular}{ccc}
-        \textbf{Ascencio, Felipe Santino} & 110675 & fascencio@fi.uba.ar \\
-        \textbf{Ghosn, Lautaro Gabriel}   & 106998 & lghosn@fi.uba.ar    \\
-        \textbf{Guerrero, Martin}         & 107774 & mguerrero@fi.uba.ar \\
-        \textbf{Zielonka, Axel}           & 110310 & azielonka@fi.uba.ar
+        \hline
+        \multicolumn{1}{|c|}{\textbf{Alumno}} & \multicolumn{1}{c|}{\textbf{Correo electrónico}} & \multicolumn{1}{c|}{\textbf{Padrón}} \\
+        \hline
+        \textbf{Ascencio, Felipe Santino} & fascencio@fi.uba.ar & 110675 \\
+        \textbf{Ghosn, Lautaro Gabriel}   & lghosn@fi.uba.ar    & 106998 \\
+        \textbf{Guerrero, Martin}         & mguerrero@fi.uba.ar & 107774 \\
+        \textbf{Zielonka, Axel}           & azielonka@fi.uba.ar & 110310 \\
     \end{tabular}
 \end{center}
 
-\vspace{1cm} % <--- ACÁ ESTABA EL ERROR
+\vspace{0.5cm}
 
 \begin{center}
     \large
     \renewcommand{\arraystretch}{2} % Hace las filas más altas
     \begin{tabular}{ccc}
-        \textbf{Tutor} & Mag. Ing. Gabriel Piñeiro & gpineiro@fi.uba.ar \\
-        \textbf{Tutor} & Ing. Agustín Perrota     & aperrota@fi.uba.ar
+        \textbf{Jefe de Cátedra} & Mg. Ing. Carlos Fontela & cfontela@fi.uba.ar \\
+        \textbf{Tutor} & Mg. Ing. Gabriel Piñeiro & gpineiro@fi.uba.ar \\
+        \textbf{Cotutor} & Ing. Agustín Perrota     & aperrota@fi.uba.ar
     \end{tabular}
 \end{center}
 \end{center}

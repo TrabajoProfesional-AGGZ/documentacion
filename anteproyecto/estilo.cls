@@ -105,9 +105,10 @@
 
 { \huge \bfseries Anteproyecto del Trabajo Profesional\\[0.8cm]}      % Título
 \includegraphics[width=12cm]{img/logo-socio} \\ [0.4cm]
-{\large "Porque el club es de los socios, y la gestión es de SocioUnido"}
+{\large "Porque el club es de los socios, y la gestión es de SocioUnido"} \\ [0.2cm]
+\normalsize{Plataforma inteligente que centraliza la gestión administrativa de los clubes, optimizando el uso de espacios compartidos, previniendo la morosidad y asegurando los accesos al estadio.}
 
-\vspace{1cm}
+\vspace{0.5cm}
 
 \begin{center}
     \large
@@ -123,7 +124,7 @@
     \end{tabular}
 \end{center}
 
-\vspace{0.3cm}
+\vspace{0.1cm}
 
 \begin{center}
     \large

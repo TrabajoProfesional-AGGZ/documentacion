@@ -100,12 +100,12 @@
 \renewcommand*{\maketitle}{
 \thispagestyle{firststyle}
 \begin{center}
-\includegraphics[width=9cm]{img/logo}
+\includegraphics[width=12cm]{img/logo}
 \vspace{0.2cm}
 
-{ \huge \bfseries Anteproyecto del Trabajo Profesional\\[0.4cm]}      % Título
-\includegraphics[width=12cm]{img/logo-socio} \\
-{\large Plataforma inteligente de gestión y fidelización para clubes de fútbol}
+{ \huge \bfseries Anteproyecto del Trabajo Profesional\\[0.8cm]}      % Título
+\includegraphics[width=12cm]{img/logo-socio} \\ [0.4cm]
+{\large "Porque el club es de los socios, y la gestión es de SocioUnido"}
 
 \vspace{1cm}
 
@@ -123,7 +123,7 @@
     \end{tabular}
 \end{center}
 
-\vspace{0.5cm}
+\vspace{0.3cm}
 
 \begin{center}
     \large

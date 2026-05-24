@@ -192,7 +192,7 @@ Equipos con convocatorias masivas en el interior del país y Gran Buenos Aires. 
 \label{tab:anexo_primera_nacional}
 \end{table}
 
-\textit{*Nota metodológica de la categoría: Las cifras aproximadas ($\sim$) se estimaron mediante un análisis cruzado que contempla la capacidad de los estadios, el promedio histórico de asistencia de local, censos de peñas y registros de recaudación de entradas de las últimas temporadas. Por su parte, la mención \textbf{"Desconocido"} significa que el club carece de plataformas digitales auditables o de comunicados oficiales con datos públicos recientes.}
+\textit{*Nota metodológica de la categoría: Las cifras aproximadas ($\sim$) se estimaron mediante un análisis cruzado que contempla la capacidad de los estadios, el promedio histórico de asistencia de local, censos de peñas y registros de recaudación de entradas de las últimas temporadas. Por su parte, la mención \textbf{Desconocido} significa que el club carece de plataformas digitales auditables o de comunicados oficiales con datos públicos recientes.}
 
 \newpage
 
@@ -334,6 +334,428 @@ Equipos con convocatorias masivas en el interior del país y Gran Buenos Aires. 
 
 \newpage
 
+\newpage
+
 \subsection{Anexo C: Detalle de todas las ideas exploradas}
 
-X.
+A lo largo del proceso inicial de ideación, se generaron y documentaron diversas alternativas tecnológicas. Para estructurar este anexo de forma progresiva, las propuestas alternativas (excluyendo a \textit{SocioUnido}, que fue la idea finalmente seleccionada y detallada en el cuerpo principal del documento) se han clasificado en tres niveles según la profundidad del análisis realizado:
+
+% ==========================================
+% NIVEL 1
+% ==========================================
+\subsubsection{Nivel 1: Propuestas con planteo inicial}
+
+Las siguientes siete propuestas fueron descartadas en la etapa temprana de validación.
+
+\begin{itemize}
+    \item \textbf{ScoreMaster (Promedios 2.0)} 
+    \newline \textit{Necesidad:} Las plataformas de seguimiento deportivo actuales presentan problemas críticos de rendimiento y UX obsoleta. 
+    \newline \textit{Solución:} Desarrollo de una plataforma web/móvil optimizada para datos en tiempo real mediante WebSockets, incorporando Inteligencia Artificial (NLP) para generar resúmenes automáticos de las jornadas deportivas.
+    
+    \item \textbf{AeroGuard}
+    \newline \textit{Necesidad:} Riesgo latente de incursiones y colisiones en pistas de aeropuertos por errores de mando o vehículos no autorizados.
+    \newline \textit{Solución:} Sistema de visión computacional y cámaras de alta definición que actúa como un \textbf{ojo digital} para auditar pistas y emitir alertas lumínicas autónomas ante trayectorias de colisión.
+    
+    \item \textbf{SkyDictate}
+    \newline \textit{Necesidad:} Errores humanos de comunicación por radio entre la torre de control y los pilotos, derivando en quiebres de separación aérea.
+    \newline \textit{Solución:} Software de auditoría en tiempo real que transcribe (Speech-to-Text) y valida las instrucciones del controlador contra las normativas de altura, emitiendo alertas previas a la ejecución de maniobras peligrosas.
+
+    \item \textbf{AutoCare}
+    \newline \textit{Necesidad:} El mantenimiento automotriz suele ser puramente reactivo y desorganizado, reduciendo la vida útil del vehículo.
+    \newline \textit{Solución:} Ecosistema preventivo que utiliza Inteligencia Artificial (OCR) para leer facturas de taller, digitalizar el historial del vehículo y cruzarlo con el manual del fabricante para predecir cuándo fallarán los repuestos.
+
+    \item \textbf{NutriPlan}
+    \newline \textit{Necesidad:} Frustración al planificar comidas que equilibren gustos, presupuesto, restricciones médicas y desgaste físico.
+    \newline \textit{Solución:} Plataforma que cruza las preferencias del usuario, intolerancias y nivel de actividad (vía \textit{wearables}), utilizando IA adaptativa para generar un menú semanal hiper-personalizado y seguro.
+
+    \item \textbf{ServiHogar}
+    \newline \textit{Necesidad:} Dificultad histórica, especialmente en adultos mayores, para encontrar profesionales de oficios (plomeros, electricistas) confiables.
+    \newline \textit{Solución:} Marketplace bidireccional con un enfoque de accesibilidad extrema (alta legibilidad, comandos de voz) y modelos de IA predictiva que estiman rangos de precios justos al describir el problema.
+
+    \item \textbf{MarketScout}
+    \newline \textit{Necesidad:} Tareas tediosas al comparar precios y promociones bancarias a través de múltiples supermercados online.
+    \newline \textit{Solución:} Motor unificador de catálogos donde el usuario arma un único carrito y la IA (mediante \textit{scraping} y normalización) le indica en qué cadena resulta más barato efectuar la compra total o dividida.
+\end{itemize}
+
+\newpage
+
+% ==========================================
+% NIVEL 2
+% ==========================================
+\subsubsection{Nivel 2: Propuestas con análisis de contexto (5 C)}
+
+\paragraph{1. CryptoWealth: Gestión integral de activos digitales}
+
+\begin{itemize}
+    \item \textbf{Necesidad:} Fragmentación patrimonial al tener criptomonedas y acciones distribuidas en múltiples exchanges y brokers.
+    \item \textbf{Solución:} Plataforma centralizada que consolida activos y utiliza NLP para hacer un \textit{Sentiment Analysis} de las noticias financieras, prediciendo movimientos del mercado.
+\end{itemize}
+
+% TABLAS 5C CRYPTOWEALTH
+\begin{table}[h!]
+\centering
+\renewcommand{\arraystretch}{1.5}
+\begin{tabularx}{\textwidth}{|X|}
+\hline
+\rowcolor{blue!20} \multicolumn{1}{|c|}{\textbf{COMPAÑÍA}} \\ \hline
+\rowcolor{blue!10} \multicolumn{1}{|c|}{\textbf{Descripción}} \\ \hline
+Empresa FinTech que ofrece una plataforma centralizada en la nube para gestión de activos. Incorpora IA basada en NLP para anticipar movimientos del mercado. \\ \hline
+\rowcolor{blue!10} \multicolumn{1}{|c|}{\textbf{Visión}} \\ \hline
+Convertirse en el estándar global de gestión patrimonial digital, eliminando la fragmentación entre cripto y finanzas tradicionales. \\ \hline
+\rowcolor{blue!10} \multicolumn{1}{|c|}{\textbf{Misión}} \\ \hline
+Brindar herramientas predictivas que permitan tomar decisiones informadas optimizando el rendimiento mediante consolidación unificada y segura. \\ \hline
+\end{tabularx}
+\end{table}
+
+\begin{table}[h!]
+\centering
+\renewcommand{\arraystretch}{1.5}
+\begin{tabularx}{\textwidth}{|X|}
+\hline
+\rowcolor{cyan!20} \multicolumn{1}{|c|}{\textbf{CLIENTES}} \\ \hline
+\textbf{B2C:} Inversores retail, jóvenes nativos digitales e inversores avanzados con carteras diversificadas.\\
+\textbf{B2B:} Asesores financieros, \textit{Family Offices} y pequeños fondos de inversión que necesitan reportar múltiples clientes. \\ \hline
+\end{tabularx}
+\end{table}
+
+\begin{table}[h!]
+\centering
+\renewcommand{\arraystretch}{1.5}
+\begin{tabularx}{\textwidth}{|X|}
+\hline
+\rowcolor{green!20} \multicolumn{1}{|c|}{\textbf{COLABORADORES}} \\ \hline
+Proveedores \textit{Cloud}, APIs de cotización (CoinGecko, Yahoo Finance), agregadores de noticias (Bloomberg) y entidades regulatorias (CNV/UIF). \\ \hline
+\end{tabularx}
+\end{table}
+
+\begin{table}[h!]
+\centering
+\renewcommand{\arraystretch}{1.5}
+\begin{tabularx}{\textwidth}{|X|}
+\hline
+\rowcolor{orange!20} \multicolumn{1}{|c|}{\textbf{COMPETIDORES}} \\ \hline
+Portfolio trackers (CoinStats, Delta), plataformas propietarias de exchanges (Binance, eToro), y el status quo: planillas de cálculo (Excel). \\ \hline
+\end{tabularx}
+\end{table}
+
+\begin{table}[h!]
+\centering
+\renewcommand{\arraystretch}{1.5}
+\begin{tabularx}{\textwidth}{|l|X|X|X|}
+\hline
+\rowcolor{red!20} \multicolumn{4}{|c|}{\textbf{CONTEXTO}} \\ \hline
+\rowcolor{red!10} \textbf{Categoría} & \textbf{Corto plazo} & \textbf{Mediano plazo} & \textbf{Largo plazo} \\ \hline
+\textbf{Económico} & \cellcolor{orange!50} & \cellcolor{green!50} & \cellcolor{green!50} \\ \hline
+\textbf{Regulatorio} & \cellcolor{red!50} & \cellcolor{orange!50} & \cellcolor{green!50} \\ \hline
+\textbf{Social / Cultural} & \cellcolor{green!50} & \cellcolor{green!50} & \cellcolor{green!50} \\ \hline
+\textbf{Tecnológico} & \cellcolor{green!50} & \cellcolor{green!50} & \cellcolor{green!50} \\ \hline
+\textbf{Político / Institucional} & \cellcolor{orange!50} & \cellcolor{orange!50} & \cellcolor{green!50} \\ \hline
+\end{tabularx}
+\end{table}
+
+\newpage
+
+\paragraph{2. MedTrack: Digitalización y seguimiento médico}
+\begin{itemize}
+    \item \textbf{Necesidad:} Fragmentación en clínicas privadas, pérdida de historiales e ineficiencia en agendas.
+    \item \textbf{Solución:} Sistema unificado de historias clínicas en la nube con algoritmos de optimización para reducir el ausentismo de pacientes.
+\end{itemize}
+
+% TABLAS 5C MEDTRACK
+\begin{table}[h!]
+\centering
+\renewcommand{\arraystretch}{1.5}
+\begin{tabularx}{\textwidth}{|X|}
+\hline
+\rowcolor{blue!20} \multicolumn{1}{|c|}{\textbf{COMPAÑÍA}} \\ \hline
+\rowcolor{blue!10} \multicolumn{1}{|c|}{\textbf{Descripción}} \\ \hline
+Empresa \textit{HealthTech} enfocada en resolver la fragmentación clínica digitalizando historias médicas y optimizando agendas mediante IA. \\ \hline
+\rowcolor{blue!10} \multicolumn{1}{|c|}{\textbf{Visión}} \\ \hline
+Ser el estándar de interoperabilidad clínica garantizando una atención fluida y sin burocracia. \\ \hline
+\rowcolor{blue!10} \multicolumn{1}{|c|}{\textbf{Misión}} \\ \hline
+Brindar herramientas tecnológicas que eliminen la pérdida de datos y el ausentismo, mejorando drásticamente la calidad de atención. \\ \hline
+\end{tabularx}
+\end{table}
+
+\begin{table}[h!]
+\centering
+\renewcommand{\arraystretch}{1.5}
+\begin{tabularx}{\textwidth}{|X|}
+\hline
+\rowcolor{cyan!20} \multicolumn{1}{|c|}{\textbf{CLIENTES}} \\ \hline
+\textbf{B2B:} Clínicas, sanatorios, centros de diagnóstico y obras sociales.\\
+\textbf{B2C:} Médicos especialistas independientes y pequeños consultorios. \\ \hline
+\end{tabularx}
+\end{table}
+
+\begin{table}[h!]
+\centering
+\renewcommand{\arraystretch}{1.5}
+\begin{tabularx}{\textwidth}{|X|}
+\hline
+\rowcolor{green!20} \multicolumn{1}{|c|}{\textbf{COLABORADORES}} \\ \hline
+Proveedores \textit{Cloud} (Alta seguridad), integradores de pago, Obras Sociales, y Ministerios de Salud para firmas electrónicas. \\ \hline
+\end{tabularx}
+\end{table}
+
+\begin{table}[h!]
+\centering
+\renewcommand{\arraystretch}{1.5}
+\begin{tabularx}{\textwidth}{|X|}
+\hline
+\rowcolor{orange!20} \multicolumn{1}{|c|}{\textbf{COMPETIDORES}} \\ \hline
+Software médico directo (Doctoralia, Omnia), sistemas cerrados de grandes hospitales, y herramientas no especializadas (Agendas papel, WhatsApp). \\ \hline
+\end{tabularx}
+\end{table}
+
+\begin{table}[h!]
+\centering
+\renewcommand{\arraystretch}{1.5}
+\begin{tabularx}{\textwidth}{|l|X|X|X|}
+\hline
+\rowcolor{red!20} \multicolumn{4}{|c|}{\textbf{CONTEXTO}} \\ \hline
+\rowcolor{red!10} \textbf{Categoría} & \textbf{Corto plazo} & \textbf{Mediano plazo} & \textbf{Largo plazo} \\ \hline
+\textbf{Económico} & \cellcolor{red!50} & \cellcolor{orange!50} & \cellcolor{green!50} \\ \hline
+\textbf{Regulatorio} & \cellcolor{orange!50} & \cellcolor{green!50} & \cellcolor{green!50} \\ \hline
+\textbf{Social / Cultural} & \cellcolor{orange!50} & \cellcolor{green!50} & \cellcolor{green!50} \\ \hline
+\textbf{Tecnológico} & \cellcolor{green!50} & \cellcolor{green!50} & \cellcolor{green!50} \\ \hline
+\textbf{Político / Institucional} & \cellcolor{green!50} & \cellcolor{green!50} & \cellcolor{green!50} \\ \hline
+\end{tabularx}
+\end{table}
+
+\newpage
+
+\paragraph{3. SmartPantry: Inventario gastronómico inteligente}
+\begin{itemize}
+    \item \textbf{Necesidad:} Desperdicio constante de insumos perecederos en restaurantes y hogares debido al mal manejo del stock y caducidad.
+    \item \textbf{Solución:} Motor de inventario dinámico que cruza fechas de vencimiento con LLMs para sugerir recetas y evitar mermas financieras.
+\end{itemize}
+
+% TABLAS 5C SMARTPANTRY
+\begin{table}[h!]
+\centering
+\renewcommand{\arraystretch}{1.5}
+\begin{tabularx}{\textwidth}{|X|}
+\hline
+\rowcolor{blue!20} \multicolumn{1}{|c|}{\textbf{COMPAÑÍA}} \\ \hline
+\rowcolor{blue!10} \multicolumn{1}{|c|}{\textbf{Descripción}} \\ \hline
+Startup \textit{FoodTech} que utiliza IA para priorizar el consumo de alimentos en base a fechas de caducidad, minimizando el desperdicio. \\ \hline
+\rowcolor{blue!10} \multicolumn{1}{|c|}{\textbf{Visión}} \\ \hline
+Liderar la gestión inteligente de inventarios gastronómicos en LATAM para hacer la industria más sostenible. \\ \hline
+\rowcolor{blue!10} \multicolumn{1}{|c|}{\textbf{Misión}} \\ \hline
+Automatizar el stock y sugerir recetas para optimizar compras y rentabilidad. \\ \hline
+\end{tabularx}
+\end{table}
+
+\begin{table}[h!]
+\centering
+\renewcommand{\arraystretch}{1.5}
+\begin{tabularx}{\textwidth}{|X|}
+\hline
+\rowcolor{cyan!20} \multicolumn{1}{|c|}{\textbf{CLIENTES}} \\ \hline
+\textbf{B2B:} Restaurantes, bares y servicios de viandas. \\
+\textbf{B2C:} Familias e individuos orientados a reducir la huella de desperdicio y optimizar su alacena. \\ \hline
+\end{tabularx}
+\end{table}
+
+\begin{table}[h!]
+\centering
+\renewcommand{\arraystretch}{1.5}
+\begin{tabularx}{\textwidth}{|X|}
+\hline
+\rowcolor{green!20} \multicolumn{1}{|c|}{\textbf{COLABORADORES}} \\ \hline
+Proveedores de alimentos, escuelas de gastronomía (para validar recetas de la IA) y ONGs medioambientales. \\ \hline
+\end{tabularx}
+\end{table}
+
+\begin{table}[h!]
+\centering
+\renewcommand{\arraystretch}{1.5}
+\begin{tabularx}{\textwidth}{|X|}
+\hline
+\rowcolor{orange!20} \multicolumn{1}{|c|}{\textbf{COMPETIDORES}} \\ \hline
+Sistemas ERP genéricos, apps de recetas estándar, e inventarios en Excel. \\ \hline
+\end{tabularx}
+\end{table}
+
+\begin{table}[h!]
+\centering
+\renewcommand{\arraystretch}{1.5}
+\begin{tabularx}{\textwidth}{|l|X|X|X|}
+\hline
+\rowcolor{red!20} \multicolumn{4}{|c|}{\textbf{CONTEXTO}} \\ \hline
+\rowcolor{red!10} \textbf{Categoría} & \textbf{Corto plazo} & \textbf{Mediano plazo} & \textbf{Largo plazo} \\ \hline
+\textbf{Económico} & \cellcolor{green!50} & \cellcolor{green!50} & \cellcolor{green!50} \\ \hline
+\textbf{Regulatorio} & \cellcolor{green!50} & \cellcolor{green!50} & \cellcolor{green!50} \\ \hline
+\textbf{Social / Cultural} & \cellcolor{orange!50} & \cellcolor{orange!50} & \cellcolor{green!50} \\ \hline
+\textbf{Tecnológico} & \cellcolor{green!50} & \cellcolor{green!50} & \cellcolor{green!50} \\ \hline
+\textbf{Político / Institucional} & \cellcolor{green!50} & \cellcolor{green!50} & \cellcolor{green!50} \\ \hline
+\end{tabularx}
+\end{table}
+
+\newpage
+
+% ==========================================
+% NIVEL 3
+% ==========================================
+\subsubsection{Nivel 3: Propuestas con análisis de negocio y marketing (5 C y 4 P)}
+
+\paragraph{1. DevQuest: Gamificación de onboarding IT}
+
+\begin{itemize}
+    \item \textbf{Necesidad:} Cuellos de botella formativos al ingresar un nuevo desarrollador a una empresa, ralentizando la productividad de los Seniors.
+    \item \textbf{Solución:} Plataforma SaaS que transforma la inducción en un \textbf{árbol de habilidades} gamificado, revisando código estático con IA y resolviendo dudas del código legado mediante un Bot RAG.
+\end{itemize}
+
+% TABLAS 5C DEVQUEST
+\begin{table}[h!]
+\centering
+\renewcommand{\arraystretch}{1.5}
+\begin{tabularx}{\textwidth}{|X|}
+\hline
+\rowcolor{blue!20} \multicolumn{1}{|c|}{\textbf{COMPAÑÍA}} \\ \hline
+\rowcolor{blue!10} \multicolumn{1}{|c|}{\textbf{Descripción}} \\ \hline
+Startup de HR-Tech que reduce la carga sobre los líderes técnicos acelerando la inducción mediante gamificación y RAG. \\ \hline
+\rowcolor{blue!10} \multicolumn{1}{|c|}{\textbf{Visión}} \\ \hline
+Erradicar la fricción en la integración de talento permitiendo productividad autónoma desde el primer día en cualquier stack. \\ \hline
+\rowcolor{blue!10} \multicolumn{1}{|c|}{\textbf{Misión}} \\ \hline
+Digitalizar el \textit{onboarding} liberando tiempo estratégico de las gerencias. \\ \hline
+\end{tabularx}
+\end{table}
+
+\begin{table}[h!]
+\centering
+\renewcommand{\arraystretch}{1.5}
+\begin{tabularx}{\textwidth}{|X|}
+\hline
+\rowcolor{cyan!20} \multicolumn{1}{|c|}{\textbf{CLIENTES}} \\ \hline
+Empresas de software (\textit{Software Factories}, Startups), CTOs y líderes técnicos (Engineering Managers). \\ \hline
+\end{tabularx}
+\end{table}
+
+\begin{table}[h!]
+\centering
+\renewcommand{\arraystretch}{1.5}
+\begin{tabularx}{\textwidth}{|X|}
+\hline
+\rowcolor{green!20} \multicolumn{1}{|c|}{\textbf{COLABORADORES}} \\ \hline
+Comunidades IT, agencias de recruiting y la urgencia del mercado por adquirir talento especializado en nuevas arquitecturas. \\ \hline
+\end{tabularx}
+\end{table}
+
+\begin{table}[h!]
+\centering
+\renewcommand{\arraystretch}{1.5}
+\begin{tabularx}{\textwidth}{|X|}
+\hline
+\rowcolor{orange!20} \multicolumn{1}{|c|}{\textbf{COMPETIDORES}} \\ \hline
+Burocracia interna (Shadowing manual en videollamadas), herramientas HR genéricas (BambooHR), y la penetración de modelos de IA generativa. \\ \hline
+\end{tabularx}
+\end{table}
+
+\begin{table}[h!]
+\centering
+\renewcommand{\arraystretch}{1.5}
+\begin{tabularx}{\textwidth}{|l|X|X|X|}
+\hline
+\rowcolor{red!20} \multicolumn{4}{|c|}{\textbf{CONTEXTO}} \\ \hline
+\rowcolor{red!10} \textbf{Categoría} & \textbf{Corto plazo} & \textbf{Mediano plazo} & \textbf{Largo plazo} \\ \hline
+\textbf{Económico} & \cellcolor{green!50} & \cellcolor{green!50} & \cellcolor{green!50} \\ \hline
+\textbf{Regulatorio} & \cellcolor{green!50} & \cellcolor{green!50} & \cellcolor{green!50} \\ \hline
+\textbf{Social / Cultural} & \cellcolor{green!50} & \cellcolor{green!50} & \cellcolor{green!50} \\ \hline
+\textbf{Tecnológico} & \cellcolor{green!50} & \cellcolor{green!50} & \cellcolor{green!50} \\ \hline
+\textbf{Político / Ambiental} & \cellcolor{green!50} & \cellcolor{green!50} & \cellcolor{green!50} \\ \hline
+\end{tabularx}
+\end{table}
+
+\vspace{0.3cm}
+
+\newpage
+
+\textbf{Análisis de las 4 P (DevQuest)}
+\begin{itemize}
+    \item \textbf{Producto:} Sistema \textit{SaaS Estándar} (con árboles pre-creados para lenguajes populares) y \textit{Proyectos Enterprise} a medida. Como ecosistema se planificó DevQuest Analytics y alianzas de certificación.
+    \item \textbf{Plaza:} Distribución 100\% B2B enfocada inicialmente en Software Factories locales (50 a 200 empleados) por su alta rotación operativa.
+    \item \textbf{Precio:} \textit{Pricing} por valor (Ahorro de horas-senior). Suscripciones recurrentes (Starter/Growth) y un cobro de capital por desarrollo en integraciones complejas (\textit{Enterprise Custom}).
+    \item \textbf{Promoción:} Tracción temprana mediante el boca a boca (\textit{Word of Mouth}) en comunidades técnicas, seguido de marketing pago B2B (LinkedIn Ads) apuntando a CTOs.
+\end{itemize}
+
+\newpage
+
+\paragraph{2. CuentasClaras: Gestión integral y predictiva del hogar}
+\begin{itemize}
+    \item \textbf{Necesidad:} Conflictos por división de dinero entre \textit{roommates} y desorganización personal ante deudas, vencimientos e inflación.
+    \item \textbf{Solución:} Billetera colaborativa que automatiza los pagos fijos, alerta sobre vencimientos y usa modelos predictivos para proyectar los presupuestos del mes entrante ajustados por inflación.
+\end{itemize}
+
+% TABLAS 5C CUENTAS CLARAS
+\begin{table}[h!]
+\centering
+\renewcommand{\arraystretch}{1.5}
+\begin{tabularx}{\textwidth}{|X|}
+\hline
+\rowcolor{blue!20} \multicolumn{1}{|c|}{\textbf{COMPAÑÍA}} \\ \hline
+\rowcolor{blue!10} \multicolumn{1}{|c|}{\textbf{Descripción}} \\ \hline
+Startup Fintech enfocada en automatizar el pago de servicios, la división de gastos y la adaptación presupuestaria. \\ \hline
+\rowcolor{blue!10} \multicolumn{1}{|c|}{\textbf{Visión}} \\ \hline
+Transformar la economía doméstica en una experiencia invisible y completamente libre de conflictos sociales. \\ \hline
+\rowcolor{blue!10} \multicolumn{1}{|c|}{\textbf{Misión}} \\ \hline
+Centralizar finanzas y eliminar la carga mental de la organización económica. \\ \hline
+\end{tabularx}
+\end{table}
+
+\begin{table}[h!]
+\centering
+\renewcommand{\arraystretch}{1.5}
+\begin{tabularx}{\textwidth}{|X|}
+\hline
+\rowcolor{cyan!20} \multicolumn{1}{|c|}{\textbf{CLIENTES}} \\ \hline
+Familias consolidadas, parejas convivientes, estudiantes universitarios (\textit{roommates}) y gestiones individuales. \\ \hline
+\end{tabularx}
+\end{table}
+
+\begin{table}[h!]
+\centering
+\renewcommand{\arraystretch}{1.5}
+\begin{tabularx}{\textwidth}{|X|}
+\hline
+\rowcolor{green!20} \multicolumn{1}{|c|}{\textbf{COLABORADORES}} \\ \hline
+Pasarelas de pagos, entidades gubernamentales (datos INDEC/inflación), y redes de publicidad digital (Google AdMob). \\ \hline
+\end{tabularx}
+\end{table}
+
+\begin{table}[h!]
+\centering
+\renewcommand{\arraystretch}{1.5}
+\begin{tabularx}{\textwidth}{|X|}
+\hline
+\rowcolor{orange!20} \multicolumn{1}{|c|}{\textbf{COMPETIDORES}} \\ \hline
+Splitwise, planillas de Excel, economía informal (manejo en efectivo puro) y módulos limitados de apps bancarias tradicionales. \\ \hline
+\end{tabularx}
+\end{table}
+
+\begin{table}[h!]
+\centering
+\renewcommand{\arraystretch}{1.5}
+\begin{tabularx}{\textwidth}{|l|X|X|X|}
+\hline
+\rowcolor{red!20} \multicolumn{4}{|c|}{\textbf{CONTEXTO}} \\ \hline
+\rowcolor{red!10} \textbf{Categoría} & \textbf{Corto plazo} & \textbf{Mediano plazo} & \textbf{Largo plazo} \\ \hline
+\textbf{Económico} & \cellcolor{green!50} & \cellcolor{orange!50} & \cellcolor{green!50} \\ \hline
+\textbf{Regulatorio} & \cellcolor{green!50} & \cellcolor{green!50} & \cellcolor{green!50} \\ \hline
+\textbf{Social / Cultural} & \cellcolor{orange!50} & \cellcolor{green!50} & \cellcolor{green!50} \\ \hline
+\textbf{Tecnológico} & \cellcolor{green!50} & \cellcolor{green!50} & \cellcolor{green!50} \\ \hline
+\textbf{Político / Ambiental} & \cellcolor{green!50} & \cellcolor{orange!50} & \cellcolor{green!50} \\ \hline
+\end{tabularx}
+\end{table}
+
+\newpage
+
+\textbf{Análisis de las 4 P (CuentasClaras)}
+
+\begin{itemize}
+    \item \textbf{Producto:} Plataforma dividida en un \textit{Tier Freemium} con anuncios y una variante \textit{Premium} (individual y hogar) con integraciones completas, predicción inflacionaria por IA y OCR para despiece de tickets.
+    \item \textbf{Plaza:} Tiendas de aplicaciones móviles (App Store/Google Play). Para el dimensionamiento, se estimó capturar un SAM de \textit{smart-shoppers} con una meta inicial de 47.000 usuarios activos.
+    \item \textbf{Precio:} Modelo de micropagos de alta penetración (\$1 a \$3 USD), sustentado paralelamente por monetización publicitaria (ARPU Free) y futuras comisiones por colocación B2B de seguros.
+    \item \textbf{Promoción:} Estrategia basada en el \textbf{efecto red} orgánico (los usuarios deben invitar a sus convivientes), apoyada por Optimización (ASO) y *marketing influencers* de educación financiera.
+\end{itemize}

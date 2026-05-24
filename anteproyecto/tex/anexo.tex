@@ -74,14 +74,266 @@ A continuación, se presentan los diagramas correspondientes a los niveles de Co
     \centering
     
     % Primero: Componentes (MS Auth)
-    \includegraphics[width=\textwidth]{img/c4_model/C4 Nivel 3-MS Auth.png}
+    \includegraphics[width=0.99\textwidth]{img/c4_model/C4 Nivel 3-MS Auth.png}
     \caption{Diagrama C4 nivel 3: Componentes (Microservicio de autenticación). Sistema centralizado para el manejo de identidades, validación de credenciales y generación de tokens JWT.}
     \label{fig:c4_nivel3_auth}
     
     \vspace{0.6cm} % Espacio vertical de separación entre ambos cuadros
 
     % Segundo: Componentes (MS Analytics & AI)
-    \includegraphics[width=\textwidth]{img/c4_model/C4 Nivel 3-MS Analytics & AI.png}
+    \includegraphics[width=0.99\textwidth]{img/c4_model/C4 Nivel 3-MS Analytics & AI.png}
     \caption{Diagrama C4 nivel 3: Componentes (Microservicio de analytics e inteligencia artificial). Orquestación de tareas asíncronas y motor de \textit{Machine Learning} para la predicción de riesgo de morosidad.}
     \label{fig:c4_nivel3_analytics}
 \end{figure}
+
+\newpage
+
+\subsection{Anexo B: Clubes y socios en el fútbol argentino}
+
+Este documento sirve como registro y base de datos para el cálculo de los \textit{Setup Fees} y las suscripciones mensuales de \textbf{SocioUnido}, los cuales escalan de forma proporcional en base a la cantidad de socios a digitalizar y migrar a la plataforma.
+
+\paragraph{Nota Metodológica:} Los datos correspondientes a la Liga Profesional reflejan los números oficiales publicados en el último \textit{Informe de Clubes de la AFA}. Los números de las categorías de ascenso representan estimaciones de mercado utilizadas para el modelado de la estrategia de penetración (\textit{Go-To-Market}) de nuestra Fase 1.
+
+\subsubsection{1° Nivel: Liga Profesional (Fase 2 - Escalamiento)}
+
+\begin{table}[h!]
+\centering
+\renewcommand{\arraystretch}{1.1}
+\begin{tabularx}{\textwidth}{|X|c|}
+\hline
+\rowcolor{gray!20} \textbf{Club} & \textbf{Socios Activos} \\ \hline
+\textbf{River Plate} & 352.712 \\ \hline
+\textbf{Boca Juniors} & 282.644 \\ \hline
+\textbf{Independiente} & 165.262 \\ \hline
+\textbf{Rosario Central} & 104.951 \\ \hline
+\textbf{Racing Club} & 102.707 \\ \hline
+\textbf{San Lorenzo} & 89.717 \\ \hline
+\textbf{Newell's Old Boys} & 84.759 \\ \hline
+\textbf{Vélez Sarsfield} & 79.083 \\ \hline
+\textbf{Talleres (Córdoba)} & 70.582 \\ \hline
+\textbf{Huracán} & 68.755 \\ \hline
+\textbf{Belgrano (Córdoba)} & 67.318 \\ \hline
+\textbf{Estudiantes de La Plata} & 55.871 \\ \hline
+\textbf{Lanús} & 36.206 \\ \hline
+\textbf{Gimnasia y Esgrima La Plata} & 35.389 \\ \hline
+\textbf{Instituto (Córdoba)} & 29.156 \\ \hline
+\textbf{Atlético Tucumán} & 27.956 \\ \hline
+\textbf{Unión (Santa Fe)} & 22.774 \\ \hline
+\textbf{Argentinos Juniors} & 20.069 \\ \hline
+\textbf{Independiente Rivadavia (Mendoza)} & 18.926 \\ \hline
+\textbf{Banfield} & 16.803 \\ \hline
+\textbf{Sarmiento (Junín)} & 9.340 \\ \hline
+\textbf{Tigre} & 9.181 \\ \hline
+\textbf{Platense} & 9.132 \\ \hline
+\textbf{Defensa y Justicia} & 7.400 \\ \hline
+\textbf{Central Córdoba (SdE)} & 6.567 \\ \hline
+\textbf{Aldosivi (Mar del Plata)} & 5.604 \\ \hline
+\textbf{Gimnasia y Esgrima (Mendoza)} & $\sim$4.500* \\ \hline
+\textbf{Estudiantes (Río Cuarto)} & $\sim$2.000* \\ \hline
+\textbf{Barracas Central} & 3.107 \\ \hline
+\textbf{Deportivo Riestra} & 1.007 \\ \hline
+\end{tabularx}
+\caption{Registros de socios activos en la Liga Profesional.}
+\label{tab:anexo_liga_profesional}
+\end{table}
+
+\textit{*Nota: Gimnasia y Esgrima (Mendoza) y Estudiantes (Río Cuarto) ascendieron recientemente a Primera División, por lo que sus cifras representan la mejor estimación de mercado disponible al no figurar en el reporte oficial de la AFA para esta categoría.}
+
+\newpage
+
+\subsubsection{2° Nivel: Primera Nacional (Fase 2 - Transición)}
+
+Equipos con convocatorias masivas en el interior del país y Gran Buenos Aires. Al no existir un informe unificado reciente de AFA para la totalidad del ascenso, las cifras representan comunicados oficiales recientes de los propios clubes o estimaciones consolidadas de mercado.
+
+\begin{table}[h!]
+\centering
+\renewcommand{\arraystretch}{1.1}
+\begin{tabularx}{\textwidth}{|X|c|}
+\hline
+\rowcolor{gray!20} \textbf{Club} & \textbf{Socios Activos} \\ \hline
+\textbf{Colón} & 32.000 \\ \hline
+\textbf{San Martín (T)} & $\sim$25.000 \\ \hline
+\textbf{Ferro Carril Oeste} & $\sim$18.000 \\ \hline
+\textbf{Quilmes} & $\sim$15.000 \\ \hline
+\textbf{Chacarita Juniors} & $\sim$12.000 \\ \hline
+\textbf{Deportivo Morón} & $\sim$10.000 \\ \hline
+\textbf{Nueva Chicago} & $\sim$10.000 \\ \hline
+\textbf{Temperley} & $\sim$10.000 \\ \hline
+\textbf{Godoy Cruz} & 8.141 \\ \hline
+\textbf{All Boys} & $\sim$8.000 \\ \hline
+\textbf{Almirante Brown} & $\sim$8.000 \\ \hline
+\textbf{Los Andes} & $\sim$6.500 \\ \hline
+\textbf{Atlanta} & $\sim$5.000 \\ \hline
+\textbf{Chaco For Ever} & $\sim$5.000 \\ \hline
+\textbf{Patronato} & $\sim$5.000 \\ \hline
+\textbf{Atlético de Rafaela} & $\sim$4.000 \\ \hline
+\textbf{Racing (C)} & $\sim$4.000 \\ \hline
+\textbf{San Martín (SJ)} & $\sim$4.000 \\ \hline
+\textbf{Colegiales} & $\sim$3.500 \\ \hline
+\textbf{Defensores de Belgrano} & $\sim$3.000 \\ \hline
+\textbf{Estudiantes (BA)} & $\sim$3.000 \\ \hline
+\textbf{Gimnasia y Esgrima (J)} & $\sim$3.000 \\ \hline
+\textbf{Gimnasia y Tiro (S)} & $\sim$3.000 \\ \hline
+\textbf{Almagro} & $\sim$2.000 \\ \hline
+\textbf{San Telmo} & $\sim$1.500 \\ \hline
+\textbf{Acassuso} & Desconocido \\ \hline
+\textbf{Agropecuario} & Desconocido \\ \hline
+\textbf{Central Norte} & Desconocido \\ \hline
+\textbf{Ciudad de Bolívar} & Desconocido \\ \hline
+\textbf{Deportivo Madryn} & Desconocido \\ \hline
+\textbf{Deportivo Maipú} & Desconocido \\ \hline
+\textbf{Ferrocarril Midland} & Desconocido \\ \hline
+\textbf{Güemes (SdE)} & Desconocido \\ \hline
+\textbf{Mitre (SdE)} & Desconocido \\ \hline
+\textbf{San Miguel} & Desconocido \\ \hline
+\textbf{Tristán Suárez} & Desconocido \\ \hline
+\end{tabularx}
+\caption{Registros y estimaciones de socios en la Primera Nacional.}
+\label{tab:anexo_primera_nacional}
+\end{table}
+
+\textit{*Nota metodológica de la categoría: Las cifras aproximadas ($\sim$) se estimaron mediante un análisis cruzado que contempla la capacidad de los estadios, el promedio histórico de asistencia de local, censos de peñas y registros de recaudación de entradas de las últimas temporadas. Por su parte, la mención \textbf{"Desconocido"} significa que el club carece de plataformas digitales auditables o de comunicados oficiales con datos públicos recientes.}
+
+\newpage
+
+\subsubsection{3° Nivel: Primera B Metropolitana (Fase 1 - Go To Market)}
+
+\begin{table}[h!]
+\centering
+\renewcommand{\arraystretch}{1.1}
+\begin{tabularx}{\textwidth}{|X|c|}
+\hline
+\rowcolor{gray!20} \textbf{Club} & \textbf{Socios Activos} \\ \hline
+\textbf{Arsenal} & $\sim$10.000 \\ \hline
+\textbf{Deportivo Laferrere} & $\sim$9.000 \\ \hline
+\textbf{Talleres (Remedios de Escalada)} & $\sim$8.500 \\ \hline
+\textbf{Comunicaciones} & $\sim$6.000 \\ \hline
+\textbf{Brown de Adrogué} & $\sim$5.000 \\ \hline
+\textbf{Defensores Unidos (CADU)} & $\sim$4.500 \\ \hline
+\textbf{Excursionistas} & $\sim$4.000 \\ \hline
+\textbf{San Martín (Burzaco)} & $\sim$4.000 \\ \hline
+\textbf{Villa Dálmine} & $\sim$3.500 \\ \hline
+\textbf{Argentino de Quilmes} & $\sim$3.000 \\ \hline
+\textbf{Deportivo Merlo} & $\sim$3.000 \\ \hline
+\textbf{Flandria} & $\sim$3.000 \\ \hline
+\textbf{Ituzaingó} & $\sim$3.000 \\ \hline
+\textbf{Dock Sud} & $\sim$2.500 \\ \hline
+\textbf{Villa San Carlos} & $\sim$2.500 \\ \hline
+\textbf{Liniers} & $\sim$2.000 \\ \hline
+\textbf{Sportivo Italiano} & $\sim$2.000 \\ \hline
+\textbf{Argentino de Merlo} & $\sim$1.500 \\ \hline
+\textbf{Deportivo Armenio} & $\sim$1.000 \\ \hline
+\textbf{Real Pilar} & $\sim$1.000 \\ \hline
+\textbf{Deportivo Camioneros} & Desconocido \\ \hline
+\textbf{UAI Urquiza} & Desconocido \\ \hline
+\end{tabularx}
+\caption{Estimaciones de socios en la Primera B Metropolitana.}
+\label{tab:anexo_primera_b}
+\end{table}
+
+\textit{*Nota metodológica de la categoría: Se aplican los mismos criterios de estimación e informalidad mencionados en la Primera Nacional.}
+
+\newpage
+
+\subsubsection{4° Nivel: Torneo Federal A (Fase 1 - Go To Market)}
+
+\begin{table}[h!]
+\centering
+\renewcommand{\arraystretch}{1.1}
+\begin{tabularx}{\textwidth}{|X|c|}
+\hline
+\rowcolor{gray!20} \textbf{Club} & \textbf{Socios Activos} \\ \hline
+\textbf{Olimpo (Bahía Blanca, Buenos Aires)} & $\sim$8.000 \\ \hline
+\textbf{Alvarado (Mar del Plata, Buenos Aires)} & $\sim$7.000 \\ \hline
+\textbf{Juventud Antoniana (Salta, Salta)} & $\sim$6.500 \\ \hline
+\textbf{Guillermo Brown (Puerto Madryn, Chubut)} & $\sim$4.000 \\ \hline
+\textbf{Boca Unidos (Corrientes, Corrientes)} & $\sim$3.500 \\ \hline
+\textbf{Cipolletti (Cipolletti, Río Negro)} & $\sim$3.500 \\ \hline
+\textbf{Villa Mitre (Bahía Blanca, Buenos Aires)} & $\sim$3.500 \\ \hline
+\textbf{Ramón Santamarina (Tandil, Buenos Aires)} & $\sim$3.000 \\ \hline
+\textbf{Douglas Haig (Pergamino, Buenos Aires)} & $\sim$2.500 \\ \hline
+\textbf{San Martín (San Martín, Mendoza)} & $\sim$2.500 \\ \hline
+\textbf{Sportivo Belgrano (San Francisco, Córdoba)} & $\sim$2.500 \\ \hline
+\textbf{Gimnasia y Esgrima (Concepción del Uruguay, Entre Ríos)} & $\sim$2.000 \\ \hline
+\textbf{Huracán Las Heras (Las Heras, Mendoza)} & $\sim$2.000 \\ \hline
+\textbf{Sarmiento (Resistencia, Chaco)} & $\sim$2.000 \\ \hline
+\textbf{Juventud Unida Universitario (San Luis, San Luis)} & $\sim$1.500 \\ \hline
+\textbf{Sarmiento (La Banda, Santiago del Estero)} & $\sim$1.500 \\ \hline
+\textbf{9 de Julio (Rafaela, Santa Fe)} & $\sim$1.000 \\ \hline
+\textbf{Atenas (Río Cuarto, Córdoba)} & $\sim$1.000 \\ \hline
+\textbf{Defensores de Belgrano (Villa Ramallo, Buenos Aires)} & $\sim$1.000 \\ \hline
+\textbf{Kimberley (Mar del Plata, Buenos Aires)} & $\sim$1.000 \\ \hline
+\textbf{Argentino (Monte Maíz, Córdoba)} & $\sim$800 \\ \hline
+\textbf{El Linqueño (Lincoln, Buenos Aires)} & $\sim$800 \\ \hline
+\textbf{Germinal (Rawson, Chubut)} & $\sim$800 \\ \hline
+\textbf{Independiente (Chivilcoy, Buenos Aires)} & $\sim$800 \\ \hline
+\textbf{San Martín (Formosa, Formosa)} & $\sim$800 \\ \hline
+\textbf{Sol de Mayo (Viedma, Río Negro)} & $\sim$800 \\ \hline
+\textbf{Sportivo Las Parejas (Las Parejas, Santa Fe)} & $\sim$800 \\ \hline
+\textbf{Costa Brava (General Pico, La Pampa)} & $\sim$600 \\ \hline
+\textbf{Círculo Deportivo (Comandante Otamendi, Buenos Aires)} & $\sim$500 \\ \hline
+\textbf{Deportivo Rincón (Rincón de los Sauces, Neuquén)} & $\sim$500 \\ \hline
+\textbf{Sol de América (Formosa, Formosa)} & $\sim$500 \\ \hline
+\textbf{FADEP (Russell, Mendoza)} & $\sim$300 \\ \hline
+\textbf{Atlético Escobar (Ingeniero Maschwitz, Buenos Aires)} & Desconocido \\ \hline
+\textbf{Bartolomé Mitre (Posadas, Misiones)} & Desconocido \\ \hline
+\textbf{Defensores de Vilelas (Puerto Vilelas, Chaco)} & Desconocido \\ \hline
+\textbf{Gimnasia y Esgrima (Chivilcoy, Buenos Aires)} & Desconocido \\ \hline
+\textbf{Tucumán Central (San Miguel de Tucumán, Tucumán)} & Desconocido \\ \hline
+\end{tabularx}
+\caption{Estimaciones de socios en el Torneo Federal A.}
+\label{tab:anexo_federal_a}
+\end{table}
+
+\textit{*Nota metodológica de la categoría: Se aplican los mismos criterios de estimación e informalidad mencionados en la Primera Nacional.}
+
+\newpage
+
+\subsubsection{5° Nivel: Primera C (Fase 1 - Go To Market)}
+
+\begin{table}[h!]
+\centering
+\renewcommand{\arraystretch}{1.1}
+\begin{tabularx}{\textwidth}{|X|c|}
+\hline
+\rowcolor{gray!20} \textbf{Club} & \textbf{Socios Activos} \\ \hline
+\textbf{Deportivo Español} & $\sim$3.000 \\ \hline
+\textbf{Central Córdoba (Rosario)} & $\sim$3.000 \\ \hline
+\textbf{Berazategui} & $\sim$2.500 \\ \hline
+\textbf{Cañuelas} & $\sim$2.000 \\ \hline
+\textbf{Sacachispas} & $\sim$2.000 \\ \hline
+\textbf{El Porvenir} & $\sim$1.500 \\ \hline
+\textbf{J.J. de Urquiza} & $\sim$1.500 \\ \hline
+\textbf{Luján} & $\sim$1.500 \\ \hline
+\textbf{Claypole} & $\sim$1.200 \\ \hline
+\textbf{Argentino de Rosario} & $\sim$1.000 \\ \hline
+\textbf{Fénix} & $\sim$1.000 \\ \hline
+\textbf{General Lamadrid} & $\sim$1.000 \\ \hline
+\textbf{Atlas} & $\sim$800 \\ \hline
+\textbf{Defensores de Cambaceres} & $\sim$800 \\ \hline
+\textbf{Leandro N. Alem} & $\sim$800 \\ \hline
+\textbf{Mercedes} & $\sim$800 \\ \hline
+\textbf{Victoriano Arenas} & $\sim$600 \\ \hline
+\textbf{Puerto Nuevo} & $\sim$500 \\ \hline
+\textbf{Sportivo Barracas} & $\sim$500 \\ \hline
+\textbf{Central Ballester} & $\sim$400 \\ \hline
+\textbf{Lugano} & $\sim$400 \\ \hline
+\textbf{Centro Español} & $\sim$300 \\ \hline
+\textbf{Deportivo Paraguayo} & $\sim$300 \\ \hline
+\textbf{Juventud Unida} & $\sim$300 \\ \hline
+\textbf{Muñiz} & $\sim$300 \\ \hline
+\textbf{Yupanqui} & $\sim$300 \\ \hline
+\textbf{Estrella del Sur} & Desconocido \\ \hline
+\textbf{Leones de Rosario} & Desconocido \\ \hline
+\end{tabularx}
+\caption{Estimaciones de socios en la Primera C.}
+\label{tab:anexo_primera_c}
+\end{table}
+
+\textit{*Nota metodológica de la categoría: Se aplican los mismos criterios de estimación e informalidad mencionados en la Primera Nacional.}
+
+\newpage
+
+\subsection{Anexo C: Detalle de todas las ideas exploradas}
+
+X.

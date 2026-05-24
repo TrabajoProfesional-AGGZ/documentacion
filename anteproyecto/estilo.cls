@@ -77,8 +77,8 @@
 
 \renewcommand{\headrulewidth}{1pt}
 \renewcommand{\footrulewidth}{1pt}
-\rhead{\includegraphics[width=2.5cm]{img/logo-socio-header.png}}
-\lhead{\includegraphics[width=2.5cm]{img/logo}}
+\rhead{\includegraphics[width=2.5cm]{img/logos/logo-socio-header.png}}
+\lhead{\includegraphics[width=2.5cm]{img/logos/logo}}
 \cfoot{\small \textsc {Página \thepage\ de \pageref*{LastPage}}}
 
 \fancypagestyle{firststyle}
@@ -100,11 +100,11 @@
 \renewcommand*{\maketitle}{
 \thispagestyle{firststyle}
 \begin{center}
-\includegraphics[width=12cm]{img/logo}
+\includegraphics[width=12cm]{img/logos/logo}
 \vspace{0.2cm}
 
 { \huge \bfseries Anteproyecto del Trabajo Profesional\\[0.8cm]}      % Título
-\includegraphics[width=12cm]{img/logo-socio} \\ [0.4cm]
+\includegraphics[width=12cm]{img/logos/logo-socio} \\ [0.4cm]
 {\large "Porque el club es de los socios, y la gestión es de SocioUnido"} \\ [0.2cm]
 \normalsize{Plataforma inteligente que centraliza la gestión administrativa de los clubes, optimizando el uso de espacios compartidos, previniendo la morosidad y asegurando los accesos al estadio.}
 

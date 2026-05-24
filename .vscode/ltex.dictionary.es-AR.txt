@@ -9,3 +9,4 @@ Service
 backlog
 semiautomatizadas
 Incepción
+analytics

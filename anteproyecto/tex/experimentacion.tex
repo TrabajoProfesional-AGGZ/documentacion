@@ -1,2 +1,48 @@
-\section{Experimentación, validación, control de calidad}
-..
+\section{Experimentación, validación y control de calidad}
+
+Con el objetivo de garantizar la robustez, seguridad y fiabilidad de la plataforma \textbf{SocioUnido}, se define a continuación la estrategia integral de pruebas. Este plan de validación inicial establece los lineamientos para certificar que el sistema cumple con todos los requerimientos funcionales y no funcionales especificados, y será ajustado iterativamente a medida que avance el desarrollo.
+
+\subsection{Roles y responsabilidades de validación}
+
+La especificación, diseño y supervisión del plan de pruebas estará a cargo del \textbf{Responsable de Control de Calidad (QA)}. Su rol consistirá en definir los casos de prueba, configurar los entornos de automatización y ejecutar las pruebas manuales exploratorias. No obstante, en concordancia con las prácticas ágiles, los desarrolladores de cada módulo (\textit{Front-end, Back-end, IA}) serán responsables de escribir y mantener las pruebas unitarias de su propia implementación.
+
+\subsection{Estrategia de pruebas y grado de automatización}
+
+La estrategia adoptará un enfoque de "Pirámide de Pruebas", priorizando un alto grado de automatización en las capas inferiores para agilizar la integración continua (CI/CD) y reservando las pruebas manuales para la validación de usabilidad y flujos complejos de experiencia de usuario.
+
+\begin{itemize}
+    \item \textbf{Pruebas unitarias (automatizadas):} Se validará el correcto funcionamiento de las funciones y métodos aislados. Se utilizarán frameworks estándar de la industria.
+    \item \textbf{Pruebas de integración (automatizadas):} Se verificará la correcta comunicación entre los microservicios, la base de datos relacional y las APIs de terceros (pasarelas de pago y API de WhatsApp). Para esto se emplearán herramientas como \textit{Postman} integradas al pipeline.
+    \item \textbf{Pruebas End-to-End (semiautomatizadas):} Simulaciones de flujos completos de usuario (por ejemplo, el pago de una cuota desde la PWA hasta que se refleja en el Dashboard B2B).
+\end{itemize}
+
+\subsection{Pruebas funcionales}
+
+El conjunto de pruebas funcionales se centrará en los módulos core del ecosistema:
+
+\begin{itemize}
+    \item \textbf{Gestión administrativa (Dashboard B2B):} Verificación de los flujos de alta, baja y modificación (CRUD) del padrón de socios, y la correcta renderización de las métricas financieras.
+    \item \textbf{Procesamiento de pagos:} Validación de la correcta integración con las pasarelas externas.
+    \item \textbf{Asistente conversacional (NLP):} Pruebas de caja negra sobre el bot de WhatsApp, inyectando frases de intención variada (texto formal, audios informales, modismos) para validar la precisión del reconocimiento de lenguaje natural y la correcta emisión de enlaces de pago automatizados.
+    \item \textbf{Motor predictivo (Machine Learning):} Evaluación de precisión del algoritmo de detección de morosidad utilizando datasets históricos de prueba, asegurando que las predicciones de riesgo de fuga superen el umbral estadístico de aceptación.
+    \item \textbf{Validación Smart Access (TOTP):} Comprobación del algoritmo de generación de códigos QR dinámicos. Cuando esta funcionalidad sea agregada al producto en futuras versiones, se evaluará que los tokens generados de forma 100\% offline por la aplicación móvil coincidan de manera unívoca con la semilla criptográfica validada por el simulador del molinete.
+\end{itemize}
+
+\newpage
+
+\subsection{Pruebas no funcionales}
+
+\begin{itemize}
+    \item \textbf{Rendimiento y estrés} Dado el riesgo operativo detectado para los días de partido, se utilizarán herramientas para simular picos extremos de tráfico simultáneo sobre los servidores, asegurando que el sistema no sufra tiempos de inactividad, o que estos sean lo menor posible.
+    \item \textbf{Seguridad y ciberseguridad:} Verificación del cifrado de datos en reposo y en tránsito, protección contra inyecciones SQL/XSS, y un manejo altamente segurizado de la información personal de los socios y de las credenciales de pago.
+    \item \textbf{Compatibilidad:} Comprobación del correcto funcionamiento de la PWA en diversos sistemas operativos móviles (iOS, Android) y del Dashboard en los navegadores web de uso corporativo más extendidos.
+\end{itemize}
+
+\subsection{Validación con usuarios}
+
+En concordancia con el modelo de \textit{Early Adopters} planteado para la Fase 1, se realizará una etapa de validación participativa directamente en las instalaciones de los clubes de ascenso:
+
+\begin{itemize}
+    \item \textbf{Pruebas de usabilidad (\textit{UX Testing}):} Observación directa del personal administrativo del club interactuando con el Dashboard B2B para identificar fricciones operativas y medir la curva de aprendizaje real.
+    \item \textbf{Encuestas y retroalimentación:} Recolección estructurada de \textit{feedback} cualitativo respecto a la percepción de la nueva herramienta por parte de los dirigentes y los socios beta-testers, lo cual servirá de insumo crítico para la priorización del backlog en las versiones subsiguientes.
+\end{itemize}

@@ -6,3 +6,6 @@ Ascencio
 Ghosn
 Zielonka
 Service
+backlog
+semiautomatizadas
+Incepción

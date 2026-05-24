@@ -1,2 +1,45 @@
 \section{Plan de actividades}
-..
+
+En este apartado se describe el plan operativo y cronológico necesario para llevar a cabo la construcción de la plataforma \textbf{SocioUnido}. El proceso se regirá por la metodología ágil Scrum descrita en secciones anteriores, adaptada específicamente a las necesidades de un equipo académico de cuatro integrantes y a los requerimientos de validación de la cátedra.
+
+\subsection{Fases de construcción del producto}
+
+El ciclo de vida del desarrollo se estructurará en fases incrementales, orientadas a la entrega temprana de valor y a la mitigación de riesgos técnicos:
+
+\begin{enumerate}
+    \item \textbf{Fase de incepción y relevamiento:} Consistirá en la definición exhaustiva de la visión del producto. Se utilizarán técnicas como \textit{User Story Mapping} para simular los recorridos de los distintos actores (socios, tesoreros, personal de accesos) y delimitar las funcionalidades estrictamente necesarias para el Producto Mínimo Viable (MVP).
+    \item \textbf{Fase de diseño y arquitectura:} Abarca el diseño de los prototipos de alta fidelidad (UX/UI) para minimizar la curva de aprendizaje de los usuarios administrativos, así como la definición de la arquitectura \textit{Cloud}, el modelo de base de datos relacional y los diagramas de infraestructura.
+    \item \textbf{Fase de desarrollo iterativo:} Construcción del software en \textit{Sprints} semanales, abordando en paralelo el desarrollo del \textit{Dashboard B2B}, la \textit{App/PWA} del socio, el \textit{Motor Predictivo} y el entrenamiento del bot de \textit{WhatsApp} con NLP.
+    \item \textbf{Fase de estabilización y calidad:} Ejecución exhaustiva del plan de pruebas (unitarias, de integración y E2E), pruebas de estrés simulando la concurrencia de días de partido y validación del algoritmo criptográfico del \textit{Smart Access} (TOTP).
+    \item \textbf{Fase de despliegue y beta testing:} Puesta en producción del sistema en entornos reales (\textit{Early Adopters}), recolección de retroalimentación cualitativa (\textit{UAT}) y ajustes finales de estabilización.
+\end{enumerate}
+
+\subsection{Gestión de la metodología y el proyecto}
+
+Para asegurar el éxito del proyecto, las prácticas metodológicas se gestionarán bajo los siguientes lineamientos:
+
+\begin{itemize}
+    \item \textbf{Gestión del alcance y estimaciones:} Las funcionalidades detectadas alimentarán un \textit{Product Backlog} dinámico. Cada tarea o historia de usuario será evaluada y estimada por el equipo (utilizando técnicas como \textit{Planning Poker} o asignación de \textit{Story Points}) considerando su complejidad. Las tareas que no aporten valor directo al objetivo de cada Sprint podrán ser subdivididas, pospuestas o eliminadas.
+    \item \textbf{Tiempos e hitos de avance:} El avance se medirá mediante hitos concretos. Los principales hitos definidos por el momento son:
+    \begin{itemize}
+        \item Aprobación del diseño arquitectónico.
+        \item Despliegue del MVP funcional del Dashboard B2B.
+        \item Despliegue del MVP funcional de la App Móvil.
+        \item Integración con los módulos de pago, y el bot NLP.
+        \item Redacción de la documentación final a entregar.
+        \item Entrega y defensa del Trabajo Profesional.
+    \end{itemize}
+    \newpage
+    \item \textbf{Calidad, riesgos e indicadores:} Se realizará un monitoreo continuo de la matriz de riesgos definida. La calidad del proceso se medirá a través de la velocidad del equipo (\textit{Velocity}), mientras que la calidad del producto se garantizará mediante la ejecución de \textit{pipelines} de Integración Continua (CI/CD) y el monitoreo de la densidad de \textit{bugs}.
+    \item \textbf{Reuniones y comunicación:} A nivel interno, el equipo mantendrá sincronizaciones periódicas para evaluar bloqueos (\textit{Daily Stand-ups} adaptadas) y ceremonias de planificación y retrospectiva al inicio y fin de cada \textit{Sprint}. A nivel externo (interesados), se mantendrán reuniones semanales de seguimiento y revisión con el Tutor y Cotutor para validar el rumbo del proyecto.
+\end{itemize}
+
+\subsection{Documentación del sistema}
+
+Dada la complejidad técnica de SocioUnido y su naturaleza como Trabajo Profesional de Ingeniería, se hace especial hincapié en la generación de documentación exhaustiva y mantenible. Se definen tres ejes documentales que acompañarán cada entrega:
+
+\begin{itemize}
+    \item \textbf{Documentación técnica y de diseño:} Incluirá los diagramas de arquitectura (UML, diagramas de despliegue, entidad-relación), la especificación de las APIs RESTful (utilizando estándares como \textit{Swagger} u \textit{OpenAPI}), y de los modelos de \textit{Machine Learning}.
+    \item \textbf{Documentación funcional:} Manuales de usuario y guías operativas orientadas al personal administrativo de los clubes y directivos, detallando los flujos de gestión de socios, control de accesos y lectura de métricas financieras.
+    \item \textbf{Artefactos de gestión y comunicación:} Se redactarán \textit{bitácoras semanales} para dejar registro formal de todos los encuentros con los tutores, detallando las decisiones arquitectónicas tomadas, los puntos de acción acordados y el estado de avance respecto al cronograma.
+\end{itemize}

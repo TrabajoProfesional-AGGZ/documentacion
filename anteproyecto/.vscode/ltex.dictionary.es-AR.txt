@@ -29,3 +29,7 @@ Setup
 Fee
 comarketing
 cloud
+Ascencio
+Zielonka
+Ghosn
+QA

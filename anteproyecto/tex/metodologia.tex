@@ -1,2 +1,84 @@
 \section{Metodología}
-..
+
+Para el desarrollo de la plataforma \textbf{SocioUnido}, se adoptará una metodología de trabajo ágil basada en el marco de trabajo \textit{Scrum}. Este enfoque permite un avance iterativo e incremental, garantizando la adaptabilidad frente a cambios en los requerimientos y facilitando la entrega continua de valor a las instituciones deportivas.
+
+\subsection{Roles y modalidad de trabajo}
+
+La estructura organizativa del proyecto estará conformada por los siguientes roles:
+
+\begin{itemize}
+    \item \textbf{Equipo de desarrollo (Estudiantes - Grupo 196):} Responsables de la ejecución integral del proyecto, abarcando el relevamiento, diseño arquitectónico, implementación de código, pruebas de calidad y redacción de la documentación técnica y funcional.
+    \item \textbf{Tutor (Mg. Ing. Gabriel Piñeiro):} Actuará como supervisor, evaluador y guía metodológico durante todo el ciclo de vida del producto.
+    \item \textbf{Cotutor (Ing. Agustín Perrota):} Actuará como supervisor, evaluador y guía metodológico durante todo el ciclo de vida del producto.
+\end{itemize}
+
+Para asegurar la correcta comunicación y trazabilidad, se mantendrá una cadencia de reuniones semanales con el objetivo de evaluar los avances, realizar presentaciones de los entregables y revisar el análisis de negocio subyacente. Adicionalmente, se generarán bitácoras semanales, constituyendo un artefacto formal para el registro de las decisiones y puntos de acción tomados.
+
+\subsubsection{Estructura organizativa y distribución de roles de los integrantes del grupo}
+
+Con el propósito de garantizar un estándar elevado de cumplimiento y establecer puntos de validación específicos para cada una de las dimensiones estratégicas y técnicas del proyecto, se ha definido una estructura organizativa basada en la asignación de responsabilidades principales (\textit{ownership}). Si bien la totalidad de los cuatro integrantes del equipo se encuentra involucrada de forma transversal en todas las fases del ciclo de vida del desarrollo —comprendiendo la programación, el relevamiento inicial y el diseño arquitectónico—, la designación de un responsable por área asegura que cada entregable cuente con una supervisión y auditoría interna rigurosa antes de su validación final.
+
+A continuación, se detalla la distribución inicial de los roles y las competencias asignadas a cada uno de los integrantes del grupo de trabajo, con base en sus experiencias previas y preferencias de trabajo:
+
+\begin{itemize}
+    \item \textbf{Ghosn, Lautaro Gabriel — Responsable de arquitectura, producto, integraciones y relaciones institucionales}
+    \begin{itemize}
+        \item \textit{Alcance:} Lidera el diseño estructural del sistema, la definición del alcance funcional del producto y la interoperabilidad con plataformas y tecnologías externas. Además de gestionar los vínculos formales con entidades del entorno sectorial.
+        \item \textit{Responsabilidades:} Definición de la arquitectura general basada en servicios, diseño de las interfaces de programación de aplicaciones (APIs), y gestión de la priorización del \textit{Product Backlog}. También coordina las integraciones de software y los módulos de comunicación con sistemas físicos o controladores de hardware de terceros. Adicionalmente, gestiona los contactos institucionales y de articulación con los directivos de las organizaciones cliente y colaboradoras.
+    \end{itemize}
+    
+    \newpage
+
+    \item \textbf{Zielonka, Axel — Responsable de Front-end, aplicación móvil, diseño UX/UI e identidad de Marca}
+    \begin{itemize}
+        \item \textit{Alcance:} Centraliza la implementación de las interfaces con el usuario, la experiencia de navegación e interacción, y la consistencia estética institucional del ecosistema.
+        \item \textit{Responsabilidades:} Desarrollo del \textit{Dashboard} administrativo web y de la aplicación móvil nativa o progresiva (PWA). Lidera el diseño de los prototipos y pantallas de alta fidelidad, asegurando una óptima usabilidad que minimice la curva de aprendizaje, y define las pautas visuales, logotipos y paletas de colores corporativas.
+    \end{itemize}
+    
+    \item \textbf{Guerrero, Martín  — Responsable de inteligencia artificial, bases de datos y Back-end}
+    \begin{itemize}
+        \item \textit{Alcance:} Coordina la lógica de negocio del servidor, los componentes de analítica avanzada y automatización inteligente.
+        \item \textit{Responsabilidades:} Implementación del Back-end del sistema, modelado y optimización de las bases de datos relacionales, y la seguridad lógica de los servicios. Desarrollo y calibración del motor predictivo de morosidad mediante \textit{Machine Learning} y del asistente conversacional con procesamiento de lenguaje natural (NLP).
+    \end{itemize}
+    
+    \item \textbf{Ascencio, Felipe Santino — Responsable de control de calidad (QA), documentación técnica, desarrollo de negocio y preventa}
+    \begin{itemize}
+        \item \textit{Alcance:} Custodia la calidad técnica del software, el registro metodológico del proyecto y la ejecución de la estrategia comercial de penetración de mercado.
+        \item \textit{Responsabilidades:} Planificación y ejecución de planes de prueba funcionales, automatizados y de aceptación (\textit{Testing}), y definición de los criterios de terminación (\textit{Definition of Done}). Lidera la confección de manuales, bitácoras semanales de avance y documentación técnica académica. Asimismo, se encarga de la preventa, el diseño de simuladores interactivos de retorno de inversión (ROI) y la preparación de presentaciones ejecutivas.
+    \end{itemize}
+\end{itemize}
+
+\subsection{Proceso de desarrollo y prácticas técnicas}
+
+El ciclo de vida del software se dividirá en iteraciones (Sprints) semanales. Al finalizar cada ciclo, se espera contar con un entregable intermedio o un incremento funcional de la plataforma. Para dar soporte a esta modalidad, se implementarán las siguientes herramientas y prácticas de ingeniería:
+
+\begin{itemize}
+    \item \textbf{Control de versiones:} Se utilizará \textit{Git} como sistema de control de versiones distribuido, con repositorios alojados en \textit{GitHub}. Esta herramienta gestionará el versionado de todo el código fuente, scripts de despliegue, configuraciones y documentación del proyecto.
+    \item \textbf{Gestión de tareas y calidad:} El seguimiento del proceso de desarrollo, la asignación de tickets y la gestión de incidentes (incluyendo el reporte y evaluación de criticidad de \textit{bugs}) se administrará de manera centralizada mediante una herramienta de calidad profesional (tal como \textit{Jira} o \textit{GitHub Projects}. La plataforma específica se encuentra en proceso de elección).
+    \item \textbf{Automatización (CI/CD):} Se implementarán \textit{pipelines} de Integración y Entrega Continua (\textit{Continuous Integration / Continuous Deployment}) utilizando herramientas como \textit{GitHub Actions}. Esto garantizará que las tareas de construcción del software, la ejecución de las pruebas automatizadas y el despliegue hacia los entornos de \textit{staging} o producción se realicen sin intervención manual.
+\end{itemize}
+
+\newpage
+
+\subsection{Artefactos de gestión y criterios de aceptación}
+
+El proyecto se administrará mediante un conjunto de artefactos orientados a mantener la visibilidad sobre el alcance, los tiempos y los costos:
+
+\begin{itemize}
+    \item \textbf{Alcance y Backlog:} La priorización de requerimientos se documentará en un \textit{Product Backlog}, dividiendo el alcance en los módulos principales de la plataforma (Dashboard B2B, App/PWA del Socio, y Módulos de Alta Concurrencia).
+    \item \textbf{Métricas e indicadores:} Se medirán de forma continua indicadores de calidad del proceso, tales como la velocidad del equipo (\textit{Sprint Velocity}), el tiempo de entrega (\textit{Lead Time}) y la densidad de defectos en el código. Para el seguimiento de tiempos y costos asociados al esfuerzo de desarrollo, se emplearán gráficos de trabajo pendiente (\textit{Por ejemplo, Burndown Charts}).
+    \item \textbf{Criterios de aceptación:} Cada funcionalidad, historia de usuario o corrección de error deberá cumplir con criterios de aceptación rigurosos y previamente definidos. Como estándar mínimo de la \textit{Definition of Done} (Definición de Terminado), se exigirá que el código apruebe todas las pruebas funcionales, supere las pruebas de aceptación y se integre sin generar regresiones en el sistema principal.
+\end{itemize}
+
+Si bien todos los criterios a seguir en este apartado se encuentran totalmente definidos; las plataformas/gráficas específicas para representar estos puntos todavía se encuentran en proceso de elección.
+
+\subsection{Gestión de riesgos iniciales}
+
+Como en todo proyecto de ingeniería de software con impacto en hardware de terceros y entornos masivos, se ha elaborado una lista preliminar de riesgos que serán monitoreados activamente:
+
+\begin{enumerate}
+    \item \textbf{Riesgo operativo (Conectividad crítica):} Posible interrupción en la validación de accesos debido a la saturación extrema de las redes de telefonía móvil (4G/5G) durante los días de partido. (Este riesgo se mitiga desde el diseño arquitectónico mediante la implementación del protocolo offline \textit{TOTP - Smart Access}).
+    \item \textbf{Riesgo institucional (Resistencia al cambio):} Retrasos en la adopción del sistema a causa del fuerte arraigo a las herramientas tradicionales (planillas impresas) por parte del personal administrativo de los clubes de ascenso.
+    \item \textbf{Riesgo de alcance (Módulos NLP):} Subestimación del tiempo e iteraciones requeridas para entrenar y calibrar correctamente el Asistente Transaccional de WhatsApp de forma tal que logre interpretar con éxito el lenguaje natural e informal de los socios.
+    \item \textbf{Riesgo tecnológico (Integración física):} Complejidad o falta de interfaces compatibles (\textit{APIs/SDKs}) al intentar conectar la lógica de SocioUnido con los controladores heredados de los molinetes físicos existentes en los estadios. \textbf{De nuevo se aclara que esta funcionalidad no está contemplada para el primer MVP del producto, pero sí definida para iteraciones futuras del mismo.}
+\end{enumerate}

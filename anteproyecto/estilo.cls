@@ -119,7 +119,7 @@
         \hline
         \textbf{Ascencio, Felipe Santino} & fascencio@fi.uba.ar & 110675 \\
         \textbf{Ghosn, Lautaro Gabriel}   & lghosn@fi.uba.ar    & 106998 \\
-        \textbf{Guerrero, Martin}         & mguerrero@fi.uba.ar & 107774 \\
+        \textbf{Guerrero, Martín}         & mguerrero@fi.uba.ar & 107774 \\
         \textbf{Zielonka, Axel}           & azielonka@fi.uba.ar & 110310 \\
     \end{tabular}
 \end{center}

@@ -1,2 +1,29 @@
-\section{Solución Propuesta}
-..
+\section{Solución propuesta}
+
+La solución propuesta es \textbf{SocioUnido}, una plataforma \textit{Software as a Service} (SaaS) con enfoque B2B que centraliza la gestión administrativa, financiera y social de los clubes de fútbol. El sistema actúa como un ecosistema integral que permite a las instituciones optimizar su recaudación, fidelizar a su masa societaria de manera proactiva y segurizar los accesos a los estadios mediante tecnología de vanguardia.
+
+La plataforma se estructura en torno a los siguientes componentes clave:
+
+\begin{itemize}
+    \item \textbf{Dashboard Administrativo (Web):} Panel de control integral de escritorio diseñado para la dirigencia y tesorería. Permite visualizar métricas complejas, consolidar la recaudación y gestionar campañas institucionales.
+    \item \textbf{App Móvil del Socio (PWA):} Interfaz liviana y accesible para el hincha. Provee una billetera digital que aloja el carnet dinámico, facilita el pago de cuotas y permite la reserva de espacios o servicios del club.
+    \item \textbf{App de Validación:} Aplicación móvil de uso exclusivo para el personal de seguridad y control en los accesos, optimizada para el escaneo de códigos QR a alta velocidad.
+    \item \textbf{Smart Access (Control Offline):} Módulo de seguridad perimetral basado en la generación de tokens TOTP (\textit{Time-Based One-Time Password}). Permite validar matemáticamente los accesos en escenarios de alta concurrencia sin depender de la conectividad a internet.
+    \item \textbf{Asistente Conversacional (NLP):} Integración omnicanal vía WhatsApp que procesa el lenguaje natural del usuario para resolver consultas administrativas y orquestar transacciones de pago automáticas.
+    \item \textbf{Motor Predictivo (IA y Analytics):} Subsistema estadístico que analiza el historial de pagos y asistencia para calcular el riesgo de morosidad (abandono) de cada socio, disparando alertas y campañas de retención tempranas.
+\end{itemize}
+
+\subsection*{Tecnologías a evaluar}
+
+Si bien el \textit{stack} tecnológico definitivo se encuentra actualmente en proceso de definición, las principales opciones que se están evaluando para soportar la arquitectura orientada a microservicios son:
+
+\begin{itemize}
+    \item \textbf{Frontend y Aplicaciones Móviles:} React, HTML5 y CSS3 para el desarrollo del \textit{Dashboard} Web y la \textit{Progressive Web App} (PWA) del socio. React Native para el desarrollo nativo de la App de Validación, priorizando el rendimiento en el escaneo óptico.
+    \item \textbf{Backend (Microservicios):} Lenguaje Python estructurado sobre el \textit{framework} FastAPI para los módulos de Gestión (Core), Autenticación, Pagos, NLP y Analytics. Go (Golang) para el microservicio crítico de \textit{Smart Access}, garantizando máxima velocidad de validación y manejo de concurrencia.
+    \item \textbf{API Gateway:} Adopción de KrakenD como puerta de enlace para recibir, validar mediante JWT y enrutar todas las peticiones hacia los microservicios correspondientes.
+    \item \textbf{Bases de Datos:} PostgreSQL como motor relacional principal para asegurar la integridad transaccional del padrón de socios y los historiales financieros. Redis como almacenamiento en memoria (caché) para el módulo anti-replay en los accesos. Firebase para la gestión de credenciales y roles.
+    \item \textbf{Inteligencia Artificial:} Scikit-Learn y Pandas para el modelado estadístico y tareas asíncronas de predicción de abandono (\textit{ChurnPredictionJob}); LangChain como motor NLP para el reconocimiento de intenciones en el canal conversacional.
+    \item \textbf{Integraciones de Terceros:} Implementación de SDKs para pasarelas de pago externas (ej. MercadoPago) y consumo de \textit{webhooks} públicos mediante la API oficial de WhatsApp (Meta).
+\end{itemize}
+
+Estas decisiones preliminares se encuentran estrictamente guiadas por criterios de escalabilidad, facilidad de integración modular, tolerancia a fallos en estadios y soporte a largo plazo. Cabe destacar que el diseño arquitectónico detallado planteado en esta instancia de ideación se encuentra plasmado gráficamente en el \textbf{Anexo: Modelo C4} del presente documento.

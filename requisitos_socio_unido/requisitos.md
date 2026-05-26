@@ -31,11 +31,49 @@ Los requisitos serán documentados de la siguiente forma: `<Tipo>-<Numeración>`
 **Código de Tipo**: RF
 
 
-### **SUBTIPO 1**
-**Código de Subtipo**: 
+### **Manejo de Sesiones**
+**Código de Subtipo**: MS
 
-### **SUBTIPO 2**
-**Código de Subtipo**:
+* **MS-1.0**: los usuarios deben ingresar sus credenciales para poder ingresar a la plataforma
+    * **MS-1.1**: al ingresar los datos correctamente, el usuario debe poder acceder a su cuenta y perfil.
+    * **MS-1.2**: al ingresar datos erróneos, el usuario no debe poder acceder a su cuenta y deberá reintentar.
+
+* **MS-2.0**: si se ingresaron correctamente las credenciales de usuario, el usuario debe encontrarse en la página principal de la aplicación.
+
+* **MS-3.0**: el usuario debe poder cerrar su sesión en la aplicación y salir de su cuenta. 
+
+### **Navegación**
+**Código de Subtipo**: NA
+
+* **NA-1.0**: una vez iniciada la sesión, el usuario debe poder navegar entre las opciones de la aplicación.
+
+* **NA-2.0**: el usuario debe poder siempre volver a la pantalla principal.
+
+### **Reservas**
+**Código de Subtipo**: RE
+
+* **RE-1.0**: los usuarios deben poder acceder a la sección de reservas y ver las actividades y propuestas disponibles para reservar.
+
+* **RE-2.0**: los usuarios deben poder elegir una actividad o propuesta y poder reservar su turno en la misma.
+    * **RE-2.1**: si la actividad o propuesta elegida está disponible en el horario solicitado, el usuario debe poder reservar la actividad.
+    * **RE-2.2**: si la actividad o propuesta elegida no está disponible, el usuario no debe poder reservar la misma.
+
+* **RE-3.0**: una vez realizada una reserva, la actividad debe reflejar la misma en el horario solicitado.
+    * **RE-3.1**: si la actividad o propuesta es individual, debe dejar de aparecer como disponible.
+    * **RE-3.2**: si la actividad o propuesta es con cupos, se debe actualizar la cantidad de cupos reservados.
+        * **RE-3.2.1**: al completar todos los cupos de una actividad, debe dejar de aparecer como disponible.
+
+* **RE-4.0**: el usuario debe poder ver sus reservas activas.
+
+* **RE-5.0**: el usuario debe poder cancelar una reserva activa
+    * **RE-5.1**: si el pedido sucede antes del horario de la actividad o propuesta, la cancelación es exitosa
+    * **RE-5.2**: si el pedido sucede durante el horario de la propuesta, la cancelación debe fallar.
+
+* **RE-6.0**: las reservas canceladas correctamente deben ser liberadas en la aplicación.
+    * **RE-6.1**: si es una actividad individual, debe volver a aparecer como disponible para el resto de los usuarios.
+    * **RE-6.2**: si es una actividad con cupos limitados, se debe actualizar el número de cupos reservados.
+        * **RE-6.2.1**: si la actividad tenía todos los cupos completos, debe volver a aparecer como disponible, con los cupos actualizados. 
+
 
 ## **Requisitos No Funcionales**
 **Código de Tipo**: RNF

@@ -13,7 +13,7 @@ A continuación, se presentan los diagramas correspondientes a los niveles de Co
     \centering
     % Nota: Las comillas en el nombre del archivo evitan errores de compilación por los espacios
     \includegraphics[width=\textwidth]{img/c4_model/C4 Nivel 1.png}
-    \caption{Diagrama C4 nivel 1: Contexto del sistema. Interacción de la plataforma SocioUnido con los distintos actores (Socios, Dirigencia, Personal de Control) y sistemas externos (Pasarela de Pagos, API de WhatsApp).}
+    \caption{Diagrama C4 nivel 1: Contexto del sistema. Interacción de la plataforma SocioUnido con los distintos actores (Socios, Dirigencia, Personal de Control) y sistemas externos (Pasarela de Pagos, Interfaz de Programación de Aplicaciones [API] de WhatsApp).}
     \label{fig:c4_nivel1}
 \end{figure}
 
@@ -25,7 +25,7 @@ A continuación, se presentan los diagramas correspondientes a los niveles de Co
 \begin{figure}[h!]
     \centering
     \includegraphics[width=\textwidth]{img/c4_model/C4 Nivel 2.png}
-    \caption{Diagrama C4 nivel 2: Contenedores. Vista de alto nivel de las aplicaciones web, móviles, bases de datos y la arquitectura basada en microservicios detrás del API Gateway.}
+    \caption{Diagrama C4 nivel 2: Contenedores. Vista de alto nivel de las aplicaciones web, móviles, bases de datos y la arquitectura basada en microservicios detrás de la puerta de enlace de API (API Gateway).}
     \label{fig:c4_nivel2}
 \end{figure}
 
@@ -37,7 +37,7 @@ A continuación, se presentan los diagramas correspondientes a los niveles de Co
 \begin{figure}[h!]
     \centering
     \includegraphics[width=\textwidth]{img/c4_model/C4 Nivel 3-MS Gestion.png}
-    \caption{Diagrama C4 nivel 3: Componentes (Microservicio de gestión societaria). Detalle del MS Core encargado del CRUD de usuarios, perfiles y reglas de negocio del padrón societario.}
+    \caption{Diagrama C4 nivel 3: Componentes (Microservicio de gestión societaria). Detalle del microservicio principal encargado de la creación, lectura, actualización y borrado (CRUD) de usuarios, perfiles y reglas de negocio del padrón societario.}
     \label{fig:c4_nivel3_gestion}
 \end{figure}
 
@@ -45,7 +45,7 @@ A continuación, se presentan los diagramas correspondientes a los niveles de Co
 \begin{figure}[h!]
     \centering
     \includegraphics[width=\textwidth]{img/c4_model/C4 Nivel 3-MS NLP.png}
-    \caption{Diagrama C4 nivel 3: Componentes (Microservicio NLP). Detalle del motor de procesamiento de lenguaje natural integrado vía Webhook con la API de WhatsApp para la atención automatizada.}
+    \caption{Diagrama C4 nivel 3: Componentes (Microservicio de Procesamiento de Lenguaje Natural [PLN]). Detalle del motor de procesamiento de lenguaje natural integrado vía retrollamada web (Webhook) con la API de WhatsApp para la atención automatizada.}
     \label{fig:c4_nivel3_nlp}
 \end{figure}
 
@@ -63,7 +63,7 @@ A continuación, se presentan los diagramas correspondientes a los niveles de Co
 \begin{figure}[h!]
     \centering
     \includegraphics[width=\textwidth]{img/c4_model/C4 Nivel 3-MS Smart Access.png}
-    \caption{Diagrama C4 nivel 3: Componentes (Microservicio Smart Access). Lógica interna de validación matemática y offline (TOTP) para el control de acceso en estadios.}
+    \caption{Diagrama C4 nivel 3: Componentes (Microservicio de Acceso Inteligente). Lógica interna de validación matemática y fuera de línea (offline) mediante contraseñas de un solo uso basadas en el tiempo (TOTP) para el control de acceso en estadios.}
     \label{fig:c4_nivel3_smartaccess}
 \end{figure}
 
@@ -75,14 +75,14 @@ A continuación, se presentan los diagramas correspondientes a los niveles de Co
     
     % Primero: Componentes (MS Auth)
     \includegraphics[width=0.99\textwidth]{img/c4_model/C4 Nivel 3-MS Auth.png}
-    \caption{Diagrama C4 nivel 3: Componentes (Microservicio de autenticación). Sistema centralizado para el manejo de identidades, validación de credenciales y generación de tokens JWT.}
+    \caption{Diagrama C4 nivel 3: Componentes (Microservicio de autenticación). Sistema centralizado para el manejo de identidades, validación de credenciales y generación de vales web JSON (Tokens JWT).}
     \label{fig:c4_nivel3_auth}
     
     \vspace{0.6cm} % Espacio vertical de separación entre ambos cuadros
 
     % Segundo: Componentes (MS Analytics & AI)
     \includegraphics[width=0.99\textwidth]{img/c4_model/C4 Nivel 3-MS Analytics & AI.png}
-    \caption{Diagrama C4 nivel 3: Componentes (Microservicio de analytics e inteligencia artificial). Orquestación de tareas asíncronas y motor de \textit{Machine Learning} para la predicción de riesgo de morosidad.}
+    \caption{Diagrama C4 nivel 3: Componentes (Microservicio de analítica e inteligencia artificial). Orquestación de tareas asíncronas y motor de \textit{aprendizaje automático (Machine Learning)} para la predicción de riesgo de morosidad.}
     \label{fig:c4_nivel3_analytics}
 \end{figure}
 
@@ -90,9 +90,9 @@ A continuación, se presentan los diagramas correspondientes a los niveles de Co
 
 \subsection{Anexo B: Clubes y socios en el fútbol argentino}
 
-Este documento sirve como registro y base de datos para el cálculo de los \textit{Setup Fees} y las suscripciones mensuales de \textbf{SocioUnido}, los cuales escalan de forma proporcional en base a la cantidad de socios a digitalizar y migrar a la plataforma.
+Este documento sirve como registro y base de datos para el cálculo de los \textit{costos de configuración (Setup Fees)} y las suscripciones mensuales de \textbf{SocioUnido}, los cuales escalan de forma proporcional en base a la cantidad de socios a digitalizar y migrar a la plataforma.
 
-\paragraph{Nota Metodológica:} Los datos correspondientes a la Liga Profesional reflejan los números oficiales publicados en el último \textit{Informe de Clubes de la AFA}. Los números de las categorías de ascenso representan estimaciones de mercado utilizadas para el modelado de la estrategia de penetración (\textit{Go-To-Market}) de nuestra Fase 1.
+\paragraph{Nota Metodológica:} Los datos correspondientes a la Liga Profesional reflejan los números oficiales publicados en el último \textit{Informe de Clubes de la AFA}. Los números de las categorías de ascenso representan estimaciones de mercado utilizadas para el modelado de la estrategia de lanzamiento al mercado (\textit{Go-To-Market}) de nuestra Fase 1.
 
 \subsubsection{1° Nivel: Liga Profesional (Fase 2 - Escalamiento)}
 
@@ -196,7 +196,7 @@ Equipos con convocatorias masivas en el interior del país y Gran Buenos Aires. 
 
 \newpage
 
-\subsubsection{3° Nivel: Primera B Metropolitana (Fase 1 - Go To Market)}
+\subsubsection{3° Nivel: Primera B Metropolitana (Fase 1 - Lanzamiento al mercado)}
 
 \begin{table}[h!]
 \centering
@@ -235,7 +235,7 @@ Equipos con convocatorias masivas en el interior del país y Gran Buenos Aires. 
 
 \newpage
 
-\subsubsection{4° Nivel: Torneo Federal A (Fase 1 - Go To Market)}
+\subsubsection{4° Nivel: Torneo Federal A (Fase 1 - Lanzamiento al mercado)}
 
 \begin{table}[h!]
 \centering
@@ -289,7 +289,7 @@ Equipos con convocatorias masivas en el interior del país y Gran Buenos Aires. 
 
 \newpage
 
-\subsubsection{5° Nivel: Primera C (Fase 1 - Go To Market)}
+\subsubsection{5° Nivel: Primera C (Fase 1 - Lanzamiento al mercado)}
 
 \begin{table}[h!]
 \centering
@@ -349,8 +349,8 @@ Las siguientes siete propuestas fueron descartadas en la etapa temprana de valid
 
 \begin{itemize}
     \item \textbf{ScoreMaster (Promedios 2.0)} 
-    \newline \textit{Necesidad:} Las plataformas de seguimiento deportivo actuales presentan problemas críticos de rendimiento y UX obsoleta. 
-    \newline \textit{Solución:} Desarrollo de una plataforma web/móvil optimizada para datos en tiempo real mediante WebSockets, incorporando Inteligencia Artificial (NLP) para generar resúmenes automáticos de las jornadas deportivas.
+    \newline \textit{Necesidad:} Las plataformas de seguimiento deportivo actuales presentan problemas críticos de rendimiento y una experiencia de usuario (UX) obsoleta. 
+    \newline \textit{Solución:} Desarrollo de una plataforma web/móvil optimizada para datos en tiempo real mediante WebSockets, incorporando Inteligencia Artificial (PLN [Procesamiento de Lenguaje Natural]) para generar resúmenes automáticos de las jornadas deportivas.
     
     \item \textbf{AeroGuard}
     \newline \textit{Necesidad:} Riesgo latente de incursiones y colisiones en pistas de aeropuertos por errores de mando o vehículos no autorizados.
@@ -358,23 +358,23 @@ Las siguientes siete propuestas fueron descartadas en la etapa temprana de valid
     
     \item \textbf{SkyDictate}
     \newline \textit{Necesidad:} Errores humanos de comunicación por radio entre la torre de control y los pilotos, derivando en quiebres de separación aérea.
-    \newline \textit{Solución:} Software de auditoría en tiempo real que transcribe (Speech-to-Text) y valida las instrucciones del controlador contra las normativas de altura, emitiendo alertas previas a la ejecución de maniobras peligrosas.
+    \newline \textit{Solución:} Software de auditoría en tiempo real que transcribe (conversión de voz a texto [Speech-to-Text]) y valida las instrucciones del controlador contra las normativas de altura, emitiendo alertas previas a la ejecución de maniobras peligrosas.
 
     \item \textbf{AutoCare}
     \newline \textit{Necesidad:} El mantenimiento automotriz suele ser puramente reactivo y desorganizado, reduciendo la vida útil del vehículo.
-    \newline \textit{Solución:} Ecosistema preventivo que utiliza Inteligencia Artificial (OCR) para leer facturas de taller, digitalizar el historial del vehículo y cruzarlo con el manual del fabricante para predecir cuándo fallarán los repuestos.
+    \newline \textit{Solución:} Ecosistema preventivo que utiliza Inteligencia Artificial (reconocimiento óptico de caracteres [OCR]) para leer facturas de taller, digitalizar el historial del vehículo y cruzarlo con el manual del fabricante para predecir cuándo fallarán los repuestos.
 
     \item \textbf{NutriPlan}
     \newline \textit{Necesidad:} Frustración al planificar comidas que equilibren gustos, presupuesto, restricciones médicas y desgaste físico.
-    \newline \textit{Solución:} Plataforma que cruza las preferencias del usuario, intolerancias y nivel de actividad (vía \textit{wearables}), utilizando IA adaptativa para generar un menú semanal hiper-personalizado y seguro.
+    \newline \textit{Solución:} Plataforma que cruza las preferencias del usuario, intolerancias y nivel de actividad (vía \textit{dispositivos vestibles [wearables]}), utilizando IA adaptativa para generar un menú semanal hiper-personalizado y seguro.
 
     \item \textbf{ServiHogar}
     \newline \textit{Necesidad:} Dificultad histórica, especialmente en adultos mayores, para encontrar profesionales de oficios (plomeros, electricistas) confiables.
-    \newline \textit{Solución:} Marketplace bidireccional con un enfoque de accesibilidad extrema (alta legibilidad, comandos de voz) y modelos de IA predictiva que estiman rangos de precios justos al describir el problema.
+    \newline \textit{Solución:} Mercado digital (Marketplace) bidireccional con un enfoque de accesibilidad extrema (alta legibilidad, comandos de voz) y modelos de IA predictiva que estiman rangos de precios justos al describir el problema.
 
     \item \textbf{MarketScout}
     \newline \textit{Necesidad:} Tareas tediosas al comparar precios y promociones bancarias a través de múltiples supermercados online.
-    \newline \textit{Solución:} Motor unificador de catálogos donde el usuario arma un único carrito y la IA (mediante \textit{scraping} y normalización) le indica en qué cadena resulta más barato efectuar la compra total o dividida.
+    \newline \textit{Solución:} Motor unificador de catálogos donde el usuario arma un único carrito y la IA (mediante \textit{extracción de datos [scraping]} y normalización) le indica en qué cadena resulta más barato efectuar la compra total o dividida.
 \end{itemize}
 
 \newpage
@@ -387,8 +387,8 @@ Las siguientes siete propuestas fueron descartadas en la etapa temprana de valid
 \paragraph{1. CryptoWealth: Gestión integral de activos digitales}
 
 \begin{itemize}
-    \item \textbf{Necesidad:} Fragmentación patrimonial al tener criptomonedas y acciones distribuidas en múltiples exchanges y brokers.
-    \item \textbf{Solución:} Plataforma centralizada que consolida activos y utiliza NLP para hacer un \textit{Sentiment Analysis} de las noticias financieras, prediciendo movimientos del mercado.
+    \item \textbf{Necesidad:} Fragmentación patrimonial al tener criptomonedas y acciones distribuidas en múltiples plataformas de intercambio (exchanges) y corredores de bolsa (brokers).
+    \item \textbf{Solución:} Plataforma centralizada que consolida activos y utiliza PLN para hacer un \textit{análisis de sentimiento (Sentiment Analysis)} de las noticias financieras, prediciendo movimientos del mercado.
 \end{itemize}
 
 % TABLAS 5C CRYPTOWEALTH
@@ -399,7 +399,7 @@ Las siguientes siete propuestas fueron descartadas en la etapa temprana de valid
 \hline
 \rowcolor{blue!20} \multicolumn{1}{|c|}{\textbf{COMPAÑÍA}} \\ \hline
 \rowcolor{blue!10} \multicolumn{1}{|c|}{\textbf{Descripción}} \\ \hline
-Empresa FinTech que ofrece una plataforma centralizada en la nube para gestión de activos. Incorpora IA basada en NLP para anticipar movimientos del mercado. \\ \hline
+Empresa de tecnología financiera (FinTech) que ofrece una plataforma centralizada en la nube para gestión de activos. Incorpora IA basada en PLN para anticipar movimientos del mercado. \\ \hline
 \rowcolor{blue!10} \multicolumn{1}{|c|}{\textbf{Visión}} \\ \hline
 Convertirse en el estándar global de gestión patrimonial digital, eliminando la fragmentación entre cripto y finanzas tradicionales. \\ \hline
 \rowcolor{blue!10} \multicolumn{1}{|c|}{\textbf{Misión}} \\ \hline
@@ -413,8 +413,8 @@ Brindando herramientas predictivas que permitan tomar decisiones informadas opti
 \begin{tabularx}{\textwidth}{|X|}
 \hline
 \rowcolor{cyan!20} \multicolumn{1}{|c|}{\textbf{CLIENTES}} \\ \hline
-\textbf{B2C:} Inversores retail, jóvenes nativos digitales e inversores avanzados con carteras diversificadas.\\
-\textbf{B2B:} Asesores financieros, \textit{Family Offices} y pequeños fondos de inversión que necesitan reportar múltiples clientes. \\ \hline
+\textbf{B2C (Empresa a Consumidor):} Inversores minoristas (retail), jóvenes nativos digitales e inversores avanzados con carteras diversificadas.\\
+\textbf{B2B (Empresa a Empresa):} Asesores financieros, \textit{oficinas familiares (Family Offices)} y pequeños fondos de inversión que necesitan reportar múltiples clientes. \\ \hline
 \end{tabularx}
 \end{table}
 
@@ -424,7 +424,7 @@ Brindando herramientas predictivas que permitan tomar decisiones informadas opti
 \begin{tabularx}{\textwidth}{|X|}
 \hline
 \rowcolor{green!20} \multicolumn{1}{|c|}{\textbf{COLABORADORES}} \\ \hline
-Proveedores \textit{Cloud}, APIs de cotización (CoinGecko, Yahoo Finance), agregadores de noticias (Bloomberg) y entidades regulatorias (CNV/UIF). \\ \hline
+Proveedores en la nube (\textit{Cloud}), interfaces de programación de aplicaciones (APIs) de cotización (CoinGecko, Yahoo Finance), agregadores de noticias (Bloomberg) y entidades regulatorias (CNV/UIF). \\ \hline
 \end{tabularx}
 \end{table}
 
@@ -434,7 +434,7 @@ Proveedores \textit{Cloud}, APIs de cotización (CoinGecko, Yahoo Finance), agre
 \begin{tabularx}{\textwidth}{|X|}
 \hline
 \rowcolor{orange!20} \multicolumn{1}{|c|}{\textbf{COMPETIDORES}} \\ \hline
-Portfolio trackers (CoinStats, Delta), plataformas propietarias de exchanges (Binance, eToro), y el status quo: planillas de cálculo (Excel). \\ \hline
+Seguidores de portafolio (Portfolio trackers como CoinStats, Delta), plataformas propietarias de plataformas de intercambio (exchanges como Binance, eToro), y el estado actual (\textit{status quo}): planillas de cálculo (Excel). \\ \hline
 \end{tabularx}
 \end{table}
 
@@ -469,7 +469,7 @@ Portfolio trackers (CoinStats, Delta), plataformas propietarias de exchanges (Bi
 \hline
 \rowcolor{blue!20} \multicolumn{1}{|c|}{\textbf{COMPAÑÍA}} \\ \hline
 \rowcolor{blue!10} \multicolumn{1}{|c|}{\textbf{Descripción}} \\ \hline
-Empresa \textit{HealthTech} enfocada en resolver la fragmentación clínica digitalizando historias médicas y optimizando agendas mediante IA. \\ \hline
+Empresa de tecnología de la salud (\textit{HealthTech}) enfocada en resolver la fragmentación clínica digitalizando historias médicas y optimizando agendas mediante IA. \\ \hline
 \rowcolor{blue!10} \multicolumn{1}{|c|}{\textbf{Visión}} \\ \hline
 Ser el estándar de interoperabilidad clínica garantizando una atención fluida y sin burocracia. \\ \hline
 \rowcolor{blue!10} \multicolumn{1}{|c|}{\textbf{Misión}} \\ \hline
@@ -494,7 +494,7 @@ Brindando herramientas tecnológicas que eliminen la pérdida de datos y el ause
 \begin{tabularx}{\textwidth}{|X|}
 \hline
 \rowcolor{green!20} \multicolumn{1}{|c|}{\textbf{COLABORADORES}} \\ \hline
-Proveedores \textit{Cloud} (Alta seguridad), integradores de pago, Obras Sociales, y Ministerios de Salud para firmas electrónicas. \\ \hline
+Proveedores en la nube (\textit{Cloud} de alta seguridad), integradores de pago, Obras Sociales, y Ministerios de Salud para firmas electrónicas. \\ \hline
 \end{tabularx}
 \end{table}
 
@@ -528,7 +528,7 @@ Software médico directo (Doctoralia, Omnia), sistemas cerrados de grandes hospi
 \paragraph{3. SmartPantry: Inventario gastronómico inteligente}
 \begin{itemize}
     \item \textbf{Necesidad:} Desperdicio constante de insumos perecederos en restaurantes y hogares debido al mal manejo del stock y caducidad.
-    \item \textbf{Solución:} Motor de inventario dinámico que cruza fechas de vencimiento con LLMs para sugerir recetas y evitar mermas financieras.
+    \item \textbf{Solución:} Motor de inventario dinámico que cruza fechas de vencimiento con modelos de lenguaje de gran tamaño (LLMs) para sugerir recetas y evitar mermas financieras.
 \end{itemize}
 
 % TABLAS 5C SMARTPANTRY
@@ -539,7 +539,7 @@ Software médico directo (Doctoralia, Omnia), sistemas cerrados de grandes hospi
 \hline
 \rowcolor{blue!20} \multicolumn{1}{|c|}{\textbf{COMPAÑÍA}} \\ \hline
 \rowcolor{blue!10} \multicolumn{1}{|c|}{\textbf{Descripción}} \\ \hline
-Startup \textit{FoodTech} que utiliza IA para priorizar el consumo de alimentos en base a fechas de caducidad, minimizando el desperdicio. \\ \hline
+Empresa emergente (\textit{Startup}) de tecnología alimentaria (\textit{FoodTech}) que utiliza IA para priorizar el consumo de alimentos en base a fechas de caducidad, minimizando el desperdicio. \\ \hline
 \rowcolor{blue!10} \multicolumn{1}{|c|}{\textbf{Visión}} \\ \hline
 Liderar la gestión inteligente de inventarios gastronómicos en LATAM para hacer la industria más sostenible. \\ \hline
 \rowcolor{blue!10} \multicolumn{1}{|c|}{\textbf{Misión}} \\ \hline
@@ -574,7 +574,7 @@ Proveedores de alimentos, escuelas de gastronomía (para validar recetas de la I
 \begin{tabularx}{\textwidth}{|X|}
 \hline
 \rowcolor{orange!20} \multicolumn{1}{|c|}{\textbf{COMPETIDORES}} \\ \hline
-Sistemas ERP genéricos, apps de recetas estándar, e inventarios en Excel. \\ \hline
+Sistemas de planificación de recursos empresariales (ERP) genéricos, aplicaciones (apps) de recetas estándar, e inventarios en Excel. \\ \hline
 \end{tabularx}
 \end{table}
 
@@ -600,11 +600,11 @@ Sistemas ERP genéricos, apps de recetas estándar, e inventarios en Excel. \\ \
 % ==========================================
 \subsubsection{Nivel 3: Propuestas con análisis de negocio y marketing (5 C y 4 P)}
 
-\paragraph{1. DevQuest: Gamificación de onboarding IT}
+\paragraph{1. DevQuest: Gamificación de la inducción en TI (onboarding de Tecnología de la Información)}
 
 \begin{itemize}
-    \item \textbf{Necesidad:} Cuellos de botella formativos al ingresar un nuevo desarrollador a una empresa, ralentizando la productividad de los Seniors.
-    \item \textbf{Solución:} Plataforma SaaS que transforma la inducción en un \textbf{árbol de habilidades} gamificado, revisando código estático con IA y resolviendo dudas del código legado mediante un Bot RAG.
+    \item \textbf{Necesidad:} Cuellos de botella formativos al ingresar un nuevo desarrollador a una empresa, ralentizando la productividad de los desarrolladores experimentados (Seniors).
+    \item \textbf{Solución:} Plataforma de software como servicio (SaaS) que transforma la inducción en un \textbf{árbol de habilidades} gamificado, revisando código estático con IA y resolviendo dudas del código legado mediante un bot de generación aumentada por recuperación (RAG).
 \end{itemize}
 
 % TABLAS 5C DEVQUEST
@@ -615,11 +615,11 @@ Sistemas ERP genéricos, apps de recetas estándar, e inventarios en Excel. \\ \
 \hline
 \rowcolor{blue!20} \multicolumn{1}{|c|}{\textbf{COMPAÑÍA}} \\ \hline
 \rowcolor{blue!10} \multicolumn{1}{|c|}{\textbf{Descripción}} \\ \hline
-Startup de HR-Tech que reduce la carga sobre los líderes técnicos acelerando la inducción mediante gamificación y RAG. \\ \hline
+Empresa emergente de tecnología aplicada a recursos humanos (HR-Tech) que reduce la carga sobre los líderes técnicos acelerando la inducción mediante gamificación y generación aumentada por recuperación (RAG). \\ \hline
 \rowcolor{blue!10} \multicolumn{1}{|c|}{\textbf{Visión}} \\ \hline
-Erradicar la fricción en la integración de talento permitiendo productividad autónoma desde el primer día en cualquier stack. \\ \hline
+Erradicar la fricción en la integración de talento permitiendo productividad autónoma desde el primer día en cualquier conjunto de tecnologías (stack). \\ \hline
 \rowcolor{blue!10} \multicolumn{1}{|c|}{\textbf{Misión}} \\ \hline
-Digitalizando el \textit{onboarding}, liberando tiempo estratégico de las gerencias. \\ \hline
+Digitalizando la inducción (\textit{onboarding}), liberando tiempo estratégico de las gerencias. \\ \hline
 \end{tabularx}
 \end{table}
 
@@ -629,7 +629,7 @@ Digitalizando el \textit{onboarding}, liberando tiempo estratégico de las geren
 \begin{tabularx}{\textwidth}{|X|}
 \hline
 \rowcolor{cyan!20} \multicolumn{1}{|c|}{\textbf{CLIENTES}} \\ \hline
-Empresas de software (\textit{Software Factories}, Startups), CTOs y líderes técnicos (Engineering Managers). \\ \hline
+Empresas de software (fábricas de software [\textit{Software Factories}], empresas emergentes [Startups]), directores de tecnología (CTOs) y líderes técnicos (gerentes de ingeniería [Engineering Managers]). \\ \hline
 \end{tabularx}
 \end{table}
 
@@ -639,7 +639,7 @@ Empresas de software (\textit{Software Factories}, Startups), CTOs y líderes t�
 \begin{tabularx}{\textwidth}{|X|}
 \hline
 \rowcolor{green!20} \multicolumn{1}{|c|}{\textbf{COLABORADORES}} \\ \hline
-Comunidades IT, agencias de recruiting y la urgencia del mercado por adquirir talento especializado en nuevas arquitecturas. \\ \hline
+Comunidades de TI, agencias de reclutamiento (recruiting) y la urgencia del mercado por adquirir talento especializado en nuevas arquitecturas. \\ \hline
 \end{tabularx}
 \end{table}
 
@@ -649,7 +649,7 @@ Comunidades IT, agencias de recruiting y la urgencia del mercado por adquirir ta
 \begin{tabularx}{\textwidth}{|X|}
 \hline
 \rowcolor{orange!20} \multicolumn{1}{|c|}{\textbf{COMPETIDORES}} \\ \hline
-Burocracia interna (Shadowing manual en videollamadas), herramientas HR genéricas (BambooHR), y la penetración de modelos de IA generativa. \\ \hline
+Burocracia interna (acompañamiento [\textit{Shadowing}] manual en videollamadas), herramientas de recursos humanos (HR) genéricas (BambooHR), y la penetración de modelos de IA generativa. \\ \hline
 \end{tabularx}
 \end{table}
 
@@ -674,17 +674,17 @@ Burocracia interna (Shadowing manual en videollamadas), herramientas HR genéric
 
 \textbf{Análisis de las 4 P (DevQuest)}
 \begin{itemize}
-    \item \textbf{Producto:} Sistema \textit{SaaS Estándar} (con árboles pre-creados para lenguajes populares) y \textit{Proyectos Enterprise} a medida. Como ecosistema se planificó DevQuest Analytics y alianzas de certificación.
-    \item \textbf{Plaza:} Distribución 100\% B2B enfocada inicialmente en Software Factories locales (50 a 200 empleados) por su alta rotación operativa.
-    \item \textbf{Precio:} \textit{Pricing} por valor (Ahorro de horas-senior). Suscripciones recurrentes (Starter/Growth) y un cobro de capital por desarrollo en integraciones complejas (\textit{Enterprise Custom}).
-    \item \textbf{Promoción:} Tracción temprana mediante el boca a boca (\textit{Word of Mouth}) en comunidades técnicas, seguido de marketing pago B2B (LinkedIn Ads) apuntando a CTOs.
+    \item \textbf{Producto:} Sistema de \textit{software como servicio (SaaS) estándar} (con árboles pre-creados para lenguajes populares) y \textit{proyectos empresariales (Enterprise)} a medida. Como ecosistema se planificó DevQuest Analítica (Analytics) y alianzas de certificación.
+    \item \textbf{Plaza:} Distribución 100\% de empresa a empresa (B2B) enfocada inicialmente en fábricas de software (Software Factories) locales (50 a 200 empleados) por su alta rotación operativa.
+    \item \textbf{Precio:} \textit{Fijación de precios (Pricing)} por valor (ahorro de horas de desarrolladores experimentados [seniors]). Suscripciones recurrentes (inicial/crecimiento [Starter/Growth]) y un cobro de capital por desarrollo en integraciones complejas (\textit{personalizado para empresas [Enterprise Custom]}).
+    \item \textbf{Promoción:} Tracción temprana mediante el boca a boca (\textit{Word of Mouth}) en comunidades técnicas, seguido de mercadotecnia pagada de empresa a empresa (marketing pago B2B mediante anuncios de LinkedIn [LinkedIn Ads]) apuntando a directores de tecnología (CTOs).
 \end{itemize}
 
 \newpage
 
 \paragraph{2. CuentasClaras: Gestión integral y predictiva del hogar}
 \begin{itemize}
-    \item \textbf{Necesidad:} Conflictos por división de dinero entre \textit{roommates} y desorganización personal ante deudas, vencimientos e inflación.
+    \item \textbf{Necesidad:} Conflictos por división de dinero entre compañeros de cuarto (\textit{roommates}) y desorganización personal ante deudas, vencimientos e inflación.
     \item \textbf{Solución:} Billetera colaborativa que automatiza los pagos fijos, alerta sobre vencimientos y usa modelos predictivos para proyectar los presupuestos del mes entrante ajustados por inflación.
 \end{itemize}
 
@@ -696,7 +696,7 @@ Burocracia interna (Shadowing manual en videollamadas), herramientas HR genéric
 \hline
 \rowcolor{blue!20} \multicolumn{1}{|c|}{\textbf{COMPAÑÍA}} \\ \hline
 \rowcolor{blue!10} \multicolumn{1}{|c|}{\textbf{Descripción}} \\ \hline
-Startup Fintech enfocada en automatizar el pago de servicios, la división de gastos y la adaptación presupuestaria. \\ \hline
+Empresa emergente de tecnología financiera (Startup Fintech) enfocada en automatizar el pago de servicios, la división de gastos y la adaptación presupuestaria. \\ \hline
 \rowcolor{blue!10} \multicolumn{1}{|c|}{\textbf{Visión}} \\ \hline
 Transformar la economía doméstica en una experiencia invisible y completamente libre de conflictos sociales. \\ \hline
 \rowcolor{blue!10} \multicolumn{1}{|c|}{\textbf{Misión}} \\ \hline
@@ -710,7 +710,7 @@ Centralizando finanzas y eliminando la carga mental de la organización económi
 \begin{tabularx}{\textwidth}{|X|}
 \hline
 \rowcolor{cyan!20} \multicolumn{1}{|c|}{\textbf{CLIENTES}} \\ \hline
-Familias consolidadas, parejas convivientes, estudiantes universitarios (\textit{roommates}) y gestiones individuales. \\ \hline
+Familias consolidadas, parejas convivientes, estudiantes universitarios (compañeros de cuarto o \textit{roommates}) y gestiones individuales. \\ \hline
 \end{tabularx}
 \end{table}
 
@@ -730,7 +730,7 @@ Pasarelas de pagos, entidades gubernamentales (datos INDEC/inflación), y redes 
 \begin{tabularx}{\textwidth}{|X|}
 \hline
 \rowcolor{orange!20} \multicolumn{1}{|c|}{\textbf{COMPETIDORES}} \\ \hline
-Splitwise, planillas de Excel, economía informal (manejo en efectivo puro) y módulos limitados de apps bancarias tradicionales. \\ \hline
+Splitwise, planillas de Excel, economía informal (manejo en efectivo puro) y módulos limitados de aplicaciones (apps) bancarias tradicionales. \\ \hline
 \end{tabularx}
 \end{table}
 
@@ -754,10 +754,10 @@ Splitwise, planillas de Excel, economía informal (manejo en efectivo puro) y m�
 \textbf{Análisis de las 4 P (CuentasClaras)}
 
 \begin{itemize}
-    \item \textbf{Producto:} Plataforma dividida en un \textit{Tier Freemium} con anuncios y una variante \textit{Premium} (individual y hogar) con integraciones completas, predicción inflacionaria por IA y OCR para despiece de tickets.
-    \item \textbf{Plaza:} Tiendas de aplicaciones móviles (App Store/Google Play). Para el dimensionamiento, se estimó capturar un SAM de \textit{smart-shoppers} con una meta inicial de 47.000 usuarios activos.
-    \item \textbf{Precio:} Modelo de micropagos de alta penetración (\$1 a \$3 USD), sustentado paralelamente por monetización publicitaria (ARPU Free) y futuras comisiones por colocación B2B de seguros.
-    \item \textbf{Promoción:} Estrategia basada en el \textbf{efecto red} orgánico (los usuarios deben invitar a sus convivientes), apoyada por Optimización (ASO) y *marketing influencers* de educación financiera.
+    \item \textbf{Producto:} Plataforma dividida en un \textit{nivel gratuito con opciones de pago (Tier Freemium)} con anuncios y una variante \textit{de pago (Premium)} (individual y hogar) con integraciones completas, predicción inflacionaria por IA y reconocimiento óptico de caracteres (OCR) para despiece de recibos (tickets).
+    \item \textbf{Plaza:} Tiendas de aplicaciones móviles (App Store/Google Play). Para el dimensionamiento, se estimó capturar un mercado disponible servible (SAM) de compradores inteligentes (\textit{smart-shoppers}) con una meta inicial de 47.000 usuarios activos.
+    \item \textbf{Precio:} Modelo de micropagos de alta penetración (\$1 a \$3 dólares [USD]), sustentado paralelamente por monetización publicitaria (ingreso promedio por usuario gratuito [ARPU Free]) y futuras comisiones por colocación de empresa a empresa (B2B) de seguros.
+    \item \textbf{Promoción:} Estrategia basada en el \textbf{efecto red} orgánico (los usuarios deben invitar a sus convivientes), apoyada por optimización para tiendas de aplicaciones (ASO) y *mercadotecnia de influenciadores (marketing influencers)* de educación financiera.
 \end{itemize}
 
 \newpage
@@ -797,7 +797,7 @@ En el presente anexo se documenta el trabajo de diseño e identidad visual de la
 
 \subsubsection{Aplicación de marca en alianzas estratégicas (Clubes)}
 
-Las siguientes figuras demuestran la adaptabilidad de la marca \textbf{SocioUnido} al integrarse como socio tecnológico (estrategia de \textit{co-branding}) de forma orgánica junto a la identidad oficial y paleta de colores de distintos clubes del fútbol argentino.
+Las siguientes figuras demuestran la adaptabilidad de la marca \textbf{SocioUnido} al integrarse como socio tecnológico (estrategia de marca conjunta o \textit{co-branding}) de forma orgánica junto a la identidad oficial y paleta de colores de distintos clubes del fútbol argentino.
 
 \begin{figure}[h!]
 \centering

@@ -132,7 +132,7 @@
     \begin{tabular}{ccc}
         \textbf{Jefe de Cátedra} & Mg. Ing. Carlos Fontela & cfontela@fi.uba.ar \\
         \textbf{Tutor} & Mg. Ing. Gabriel Piñeiro & gpineiro@fi.uba.ar \\
-        \textbf{Cotutor} & Ing. Agustín Perrota     & aperrota@fi.uba.ar
+        \textbf{Cotutor} & Ing. Agustín Perrotta  & aperrotta@fi.uba.ar
     \end{tabular}
 \end{center}
 \end{center}

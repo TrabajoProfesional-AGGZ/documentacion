@@ -1,0 +1,106 @@
+\section{Análisis de colorimetría y teoría de la Gestalt}
+
+La concepción visual de la plataforma se fundamenta en un diseño escalable y modular, estructurado en dos dimensiones estéticas principales: un entorno base neutral corporativo y un entorno adaptativo para el usuario final. Este enfoque garantiza la usabilidad operativa y, simultáneamente, permite la apropiación identitaria por parte de las instituciones deportivas, justificando las decisiones de diseño mediante la Teoría del Color y las leyes de la percepción de la Gestalt.
+
+\subsection{Diseño base de 'SocioUnido': La maqueta neutral y el lienzo institucional}
+
+El diseño del Producto Mínimo Viable (MVP) y del panel administrativo web empleado por las comisiones directivas se rige por una paleta estrictamente acromática, compuesta por blancos, negros y escalas de grises.
+
+Desde la perspectiva de la Teoría del Color, la neutralidad cromática transmite institucionalidad, transparencia y eficiencia, atributos fundamentales para una herramienta de gestión financiera. Desde el enfoque de negocio, esta ausencia de color elimina fricciones visuales durante las etapas de preventa y auditoría, evitando que la dirigencia asocie inconscientemente el software con colores de instituciones deportivas rivales.
+
+Esta arquitectura acromática cumple una función psicológica crucial: presentarse como un lienzo en blanco o boceto estructural. Al interactuar con un entorno desprovisto de colores saturados, el cliente percibe que está ante una matriz de alta fidelidad, lista y perfectamente optimizada para recibir la impronta visual de su club con total libertad.
+
+En términos de la Teoría de la Gestalt, este diseño explota la \textbf{Ley de Figura y Fondo} y la \textbf{Ley de la Pregnancia} (simplicidad). El fondo gris o blanco actúa como un espacio de descanso visual continuo, permitiendo que la información cuantitativa crítica y las alertas del motor predictivo asuman el rol de $"$figura$"$ y destaquen sin esfuerzo. Esto minimiza drásticamente la carga cognitiva del personal de tesorería al leer métricas complejas.
+
+\subsubsection{Matriz cromática del sistema base (SocioUnido)}
+
+\begin{table}[htbp]
+\centering
+\caption{Especificación de la paleta base acromática corporativa.}
+\label{tab:paleta_base}
+\begin{tabularx}{\textwidth}{clcXX}
+\toprule
+\textbf{Muestra} & \textbf{Denominación} & \textbf{Código HEX} & \textbf{Rol Funcional UI} & \textbf{Justificación Perceptual} \\
+\midrule
+\muestra{suNegro} & Negro Institucional & \#111111 & Tipografía principal y bordes. & Máxima legibilidad y contraste. \\
+\muestra{suGrisOscuro} & Gris Estructural & \#4A4A4A & Tipografía secundaria y jerarquías. & Reducción de la fatiga visual. \\
+\muestra{suGrisClaro} & Gris Fondo & \#F5F5F5 & Fondo general del panel (Dashboard). & Espacio neutro (Descanso visual / Fondo). \\
+\muestra{suBlanco} & Blanco Absoluto & \#FFFFFF & Fondos de tarjetas y contenedores. & Delimitador de módulos independientes. \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\newpage
+
+\subsection{Entorno adaptativo: Inserción de la identidad deportiva}
+
+Para la interfaz de la Aplicación Web Progresiva (PWA) orientada al socio, el color abandona su rol neutral para convertirse en un vehículo de identidad, pasión y fidelización. La \textbf{Ley de Similitud} de la Gestalt rige la interacción en este módulo: al teñir todos los llamados a la acción (botones de pago de cuota, reserva de espacios, generación de QR) con los colores oficiales del club, el sistema le enseña al usuario un patrón de comportamiento sin necesidad de instrucciones explícitas. Todo lo que comparte color, comparte función.
+
+Esta misma modificación cromática puede ser llevada a la plataforma 'Web' de gestión del club, si así lo desea el cliente. En este caso no tendría un sentido de generar sentimientos de pertenencia en el socio, sino buscar ese sentimiento a nivel institucional en todos los trabajadores del club que se vean involucrados en el uso de la plataforma.
+
+A continuación, se detalla la parametrización colorimétrica para la adaptación de la plataforma en los clubes evaluados:
+
+\subsubsection{Club Atlético Boca Juniors (Azul y Oro)}
+
+La adaptación visual para esta institución se rige por un esquema de colores complementarios de alto contraste. El color amarillo (oro), debido a su alta luminosidad y capacidad de captar la atención periférica, se emplea como color de acento primario para los botones transaccionales y el carnet digital. El azul oscuro asume un rol estructural, utilizándose en los fondos de encabezados y menús de navegación para anclar la interfaz. Este equilibrio cromático garantiza una lectura óptima en exteriores bajo luz solar directa, algo fundamental para el control de accesos en los estadios.
+
+\subsubsection{Matriz cromática de Boca Juniors}
+
+\begin{table}[htbp]
+\centering
+\caption{Adaptación e integración visual para la identidad del Club Atlético Boca Juniors.}
+\label{tab:paleta_boca}
+\begin{tabularx}{\textwidth}{clcXX}
+\toprule
+\textbf{Muestra} & \textbf{Denominación} & \textbf{Código HEX} & \textbf{Aplicación en Interfaz (UI)} & \textbf{Principio de la Gestalt} \\
+\midrule
+\muestra{bocaAzul} & Azul Xeneize & \#003893 & Fondos estructurales, barras y menús. & Ley de Continuidad (Estructura fija). \\
+\muestra{bocaOro} & Oro Boca & \#F2A900 & Botones transaccionales y carnet QR. & Ley de Pregnancia (Foco de atención). \\
+\muestra{suBlanco} & Blanco Soporte & \#FFFFFF & Tipografía sobre fondo azul y tarjetas. & Contraste y legibilidad offline. \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\newpage
+
+\subsubsection{Club Atlético San Lorenzo de Almagro (Azul y Rojo)}
+
+Al integrar dos tonos de alta saturación y peso visual, se evita la fatiga óptica mediante la \textbf{Ley de Cierre} y la gestión del espacio negativo. Se introduce el color blanco absoluto como delimitador de la interfaz, impidiendo la vibración visual que genera el contacto directo entre el rojo y el azul puros. En este esquema, el rojo azulgrana se reserva exclusivamente para las alertas de deuda y las interacciones principales, mientras que el azul se destina a la tipografía de lectura y jerarquía de datos del socio.
+
+\subsubsection{Matriz cromática de San Lorenzo de Almagro}
+
+\begin{table}[htbp]
+\centering
+\caption{Adaptación e integración visual para la identidad del Club Atlético San Lorenzo de Almagro.}
+\label{tab:paleta_casla}
+\begin{tabularx}{\textwidth}{clcXX}
+\toprule
+\textbf{Muestra} & \textbf{Denominación} & \textbf{Código HEX} & \textbf{Aplicación en Interfaz (UI)} & \textbf{Principio de la Gestalt} \\
+\midrule
+\muestra{caslaAzul} & Azul Cuervo & \#002F6C & Tipografía de lectura e íconos base. & Ley de Similitud (Elementos de consulta). \\
+\muestra{caslaRojo} & Rojo San Lorenzo & \#C8102E & Alertas, avisos de deuda y CTA crítico. & Estímulo reactivo (Proactividad). \\
+\muestra{suBlanco} & Blanco Aislante & \#FFFFFF & Fondo total y separador de interfaz. & Ley de Cierre (Previene vibración óptica). \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\subsubsection{Club Atlético Talleres de Remedios de Escalada (Rojo y Blanco)}
+
+La identidad de este club permite explotar el espacio en blanco como el principal elemento ordenador de la pantalla. Basado en la \textbf{Ley de Proximidad}, el uso extensivo del blanco facilita la agrupación de los módulos (como el estado de cuenta o el historial de asistencia) sin necesidad de recurrir a bordes sólidos o cajas divisoras. El color rojo identitario actúa como un acento de alta pregnancia, guiando el ojo del hincha directamente hacia las funciones críticas de la aplicación, logrando una experiencia de usuario limpia, directa y libre de distracciones.
+
+\subsubsection{Matriz cromática de Talleres de Remedios de Escalada}
+
+\begin{table}[htbp]
+\centering
+\caption{Adaptación e integración visual para la identidad del Club Atlético Talleres de Remedios de Escalada.}
+\label{tab:paleta_talleres}
+\begin{tabularx}{\textwidth}{clcXX}
+\toprule
+\textbf{Muestra} & \textbf{Denominación} & \textbf{Código HEX} & \textbf{Aplicación en Interfaz (UI)} & \textbf{Principio de la Gestalt} \\
+\midrule
+\muestra{talleresRojo} & Rojo Talleres & \#E30613 & Acentos principales y botones de acción. & Ley de Similitud (Acción transaccional). \\
+\muestra{suBlanco} & Blanco Espacial & \#FFFFFF & Fondo predominante y lienzo general. & Ley de Proximidad (Agrupamiento orgánico). \\
+\muestra{suGrisOscuro} & Gris de Contraste & \#4A4A4A & Cuerpo de texto y datos del padrón. & Balance de brillo en pantallas móviles. \\
+\bottomrule
+\end{tabularx}
+\end{table}

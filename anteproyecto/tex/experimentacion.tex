@@ -13,7 +13,7 @@ La estrategia adoptará un enfoque de "Pirámide de Pruebas", priorizando un alt
 \begin{itemize}
     \item \textbf{Pruebas unitarias (automatizadas):} se validará el correcto funcionamiento de las funciones y métodos aislados. Se utilizarán marcos de trabajo (frameworks) estándar de la industria.
     \item \textbf{Pruebas de integración (automatizadas):} se verificará la correcta comunicación entre los microservicios, la base de datos relacional y las interfaces de programación de aplicaciones (APIs) de terceros (pasarelas de pago y API de WhatsApp). Para esto se emplearán herramientas como \textit{Postman} integradas a la tubería de desarrollo (pipeline).
-    \item \textbf{Pruebas de extremo a extremo [End-to-End] (semiautomatizadas):} simulaciones de flujos completos de usuario (por ejemplo, el pago de una cuota desde la aplicación web progresiva [PWA] hasta que se refleja en el panel de control de empresa a empresa [Dashboard B2B]).
+    \item \textbf{Pruebas de extremo a extremo [End-to-End] (semiautomatizadas):} simulaciones de flujos completos de usuario (por ejemplo, el pago de una cuota desde la aplicación web progresiva [PWA] hasta que se refleja en el panel de control de empresa a empresa [Dashboard E2E]).
 \end{itemize}
 
 \subsection{Pruebas funcionales}
@@ -21,7 +21,7 @@ La estrategia adoptará un enfoque de "Pirámide de Pruebas", priorizando un alt
 El conjunto de pruebas funcionales se centrará en los módulos principales (core) del ecosistema:
 
 \begin{itemize}
-    \item \textbf{Gestión administrativa (Panel de control [Dashboard] B2B):} verificación de los flujos de creación, lectura, actualización y borrado (CRUD) del padrón de socios, y la correcta representación visual (renderización) de las métricas financieras.
+    \item \textbf{Gestión administrativa (Panel de control [Dashboard] E2E):} verificación de los flujos de creación, lectura, actualización y borrado (CRUD) del padrón de socios, y la correcta representación visual (renderización) de las métricas financieras.
     \item \textbf{Procesamiento de pagos:} validación de la correcta integración con las pasarelas externas.
     \item \textbf{Asistente conversacional (PLN [Procesamiento de Lenguaje Natural]):} pruebas de caja negra sobre el robot conversacional (bot) de WhatsApp, inyectando frases de intención variada (texto formal, audios informales, modismos) para validar la precisión del reconocimiento de lenguaje natural y la correcta emisión de enlaces de pago automatizados.
     \item \textbf{Motor predictivo (Aprendizaje automático [Machine Learning]):} evaluación de precisión del algoritmo de detección de morosidad utilizando conjuntos de datos (datasets) históricos de prueba, asegurando que las predicciones de riesgo de fuga superen el umbral estadístico de aceptación.
@@ -41,6 +41,6 @@ El conjunto de pruebas funcionales se centrará en los módulos principales (cor
 En concordancia con el modelo de \textit{usuarios pioneros (Early Adopters)} planteado para la Fase 1, se realizará una etapa de validación participativa directamente en las instalaciones de los clubes de ascenso:
 
 \begin{itemize}
-    \item \textbf{Pruebas de usabilidad (\textit{pruebas de experiencia de usuario o UX Testing}):} observación directa del personal administrativo del club interactuando con el panel de control de empresa a empresa (Dashboard B2B) para identificar fricciones operativas y medir la curva de aprendizaje real.
+    \item \textbf{Pruebas de usabilidad (\textit{pruebas de experiencia de usuario o UX Testing}):} observación directa del personal administrativo del club interactuando con el panel de control de empresa a empresa (Dashboard E2E) para identificar fricciones operativas y medir la curva de aprendizaje real.
     \item \textbf{Encuestas y retroalimentación:} recolección estructurada de \textit{comentarios (feedback)} cualitativo respecto a la percepción de la nueva herramienta por parte de los dirigentes y los socios usuarios de prueba (beta-testers), lo cual servirá de insumo crítico para la priorización de la lista de tareas pendientes (backlog) en las versiones subsiguientes.
 \end{itemize}

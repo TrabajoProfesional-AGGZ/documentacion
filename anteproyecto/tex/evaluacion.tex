@@ -1,52 +1,292 @@
 \section{Evaluación preliminar de impacto económico, social y ambiental}
 
-El desarrollo e implementación de la plataforma \textbf{SocioUnido} conlleva implicancias directas y tangibles en diversas esferas del entorno en el que opera. En cumplimiento con los lineamientos de la ingeniería en informática aplicada a entornos profesionales, a continuación se presenta un análisis descriptivo preliminar de los impactos en las dimensiones económica, social y ambiental.
+\subsection{Introducción}
 
-\subsection{Impacto económico}
+El desarrollo e implementación de la plataforma \textbf{SocioUnido} conlleva implicancias directas y tangibles en diversas esferas del entorno en el que opera. En cumplimiento con los lineamientos de la ingeniería en informática aplicada a entornos profesionales, se presenta a continuación un análisis descriptivo preliminar. 
 
-El impacto económico de SocioUnido posee un carácter dual: por un lado, representa un modelo de negocios altamente escalable para los desarrolladores (proveedores del servicio de software como servicio [SaaS]) y, por el otro, actúa como una herramienta de saneamiento financiero para las instituciones deportivas contratantes.
+Para dotar a esta evaluación de un rigor analítico superior, se ha optado por fundamentar los impactos proyectados utilizando marcos estratégicos de negocio consolidados: el análisis de las \textbf{5 C} actúa como la matriz para evaluar el impacto \textbf{social y ambiental} (al estudiar el contexto macro, la comunidad y las dinámicas institucionales), mientras que la mezcla de mercadotecnia de las \textbf{4 P} estructura y justifica el impacto \textbf{económico}.
 
-Para las dirigencias de los clubes, el impacto económico es netamente positivo y de rápido retorno de inversión (ROI). La plataforma ataca directamente tres focos de pérdida de capital histórico en los clubes del fútbol argentino:
+\subsection{Evaluación de impacto social y ambiental: Análisis de las 5 C}
+
+El marco de las 5 C (Compañía, Clientes, Colaboradores, Competidores y Contexto) permite dimensionar cómo la inserción de SocioUnido modifica el ecosistema deportivo más allá de las métricas financieras. Analizar a los actores involucrados y el entorno sociocultural y regulatorio demuestra que la adopción masiva de la plataforma genera externalidades altamente positivas para la comunidad y el medio ambiente.
+
+\subsubsection*{Justificación del Impacto Social}
+La evaluación de nuestros \textit{Clientes} (clubes del ascenso) y el \textit{Contexto Sociocultural} evidencia un impacto social y cultural significativo:
 \begin{itemize}
-    \item \textbf{Reducción de la morosidad:} a través del motor predictivo de \textit{aprendizaje automático (Machine Learning)}, se evita la fuga de capitales reteniendo a socios en riesgo de abandono.
-    \item \textbf{Mitigación del fraude:} la implementación del \textit{acceso inteligente (Smart Access)} con tecnología de contraseñas de un solo uso basadas en el tiempo (TOTP) fuera de línea (offline) elimina la reventa de entradas falsas y el préstamo de carnets físicos, obligando a regularizar la situación de los asistentes.
-    \item \textbf{Nuevas vías de monetización:} a través del \textit{mercado digital con costo por acción (Marketplace CPA)} y la optimización en el alquiler de espacios del club.
-\end{itemize}
-
-\begin{table}[h!]
-\centering
-\renewcommand{\arraystretch}{1.5}
-\begin{tabularx}{\textwidth}{|X|c|}
-\hline
-\rowcolor{gray!20} \multicolumn{1}{|c|}{\textbf{Concepto y descripción del ingreso}} & \textbf{Estimación anual (Fase 1)} \\ \hline
-\textbf{Costo de configuración [Setup Fee] (Digitalización y migración)} \newline Bonificado al 100\% para los primeros 10 clubes (\textit{usuarios pioneros o Early Adopters}) como estrategia de penetración de mercado. & \textbf{\$0 dólares [USD]} \\ \hline
-\textbf{Suscripción mensual híbrida (Cargo fijo)} \newline 10 clubes $\times$ \$400 dólares [USD]/mes (promedio estimado para Fase 1) $\times$ 12 meses. & \textbf{\$48.000 dólares [USD]} \\ \hline
-\textbf{Suscripción mensual híbrida (Cargo variable)} \newline Comisión transaccional del 1\% al 5\% sobre pago de cuotas y entradas a través de la pasarela digital. & \textit{Ingreso dinámico no topeado} \\ \hline
-\textbf{Mercado digital con costo por acción [Marketplace CPA] (Publicidad y beneficios)} \newline Del 10\% al 25\% de las ganancias netas generadas por empresas anunciantes. & \textit{Ingreso dinámico no topeado} \\ \hline
-\rowcolor{gray!10} \multicolumn{1}{|r|}{\textbf{Total base garantizado (sin impuestos ni gastos)}} & \textbf{\$48.000 dólares [USD] + variables} \\ \hline
-\end{tabularx}
-\caption{Proyección económica preliminar para el primer año en régimen (Fase 1).}
-\label{tab:impacto_economico}
-\end{table}
-
-\newpage
-
-\subsection{Impacto social}
-
-La implementación de SocioUnido genera un impacto social y cultural significativo en la comunidad que rodea a las instituciones deportivas, destacándose los siguientes puntos:
-
-\begin{itemize}
-    \item \textbf{Democratización e inclusión tecnológica:} acerca herramientas de alta ingeniería (IA, procesamiento de lenguaje natural [PLN], arquitecturas en la nube [Cloud]) a clubes de categorías de ascenso, organizaciones que históricamente han estado marginadas de las innovaciones tecnológicas reservadas para la élite de la Primera División.
+    \item \textbf{Democratización e inclusión tecnológica:} acerca herramientas de alta ingeniería (IA, procesamiento de lenguaje natural [PLN], arquitecturas en la nube) a clubes de categorías de ascenso, organizaciones que históricamente han estado marginadas de las innovaciones tecnológicas reservadas para la élite de la Primera División.
     \item \textbf{Mejora en la experiencia del usuario (Hincha):} elimina la burocracia administrativa y las filas presenciales en las sedes físicas. La integración omnicanal con WhatsApp permite que personas de diversas franjas etarias y con diferentes niveles de alfabetización digital puedan gestionar sus pagos y accesos sin fricciones mediante lenguaje natural.
     \item \textbf{Seguridad y transparencia:} al digitalizar nominalmente el acceso a los estadios, se reduce el margen para el accionar de grupos informales y la reventa ilegal, fomentando un entorno más seguro e inclusivo para el retorno de las familias a los eventos deportivos.
 \end{itemize}
 
-\subsection{Impacto ambiental}
-
-Dada su naturaleza como producto de software como servicio (SaaS), SocioUnido posee una huella de carbono inherentemente baja. No obstante, su adopción masiva introduce externalidades ambientales altamente positivas:
-
+\subsubsection*{Justificación del Impacto Ambiental}
+El análisis de la \textit{Compañía} (como proveedora SaaS) y sus \textit{Colaboradores} tecnológicos certifica una huella de carbono inherentemente baja y mejoras ecológicas tangibles:
 \begin{itemize}
     \item \textbf{Erradicación de plásticos y consumibles:} la migración masiva hacia carnets digitales (aplicación web progresiva / móvil [PWA/Mobile]) elimina la necesidad de emisión e impresión constante de plásticos PVC, credenciales magnéticas y boletos (tickets) de papel térmico, reduciendo drásticamente la generación de residuos sólidos por parte de los clubes.
     \item \textbf{Eficiencia energética en infraestructura:} al estar soportado sobre una arquitectura \textit{en la nube (Cloud)} centralizada, se evita que cada club deba invertir, mantener y refrigerar servidores físicos locales obsoletos y de alto consumo energético.
-    \item \textbf{Optimización operativa en estadios:} la validación mediante vales (tokens) fuera de línea (offline) (\textit{acceso inteligente [Smart Access]}) elimina la necesidad de instalar antenas de red de alta potencia o anillos de fibra óptica temporales en los accesos al estadio, reduciendo el consumo eléctrico y el despliegue de infraestructura física durante los días de partido.
+    \item \textbf{Optimización operativa en estadios:} la validación mediante vales (tokens) fuera de línea (\textit{acceso inteligente [Smart Access]}) elimina la necesidad de instalar antenas de red de alta potencia o anillos de fibra óptica temporales en los accesos al estadio, reduciendo el consumo eléctrico durante los días de partido.
+\end{itemize}
+
+A continuación, se tabulan los componentes estratégicos de este análisis:
+
+\begin{table}[h!]
+\centering
+\renewcommand{\arraystretch}{1.5}
+\begin{tabularx}{\textwidth}{|X|}
+\hline
+\rowcolor{blue!20} \multicolumn{1}{|c|}{\textbf{COMPAÑÍA}} \\ \hline
+\rowcolor{blue!10} \multicolumn{1}{|c|}{\textbf{Descripción}} \\ \hline
+Startup de tecnología deportiva que ofrece un ecosistema integral de gestión para clubes de fútbol, combinando administración eficiente, prevención de morosidad y control de socios. \\ \hline
+\rowcolor{blue!10} \multicolumn{1}{|c|}{\textbf{Visión}} \\ \hline
+Ser el sistema operativo estándar para los clubes de fútbol en Argentina, transformando la relación entre el club y el hincha mediante innovación tecnológica. \\ \hline
+\rowcolor{blue!10} \multicolumn{1}{|c|}{\textbf{Misión}} \\ \hline
+Proveyendo a las comisiones directivas una herramienta inteligente, optimizando la administración, blindando los accesos al estadio y fidelizando a los hinchas para brindar nuevas vías de monetización. \\ \hline
+\end{tabularx}
+\caption{Evaluación de compañía en el análisis de las 5 C}
+\end{table}
+
+\begin{table}[h!]
+\centering
+\renewcommand{\arraystretch}{1.5}
+\begin{tabularx}{\textwidth}{|X|}
+\hline
+\rowcolor{cyan!20} \multicolumn{1}{|c|}{\textbf{CLIENTES}} \\ \hline
+\rowcolor{cyan!10} \multicolumn{1}{|c|}{\textbf{Segmentos objetivos}} \\ \hline
+\textbf{Segmento principal de Empresa a Empresa [E2E] (Lanzamiento al mercado [Go-To-Market]):} Clubes del Ascenso y Ligas Metropolitanas (Primera B, C y Federal A) que buscan profesionalizar su gestión, optimizar su rentabilidad controlando mejor los ingresos de los días de partido y reduciendo la morosidad. \\
+\textbf{Segmento de expansión de Empresa a Empresa [E2E]:} Clubes de Primera División (Liga Profesional y Primera Nacional) que requieren arquitecturas robustas para gestionar volúmenes masivos de concurrencia. \\
+\textbf{Usuarios decisores:} Presidentes, Tesoreros y Comisiones Directivas orientados a maximizar ingresos, reducir morosidad y optimizar los accesos físicos. \\ \hline
+\end{tabularx}
+\caption{Evaluación de clientes en el análisis de las 5 C}
+\end{table}
+
+\begin{table}[h!]
+\centering
+\renewcommand{\arraystretch}{1.5}
+\begin{tabularx}{\textwidth}{|X|}
+\hline
+\rowcolor{green!20} \multicolumn{1}{|c|}{\textbf{COLABORADORES}} \\ \hline
+\textbf{Proveedores de equipamiento físico (hardware) de acceso:} Empresas fabricantes de molinetes y sistemas de lectura óptica para integrar la validación mediante contraseñas de un solo uso basadas en el tiempo (TOTP) en los estadios. \\
+\textbf{Agencias de mercadotecnia (marketing) y patrocinadores (sponsors):} Entidades comerciales que busquen generar activaciones directas con la masa societaria a través del ecosistema digital del club. \\
+\textbf{Entidades rectoras (AFA y Ligas):} Organizaciones que pueden facilitar y homologar la adopción tecnológica en sus respectivos torneos. \\ \hline
+\end{tabularx}
+\caption{Evaluación de colaboradores en el análisis de las 5 C}
+\end{table}
+
+\newpage
+
+\begin{table}[h!]
+\centering
+\renewcommand{\arraystretch}{1.5}
+\begin{tabularx}{\textwidth}{|X|}
+\hline
+\rowcolor{orange!20} \multicolumn{1}{|c|}{\textbf{COMPETIDORES}} \\ \hline
+\textbf{Sistemas de gestión deportiva actuales (Ej. Global.fan):} Enfoque administrativo reactivo tradicional. Carecen de análisis predictivo de morosidad y validación de accesos estables en escenarios sin conectividad. \\
+\textbf{El estado actual ("Status Quo"):} Administración basada en papel, planillas de cálculo (Excel) y emisión de carnets físicos de plástico con alta vulnerabilidad a la falsificación. \\
+\textbf{Dinámicas internas de los clubes:} Entendemos que los clubes de fútbol son instituciones políticas con funcionamientos complejos. Nuestro enfoque no es imponer una “transparencia disruptiva” que entorpezca los asuntos internos o perjudique a la institución. Por el contrario, nos posicionamos como una herramienta operativa orientada a dotar a la dirigencia de mejores mecanismos para monetizar y controlar el funcionamiento general, adaptándonos a la realidad de cada club sin forzar fricciones políticas. \\ \hline
+\end{tabularx}
+\caption{Evaluación de competidores en el análisis de las 5 C}
+\end{table}
+
+\vspace{0.3cm}
+
+\begin{table}[h!]
+\centering
+\renewcommand{\arraystretch}{1.5}
+\begin{tabularx}{\textwidth}{|l|X|X|X|}
+\hline
+\rowcolor{red!20} \multicolumn{4}{|c|}{\textbf{CONTEXTO}} \\ \hline
+\rowcolor{red!10} \textbf{Categoría} & \textbf{Corto Plazo} & \textbf{Mediano Plazo} & \textbf{Largo Plazo} \\ \hline
+\textbf{Económico} & \cellcolor{orange!50} & \cellcolor{green!50} & \cellcolor{green!50} \\ \hline
+\textbf{Regulatorio} & \cellcolor{green!50} & \cellcolor{green!50} & \cellcolor{green!50} \\ \hline
+\textbf{Social / Cultural} & \cellcolor{orange!50} & \cellcolor{green!50} & \cellcolor{green!50} \\ \hline
+\textbf{Tecnológico} & \cellcolor{green!50} & \cellcolor{green!50} & \cellcolor{green!50} \\ \hline
+\textbf{Político / Institucional} & \cellcolor{orange!50} & \cellcolor{orange!50} & \cellcolor{green!50} \\ \hline
+\end{tabularx}
+\caption{Evaluación de viabilidad contextual en el análisis de las 5 C}
+\end{table}
+
+\vspace{0.3cm}
+
+\textbf{Detalle del análisis de contexto:}
+\begin{itemize}
+    \item \textbf{Económico:} la recuperación económica pospandemia y el aumento del interés en actividades deportivas generan un clima favorable para la adopción de soluciones que optimicen la gestión de clubes. Sin embargo, la inflación y los costos operativos pueden ser un desafío para algunos clubes, lo que hace que la propuesta de valor de SocioUnido (reducción de pérdidas por fraude y abandono) sea aún más relevante.
+    \item \textbf{Social / Cultural:} la migración desde herramientas tradicionales u organizativas \textit{de facto} (como el uso de planillas de cálculo $"Excel"$) puede representar una barrera de adopción inicial en los clubes debido al arraigo de las rutinas cotidianas. No obstante, este desafío se mitiga de manera directa mediante el diseño de una interfaz altamente intuitiva y amigable. El sistema está concebido para ofrecer una excelente usabilidad y una curva de aprendizaje mínima, garantizando una transición fluida.
+    \item \textbf{Político / Institucional:} existe un fuerte arraigo a las formas tradicionales de gestión. Sin embargo, al presentar la herramienta como un potenciador de ingresos y una mejora en la imagen de gestión de la directiva (sin inmiscuirse en auditorías externas), se reduce la barrera de adopción institucional.
+\end{itemize}
+
+\newpage
+
+\subsection{Evaluación de impacto económico: Análisis de las 4 P}
+
+El impacto económico de SocioUnido posee un carácter dual, operando de manera simbiótica: representa un modelo de negocios E2E altamente escalable para sus desarrolladores (generación de ingresos a través del SaaS) y actúa como una rigurosa herramienta de saneamiento financiero para las dirigencias deportivas. La mezcla de mercadotecnia (\textit{Marketing Mix} de las 4 P) es el vehículo idóneo para explicar y justificar de qué manera se materializa este retorno de inversión (ROI) para ambas partes.
+
+A través del \textbf{Producto}, se atacan directamente tres focos históricos de pérdida de capital en el fútbol argentino:
+\begin{itemize}
+    \item \textbf{Reducción de la morosidad:} mediante el motor predictivo de \textit{Machine Learning}, se evita la fuga de capitales reteniendo a socios en riesgo de abandono.
+    \item \textbf{Mitigación del fraude:} el sistema criptográfico TOTP fuera de línea (offline) elimina la reventa y el préstamo de carnets físicos, forzando la regularización de pagos.
+    \item \textbf{Nuevas vías de monetización:} a través del \textit{mercado digital (Marketplace CPA)} publicitario y la digitalización del alquiler de espacios ociosos del club.
+\end{itemize}
+
+A continuación, se desglosa cómo los componentes \textit{Producto, Plaza, Precio y Promoción} estructuran este impacto económico.
+
+\subsubsection*{Producto}
+
+SocioUnido es una plataforma modular de software como servicio (SaaS) de empresa a empresa (E2E) diseñada exclusivamente para la realidad del fútbol argentino. Es un ecosistema compuesto por tres pilares:
+
+\textbf{1. Panel administrativo (entorno Web):} Centro de comando para la comisión directiva y gerencia, con métricas de recaudación, morosidad, accesos y gestión de espacios/servicios brindados.
+
+\textbf{2. Aplicación móvil multiplataforma (Aplicación Web Progresiva [PWA] / Móvil [Mobile]):} Sistema central que ofrece dos interfaces de usuario diferenciadas según el nivel de acceso y el rol dentro de la institución:
+\begin{itemize}
+    \item \textbf{Interfaz del socio:} Orientada al usuario final. Contiene su carnet digital (QR dinámico), pagos de cuota social, compra de abonos, módulo integrado para la compra y venta de entradas a los partidos, plataforma de alquiler de espacios/servicios y acceso a noticias o tienda del club.
+    \item \textbf{Interfaz operativa (Trabajadores):} Entorno de acceso restringido para el personal del club. En este primer Producto Mínimo Viable (MVP), esta interfaz está orientada específicamente al control de accesos mediante al escaneo de códigos QR.
+\end{itemize}
+
+\textbf{3. Canal conversacional:} Robot conversacional (bot) de WhatsApp con procesamiento de lenguaje natural (PLN) para consultas de los hinchas y gestión de pagos automatizada.
+
+\newpage
+
+\subsubsection*{Plaza}
+
+Al tratarse de una solución basada en el modelo de \textit{software como servicio (Software as a Service - SaaS)} desplegada en la nube (\textit{basada en la nube o Cloud-based}), la distribución de los componentes lógicos de \textbf{SocioUnido} es inmediata y centralizada. La infraestructura no requiere de despliegues locales complejos en los servidores de las instituciones, limitándose la intervención física exclusivamente a la etapa de \textit{inducción e incorporación (onboarding)}.
+
+Para diseñar una estrategia de lanzamiento y penetración de mercado eficiente (\textit{Go-To-Market}), se procedió a analizar de manera exhaustiva la estructura jerárquica e institucional del fútbol argentino, clasificando el universo de clientes potenciales según su nivel competitivo y volumen operativo. La distribución de estas instituciones se estructura de la siguiente manera:
+
+\begin{table}[h!]
+\centering
+\renewcommand{\arraystretch}{1.3}
+\begin{tabular}{|l|l|c|}
+\hline
+\rowcolor{gray!20} \textbf{Nivel} & \textbf{Categoría} & \textbf{Cantidad de clubes} \\ \hline
+1° & Liga Profesional & 30 \\ \hline
+2° & Primera Nacional & 36 \\ \hline
+3° & Primera B Metropolitana & 22 \\ \hline
+4° & Torneo Federal A & 37 \\ \hline
+5° & Primera C & 28 \\ \hline
+6° & Torneo Regional Federal Amateur & $\sim$330 \\ \hline
+7° & Torneo Promocional Amateur & 17 \\ \hline
+
+\end{tabular}
+\caption{Estructura y distribución de las categorías del fútbol argentino.}
+\label{tab:categorias_futbol}
+\end{table}
+
+Cabe destacar que la investigación detallada respecto al listado nominal de las instituciones y el análisis cuantitativo de su masa societaria activa se encuentran completamente desarrollados en el \textbf{Anexo C: Clubes y socios en el fútbol argentino}. Dichos registros sirven como matriz de datos fundamental para las proyecciones financieras y la futura parametrización de los costos de implementación.
+
+\paragraph{Estrategia de penetración y lanzamiento de mercado (Go-To-Market):}
+
+el plan de adopción tecnológica se ha estructurado en un modelo iterativo divido en dos fases estratégicas:
+
+\begin{itemize}
+    \item \textbf{Fase 1 (Nicho estratégico de lanzamiento):} la comercialización inicial evitará deliberadamente a las instituciones de élite de la Primera División, concentrando el esfuerzo comercial de forma quirúrgica en los clubes pertenecientes a la \textit{Primera B Metropolitana}, \textit{Primera C} y \textit{Torneo Federal A} (totalizando un mercado objetivo inicial de 87 instituciones). La magnitud estructural y organizativa de estos clubes permite un acceso directo a los tomadores de decisiones estratégicas (Presidentes y Tesoreros), reduciendo drásticamente los tiempos de preventa al eludir la densa burocracia corporativa y los contratos de exclusividad preexistentes que caracterizan a la máxima categoría. Se define como un nicho con necesidades tecnológicas críticas y urgentes, pero con presupuestos que justifican plenamente la inversión.
+    \item \textbf{Fase 2 (Escalamiento progresivo):} una vez consolidada la plataforma en el ascenso metropolitano y del interior, se capitalizarán los casos de éxito verificados, las métricas de incremento en la recaudación neta y las recomendaciones operativas de las primeras dirigencias. Esto permitirá escalar la solución de manera sólida hacia la \textit{Primera Nacional} y, en última instancia, hacia la \textit{Liga Profesional}, alcanzando un mercado objetivo acumulado de 153 clubes de alta relevancia.
+\end{itemize}
+
+\newpage
+
+\subsubsection*{Precio}
+
+La estrategia de fijación de precios de \textbf{SocioUnido} se aparta de los esquemas tradicionales de costos fijos genéricos, optando por un modelo de \textit{Pricing basado en el Valor}. Este enfoque busca alinear directamente el costo del software con el beneficio económico e institucional percibido por la dirigencia, estructurándose sobre tres pilares fundamentales de ingresos:
+
+\begin{enumerate}
+    \item \textbf{Costo de configuración [Setup Fee] (Pago único por digitalización y migración):} Comprende las tareas de configuración inicial, migración de los padrones de socios físicos o manuales, y la capacitación de los trabajadores para operar la interfaz móvil de control de accesos. Para los clientes calificados como \textit{usuarios pioneros (Early Adopters)}, este arancel será bonificado al 100\%. El objetivo reside en eliminar la barrera de entrada económica, acelerar la penetración en el mercado y generar casos de estudio empíricos. Como contraprestación, el club se compromete a aportar personal administrativo propio para acelerar la migración de datos y a participar activamente en campañas de mercadotecnia conjunta (comarketing) que otorguen visibilidad a la plataforma. En etapas de régimen estables y de expansión, este cargo pasará a ser variable, calculándose directamente basándonos en el volumen nominal de socios a migrar por cada institución.
+    \item \textbf{Suscripción mensual híbrida (Componente fijo + transaccional):} Se implementa un modelo mixto que equilibra la previsibilidad financiera de la empresa con la realidad económica de los clubes.
+    \begin{itemize}
+        \item \textbf{Cargo fijo:} Escalonado según el volumen de socios activos, estimado tentativamente entre \$200 dólares (USD) y \$800 dólares (USD) mensuales para los clubes del ascenso (Fase 1). Este tope es estrictamente indicativo y será reajustado al escalar a instituciones de Primera División. Garantiza la cobertura de los costos fijos de infraestructura \textit{en la nube (cloud)} y soporte técnico.
+        \item \textbf{Cargo variable (Tarifa / Fee transaccional):} Una tasa de comisión que oscila entre el 1\% y el 5\% sobre cada transacción procesada a través de la plataforma (cobro de cuotas sociales, venta de entradas digitales, abonos y alquiler de instalaciones). Este esquema se justifica ante la tesorería del club debido a que el sistema se ``autofinancia'' mediante el recupero de deudas atrasadas y la optimización de activos institucionales ociosos. También, como alternativa, se puede fijar un precio fijo por transacción realizada, dependiendo del acuerdo y la preferencia del cliente.
+    \end{itemize}
+    \item \textbf{Mercado digital con costo por acción [Marketplace CPA] (Módulo opcional de monetización conjunta):} La aplicación móvil habilita un canal publicitario y de beneficios segmentado. Las utilidades derivadas de las impresiones y conversiones se distribuyen según el origen de la alianza comercial:
+    \begin{itemize}
+        \item \textbf{Alianzas directas del club:} Si el sponsor es gestionado por la institución, la plataforma percibe únicamente un 10\% del canon publicitario en concepto de soporte técnico e integración en la interfaz.
+        \item \textbf{Empresas provistas por SocioUnido:} Si la plataforma introduce al anunciante externo, los ingresos netos se distribuyen en un 75\% para el club y un 25\% para la aplicación, abriendo una nueva vía de ingresos para la entidad deportiva.
+    \end{itemize}
+\end{enumerate}
+
+\newpage
+
+\paragraph{Estimación de ingresos y proyección financiera para la Fase 1:}
+
+Considerando un escenario moderado para la Fase 1, con una tasa de penetración estimada del $\sim$12\% sobre el mercado objetivo inicial (equivalente a 10 clubes contratantes entre la Primera B y la Primera C), se formulan las siguientes proyecciones operativas para el primer año completo en régimen:
+\begin{itemize}
+    \item \textbf{Costos de configuración (Setup Fees) anuales (10 clubes):} \$0 dólares [USD] (Inversión estratégica orientada al posicionamiento de marca).
+    \item \textbf{Cargos fijos mensuales acumulados:} \$4.000 USD mensuales (tomando un valor promedio de \$400 USD por institución), lo que consolida un piso mínimo garantizado de \textbf{\$48.000 USD anuales}.
+    \item \textbf{Cargos variables transaccionales y costo por acción (CPA):} flujo dinámico y exponencial que se adicionará al piso fijo a medida que la masa de hinchas adopte de forma masiva los canales digitales para sus transacciones habituales.
+\end{itemize}
+
+\paragraph{Estrategia de precios y escalabilidad para la Fase 2 (Primera Nacional y Liga Profesional):}
+
+Con la validación de la plataforma superada, el modelo de negocio evoluciona para adaptarse a la magnitud de las instituciones de mayor jerarquía:
+
+\begin{enumerate}
+ \item \textbf{Costo de configuración [Setup Fee] (Pago único por digitalización y migración):} Comprende las tareas de configuración inicial, migración masiva de padrones societarios y la integración con equipamiento físico (hardware) avanzado de control de accesos. Al finalizar la etapa de usuarios pioneros (\textit{Early Adopters}) de la fase previa, este cargo deja de estar bonificado. Para los clubes de la Primera Nacional, el arancel pasa a ser estrictamente variable y proporcional al inmenso volumen nominal de socios a migrar, representando un ingreso inicial de miles de dólares por institución. Esto justifica la inversión operativa y refleja la complejidad técnica de absorber bases de datos de gran escala.
+
+  \item \textbf{Suscripción mensual híbrida (Componente fijo + transaccional):} Se mantiene el modelo mixto para equilibrar la previsibilidad financiera de la empresa con el flujo de los clubes, pero recalibrado para soportar las altas exigencias de las máximas categorías del fútbol argentino.
+  \begin{itemize}
+    \item \textbf{Cargo fijo:} El piso base se ajusta significativamente al alza respecto a las categorías inferiores, consolidando ingresos garantizados de miles de dólares mensuales por club en estas categorías. Este ajuste es indispensable para garantizar la escalabilidad de la infraestructura en la nube (\textit{cloud}) y el soporte técnico ante los picos masivos de tráfico generados en los días de partido.
+    \item \textbf{Cargo variable (Tarifa / Fee transaccional):} Se aplica una tasa de comisión competitiva sobre cada transacción procesada (cobro de cuotas, abonos y venta de entradas digitales). Dado que las instituciones de esta categoría movilizan a decenas de miles de hinchas regulares, el volumen de transacciones se multiplica exponencialmente. Este esquema se convierte en el flujo de caja más robusto de la plataforma, generando ingresos muy superiores a los de la etapa inicial.
+  \end{itemize}
+
+  \item \textbf{Mercado digital con costo por acción [Marketplace CPA] (Módulo opcional de monetización conjunta):} La mayor exposición mediática y el alto tráfico de usuarios de los clubes de Primera Nacional revalorizan drásticamente el canal publicitario de la aplicación. Para clubes de esta nueva dimensión, lo mas probable es que se reduzca el porcentaje de ganancias totales de \textbf{SocioUnido} dado que las instituciones de esta categoría suelen gestionar sus propias alianzas comerciales con sponsors de gran envergadura. Sin embargo, el volumen de impresiones y conversiones es tan masivo que el ingreso neto para la plataforma tendrá un incremento sustancial.
+\end{enumerate}
+
+\newpage
+
+\subsubsection*{Promoción}
+
+Dado el carácter estrictamente institucional, de empresa a empresa (E2E), del proyecto y reconociendo que el ecosistema directivo del fútbol argentino se caracteriza por ser un entorno altamente cerrado y tradicional, las metodologías tradicionales de mercadotecnia (marketing) digital masivo quedan descartadas. El plan de promoción se enfoca exclusivamente en acciones de \textit{Ventas Corporativas} (salientes / Outbound), \textit{Relaciones Públicas} y el apalancamiento de \textit{Casos de Éxito}.
+
+La estrategia operativa se desglosa en las siguientes dimensiones de acción:
+
+\paragraph{1. Metodología de contacto y penetración institucional:}
+
+\begin{itemize}
+    \item \textbf{Venta consultiva avanzada:} el contacto inicial con las autoridades no se presenta bajo un formato de venta de software tradicional, sino como el ofrecimiento de una \textit{``Auditoría de Recaudación y Diagnóstico de Fuga de Capitales''}. A través de canales formales (LinkedIn corporativo, correos institucionales y redes de contactos profesionales), se aborda directamente a los Tesoreros y Presidentes de las comisiones directivas para evidenciar las ineficiencias financieras de sus sistemas actuales.
+    \item \textbf{Generación de redes de contacto (Networking) y alianzas de confianza:} presencia activa en asambleas institucionales, reuniones de comités federativos en la Asociación del Fútbol Argentino (AFA) y congresos de gestión deportiva (\textit{Sports Management}). Paralelamente, se establecerán alianzas con consultoras de auditoría deportiva y agencias de mercadotecnia (marketing) especializadas que ya operen con estas instituciones, utilizándolas como puentes de legitimidad técnica.
+\end{itemize}
+
+\paragraph{2. Estrategia de presentación y demostración de valor:}
+
+Las reuniones ejecutivas tendrán un enfoque netamente práctico y cuantitativo, estructurado sobre dos herramientas de validación inmediata:
+\begin{itemize}
+    \item \textbf{Simuladores interactivos de retorno de inversión (ROI):} utilizando una interfaz dinámica, se requiere al tesorero ingresar los datos públicos del club (cantidad de socios y valor de la cuota social). El simulador calcula en tiempo real el impacto económico positivo que representa la reducción de la morosidad en un 15\%, la erradicación del fraude por duplicación de accesos y la optimización del alquiler de espacios institucionales.
+    \item \textbf{Pruebas de estrés en vivo:} se realizarán demostraciones prácticas del componente \textit{de acceso inteligente (Smart Access)} utilizando la aplicación en dos dispositivos móviles simultáneamente: uno generando el código QR del socio en ``Modo Avión'' (fuera de línea) y el otro operando con la interfaz del trabajador para escanear y validar dicho acceso de forma instantánea. Esto demuestra la capacidad matemática de los algoritmos de contraseñas de un solo uso basadas en el tiempo (TOTP) para validar accesos concurrentes de forma 100\% fuera de línea (offline), garantizando la viabilidad del MVP. Del mismo modo, se expondrá la velocidad de procesamiento del asistente de WhatsApp mediante la interacción directa con notas de voz para la generación de enlaces de pago automatizados.
+\end{itemize}
+
+\paragraph{3. Programa de usuarios pioneros (Early Adopters) y efecto contagio:} El pilar promocional del anteproyecto se fundamenta en la explotación del boca en boca dirigencial y las dinámicas competitivas inherentes al entorno deportivo.
+
+\begin{itemize}
+    \item \textbf{Construcción de casos de estudio:} las instituciones iniciales que accedan al beneficio del \textit{costo de configuración (Setup Fee)} bonificado serán documentadas exhaustivamente, midiendo de manera rigurosa métricas del ``Antes y Después'' en velocidad de acceso los días de partido utilizando la interfaz operativa móvil y el volumen de recaudación contable.
+    \newpage
+    \item \textbf{Efecto rivalidad:} El fútbol local opera fuertemente bajo lógicas de imitación y estatus institucional. Al evidenciar que un club de la misma categoría optimiza sus ingresos, reduce las filas de ingreso al estadio y moderniza su imagen hacia el socio, las comisiones directivas de las instituciones competidoras experimentarán una presión directa para actualizar sus plataformas.
+    \item \textbf{Relaciones públicas y difusión mediática:} gestión de gacetillas de prensa especializadas en medios deportivos y de economía de amplio alcance (tales como Olé, Infobae Económico y portales especializados en el fútbol de ascenso), con el fin de consolidar a \textbf{SocioUnido} como el estándar de ingeniería de software aplicado a la modernización deportiva.
+\end{itemize}
+
+\subsubsection{Análisis competitivo de mercado}
+
+Para validar la viabilidad comercial y tecnológica de \textbf{SocioUnido} en el marco de la ingeniería de software aplicada, resulta indispensable contrastar su propuesta de valor frente a las soluciones de gestión deportiva que actualmente dominan el mercado del fútbol argentino. A tal efecto, se toma como principal caso de referencia a la plataforma \textit{Global.fan}, considerada el competidor más representativo en el ámbito local. A continuación, se presenta una matriz comparativa donde se evalúan los ejes estratégicos del proyecto frente al paradigma vigente en el mercado:
+
+\begin{table}[h!]
+\centering
+\renewcommand{\arraystretch}{1.5}
+\begin{tabularx}{\textwidth}{|l|X|X|}
+\hline
+\rowcolor{gray!20} \textbf{Característica / Enfoque} & \textbf{Competidores actuales (Ej. Global.fan)} & \textbf{SocioUnido} \\ \hline
+\textbf{Naturaleza del sistema} & Administrativo y reactivo (basado en un esquema de creación, lectura, actualización y borrado [CRUD]). & Predictivo y proactivo (basado en modelos de Inteligencia Artificial). \\ \hline
+\textbf{Gestión de morosidad} & Reporta de manera \textit{ex post} al usuario que ya ha incurrido en la falta de pago. & Predice el riesgo de abandono mediante \textit{aprendizaje automático} y ejecuta acciones preventivas. \\ \hline
+\textbf{Control de accesos} & Código QR dinámico estándar (altamente dependiente de la conectividad de red e infraestructura física del estadio). & \textbf{Acceso inteligente [Smart Access] (TOTP):} Generación de vales (tokens) criptográficos fuera de línea (offline) validados instantáneamente por los propios trabajadores mediante la aplicación móvil del club. \\ \hline
+\textbf{Canales de atención} & Interfaz cerrada (operación obligatoria dentro de la aplicación nativa o entorno web). & \textbf{Omnicanalidad PLN [Procesamiento de Lenguaje Natural]:} Procesamiento de lenguaje natural para gestionar consultas y cobros mediante WhatsApp. \\ \hline
+\textbf{Enfoque de mercado} & Captación agresiva orientada a la Primera División e instituciones de alta envergadura. & \textbf{Estrategia de nicho (Lanzamiento al mercado [GTM]):} Foco inicial en la Primera B Metropolitana y la Primera C. \\ \hline
+\end{tabularx}
+\caption{Matriz comparativa entre soluciones tradicionales y la propuesta de SocioUnido.}
+\label{tab:cuadro_comparativo}
+\end{table}
+
+\newpage
+
+\paragraph{2. Diferenciales técnicos y de negocio clave}
+
+Con el propósito de superar las limitaciones observadas en el ecosistema actual, \textbf{SocioUnido} no se concibe meramente como un sistema contable optimizado, sino como una herramienta de inteligencia de negocios y ciberseguridad diseñada para resolver contingencias físicas y operativas reales de las instituciones:
+
+\begin{itemize}
+    \item \textbf{La realidad del molinete (Acceso inteligente sin conexión):} en los minutos previos al inicio de un evento masivo, la aglomeración de espectadores provoca de forma sistemática el colapso de las redes de conectividad móvil (4G/5G) en las inmediaciones del estadio. Si la validación del carnet digital requiere una petición al servidor en ese instante, el embudo de ingreso fracasa. La plataforma mitiga este cuello de botella mediante tecnología de vales (tokens) de contraseñas de un solo uso basadas en el tiempo (TOTP por sus siglas en inglés, \textit{Time-Based One-Time Password}), regenerados cada 15 segundos de manera interna en el dispositivo. Esto permite al dispositivo móvil del trabajador (a través de la interfaz operativa de la aplicación) escanear el código QR y validar la autenticidad matemática del acceso de forma 100\% fuera de línea (offline), asegurando la fluidez del ingreso al estadio sin depender de integraciones iniciales con hardware de terceros ni de la red local.
+    \item \textbf{Retención frente a cobranza (El motor predictivo):} los sistemas tradicionales se limitan a emitir listados estáticos de morosos para gestiones de cobranza tardías. El algoritmo analítico de \textbf{SocioUnido} procesa de manera continua el historial de pagos cruzado con la asistencia física a las tribunas. Si se detecta una anomalía en el patrón de asistencia de un socio regular, el sistema automatizado clasifica al usuario en ``riesgo de baja'' e inicia campañas preventivas de fidelización y regularización, transformando la cobranza reactiva en salvataje proactivo de capital.
+    \item \textbf{Fricción cero en transacciones (Asistente PLN [Procesamiento de Lenguaje Natural]):} forzar al usuario a descargar aplicativos adicionales, recordar credenciales y navegar por pasarelas complejas incrementa la tasa de deserción en los pagos. Al integrar un robot conversacional (bot) transaccional en WhatsApp con capacidades de procesamiento de lenguaje natural, el socio puede interactuar mediante lenguaje cotidiano (mensajes de texto o notas de voz). El sistema interpreta la intención y devuelve de manera inmediata un enlace directo de pago parametrizado, optimizando drásticamente la tasa de conversión.
 \end{itemize}

@@ -103,7 +103,7 @@
 \includegraphics[width=12cm]{img/logos/logo}
 \vspace{0.2cm}
 
-{ \huge \bfseries Presentaciones - Elevator Pitchs\\[0.8cm]}      % Título
+{ \huge \bfseries Presentaciones - Elevator pitchs\\[0.8cm]}      % Título
 \includegraphics[width=12cm]{img/logos/logo-socio-alt} \\ [0.4cm]
 {\large "Porque el club es de los socios, y la gestión es de SocioUnido"} \\ [0.2cm]
 \normalsize{Plataforma inteligente que centraliza la gestión administrativa de los clubes, optimizando el uso de espacios compartidos, previniendo la morosidad y asegurando los accesos al estadio.}

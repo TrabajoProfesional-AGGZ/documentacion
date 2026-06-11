@@ -1,9 +1,9 @@
 ---
 layout: default
-title: Presentaciones
-nav_order: 6
+title: Entrega intermedia
+nav_order: 3
 ---
 
-# Presentaciones
+# Entrega final
 
 Documento fundacional y alcance del sistema.

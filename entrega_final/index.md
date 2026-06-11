@@ -6,4 +6,6 @@ nav_order: 4
 
 # Entrega final
 
-Documento fundacional y alcance del sistema.
+🛠️ **Apartado en desarrollo**
+
+La documentación asociada a esta entrega se publicarán en esta sección más adelante.

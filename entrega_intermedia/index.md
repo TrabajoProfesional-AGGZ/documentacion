@@ -4,6 +4,8 @@ title: Entrega intermedia
 nav_order: 3
 ---
 
-# Entrega final
+# Entrega intermedia
 
-Documento fundacional y alcance del sistema.
+🛠️ **Apartado en desarrollo**
+
+La documentación asociada a esta entrega se publicarán en esta sección más adelante.

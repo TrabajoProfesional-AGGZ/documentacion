@@ -2,7 +2,7 @@
 
 Documentación integral asociada al desarrollo del Trabajo Profesional "SocioUnido".
 
-📖 **[Ver la documentación online aquí](https://trabajoprofesional-aggz.github.io/documentacion/)**
+📖 **[Ver la documentación online](https://trabajoprofesional-aggz.github.io/documentacion/)**
 
 ## Sobre este repositorio
 

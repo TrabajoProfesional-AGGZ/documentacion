@@ -31,6 +31,3 @@ _site/
 # Dependencias de Ruby (si en algún momento se instalan localmente en el repo)
 vendor/
 .bundle/
-
-# Ignoro el workflow mientras el repo sea privado
-.github/

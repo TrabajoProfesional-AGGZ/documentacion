@@ -2,7 +2,7 @@
 layout: default
 title: Inicio
 nav_order: 1
-description: "Documentación oficial del proyecto."
+description: "Documentación integral asociada al desarrollo del Trabajo Profesional SocioUnido"
 ---
 
 # Documentación

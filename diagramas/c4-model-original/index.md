@@ -74,3 +74,24 @@ Orquestación de flujos asíncronos y modelos predictivos de Machine Learning en
 <p align="center">
   <img src="C4 Nivel 3-MS Analytics & AI.png" alt="C4 Nivel 3: MS Analytics & AI" width="100%" style="border-radius: 6px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); margin: 15px 0;">
 </p>
+
+### 🚪 API Gateway
+Punto de entrada unificado basado en KrakenD, encargado de interceptar peticiones, validar tokens JWT, aplicar limitación de tasa (Rate Limiting) y enrutar el tráfico hacia los microservicios correspondientes.
+
+<p align="center">
+  <img src="C4 Nivel 3-Gateway.png" alt="C4 Nivel 3: API Gateway" width="100%" style="border-radius: 6px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); margin: 15px 0;">
+</p>
+
+### 💻 Web administrativa (Panel de gestión)
+Aplicación frontend orientada al personal del club, que centraliza la administración de socios, disciplinas, reservas e informes, comunicándose de forma segura a través de la API Gateway.
+
+<p align="center">
+  <img src="C4 Nivel 3-Web Administrativa.png" alt="C4 Nivel 3: Web Administrativa" width="100%" style="border-radius: 6px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); margin: 15px 0;">
+</p>
+
+### 📱 App del Socio (PWA)
+Aplicación Web Progresiva diseñada para el usuario final, con soporte offline, notificaciones push en tiempo real y almacenamiento local para garantizar el acceso rápido al carnet digital y gestión de reservas.
+
+<p align="center">
+  <img src="C4 Nivel 3-App Socio.png" alt="C4 Nivel 3: App Socio" width="100%" style="border-radius: 6px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); margin: 15px 0;">
+</p>

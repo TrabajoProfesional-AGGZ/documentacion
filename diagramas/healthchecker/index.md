@@ -36,7 +36,7 @@ Desglose técnico de la lógica interna del servicio de monitoreo.
 **Nota:** Esta vista simplificada y optimizada.
 
 <p align="center">
-  <img src="C4 Nivel 3-Healthchecker_2.png" alt="C4 Nivel 3: Healthchecker Simplificado" width="100%" style="border-radius: 6px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); margin: 15px 0;">
+  <img src="C4 Nivel 3-Healthchecker.jpg" alt="C4 Nivel 3: Healthchecker Simplificado" width="100%" style="border-radius: 6px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); margin: 15px 0;">
   <br>
   <em><strong>Figura 2:</strong> Arquitectura de componentes del Healthchecker. Flujo desde el Task Scheduler y Monitor Engine hasta el HTTP Probe que evalúa los microservicios del sistema.</em>
 </p>

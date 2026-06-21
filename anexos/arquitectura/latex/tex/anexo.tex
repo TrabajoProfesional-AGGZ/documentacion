@@ -1,17 +1,20 @@
 \section{Modelo de arquitectura C4}
 
-En el presente anexo se documenta la arquitectura de software de la plataforma \textbf{SocioUnido} utilizando el modelo C4. Este modelo permite visualizar el sistema desde distintos niveles de abstracción, facilitando la comprensión tanto para perfiles de negocio como para el equipo de desarrollo y operaciones.
+En el presente anexo se documenta la arquitectura de software de la plataforma \textbf{SocioUnido} utilizando el modelo C4. Este modelo permite visualizar el sistema desde distintos niveles de abstracción, facilitando la comprensión tanto para perfiles técnicos de desarrollo y operaciones, como para perfiles de negocio.
 
-A continuación, se presentan los diagramas correspondientes a los niveles de Contexto (Nivel 1), Contenedores (Nivel 2) y Componentes (Nivel 3) para los distintos microservicios que componen el ecosistema.
+A continuación, se presentan los diagramas correspondientes a los niveles de Contexto (Nivel 1), Contenedores (Nivel 2) y Componentes (Nivel 3) para los distintos microservicios que componen el ecosistema. Para el nivel de componentes, se expone en cada caso el diagrama técnico (base) seguido inmediatamente por su versión visual y simplificada.
 
 \subsection{Nivel 1 del modelo de arquitectura C4}
 
 % Nivel 1: Contexto
 \begin{figure}[h!]
     \centering
-    % Nota: Las comillas en el nombre del archivo evitan errores de compilación por los espacios
-    \includegraphics[width=\textwidth]{img/c4_model/C4 Nivel 1.png}
-    \caption{Diagrama C4 nivel 1: Contexto del sistema. Interacción de la plataforma SocioUnido con los distintos actores (Socios, Dirigencia, Personal de Control) y sistemas externos (Pasarela de Pagos, Interfaz de Programación de Aplicaciones [API] de WhatsApp).}
+    \includegraphics[width=0.6\textwidth]{img/c4_model/C4 Nivel 1.png}
+    
+    \vspace{1cm}
+    
+    \includegraphics[width=0.6\textwidth]{img/c4-model-simplificado/C4 Nivel 1.png}
+    \caption{Diagrama C4 nivel 1: Contexto del sistema. \\ \textbf{Arriba:} Vista técnica base. \\ \textbf{Abajo:} Vista visual simplificada. Interacción de la plataforma SocioUnido con los distintos actores (Socios, Dirigencia, Personal de Control) y sistemas externos (Pasarela de Pagos, Interfaz de Programación de Aplicaciones [API] de WhatsApp).}
     \label{fig:c4_nivel1}
 \end{figure}
 
@@ -22,8 +25,12 @@ A continuación, se presentan los diagramas correspondientes a los niveles de Co
 % Nivel 2: Contenedores
 \begin{figure}[h!]
     \centering
-    \includegraphics[width=\textwidth]{img/c4_model/C4 Nivel 2.png}
-    \caption{Diagrama C4 nivel 2: Contenedores. Vista de alto nivel de las aplicaciones web, móviles, bases de datos y la arquitectura basada en microservicios detrás de la puerta de enlace de API (API Gateway).}
+    \includegraphics[width=0.85\textwidth]{img/c4_model/C4 Nivel 2.png}
+    
+    \vspace{1cm}
+    
+    \includegraphics[width=0.85\textwidth]{img/c4-model-simplificado/C4 Nivel 2.png}
+    \caption{Diagrama C4 nivel 2: Contenedores. \\ \textbf{Arriba:} Vista técnica base. \\ \textbf{Abajo:} Vista visual simplificada. Vista de alto nivel de las aplicaciones web, móviles, bases de datos y la arquitectura basada en microservicios detrás de la puerta de enlace de API (API Gateway).}
     \label{fig:c4_nivel2}
 \end{figure}
 
@@ -31,55 +38,186 @@ A continuación, se presentan los diagramas correspondientes a los niveles de Co
 
 \subsection{Nivel 3 del modelo de arquitectura C4}
 
+\subsubsection{Microservicio central (Core)}
+
 % Nivel 3: Componentes (MS Core / Gestión Societaria)
 \begin{figure}[h!]
     \centering
     \includegraphics[width=\textwidth]{img/c4_model/C4 Nivel 3-MS Gestion.png}
-    \caption{Diagrama C4 nivel 3: Componentes (Microservicio de gestión societaria). Detalle del microservicio principal encargado de la creación, lectura, actualización y borrado (CRUD) de usuarios, perfiles y reglas de negocio del padrón societario.}
+    
+    \vspace{1cm}
+    
+    \includegraphics[width=\textwidth]{img/c4-model-simplificado/C4 Nivel 3-MS Gestion.png}
+    \caption{Diagrama C4 nivel 3: Componentes (Microservicio de gestión societaria). \\ \textbf{Arriba:} Vista técnica base. \\ \textbf{Abajo:} Vista visual simplificada. Detalle del microservicio principal encargado del CRUD de usuarios, perfiles y reglas de negocio del padrón societario.}
     \label{fig:c4_nivel3_gestion}
 \end{figure}
+
+\newpage
+
+\subsubsection{Microservicio de procesamiento de lenguaje natural (PLN)}
 
 % Nivel 3: Componentes (MS NLP)
 \begin{figure}[h!]
     \centering
     \includegraphics[width=\textwidth]{img/c4_model/C4 Nivel 3-MS NLP.png}
-    \caption{Diagrama C4 nivel 3: Componentes (Microservicio de Procesamiento de Lenguaje Natural [PLN]). Detalle del motor de procesamiento de lenguaje natural integrado vía retrollamada web (Webhook) con la API de WhatsApp para la atención automatizada.}
+    
+    \vspace{1cm}
+    
+    \includegraphics[width=\textwidth]{img/c4-model-simplificado/C4 Nivel 3-MS NLP.png}
+    \caption{Diagrama C4 nivel 3: Componentes (Microservicio de Procesamiento de Lenguaje Natural [PLN]). \\ \textbf{Arriba:} Vista técnica base. \\ \textbf{Abajo:} Vista visual simplificada. Detalle del motor integrado vía Webhook con la API de WhatsApp.}
     \label{fig:c4_nivel3_nlp}
 \end{figure}
 
 \newpage
 
+\subsubsection{Microservicio de pagos}
+
 % Nivel 3: Componentes (MS Payments)
 \begin{figure}[h!]
     \centering
-    \includegraphics[width=\textwidth]{img/c4_model/C4 Nivel 3-MS Payments.png}
-    \caption{Diagrama C4 nivel 3: Componentes (Microservicio de pagos). Arquitectura del componente encargado de la facturación y comunicación con pasarelas de pago externas.}
+    \includegraphics[width=0.65\textwidth]{img/c4_model/C4 Nivel 3-MS Payments.png}
+    
+    \vspace{1cm}
+    
+    \includegraphics[width=0.65\textwidth]{img/c4-model-simplificado/C4 Nivel 3-MS Payments.png}
+    \caption{Diagrama C4 nivel 3: Componentes (Microservicio de pagos). \\ \textbf{Arriba:} Vista técnica base. \\ \textbf{Abajo:} Vista visual simplificada. Arquitectura del componente encargado de la facturación y comunicación externa.}
     \label{fig:c4_nivel3_payments}
 \end{figure}
+
+\newpage
+
+\subsubsection{Microservicio de acceso inteligente}
 
 % Nivel 3: Componentes (MS Smart Access)
 \begin{figure}[h!]
     \centering
     \includegraphics[width=\textwidth]{img/c4_model/C4 Nivel 3-MS Smart Access.png}
-    \caption{Diagrama C4 nivel 3: Componentes (Microservicio de Acceso Inteligente). Lógica interna de validación matemática y fuera de línea (offline) mediante contraseñas de un solo uso basadas en el tiempo (TOTP) para el control de acceso en estadios.}
+    
+    \vspace{1cm}
+    
+    \includegraphics[width=\textwidth]{img/c4-model-simplificado/C4 Nivel 3-MS Smart Access.png}
+    \caption{Diagrama C4 nivel 3: Componentes (Microservicio de acceso inteligente). \\ \textbf{Arriba:} Vista técnica base. \\ \textbf{Abajo:} Vista visual simplificada. Lógica interna de validación mediante TOTP para estadios.}
     \label{fig:c4_nivel3_smartaccess}
 \end{figure}
 
 \newpage
 
+\subsubsection{Microservicio de autenticación}
+
 % Nivel 3: Componentes (MS Auth)
 \begin{figure}[h!]
     \centering
+    \includegraphics[width=\textwidth]{img/c4_model/C4 Nivel 3-MS Auth.png}
     
-    % Primero: Componentes (MS Auth)
-    \includegraphics[width=0.95\textwidth]{img/c4_model/C4 Nivel 3-MS Auth.png}
-    \caption{Diagrama C4 nivel 3: Componentes (Microservicio de autenticación). Sistema centralizado para el manejo de identidades, validación de credenciales y generación de vales web JSON (Tokens JWT).}
+    \vspace{1cm}
+    
+    \includegraphics[width=\textwidth]{img/c4-model-simplificado/C4 Nivel 3-MS Auth.png}
+    \caption{Diagrama C4 nivel 3: Componentes (Microservicio de autenticación). \\ \textbf{Arriba:} Vista técnica base. \\ \textbf{Abajo:} Vista visual simplificada. Sistema para el manejo de identidades y generación de JWT.}
     \label{fig:c4_nivel3_auth}
-    
-    \vspace{0.2cm} % Espacio vertical de separación entre ambos cuadros
+\end{figure}
 
-    % Segundo: Componentes (MS Analytics & AI)
-    \includegraphics[width=0.95\textwidth]{img/c4_model/C4 Nivel 3-MS Analytics & AI.png}
-    \caption{Diagrama C4 nivel 3: Componentes (Microservicio de analítica e inteligencia artificial). Orquestación de tareas asíncronas y motor de \textit{aprendizaje automático (Machine Learning)} para la predicción de riesgo de morosidad.}
+\newpage
+
+\subsubsection{Microservicio de analítica e inteligencia artificial}
+
+% Nivel 3: Componentes (MS Analytics & AI)
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=\textwidth]{img/c4_model/C4 Nivel 3-MS Analytics & AI.png}
+    
+    \vspace{1cm}
+    
+    \includegraphics[width=\textwidth]{img/c4-model-simplificado/C4 Nivel 3-MS Analytics & AI.png}
+    \caption{Diagrama C4 nivel 3: Componentes (Microservicio de analítica e inteligencia artificial). \\ \textbf{Arriba:} Vista técnica base. \\ \textbf{Abajo:} Vista visual simplificada. Tareas asíncronas y motor de Machine Learning.}
     \label{fig:c4_nivel3_analytics}
+\end{figure}
+
+\newpage
+
+\subsubsection{Gateway}
+
+% Nivel 3: Componentes (API Gateway)
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=\textwidth]{img/c4_model/C4 Nivel 3-Gateway.png}
+    
+    \vspace{1cm}
+    
+    \includegraphics[width=\textwidth]{img/c4-model-simplificado/C4 Nivel 3-Gateway.jpg}
+    \caption{Diagrama C4 nivel 3: Componentes (API Gateway). \\ \textbf{Arriba:} Vista técnica base. \\ \textbf{Abajo:} Vista visual simplificada. Punto de entrada unificado basado en KrakenD, encargado de interceptar peticiones, validar tokens JWT, aplicar limitación de tasa (Rate Limiting) y enrutar el tráfico hacia los microservicios correspondientes.}
+    \label{fig:c4_nivel3_gateway}
+\end{figure}
+
+\newpage
+
+\subsubsection{Web administrativa (Panel de gestión)}
+
+% Nivel 3: Componentes (Web Administrativa)
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=\textwidth]{img/c4_model/C4 Nivel 3-Web Administrativa.png}
+    
+    \vspace{1cm}
+    
+    \includegraphics[width=\textwidth]{img/c4-model-simplificado/C4 Nivel 3-Web Administrativa.jpg}
+    \caption{Diagrama C4 nivel 3: Componentes (Web administrativa). \\ \textbf{Arriba:} Vista técnica base. \\ \textbf{Abajo:} Vista visual simplificada. Aplicación frontend orientada al personal del club, que centraliza la administración de socios, disciplinas, reservas e informes, comunicándose de forma segura a través de la API Gateway.}
+    \label{fig:c4_nivel3_webadmin}
+\end{figure}
+
+\newpage
+
+\subsubsection{App del Socio (PWA)}
+
+% Nivel 3: Componentes (App Socio)
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=\textwidth]{img/c4_model/C4 Nivel 3-App Socio.png}
+    
+    \vspace{1cm}
+    
+    \includegraphics[width=\textwidth]{img/c4-model-simplificado/C4 Nivel 3-App Socio.jpg}
+    \caption{Diagrama C4 nivel 3: Componentes (App del Socio [PWA]). \\ \textbf{Arriba:} Vista técnica base. \\ \textbf{Abajo:} Vista visual simplificada. Aplicación Web Progresiva diseñada para el usuario final, con soporte offline, notificaciones push en tiempo real y almacenamiento local para garantizar el acceso rápido al carnet digital y gestión de reservas.}
+    \label{fig:c4_nivel3_appsocio}
+\end{figure}
+
+\newpage
+
+% --- NUEVA SECCIÓN: HEALTHCHECKER ---
+\subsection{Monitoreo y Resiliencia: Servicio de Healthchecker}
+
+Para garantizar la alta disponibilidad, observabilidad y resiliencia del ecosistema de \textbf{SocioUnido}, se ha incorporado un nodo dedicado exclusivamente al monitoreo continuo del sistema: el \textbf{Servicio de Healthchecker}. 
+
+\subsubsection*{Justificación Técnica y Arquitectónica}
+En arquitecturas distribuidas basadas en microservicios, la degradación o falla parcial de un componente no debe comprometer la integridad global de la plataforma ni pasar desapercibida. El patrón de \textit{Health Check} implementado mediante un nodo observador independiente permite aislar la lógica de monitoreo del flujo principal de datos (como el API Gateway o los microservicios de negocio centrales). 
+
+El diseño y propósito de este nodo abarca los siguientes puntos críticos:
+\begin{itemize}
+    \item \textbf{Monitoreo Activo (Pull-based):} Realiza rutinas programadas de verificación (pings HTTP/TCP) consultando los \textit{endpoints} de salud designados (típicamente \texttt{/health} o \texttt{/metrics}) en cada uno de los microservicios y bases de datos.
+    \item \textbf{Evaluación de Latencia y Estado de Salud:} Además de validar la correcta recepción de códigos HTTP \texttt{200 OK}, el sistema actúa como una sonda que mide los tiempos de respuesta. Esto permite detectar bloqueos de base de datos, cuellos de botella en la red o degradación progresiva del rendimiento antes de que decante en una interrupción total del servicio (\textit{Downtime}).
+    \item \textbf{Auto-recuperación (Self-healing) y Orquestación de Alertas:} Al detectar una caída (cambio de estado de \textit{UP} a \textit{DOWN}), \textit{timeouts} excesivos o anomalías estructurales, el motor de monitoreo está diseñado para actuar proactivamente. Puede ejecutar rutinas de mitigación e interactuar con la infraestructura para reiniciar contenedores comprometidos, o disparar alertas críticas mediante \textit{webhooks} para notificar al equipo en tiempo real.
+\end{itemize}
+
+Desacoplar este componente es una decisión arquitectónica vital; asegura que bajo escenarios de alta concurrencia o ataques de denegación de servicio (DDoS) donde el API Gateway se encuentre comprometido o bajo estrés, el monitoreo transversal del sistema mantenga su capacidad operativa sin verse ralentizado por el tráfico de los usuarios finales.
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.9\textwidth]{img/healthchecker/Grafico Healthchecker.png}
+    \caption{Diagrama ilustrativo de funcionamiento del HealthChecker.}
+    \label{fig:healthchecker_logico}
+\end{figure}
+
+\newpage
+
+\subsubsection{Nivel 3 del modelo de arquitectura C4}
+
+% Nivel 3: Componentes (Healthchecker)
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=\textwidth]{img/healthchecker/C4 Nivel 3-Healthchecker.png}
+    
+    \vspace{1cm}
+    
+    \includegraphics[width=\textwidth]{img/healthchecker/C4 Nivel 3-Healthchecker.jpg}
+    \caption{Diagrama C4 nivel 3: Componentes (Servicio de Healthchecker). \\ \textbf{Arriba:} Vista técnica base. \\ \textbf{Abajo:} Vista visual simplificada. Detalle interno del orquestador de tareas automatizadas (Cron), el motor lógico de monitoreo y las sondas de red.}
+    \label{fig:c4_nivel3_healthchecker}
 \end{figure}

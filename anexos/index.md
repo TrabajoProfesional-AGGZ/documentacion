@@ -16,5 +16,6 @@ Seleccioná uno de los siguientes anexos para visualizar su contenido:
 
 * ⚽ **[Análisis de clubes y fútbol argentino](analisis-clubes/)**
 * 🎨 **[Análisis de colorimetría y teoría de la Gestalt](colorimetría/)**
+* 💡 **[Arquitectura (Modelo C4)](arquitectura/)**
 * 💡 **[Detalle de todas las ideas exploradas](ideas-exploradas/)**
 * 🖼️ **[Representaciones visuales y de marca](representaciones-visuales/)**

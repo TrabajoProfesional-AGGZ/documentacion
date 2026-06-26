@@ -221,3 +221,25 @@ Desacoplar este componente es una decisión arquitectónica vital; asegura que b
     \caption{Diagrama C4 nivel 3: Componentes (Servicio de Healthchecker). \\ \textbf{Arriba:} Vista técnica base. \\ \textbf{Abajo:} Vista visual simplificada. Detalle interno del orquestador de tareas automatizadas (Cron), el motor lógico de monitoreo y las sondas de red.}
     \label{fig:c4_nivel3_healthchecker}
 \end{figure}
+
+\newpage
+
+\subsection{Observabilidad y centralización de logs: Integración con Datadog}
+
+Complementando de forma sinérgica las capacidades de inspección reactiva y proactiva del \textbf{Servicio de Healthchecker}, la plataforma \textbf{SocioUnido} incorpora \textbf{Datadog} como pilar central de su estrategia de observabilidad corporativa. En una arquitectura orientada a microservicios donde las transacciones involucran la interacción secuencial de múltiples nodos descentralizados (tales como la pasarela de API, los servicios de autenticación, el microservicio central y las pasarelas de pago externas), la dispersión y el aislamiento de los registros de ejecución (\textit{logs}) representan un desafío crítico para el diagnóstico de fallas y el análisis de rendimiento. 
+
+La adopción de Datadog resuelve esta problemática actuando como una plataforma unificada de agregación, correlación y análisis de datos en tiempo real, sirviendo como una herramienta indispensable en todas las etapas del ciclo de vida del software, con especial énfasis en las fases de desarrollo activo, pruebas integrales automatizadas y monitoreo continuo del ecosistema.
+
+\subsubsection{Ejes fundamentales de la implementación y casos de uso}
+
+El despliegue y la configuración de esta solución de telemetría transversal abarca las siguientes dimensiones técnico-arquitectónicas:
+
+\begin{itemize}
+    \item \textbf{Agregación y centralización de logs heterogéneos:} Cada uno de los componentes del ecosistema de \textbf{SocioUnido} (los microservicios en sus respectivos contenedores, el API Gateway basado en KrakenD, y los motores de persistencia de datos) exporta sus flujos de salida estándar (\texttt{stdout} y \texttt{stderr}) de forma estructurada (típicamente en formato JSON). Datadog recolecta e indexa estos flujos de manera unificada, permitiendo al equipo de desarrollo realizar búsquedas transversales, filtrar por nivel de criticidad (\texttt{INFO}, \texttt{WARN}, \texttt{ERROR}) y reconstruir cronologías exactas de eventos sin necesidad de acceder de forma aislada a la infraestructura subyacente.
+    
+    \item \textbf{Trazabilidad distribuida y soporte para pruebas End-to-End (E2E):} Durante la ejecución de pruebas integrales o la simulación de flujos críticos del usuario final (por ejemplo, el login de un socio desde la PWA, pasando por la validación de identidad en el componente de autenticación hasta la confirmación de la pasarela de pagos), Datadog asocia un identificador único de traza (\textit{Trace ID}) a la petición a través de mecanismos de APM (\textit{Application Performance Monitoring}). Esta capacidad correlaciona los logs individuales de los distintos microservicios intervinientes en dicha transacción. Como resultado, es posible visualizar gráficamente el ciclo de vida completo de la solicitud, aislar cuellos de botella latentes y detectar con precisión milimétrica en qué punto exacto de la topología distribuida se originó una excepción.
+    
+    \item \textbf{Configuración de alertas proactivas para el ciclo de desarrollo:} Lejos de limitarse a un rol pasivo de auditoría \textit{post-mortem}, la plataforma ha sido configurada con monitores inteligentes que evalúan de forma continua las métricas de ingesta. Mediante reglas basadas en lógica condicional, el sistema dispara alertas inmediatas ante anomalías tales como picos inusuales en la tasa de errores HTTP 5xx, excepciones no controladas en el microservicio de analítica e inteligencia artificial, o degradaciones de latencia en la lógica de validación por TOTP del microservicio de acceso inteligente. Estas notificaciones tempranas optimizan los tiempos de depuración en entornos de desarrollo y control de calidad (\textit{QA}), previniendo el avance de regresiones hacia etapas posteriores del pipeline.
+    
+    \item \textbf{Visualización y análisis del comportamiento del sistema (\textit{Dashboards}):} Se podrían diseñar tableros de control personalizados que consoliden las métricas operativas y de negocio más relevantes de la plataforma. Estos páneles interactivos ofrecen una representación visual intuitiva de la salud del sistema, permitiendo realizar análisis tendenciales de la carga de trabajo, observar los patrones de tráfico concurrentes y evaluar la estabilidad de las integraciones con webhooks externos (como la API de WhatsApp). Esta visibilidad continua facilita la toma de decisiones basada en datos para el refinamiento de la arquitectura y la planificación de la escalabilidad.
+\end{itemize}

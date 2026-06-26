@@ -30,7 +30,7 @@ A continuación, se presenta el video entregado a la cátedra en esta instancia 
 <div style="margin-top: 25px; width: 100%; text-align: center;">
     <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
         <iframe 
-            src="https://drive.google.com/file/d/1uKD2dKJxH3MyjLlXAZiETL8qv-0QcdMK/preview" 
+            src="https://drive.google.com/file/d/1ZU50mg3WzlAraWa5ZiyNm-X-0FGgemA0/preview" 
             style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none;" 
             allow="autoplay; fullscreen">
         </iframe>

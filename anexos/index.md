@@ -17,5 +17,10 @@ Seleccioná uno de los siguientes anexos para visualizar su contenido:
 * ⚽ **[Análisis de clubes y fútbol argentino](analisis-clubes/)**
 * 🎨 **[Análisis de colorimetría y teoría de la Gestalt](colorimetría/)**
 * 🏛️ **[Arquitectura (Modelo C4)](arquitectura/)**
+* 🕸️ **[Ciberseguridad](ciberseguridad/)**
+* 📚 **[Conocimientos aplicados](conocimientos/)**
+* 📋 **[Definition of Ready / Definition of Done](dor-dod/)**
 * 💡 **[Detalle de todas las ideas exploradas](ideas-exploradas/)**
+* 📝 **[Derechos de autor y propiedad intelectual](derechos/)**
+* 🧪 **[Innovación](innovacion/)**
 * 🖼️ **[Representaciones visuales y de marca](representaciones-visuales/)**

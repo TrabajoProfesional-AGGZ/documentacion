@@ -23,4 +23,5 @@ Seleccioná uno de los siguientes anexos para visualizar su contenido:
 * 💡 **[Detalle de todas las ideas exploradas](ideas-exploradas/)**
 * 📝 **[Derechos de autor y propiedad intelectual](propiedad-intelectual/)**
 * 🧪 **[Innovación](innovacion/)**
+* 📊 **[Métricas SaaS](metricas-saas/)**
 * 🖼️ **[Representaciones visuales y de marca](representaciones-visuales/)**

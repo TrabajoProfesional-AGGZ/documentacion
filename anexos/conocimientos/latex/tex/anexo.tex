@@ -1,3 +1,63 @@
 \section{Conocimientos aplicados}
 
-X.
+El diseño, arquitectura y desarrollo de la plataforma SocioUnido no es un esfuerzo aislado, sino la síntesis y aplicación directa de los conocimientos adquiridos a lo largo de toda la carrera de Ingeniería en Informática. La resolución de las problemáticas de las instituciones deportivas exigió un enfoque multidisciplinario, articulando tanto los saberes técnicos de las ciencias de la computación como las habilidades blandas, la gestión de proyectos y la visión estratégica de negocios.
+
+A continuación, se detalla cómo las distintas áreas temáticas del plan de estudios se materializan en las funcionalidades y procesos de nuestra solución tecnológica.
+
+\subsection{Fundamentos matemáticos, algorítmicos y estructuras de datos}
+
+La base lógica y matemática de la carrera fue fundamental para el diseño eficiente y seguro de la plataforma:
+
+\begin{itemize}
+    \item \textbf{Fundamentos matemáticos de la criptografía (Optativa):} Esta asignatura fue la piedra angular para el desarrollo del módulo de Acceso Inteligente (\textit{Smart Access}). Los conceptos de aritmética modular y funciones unidireccionales (hash) nos permitieron implementar el algoritmo de \textit{Time-Based One-Time Passwords} (TOTP). Esto garantiza que la generación y validación de los tokens en los estadios sea matemáticamente segura y completamente funcional en entornos sin conectividad (\textit{offline}).
+    \item \textbf{Algoritmos, Estructuras de datos y teoría de algoritmos:} La eficiencia en la búsqueda, ordenamiento y filtrado de grandes padrones de socios en el Panel Administrativo se sustenta en la correcta elección de estructuras de datos (como diccionarios, tablas de hash y árboles) y en el análisis de la complejidad computacional para minimizar los tiempos de respuesta del sistema.
+    \item \textbf{Modelación numérica y análisis matemático:} Los principios de aproximación, optimización y análisis de datos fueron necesarios para comprender el comportamiento de los modelos matemáticos subyacentes a las predicciones del sistema.
+\end{itemize}
+
+\subsection{Ingeniería de software, arquitectura y calidad}
+
+La construcción de un sistema complejo y mantenible a nivel empresarial requirió aplicar metodologías rigurosas de desarrollo:
+
+\begin{itemize}
+    \item \textbf{Ingeniería de software I y II:} Estas materias guiaron la estructuración del proyecto. Aplicamos metodologías ágiles (Scrum), desarrollo iterativo e incremental, y definimos una arquitectura orientada a microservicios. Utilizamos principios de diseño como alta cohesión, bajo acoplamiento y separación de responsabilidades. La gestión de repositorios, control de versiones (Git), \textit{Release Planning}, y la implementación de un \textit{Delivery Pipeline} (CI/CD) con GitHub Actions fueron aplicados directamente de estos programas.
+    \item \textbf{Taller de programación e introducción al desarrollo:} Los fundamentos de buenas prácticas, automatización, pruebas unitarias y de integración (TDD), y la familiaridad con entornos Linux y terminales, resultaron vitales para la fase inicial de desarrollo y la estabilidad del código.
+\end{itemize}
+
+\newpage
+
+\subsection{Sistemas, redes y bases de datos}
+
+El núcleo operativo de SocioUnido se apoya en los conocimientos de infraestructura y gestión de la información:
+\begin{itemize}
+    \item \textbf{Base de datos:} El diseño del modelo relacional para el padrón de socios, la gestión de transacciones concurrentes (como el pago simultáneo de cuotas) y la optimización de consultas SQL (PostgreSQL) son aplicaciones directas de esta asignatura, asegurando la integridad de los datos financieros.
+    \item \textbf{Sistemas operativos y programación concurrente:} La comprensión de procesos, hilos, manejo de memoria, y problemas clásicos de concurrencia fue indispensable para desarrollar microservicios eficientes (especialmente en Go para el módulo de accesos) capaces de manejar múltiples peticiones simultáneas sin bloqueos.
+    \item \textbf{Redes y sistemas distribuidos I:} La comunicación entre microservicios, el diseño de APIs RESTful sobre HTTP/HTTPS, el uso del API Gateway (KrakenD), la tolerancia a fallos, y los modelos de sincronización provienen de los conceptos estudiados en estas materias.
+\end{itemize}
+
+\subsection{Ciencia de datos e inteligencia artificial}
+
+La capacidad predictiva y cognitiva de SocioUnido es su principal diferencial innovador:
+
+\begin{itemize}
+    \item \textbf{Aprendizaje automático (Optativa):} Los fundamentos teóricos y prácticos de esta asignatura fueron esenciales para la construcción del motor predictivo de morosidad societaria (\textit{Churn Prediction}). Se aplicaron técnicas de entrenamiento de modelos de \textit{Machine Learning} (clasificación y regresión), validación cruzada y optimización de hiperparámetros para calibrar el algoritmo con alta precisión.
+    \item \textbf{Ciencia de datos, probabilidad y estadística:} Estas materias se utilizaron para la etapa crítica de preprocesamiento, aplicando limpieza de datos, extracción de características y análisis exploratorio sobre los historiales financieros, sentando las bases estadísticas necesarias para alimentar los modelos predictivos.
+\end{itemize}
+
+\subsection{Ciberseguridad}
+
+La protección de los activos de información del club y de los usuarios es un requerimiento crítico:
+\begin{itemize}
+    \item \textbf{Taller de seguridad informática:} Los conocimientos sobre vulnerabilidades web, ingeniería inversa, análisis de protocolos de red y defensa en profundidad se aplicaron para segurizar las APIs, evitar ataques de inyección, sanitizar entradas (enrutadores), gestionar la autenticación mediante tokens JWT y asegurar la persistencia segura de credenciales.
+\end{itemize}
+
+\newpage
+
+\subsection{Emprendedurismo, gestión y contexto profesional}
+
+El Trabajo Profesional no solo es un desarrollo técnico, sino un producto viable en el mercado real:
+\begin{itemize}
+    \item \textbf{Empresas de base tecnológica I y II:} Estas asignaturas proporcionaron el marco para el análisis económico, financiero y legal del proyecto. La estructuración de SocioUnido como un modelo SaaS (Software as a Service) B2B, el análisis competitivo de mercado, la definición de la estrategia de \textit{pricing} (cobro mixto), el plan de penetración (\textit{Go-To-Market}), y la gestión de la propiedad intelectual (Licencia PolyForm) son aplicaciones directas de estos contenidos.
+    \item \textbf{Gestión del desarrollo de sistemas informáticos:} La administración de los tiempos, costos, calidad, y la gestión de riesgos (como los detallados en el anteproyecto) se basaron en los marcos de gestión de proyectos estudiados. La planificación de Sprints y el control de progreso fueron fundamentales para mantener el rumbo del desarrollo.
+\end{itemize}
+
+En síntesis, SocioUnido no es un mero ensamblaje de tecnologías, sino el producto maduro de un ingeniero informático formado en la FIUBA, capaz de integrar ciencias básicas, aplicadas, y competencias de gestión para resolver problemas complejos de la sociedad y la industria.

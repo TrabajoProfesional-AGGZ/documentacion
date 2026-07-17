@@ -1,11 +1,11 @@
 ---
 layout: default
-title: Definition of Ready / Done
+title: Definition of Ready (DoR) y Definition of Done (DoD)
 parent: Anexos
 nav_order: 6
 ---
 
-# Definition of Ready / Definition of Done
+# Definition of Ready (DoR) y Definition of Done (DoD)
 
 Documento que detalla los criterios de aceptación y los procesos de validación cruzada para las tareas del ciclo de desarrollo de SocioUnido.
 

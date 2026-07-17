@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Propiedad Intelectual
+title: Propiedad intelectual
 parent: Anexos
 nav_order: 8
 ---

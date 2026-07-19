@@ -1,63 +1,63 @@
 \section{Conocimientos aplicados}
 
-El diseño, arquitectura y desarrollo de la plataforma SocioUnido no es un esfuerzo aislado, sino la síntesis y aplicación directa de los conocimientos adquiridos a lo largo de toda la carrera de Ingeniería en Informática. La resolución de las problemáticas de las instituciones deportivas exigió un enfoque multidisciplinario, articulando tanto los saberes técnicos de las ciencias de la computación como las habilidades blandas, la gestión de proyectos y la visión estratégica de negocios.
+El diseño, arquitectura y desarrollo de la plataforma SocioUnido no es un esfuerzo aislado, sino la síntesis y aplicación directa de los conocimientos adquiridos a lo largo de toda la carrera de Ingeniería en Informática. La resolución de las problemáticas de las instituciones deportivas exigió un enfoque multidisciplinario, articulando tanto los saberes técnicos de las ciencias exactas y computacionales, como las habilidades de investigación, la gestión de proyectos y el entendimiento del entorno social.
 
-A continuación, se detalla cómo las distintas áreas temáticas del plan de estudios se materializan en las funcionalidades y procesos de nuestra solución tecnológica.
+A continuación, se detalla cómo la totalidad de las áreas temáticas obligatorias del plan de estudios se materializan en las funcionalidades y procesos de nuestra solución tecnológica.
 
-\subsection{Fundamentos matemáticos, algorítmicos y estructuras de datos}
+\subsection{Fundamentos matemáticos, ciencias básicas y algoritmos}
 
-La base lógica y matemática de la carrera fue fundamental para el diseño eficiente y seguro de la plataforma:
-
-\begin{itemize}
-    \item \textbf{Fundamentos matemáticos de la criptografía (Optativa):} Esta asignatura fue la piedra angular para el desarrollo del módulo de Acceso Inteligente (\textit{Smart Access}). Los conceptos de aritmética modular y funciones unidireccionales (hash) nos permitieron implementar el algoritmo de \textit{Time-Based One-Time Passwords} (TOTP). Esto garantiza que la generación y validación de los tokens en los estadios sea matemáticamente segura y completamente funcional en entornos sin conectividad (\textit{offline}).
-    \item \textbf{Algoritmos, Estructuras de datos y teoría de algoritmos:} La eficiencia en la búsqueda, ordenamiento y filtrado de grandes padrones de socios en el Panel Administrativo se sustenta en la correcta elección de estructuras de datos (como diccionarios, tablas de hash y árboles) y en el análisis de la complejidad computacional para minimizar los tiempos de respuesta del sistema.
-    \item \textbf{Modelación numérica y análisis matemático:} Los principios de aproximación, optimización y análisis de datos fueron necesarios para comprender el comportamiento de los modelos matemáticos subyacentes a las predicciones del sistema.
-\end{itemize}
-
-\subsection{Ingeniería de software, arquitectura y calidad}
-
-La construcción de un sistema complejo y mantenible a nivel empresarial requirió aplicar metodologías rigurosas de desarrollo:
+La base científica y lógica de la carrera fue la piedra angular para diseñar una plataforma robusta ante entornos adversos:
 
 \begin{itemize}
-    \item \textbf{Ingeniería de software I y II:} Estas materias guiaron la estructuración del proyecto. Aplicamos metodologías ágiles (Scrum), desarrollo iterativo e incremental, y definimos una arquitectura orientada a microservicios. Utilizamos principios de diseño como alta cohesión, bajo acoplamiento y separación de responsabilidades. La gestión de repositorios, control de versiones (Git), \textit{Release Planning}, y la implementación de un \textit{Delivery Pipeline} (CI/CD) con GitHub Actions fueron aplicados directamente de estos programas.
-    \item \textbf{Taller de programación e introducción al desarrollo:} Los fundamentos de buenas prácticas, automatización, pruebas unitarias y de integración (TDD), y la familiaridad con entornos Linux y terminales, resultaron vitales para la fase inicial de desarrollo y la estabilidad del código.
+\item \textbf{Física y Física para Informática:} Proveyeron el conocimiento fundamental sobre el electromagnetismo, la atenuación de ondas y la propagación de señales. Esto nos permitió analizar críticamente los problemas de conectividad e interferencia de red presentes en los estadios repletos de gente, justificando desde la física la necesidad arquitectónica de implementar una validación de ingresos completamente descentralizada y \textit{offline}.
+\item \textbf{Álgebra A y Álgebra Lineal:} Las bases de espacios vectoriales, matrices y transformaciones fueron indispensables para comprender las matemáticas detrás de la \textbf{Criptografía}. Gracias a estos conceptos lógicos, implementamos el algoritmo de \textit{Time-Based One-Time Passwords} (TOTP), el cual, mediante el uso de aritmética modular y funciones unidireccionales de \textit{hash}, garantiza que los tokens generados sin conexión a internet sean infalsificables y seguros.
+\item \textbf{Química:} Aportó la perspectiva de las ciencias materiales y el comportamiento de componentes, permitiendo comprender las limitaciones de hardware y electroquímicas de las baterías de los dispositivos móviles de escaneo que los empleados de control de accesos utilizan en jornadas extensas y a la intemperie. Este concepto nos permite validar la importancia de la integración con molinetes en futuras versiones del producto.
+\item \textbf{Pensamiento Computacional, Fundamentos de Programación, Algoritmos y Estructuras de Datos, y Teoría de Algoritmos:} Constituyen el núcleo de la eficiencia del sistema. Desde los conceptos iniciales de variables y flujos, hasta la elección de árboles, grafos, tablas de \textit{hash} y el análisis de la complejidad algorítmica y división y conquista, permitiendo búsquedas en tiempo real y filtrados óptimos de enormes padrones de socios en el Panel Administrativo sin sobrecargar los servidores.
+\item \textbf{Análisis Matemático A, Análisis Matemático II, Probabilidad y Estadística, y Modelación Numérica:} Aportaron el marco teórico del cálculo diferencial, derivadas, optimización, propagación de errores y análisis de incertezas. Estos principios son el sostén estadístico para el preprocesamiento, limpieza de datos y la evaluación del comportamiento subyacente de nuestros futuros motores de predicción.
 \end{itemize}
 
 \newpage
 
-\subsection{Sistemas, redes y bases de datos}
+\subsection{Ingeniería de software, arquitectura y calidad}
 
-El núcleo operativo de SocioUnido se apoya en los conocimientos de infraestructura y gestión de la información:
+La construcción de un sistema complejo y mantenible requirió aplicar metodologías rigurosas:
+
 \begin{itemize}
-    \item \textbf{Base de datos:} El diseño del modelo relacional para el padrón de socios, la gestión de transacciones concurrentes (como el pago simultáneo de cuotas) y la optimización de consultas SQL (PostgreSQL) son aplicaciones directas de esta asignatura, asegurando la integridad de los datos financieros.
-    \item \textbf{Sistemas operativos y programación concurrente:} La comprensión de procesos, hilos, manejo de memoria, y problemas clásicos de concurrencia fue indispensable para desarrollar microservicios eficientes (especialmente en Go para el módulo de accesos) capaces de manejar múltiples peticiones simultáneas sin bloqueos.
-    \item \textbf{Redes y sistemas distribuidos I:} La comunicación entre microservicios, el diseño de APIs RESTful sobre HTTP/HTTPS, el uso del API Gateway (KrakenD), la tolerancia a fallos, y los modelos de sincronización provienen de los conceptos estudiados en estas materias.
+\item \textbf{Ingeniería de Software I y II:} Guiaron la concepción del ciclo de vida del producto. Aplicamos Scrum, metodologías ágiles, control de versiones, \textit{Release Planning}, atributos de calidad, modelo SRE, e implementamos un robusto \textit{Delivery Pipeline} (CI/CD). Diseñamos una arquitectura basada en microservicios buscando siempre alta cohesión y bajo acoplamiento.
+\item \textbf{Introducción al Desarrollo de Software, Taller de Programación y Paradigmas de Programación:} Forjaron las bases de las pruebas automatizadas (TDD), la familiaridad profunda con entornos Linux, y la aplicación de programación orientada a objetos, funcional y estructurada para lograr un código limpio, encapsulado y fácilmente escalable en equipos de trabajo.
 \end{itemize}
 
-\subsection{Ciencia de datos e inteligencia artificial}
+\subsection{Sistemas, redes y bases de datos}
 
-La capacidad predictiva y cognitiva de SocioUnido es su principal diferencial innovador:
+El núcleo operativo de SocioUnido se apoya firmemente en el manejo de la infraestructura:
+\begin{itemize}
+\item \textbf{Organización del Computador y Sistemas Operativos:} Permitieron comprender la arquitectura interna a bajo nivel, el manejo de memoria dinámica, los hilos (threads) y la paginación. Esto se tradujo en una mejor optimización del consumo de recursos en nuestros contenedores y máquinas virtuales.
+\item \textbf{Base de Datos:} El diseño lógico del modelo relacional, la gestión de transacciones concurrentes y el uso óptimo de consultas SQL en PostgreSQL aseguraron la persistencia, integridad y normalización de todos los datos financieros y societarios del sistema.
+\item \textbf{Programación Concurrente, Redes y Sistemas Distribuidos I:} Son la columna vertebral de la plataforma \textit{Cloud}. La sincronización de estados, tolerancia a fallos, balanceo de carga, protocolos TCP/UDP/HTTP, diseño de APIs RESTful mediante un API Gateway y el uso de microservicios eficientes en Go/Python evitan bloqueos de concurrencia y garantizan la resiliencia y escalabilidad de la comunicación distribuida.
+\end{itemize}
+
+\subsection{Ciencia de datos}
+
+La capacidad de extraer valor de la información recolectada es nuestro enfoque estratégico:
 
 \begin{itemize}
-    \item \textbf{Aprendizaje automático (Optativa):} Los fundamentos teóricos y prácticos de esta asignatura fueron esenciales para la construcción del motor predictivo de morosidad societaria (\textit{Churn Prediction}). Se aplicaron técnicas de entrenamiento de modelos de \textit{Machine Learning} (clasificación y regresión), validación cruzada y optimización de hiperparámetros para calibrar el algoritmo con alta precisión.
-    \item \textbf{Ciencia de datos, probabilidad y estadística:} Estas materias se utilizaron para la etapa crítica de preprocesamiento, aplicando limpieza de datos, extracción de características y análisis exploratorio sobre los historiales financieros, sentando las bases estadísticas necesarias para alimentar los modelos predictivos.
+\item \textbf{Ciencia de Datos:} Los conocimientos de clasificación, regresión, análisis exploratorio y extracción de características sirvieron para procesar grandes volúmenes de transacciones, detectar valores atípicos y proyectar soluciones inteligentes sobre la prevención de morosidad societaria e informes de valor para las instituciones.
 \end{itemize}
 
 \subsection{Ciberseguridad}
 
-La protección de los activos de información del club y de los usuarios es un requerimiento crítico:
+La protección de los activos de información es innegociable en sistemas financieros y de accesos:
 \begin{itemize}
-    \item \textbf{Taller de seguridad informática:} Los conocimientos sobre vulnerabilidades web, ingeniería inversa, análisis de protocolos de red y defensa en profundidad se aplicaron para segurizar las APIs, evitar ataques de inyección, sanitizar entradas (enrutadores), gestionar la autenticación mediante tokens JWT y asegurar la persistencia segura de credenciales.
+\item \textbf{Taller de Seguridad Informática:} Las técnicas de defensa en profundidad se aplicaron para prevenir ataques de inyección, mitigar vulnerabilidades, gestionar roles mediante autenticación robusta con JWT, sanitizar entradas de datos y proteger todo el tráfico perimetral de nuestra infraestructura.
 \end{itemize}
-
-\newpage
 
 \subsection{Emprendedurismo, gestión y contexto profesional}
 
-El Trabajo Profesional no solo es un desarrollo técnico, sino un producto viable en el mercado real:
+SocioUnido no es solo desarrollo, sino un producto pensado para insertarse y mejorar la realidad de un mercado real:
 \begin{itemize}
-    \item \textbf{Empresas de base tecnológica I y II:} Estas asignaturas proporcionaron el marco para el análisis económico, financiero y legal del proyecto. La estructuración de SocioUnido como un modelo SaaS (Software as a Service) B2B, el análisis competitivo de mercado, la definición de la estrategia de \textit{pricing} (cobro mixto), el plan de penetración (\textit{Go-To-Market}), y la gestión de la propiedad intelectual (Licencia PolyForm) son aplicaciones directas de estos contenidos.
-    \item \textbf{Gestión del desarrollo de sistemas informáticos:} La administración de los tiempos, costos, calidad, y la gestión de riesgos (como los detallados en el anteproyecto) se basaron en los marcos de gestión de proyectos estudiados. La planificación de Sprints y el control de progreso fueron fundamentales para mantener el rumbo del desarrollo.
+\item \textbf{Introducción al Conocimiento de la Sociedad y el Estado (ICSE) e Introducción al Pensamiento Científico (IPC):} Estas asignaturas de enfoque social brindaron el pensamiento crítico necesario para interpretar documentación extensa, analizar reglamentos y estatutos. Permitió entender la naturaleza sociopolítica y las dinámicas internas de los clubes deportivos, tratándolos no solo como entes económicos, sino como pilares sociales, empatizando directamente con los problemas y necesidades de la masa societaria.
+\item \textbf{Empresas de Base Tecnológica I y II:} Sentaron las bases legales, corporativas y financieras. Definieron la viabilidad del modelo SaaS B2B, estrategias de comercialización y \textit{pricing}, propiedad intelectual, estructura de costos y todo el plan de negocios para transformar el código en un emprendimiento viable.
+\item \textbf{Gestión del Desarrollo de Sistemas Informáticos:} Aportó la estructura ejecutiva para estimar tiempos, calcular costos, liderar al equipo y realizar la fundamental gestión de riesgos que mantuvo el rumbo del desarrollo del Trabajo Profesional dentro de los plazos establecidos.
 \end{itemize}
 
-En síntesis, SocioUnido no es un mero ensamblaje de tecnologías, sino el producto maduro de un ingeniero informático formado en la FIUBA, capaz de integrar ciencias básicas, aplicadas, y competencias de gestión para resolver problemas complejos de la sociedad y la industria.
+En síntesis, SocioUnido no es un mero ensamblaje de tecnologías, sino el producto maduro de un ingeniero informático formado integralmente en la Universidad de Buenos Aires (UBA), capaz de integrar ciencias básicas, aplicadas, y competencias de gestión para resolver problemas complejos de la sociedad y la industria.

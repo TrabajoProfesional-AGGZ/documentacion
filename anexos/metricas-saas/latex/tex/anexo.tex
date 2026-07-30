@@ -6,43 +6,107 @@ En el mercado de SaaS, la retención es tan crítica como la adquisición. Si un
 
 \subsection{Ingresos recurrentes y crecimiento (MRR y New Net MRR)}
 
-La métrica principal de estabilidad financiera es el \textbf{\textit{Monthly Recurring Revenue} (MRR)}, que representa la suma de los cargos fijos mensuales cobrados a todas las instituciones.
+La métrica principal de estabilidad financiera es el \textbf{\textit{Monthly Recurring Revenue} (MRR)}, que representa la suma de los cargos fijos mensuales cobrados a todas las instituciones:
+\begin{equation}
+    \text{MRR} = \sum_{i=1}^{n} \text{Cuota Mensual Recurrente}_i
+\end{equation}
+donde $n$ representa la cantidad total de clubes suscriptos y activos en el mes corriente. El MRR garantiza que las operaciones diarias se ejecuten con previsibilidad financiera sin depender de ingresos transaccionales extraordinarios.
 
-Dado el modelo híbrido de SocioUnido, el crecimiento financiero (el \textbf{\textit{New Net MRR}}) se compone de la siguiente manera:
+Dado el modelo híbrido de SocioUnido, el crecimiento financiero neto, denominado \textbf{\textit{New Net MRR}}, se evalúa mediante la siguiente ecuación diferencial de ingresos:
+\begin{equation}
+    \text{New Net MRR} = \text{New MRR} + \text{Expansion MRR} - \text{Contraction MRR} - \text{Churn MRR}
+\end{equation}
+cuyos componentes se definen como:
 \begin{itemize}
     \item \textbf{\textit{New MRR}:} Ingresos fijos generados por nuevos clubes adquiridos en el mes corriente.
-    \item \textbf{\textit{Expansion MRR}:} Crecimiento interno de la cuenta de un club existente. En nuestro modelo, esto ocurre orgánicamente por dos vías: cuando el club crece en su masa societaria o éxito futbolístico (aumentando su abono fijo) o, fundamentalmente, por el componente variable: cuando los hinchas incrementan el uso de la plataforma para pagos o reservas, aumentando el volumen del \textit{Fee Transaccional} y del \textit{Marketplace CPA}.
-    \item \textbf{\textit{Contraction MRR} y \textit{Churn MRR}:} Pérdida de ingresos por clubes que descienden de categoría (y exigen una re-negociación a la baja del cargo fijo) o que abandonan completamente la plataforma (\textit{Churn}).
+    \item \textbf{\textit{Expansion MRR}:} Crecimiento interno de la cuenta de un club existente. En nuestro modelo, esto ocurre orgánicamente por dos vías: cuando el club crece en su masa societaria o éxito futbolístico (aumentando su abono fijo por escalafón) o, fundamentalmente, por el componente variable: cuando los hinchas incrementan el uso de la plataforma para pagos o reservas, aumentando el volumen del \textit{Fee Transaccional} y del \textit{Marketplace CPA}.
+    \item \textbf{\textit{Contraction MRR} (o \textit{Downgrade MRR}):} Pérdida de ingresos por clubes que descienden de categoría o reducen su padrón activo, exigiendo una renegociación a la baja del cargo fijo.
+    \item \textbf{\textit{Churn MRR}:} Pérdida total de ingresos recurrentes provocada por clubes que abandonan completamente la plataforma (\textit{Churn}).
 \end{itemize}
-El objetivo es garantizar que la suma de \textit{New} + \textit{Expansion} siempre supere holgadamente a la suma de \textit{Contraction} + \textit{Churn}.
+El objetivo estratégico es garantizar que la suma de ingresos de adquisición y expansión ($\text{New} + \text{Expansion}$) supere holgadamente a la merma por contracción y pérdida de clientes ($\text{Contraction} + \text{Churn}$).
 
-\subsection{Retención institucional (Customer Churn Rate - CCR)}
+\subsection{Retención institucional (Customer Churn Rate - CCR y Revenue Churn Rate)}
 
-El \textbf{\textit{Customer Churn Rate}} mide el porcentaje de clubes que cancelan su suscripción en un periodo determinado. A diferencia de las plataformas orientadas al consumidor final (B2C), donde el \textit{churn} suele ser alto, en el ecosistema B2B institucional de SocioUnido esperamos un CCR extremadamente bajo (inferior al 5\% anual).
+El \textbf{\textit{Customer Churn Rate} (CCR)} mide el porcentaje de clubes que cancelan su suscripción en un período determinado, formalizado mediante la expresión:
+\begin{equation}
+    \text{CCR} = \frac{\text{Cantidad de clientes perdidos durante el período}}{\text{Cantidad de clientes al inicio del período}}
+\end{equation}
+A diferencia de las plataformas orientadas al consumidor final (B2C), donde el \textit{churn} suele ser elevado, en el ecosistema B2B institucional de SocioUnido esperamos un CCR extremadamente bajo (inferior al 5\% anual, superando el estándar saludable del mercado SaaS situado entre el 5\% y el 7\% anual).
 
 Esto se debe al concepto de \textbf{``Fricción de Salida'' (\textit{Vendor Lock-in})}: una vez que un club migra su padrón de socios, integra sus finanzas, entrena a su personal de seguridad en el \textit{Smart Access} y educa a sus hinchas a usar el bot de WhatsApp, cambiar a otro proveedor o volver al papel representa un costo operativo e institucional masivo. La plataforma se vuelve el núcleo operativo del club, lo que garantiza una retención natural prolongada.
 
-\newpage
+Adicionalmente, para evitar confusiones entre la pérdida física de cuentas institucionales y la merma económica, incorporamos el seguimiento del \textbf{\textit{Revenue Churn Rate} (o \textit{Gross Dollar Churn})}, que evalúa el impacto financiero directo de la contracción y deserción respecto al MRR del período anterior:
+\begin{equation}
+    \text{Revenue Churn Rate}_i = \frac{\text{Contraction MRR}_i + \text{Churn MRR}_i}{\text{MRR}_{i-1}}
+\end{equation}
+donde $\text{MRR}_{i-1}$ representa la facturación recurrente total al cierre del mes inmediatamente anterior. Esta métrica permite auditar si las eventuales pérdidas se concentran en instituciones de gran volumen o en clubes de menor peso contable.
 
 \subsection{Costo de adquisición vs. valor del cliente (CAC y LTV)}
 
 La rentabilidad del modelo de negocio se valida mediante la relación entre cuánto nos cuesta conseguir un club (\textbf{CAC}) y cuánto dinero nos deja ese club durante todo el tiempo que use la plataforma (\textbf{LTV}).
 
 \begin{itemize}
-    \item \textbf{\textit{Customer Acquisition Cost} (CAC):} Como se detalla en la estrategia de \textit{Promoción}, la adquisición en SocioUnido no depende de anuncios pagos genéricos (Google Ads), sino de Ventas Consultivas (Outbound), reuniones corporativas, auditorías de recaudación in-situ y alianzas estratégicas. Por lo tanto, el CAC se calcula sumando los salarios del equipo de ventas/relaciones públicas, viáticos y el ``costo'' de bonificar el \textit{Setup Fee} a los \textit{Early Adopters}, dividido por la cantidad de clubes cerrados.
+    \item \textbf{\textit{Customer Acquisition Cost} (CAC):} Como se detalla en la estrategia de \textit{Promoción}, la adquisición en SocioUnido no depende de anuncios pagos genéricos (Google Ads), sino de Ventas Consultivas (Outbound), reuniones corporativas, auditorías de recaudación in-situ y alianzas estratégicas. Por lo tanto, el CAC se calcula sumando los costos totales de marketing y ventas del período sobre la cantidad de clientes cerrados:
+    \begin{equation}
+        \text{CAC} = \frac{\sum \text{Costos de marketing y ventas del período}}{\text{Cantidad de clientes obtenidos en el período}}
+    \end{equation}
+    En SocioUnido, el numerador incluye los salarios del equipo de ventas y relaciones públicas, viáticos ejecutivos y el costo de oportunidad de bonificar el \textit{Setup Fee} a los \textit{Early Adopters}. Cuanto menor sea el CAC, mayor será el margen bruto del negocio.
     
-    \item \textbf{\textit{Lifetime Value} (LTV):} Es el valor total histórico que genera un club. Se calcula multiplicando el Ingreso Promedio por Usuario (\textbf{ARPU}, que suma el abono fijo más el promedio histórico del \textit{Fee} variable transaccional y publicidad) y dividiéndolo por el \textit{Churn Rate} (CCR).
+    \item \textbf{\textit{Lifetime Value} (LTV):} Es el valor monetario total promedio que genera un club a lo largo de toda su vida útil en el ecosistema. Se determina mediante el cociente entre el Ingreso Promedio por Usuario (\textbf{ARPU}) y la tasa de abandono institucional (\textbf{CCR}):
+    \begin{equation}
+        \text{LTV} = \frac{\text{ARPU}}{\text{CCR}}
+    \end{equation}
+    donde el \textbf{ARPU} (\textit{Average Monthly Recurring Revenue per User}) es la facturación media por cliente, obtenida del cociente entre el MRR mensual y el total de clubes activos:
+    \begin{equation}
+        \text{ARPU} = \frac{\text{MRR}}{\text{Cantidad de clientes activos}}
+    \end{equation}
+    En nuestro modelo B2B, el ARPU de cada club consolida el abono fijo mensual escalonado por padrón, las comisiones del \textit{Fee Transaccional} por cobranzas y los ingresos netos del \textit{Marketplace CPA}.
 \end{itemize}
 
 \textbf{Análisis de viabilidad (\textit{LTV/CAC Ratio}):}
-Para que SocioUnido sea considerado un negocio altamente rentable y atractivo para inversores, la relación debe cumplir la regla de oro del SaaS: \textbf{El LTV debe ser, como mínimo, 3 veces mayor que el CAC ($LTV > 3 \times CAC$)}. 
-Dada la estrategia de comercializar un producto con cobro transaccional recurrente (donde el club aporta dinero continuamente mes a mes) a un sector institucional que rara vez cambia de proveedor (bajando el CCR y extendiendo la vida útil), proyectamos que el índice LTV/CAC de SocioUnido superará este umbral, consolidando un modelo de negocio altamente viable y escalable.
+Para que SocioUnido sea considerado un negocio altamente rentable y atractivo para inversores, la relación debe cumplir la regla de oro del SaaS:
+\begin{equation}
+    \text{LTV} > 3 \times \text{CAC}
+\end{equation}
+asimismo, el período de recupero de la inversión de adquisición (tiempo necesario para compensar el CAC con el MRR neto) debe mantenerse por debajo de los 12 meses ($\text{Meses para recuperar CAC} < 12$), sujeto a la disponibilidad de caja de la empresa. 
+Dada la estrategia de comercializar un producto con cobro transaccional recurrente (donde el club aporta dinero continuamente mes a mes) a un sector institucional que rara vez cambia de proveedor (bajando el CCR y extendiendo la vida útil), proyectamos que el índice LTV/CAC de SocioUnido superará ampliamente este umbral, consolidando un modelo de negocio altamente viable y escalable.
 
-\subsection{Velocidad y eficiencia del crecimiento (Quick ratio)}
+\subsection{Velocidad y eficiencia del crecimiento (Quick Ratio)}
 
 A medida que el ecosistema se expanda desde la Fase 1 (Primera B y C) hacia la Fase 2 (Primera Nacional y Liga Profesional), utilizaremos el \textbf{\textit{Quick Ratio}} para medir si estamos creciendo de forma saludable o si simplemente estamos reemplazando clientes perdidos.
 
 La fórmula compara los ingresos que entran versus los que salen:
-$$ \text{Quick Ratio} = \frac{\text{New MRR} + \text{Expansion MRR}}{\text{Downgrade MRR} + \text{Churn MRR}} $$
+\begin{equation}
+    \text{Quick Ratio} = \frac{\text{New MRR} + \text{Expansion MRR}}{\text{Downgrade MRR} + \text{Churn MRR}}
+\end{equation}
+donde $\text{Downgrade MRR}$ es equivalente al término $\text{Contraction MRR}$. 
 
-Nuestra meta corporativa a mediano plazo es sostener un \textbf{Quick Ratio superior a 4}. Lograr este índice (es decir, ingresar \$4 por cada \$1 perdido) validará el éxito de nuestro \textit{Go-To-Market}, demostrando a potenciales grupos inversores (Capital de Riesgo / \textit{Venture Capital}) que SocioUnido es una empresa que crece a un ritmo acelerado y con alta eficiencia de retención de capital.
+Los rangos de referencia para evaluar la salud de la estructura recurrente son los siguientes:
+\begin{itemize}
+    \item $\text{Quick Ratio} < 1$: Escenario inviable u obsoleto (\textit{``estamos muertos''}). La merma de ingresos supera a la adquisición y expansión, lo que conduce a una contracción neta que destruye la empresa si perdura en el tiempo.
+    \item $1 < \text{Quick Ratio} < 4$: Crecimiento lento o con baja eficiencia. Aunque existe crecimiento neto, la institución o la plataforma requiere mantener altos costos de adquisición para reponer el volumen transaccional perdido.
+    \item $\text{Quick Ratio} > 4$: Crecimiento acelerado y de alta eficiencia de retención. Representa el estándar que exige el capital de riesgo (\textit{Venture Capital}) para invertir en empresas SaaS.
+\end{itemize}
+Nuestra meta corporativa a mediano plazo es sostener un \textbf{Quick Ratio superior a 4}. Lograr este índice (es decir, ingresar \$4 por cada \$1 perdido) validará el éxito de nuestro \textit{Go-To-Market}, demostrando a potenciales grupos inversores que SocioUnido es una empresa que crece a un ritmo acelerado y con alta eficiencia de retención de capital.
+
+\newpage
+
+\subsection{Profit \& Loss (P\&L): Impacto y optimización de costos en las entidades}
+
+El modelo SaaS de SocioUnido no solo se fundamenta en la captación de ingresos recurrentes para la plataforma, sino en una transformación directa sobre el estado de resultados o \textbf{\textit{Profit \& Loss} (P\&L)} de las entidades deportivas clientes. La propuesta de valor actúa simultáneamente sobre la contracción del gasto operativo/fijo y la expansión de la línea de ingresos:
+
+\begin{itemize}
+    \item \textbf{Reducción de costos directos, fijos y operativos:}
+    \begin{itemize}
+        \item \textit{Optimización en sueldos y carga administrativa:} En los clubes del ascenso y ligas metropolitanas, una proporción significativa del presupuesto se destina a horas-hombre ocupadas en tareas repetitivas de cobranza, atención en secretaría y conciliación manual en planillas de cálculo. La implementación del Asistente Conversacional con Procesamiento de Lenguaje Natural (PLN) en WhatsApp para consultas y cobros automáticos, sumado a la automatización contable del Panel E2E, reduce drásticamente la sobrecarga operativa de secretaría y tesorería. Esto permite rediseñar y eficientizar la estructura de gastos en personal, reasignando recursos humanos hacia áreas de mayor valor agregado.
+        \item \textit{Ahorro en operativos policiales y de seguridad en accesos:} En los días de partido, la saturación perimetral, las demoras en molinetes y el fraude por entradas o carnets físicos obligan a los clubes a contratar un número elevado de efectivos policiales y personal de seguridad privada para contener cuellos de botella. El módulo de \textbf{Acceso Inteligente (\textit{Smart Access}) con validación TOTP 100\% offline} agiliza el flujo de escaneo a velocidades casi instantáneas sin depender de conectividad ni redes 4G/5G. La eliminación de aglomeraciones y la erradicación del ingreso ilegal por carnet duplicado disminuyen la conflictividad en las puertas, permitiendo a los directivos reducir la dotación requerida y el costo directo del operativo de seguridad por partido.
+        \item \textit{Supresión de costos en insumos físicos y servidores locales:} La desmaterialización del carnet de socio en una PWA digital elimina el costo recurrente de impresión de tarjetas PVC, credenciales magnéticas y rollos térmicos. Asimismo, la infraestructura 100\% en la nube ahorra gastos de adquisición, refrigeración y mantenimiento de servidores físicos locales.
+    \end{itemize}
+    
+    \item \textbf{Expansión de ingresos y nuevas vías de monetización:}
+    \begin{itemize}
+        \item \textit{Recupero de morosidad silenciosa:} El motor predictivo de \textit{Machine Learning} identifica anomalías en la asistencia y el pago antes de que el socio incurra en baja definitiva, activando campañas preventivas de regularización que salvan capital.
+        \item \textit{Alquiler digital de espacios institucionales ociosos:} A través de la interfaz del socio, la institución rentabiliza instalaciones compartidas (canchas, salones, quinchos) que permanecían subutilizadas.
+        \item \textit{Monetización publicitaria (\textit{Marketplace CPA}):} La integración de un canal comercial y de beneficios segmentado dentro de la aplicación móvil habilita ingresos publicitarios compartidos (10\% para SocioUnido en alianzas directas del club y hasta 75\% para el club en anunciantes provistos por la plataforma), diversificando el ingreso neto corporativo.
+    \end{itemize}
+\end{itemize}

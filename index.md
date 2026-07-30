@@ -26,3 +26,4 @@ Su propósito es alojar los documentos correspondientes a las distintas instanci
 * **[Anexos](anexos/):** Material adicional que complementa los documentos formales, como arquitectura, investigaciones de mercado, colorimetrías, entre otros.
 * **[Diagramas y esquemas](diagramas/):** Representaciones visuales que facilitan la comprensión de la estructura, implementación y funcionamiento del producto.
 * **[Presentaciones](presentaciones/):** Material utilizado para exposiciones, reuniones o presentaciones internas (con los tutores), o externas (con posibles clientes, inversores o jurados del trabajo profesional).
+* **[Validación del producto](validacion_producto/):** Entrevistas, sesiones de testeo, feedback de trabajadores de clubes y usuarios reales para validar UX/UI, usabilidad y valor agregado.

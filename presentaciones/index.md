@@ -8,7 +8,7 @@ nav_order: 7
 
 El apartado de **Presentaciones** centraliza el material de apoyo utilizado para exposiciones, reuniones y demostraciones del ecosistema de **SocioUnido**. Esto abarca desde instancias formales e internas con los tutores, hasta enfoques externos dirigidos a posibles clientes, inversores o jurados del trabajo profesional.
 
-## Enfoque y Estrategia de Comunicación
+## Enfoque y estrategia de comunicación
 
 En este documento se estructuran las distintas variantes de presentación rápida (*Elevator Pitch*) diseñadas meticulosamente para diferentes audiencias (comercial, técnico, ventas directas a clubes y *networking*).
 

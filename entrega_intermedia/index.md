@@ -6,9 +6,9 @@ nav_order: 3
 
 # Entrega intermedia
 
-En esta sección se exponen los avances consolidados y la demostración práctica correspondiente a la **Entrega Intermedia** de **SocioUnido**.
+En esta sección se exponen los avances consolidados y la demostración práctica correspondiente a la **Entrega intermedia** de **SocioUnido**.
 
-## Presentaciones de Avances
+## Presentaciones de avances
 
 Para esta instancia, generamos varias versiones de la presentación detallando el progreso del desarrollo, la arquitectura y los próximos pasos del proyecto.
 
@@ -23,7 +23,7 @@ De esta forma, es posible visualizar el contenido en distintos formatos según l
     </a>
 </div>
 
-## Demostración Audiovisual
+## Demostración audiovisual
 
 A continuación, se presenta el video entregado a la cátedra en esta instancia de evaluación:
 

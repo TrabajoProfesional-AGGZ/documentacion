@@ -17,10 +17,10 @@ A continuación, se presentan los registros audiovisuales y resúmenes de los en
 ### Club Atlético Talleres (Remedios de Escalada)
 
 * **Entrevistado:** Martín Fernando Rubino
-* **Rol / Relación con el club:** Trabajador de la institución
+* **Rol / relación con el club:** Trabajador de la institución
 * **Foco del encuentro:** Realizar un primer análisis de las funcionalidades diseñadas para el club, detección de puntos de dolor y relevamiento de primeras impresiones sobre la propuesta de valor de **SocioUnido**.
 
-#### Registro Audiovisual de la Entrevista
+#### Registro audiovisual de la entrevista
 
 <div style="margin-top: 25px; width: 100%; text-align: center;">
     <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">

@@ -18,8 +18,8 @@ Su propósito es alojar los documentos correspondientes a las distintas instanci
 ### Documentos formales de evaluación
 
 * **[Anteproyecto](anteproyecto/):** Definición del marco teórico, viabilidad comercial, alcance del producto (SocioUnido) y planificación inicial (Formato '.pdf').
-* **[Entrega Intermedia](entrega_intermedia/):** Avances técnicos, definiciones de arquitectura, diagramas de flujo y primeras iteraciones del desarrollo (Formato '.pptx' + video explicativo).
-* **[Entrega Final](entrega_final/):** Documentación técnica consolidada, manuales de usuario, MVP y conclusiones definitivas del producto terminado (Formato '.pdf' + presentación con '.pptx' y defensa oral).
+* **[Entrega intermedia](entrega_intermedia/):** Avances técnicos, definiciones de arquitectura, diagramas de flujo y primeras iteraciones del desarrollo (Formato '.pptx' + video explicativo).
+* **[Entrega final](entrega_final/):** Documentación técnica consolidada, manuales de usuario, MVP y conclusiones definitivas del producto terminado (Formato '.pdf' + presentación con '.pptx' y defensa oral).
 
 ### Documentación de soporte
 

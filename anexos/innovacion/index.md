@@ -5,7 +5,7 @@ parent: Anexos
 nav_order: 9
 ---
 
-# Innovación y Ruptura del Paradigma Tecnológico en la Gestión Deportiva
+# Innovación y ruptura del paradigma tecnológico en la gestión deportiva
 
 Documento que detalla en profundidad los aspectos disruptivos de SocioUnido, incluyendo la prevención de morosidad mediante Machine Learning, validación de accesos offline con tecnología TOTP y el uso de Procesamiento de Lenguaje Natural (PLN) para la fricción cero.
 

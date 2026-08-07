@@ -8,7 +8,7 @@ nav_order: 2
 
 El **Anteproyecto** constituye el documento fundacional de **SocioUnido**, estableciendo formalmente el marco teórico, la viabilidad comercial, el alcance inicial del trabajo profesional y la planificación estratégica del ciclo de vida del producto.
 
-## Instancia de Evaluación y Estado
+## Instancia de evaluación y estado
 
 Para esta presentación formal ante la cátedra, se procedió con la entrega del documento técnico asociado.
 

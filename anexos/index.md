@@ -21,7 +21,8 @@ Seleccioná uno de los siguientes anexos para visualizar su contenido:
 * 📚 **[Conocimientos aplicados](conocimientos/)**
 * 📋 **[Definition of Ready / Definition of Done](dor-dod/)**
 * 💡 **[Detalle de todas las ideas exploradas](ideas-exploradas/)**
-* 📝 **[Derechos de autor y propiedad intelectual](propiedad-intelectual/)**
+* ⚖️ **[Derechos de autor y propiedad intelectual](propiedad-intelectual/)**
 * 🧪 **[Innovación](innovacion/)**
 * 📊 **[Métricas SaaS](metricas-saas/)**
+* 📜 **[Política de privacidad, seguridad, términos y condiciones](politica-privacidad/)**
 * 🖼️ **[Representaciones visuales y de marca](representaciones-visuales/)**

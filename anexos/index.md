@@ -24,5 +24,5 @@ Seleccioná uno de los siguientes anexos para visualizar su contenido:
 * ⚖️ **[Derechos de autor y propiedad intelectual](propiedad-intelectual/)**
 * 🧪 **[Innovación](innovacion/)**
 * 📊 **[Métricas SaaS](metricas-saas/)**
-* 📜 **[Política de privacidad, seguridad, términos y condiciones](politica-privacidad/)**
+* 📜 **[Política de privacidad, seguridad, términos y condiciones](politicas/)**
 * 🖼️ **[Representaciones visuales y de marca](representaciones-visuales/)**

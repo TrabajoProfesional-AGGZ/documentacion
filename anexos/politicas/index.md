@@ -7,7 +7,7 @@ nav_order: 11
 
 # Política de privacidad, seguridad, términos y condiciones
 
-Definición de la política de privacidad, seguridad, términos y condiciones del proyecto **SocioUnido**.
+Definición de la política de privacidad, seguridad, términos y condiciones del producto **SocioUnido**.
 
 <div style="margin-top: 25px; text-align: center;">
     <a href="{{ '/anexos/politicas/Política de privacidad, seguridad, términos y condiciones.pdf' | relative_url }}" download="Política de privacidad, seguridad, términos y condiciones - SocioUnido.pdf" style="display: inline-block; padding: 12px 24px; background-color: #0284c7; color: white; text-decoration: none; border-radius: 6px; font-weight: bold; font-size: 14px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">

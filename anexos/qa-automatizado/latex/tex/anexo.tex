@@ -28,7 +28,7 @@ Para optimizar la legibilidad y eficiencia de la auditoría, se le exige al agen
 
 A continuación, se detalla el análisis exhaustivo de seguridad realizado por OpenClaw sobre los cinco repositorios principales que conforman la arquitectura de SocioUnido.
 
-\subsubsection{Aplicación móvil PWA (para socios)}
+\subsubsection{Aplicación móvil PWA (Socios)}
 
 \begin{itemize}
     \item \textbf{Fuga de información sensible:} Se identificó que ante fallos inesperados de la aplicación, el componente encargado de capturar errores exponía la traza completa del sistema (stack trace) directamente en la pantalla del usuario, revelando la estructura interna del código fuente.
@@ -39,16 +39,33 @@ A continuación, se detalla el análisis exhaustivo de seguridad realizado por O
     \item \textbf{Metadatos del documento:} El archivo raíz de la interfaz mantenía el atributo de idioma configurado en inglés para una aplicación desarrollada íntegramente en español, lo que afectaba la accesibilidad y la interpretación de agentes externos.
 \end{itemize}
 
-\subsubsection{Microservicio de pagos}
+\subsubsection{Aplicación móvil PWA (Trabajadores)}
 
 \begin{itemize}
-    \item \textbf{Omisión de autenticación en procesamiento de cobros:} El punto de acceso principal para ejecutar transacciones financieras no aplicaba la validación de la clave interna del sistema, permitiendo a cualquier actor invocar operaciones de cobro de forma anónima.
-    \item \textbf{Ausencia de verificación en notificaciones externas:} El servicio procesaba las notificaciones de pago entrantes desde la pasarela externa sin validar su firma criptográfica, exponiendo la plataforma a ataques de saturación o denegación de servicio (DoS).
-    \item \textbf{Inseguridad en la comunicación con la base de datos en memoria:} La conexión hacia el intermediario de eventos (Redis) desactivaba la validación de certificados SSL/TLS, abriendo las transacciones financieras a intercepciones de red o ataques de tipo Man-in-the-Middle.
-    \item \textbf{Gestión de credenciales en scripts de migración:} Se hallaron claves secretas débiles asignadas por defecto y cadenas de conexión con contraseñas expuestas dentro de los archivos de configuración de la base de datos.
+    \item \textbf{Fuga de información sensible:} Se identificó que ante fallos inesperados de la aplicación, el componente encargado de capturar errores exponía la traza completa del sistema directamente en la pantalla del usuario, revelando la estructura interna del código fuente.
+    \item \textbf{Gestión de encabezados de autorización:} El módulo central de peticiones enviaba encabezados de autenticación con valores nulos o indefinidos cuando el usuario navegaba de forma anónima, generando un comportamiento ambiguo en los servidores.
+    \item \textbf{Políticas de seguridad de contenido inexistentes:} El documento principal carecía de políticas de restricción de contenido (CSP), exponiendo a la aplicación a ataques de inyección de código de terceros.
 \end{itemize}
 
 \newpage
+
+\subsubsection{Gateway}
+
+\begin{itemize}
+    \item \textbf{Elevación de privilegios y falta de control de accesos:} Módulos sensibles, como la administración de roles o el enrolamiento de accesos físicos, carecían de verificación de permisos, permitiendo que usuarios con credenciales básicas ejecutaran acciones administrativas. Asimismo, el enrutador adjuntaba su clave secreta interna sin validar previamente el nivel de acceso del cliente.
+    \item \textbf{Ausencia de límites de tráfico y políticas permisivas:} Diversas rutas expuestas carecían de mecanismos para restringir la tasa de peticiones por minuto (Rate Limiting) y utilizaban configuraciones de origen cruzado (CORS) demasiado laxas para entornos de producción.
+    \item \textbf{Ejecución de contenedores con privilegios máximos:} El entorno de empaquetado del enrutador ejecutaba el servicio bajo el usuario principal del sistema operativo (\texttt{root}), lo que incrementaba el impacto en caso de un compromiso del contenedor.
+    \item \textbf{Desactivación de la validación de llaves públicas:} La configuración desactivaba explícitamente la verificación de seguridad al descargar las llaves criptográficas del proveedor de identidades, permitiendo la eventual suplantación de firmas de autenticación.
+\end{itemize}
+
+\subsubsection{Microservicio de accesos}
+
+\begin{itemize}
+    \item \textbf{Almacenamiento en texto plano de secretos criptográficos:} Las semillas secretas utilizadas para validar los códigos dinámicos de acceso fuera de línea se almacenaban en la base de datos sin ningún tipo de cifrado.
+    \item \textbf{Fuga de tokens de acceso en registros:} El sistema imprimía los códigos temporales válidos directamente en los registros del servidor, lo que permitiría a un actor interno suplantar identidades en tiempo real.
+    \item \textbf{Valores predeterminados rígidos:} Se encontraron identificadores de molinetes/escáners físicos escritos directamente en el código, impidiendo el uso dinámico del sistema en un entorno real con múltiples puertas.
+    \item \textbf{Políticas de origen cruzado ausentes:} El servicio carecía de configuración para permitir peticiones seguras desde las aplicaciones integradas de terceros.
+\end{itemize}
 
 \subsubsection{Microservicio de analíticas}
 
@@ -58,6 +75,8 @@ A continuación, se detalla el análisis exhaustivo de seguridad realizado por O
     \item \textbf{Contratos de interfaz incompletos:} La falta de especificación formal para las respuestas de error en la documentación técnica (OpenAPI) dificultaba la integración automatizada por parte de clientes externos o agentes de Inteligencia Artificial.
 \end{itemize}
 
+\newpage
+
 \subsubsection{Microservicio de autenticación}
 
 \begin{itemize}
@@ -66,13 +85,39 @@ A continuación, se detalla el análisis exhaustivo de seguridad realizado por O
     \item \textbf{Fuga de detalles técnicos en errores de registro:} Ante un fallo no controlado durante el alta de un usuario, el sistema devolvía al cliente el mensaje de excepción crudo del motor de base de datos o del proveedor de identidad, exponiendo detalles internos de la infraestructura.
 \end{itemize}
 
-\subsubsection{API Gateway}
+\subsubsection{Microservicio de bot conversacional (PLN)}
 
 \begin{itemize}
-    \item \textbf{Elevación de privilegios y falta de control de accesos:} Módulos sensibles, como la administración de roles o el enrolamiento de accesos físicos, carecían de verificación de permisos, permitiendo que usuarios con credenciales básicas ejecutaran acciones administrativas. Asimismo, el enrutador adjuntaba su clave secreta interna sin validar previamente el nivel de acceso del cliente.
-    \item \textbf{Ausencia de límites de tráfico y políticas permisivas:} Diversas rutas expuestas carecían de mecanismos para restringir la tasa de peticiones por minuto (Rate Limiting) y utilizaban configuraciones de origen cruzado (CORS) demasiado laxas para entornos de producción.
-    \item \textbf{Ejecución de contenedores con privilegios máximos:} El entorno de empaquetado del enrutador ejecutaba el servicio bajo el usuario principal del sistema operativo (\texttt{root}), lo que incrementaba el impacto en caso de un compromiso del contenedor.
-    \item \textbf{Desactivación de la validación de llaves públicas:} La configuración desactivaba explícitamente la verificación de seguridad al descargar las llaves criptográficas del proveedor de identidades, permitiendo la eventual suplantación de firmas de autenticación.
+    \item \textbf{Falta de validación de firmas de proveedores externos:} El servicio de recepción de mensajes no verificaba criptográficamente las peticiones enviadas por el proveedor de mensajería (Meta), permitiendo la suplantación de identidad mediante el envío de paquetes falsificados.
+    \item \textbf{Exposición de datos personales en el servidor:} Se registraban en consola los mensajes y números telefónicos completos de los socios sin procesos de ofuscación, vulnerando las normativas de protección de datos.
+    \item \textbf{Caídas por datos no validados:} La lectura directa de la estructura de los mensajes entrantes carecía de controles de seguridad, generando excepciones críticas y denegación de servicio ante mensajes con formatos inesperados.
+\end{itemize}
+
+\subsubsection{Microservicio de gestión del club (Core)}
+
+\begin{itemize}
+    \item \textbf{Exposición de la arquitectura interna de la base de datos:} Ante un fallo interno del servidor, el sistema devolvía al cliente los errores crudos, revelando la estructura exacta de las tablas y campos, lo que facilitaría enormemente el diseño de ataques de inyección de código.
+    \item \textbf{Inconsistencia en los contratos de datos para automatización:} Múltiples salidas de información presentaban fallas de validación de esquemas. Esto rompía los contratos prometidos, provocando que cualquier agente de inteligencia artificial externo fuera incapaz de interpretar correctamente la respuesta.
+\end{itemize}
+
+\newpage
+
+\subsubsection{Microservicio de pagos}
+
+\begin{itemize}
+    \item \textbf{Omisión de autenticación en procesamiento de cobros:} El punto de acceso principal para ejecutar transacciones financieras no aplicaba la validación de la clave interna del sistema, permitiendo a cualquier actor invocar operaciones de cobro de forma anónima.
+    \item \textbf{Ausencia de verificación en notificaciones externas:} El servicio procesaba las notificaciones de pago entrantes desde la pasarela externa sin validar su firma criptográfica, exponiendo la plataforma a ataques de saturación o denegación de servicio (DoS).
+    \item \textbf{Inseguridad en la comunicación con la base de datos en memoria:} La conexión hacia el intermediario de eventos (Redis) desactivaba la validación de certificados SSL/TLS, abriendo las transacciones financieras a intercepciones de red o ataques de tipo Man-in-the-Middle.
+    \item \textbf{Gestión de credenciales en scripts de migración:} Se hallaron claves secretas débiles asignadas por defecto y cadenas de conexión con contraseñas expuestas dentro de los archivos de configuración de la base de datos.
+\end{itemize}
+
+\subsubsection{Panel administrativo web}
+
+\begin{itemize}
+    \item \textbf{Exposición de credenciales administrativas:} Se detectó que el código fuente realizaba importaciones estáticas de claves privadas de bases de datos, lo que podría comprometer el acceso total a la infraestructura si los archivos se publican por error.
+    \item \textbf{Sobrecarga de memoria y fuga masiva de datos:} El sistema descargaba el padrón completo de socios directamente en la memoria del navegador del cliente en lugar de utilizar paginación en el servidor. Esto vulneraba el principio de privacidad al exponer datos masivos y penalizaba gravemente la escalabilidad del sistema.
+    \item \textbf{Vulnerabilidad de inyección de código (XSS):} Se encontraron múltiples instancias donde los enlaces a imágenes de productos y documentos de trámites se inyectaban en la interfaz sin un proceso de sanitización previo, permitiendo la ejecución de comandos maliciosos.
+    \item \textbf{Manipulación de rutas de red:} Las consultas hacia los servicios internos no codificaban correctamente los identificadores dinámicos, dejando la puerta abierta a ataques de manipulación de rutas (Path Traversal).
 \end{itemize}
 
 \newpage
@@ -81,22 +126,32 @@ A continuación, se detalla el análisis exhaustivo de seguridad realizado por O
 
 Las observaciones emitidas por el agente automatizado fueron integradas al flujo de trabajo mediante un proceso de refactorización integral en todos los módulos de la aplicación. A continuación, se detallan las correcciones aplicadas y sus fundamentos técnicos.
 
-\subsubsection{Implementación del principio de mínimo privilegio y modelo Zero-Trust}
+\subsubsection{Cifrado de datos en reposo y gestión segura de credenciales}
 
-Se reestructuró el enrutamiento de peticiones para eliminar la adjunción automática de claves internas. Toda solicitud, tanto pública como entre servicios, se somete a una validación estricta de tokens de identidad, verificando criptográficamente el rol del emisor y otorgando únicamente los permisos indispensables para la acción requerida. Además, se reconfiguraron los entornos enpaquetados en contenedores para ejecutarse bajo usuarios de sistema con privilegios acotados.
+Se erradicó el uso de contraseñas por defecto y el almacenamiento de claves maestras en el código fuente. Todos los archivos de configuración ahora exigen estrictamente la inyección de credenciales seguras durante el despliegue. Adicionalmente, los secretos utilizados para la validación criptográfica de accesos físicos (TOTP) pasaron a almacenarse con algoritmos de cifrado simétrico, blindando la identidad de los socios ante posibles filtraciones de la base de datos. 
 
-\subsubsection{Sanitización de entradas, codificación de rutas y protección de datos}
+\subsubsection{Auditoría de dependencias y prevención de ataques de cadena de suministro}
 
-Se estandarizó la preparación de peticiones HTTP en el cliente web, aplicando codificación de caracteres a todo parámetro dinámico (como documentos o identificadores) previo a la conformación de la URL, anulando intentos de manipulación de rutas. La exposición no deseada de información se neutralizó suprimiendo la impresión de variables en consola durante la producción y reemplazando las trazas de error en pantalla por mensajes genéricos orientados al usuario final. Adicionalmente, las conexiones internas de datos fueron forzadas a exigir certificados SSL/TLS válidos.
+Se revisaron exhaustivamente los manifiestos de instalación de todos los servicios para garantizar el uso de librerías oficiales y certificadas, mitigando ataques de confusión de dependencias. Además, se corrigieron problemas de codificación de archivos que provocaban inestabilidades durante la construcción automatizada del software en la nube.
 
-\subsubsection{Protección criptográfica contra ataques de análisis de tiempo}
+\subsubsection{Sanitización de entradas, protección de interfaces y prevención de fuga de datos}
 
-En los módulos de validación de seguridad de los microservicios se reemplazaron las comparaciones de texto tradicionales por funciones de comparación de tiempo constante. Este método garantiza que la verificación de una clave requiera exactamente la misma fracción de segundo independientemente de si los caracteres coinciden o no, eliminando la posibilidad de inferir el secreto mediante mediciones estadísticas de respuesta.
+Se estandarizó la preparación de peticiones HTTP en todos los clientes web, aplicando codificación de caracteres a todo parámetro dinámico para anular intentos de manipulación de rutas. Se forzó el uso de políticas de seguridad de contenido (CSP) estrictas y funciones de sanitización en todos los recursos multimedia para prevenir ataques de inyección. Por último, se implementó la paginación a nivel servidor, evitando la descarga masiva de datos en los dispositivos de los clientes, protegiendo así la información personal del padrón de socios.
+
+\subsubsection{Gestión de concurrencia y robustez de infraestructura}
+
+Para soportar de manera segura el tráfico de alta concurrencia, se implementaron sistemas de bloqueo de hilos de ejecución, asegurando la integridad de la memoria en servicios compartidos. Asimismo, se ajustaron las configuraciones de los contenedores de despliegue para deshabilitar las herramientas de recarga en caliente propias del desarrollo y se restringió su ejecución estableciendo usuarios de sistema sin privilegios administrativos (\texttt{root}), reduciendo enormemente la superficie de ataque.
+
+\subsubsection{Protección criptográfica contra ataques de análisis de tiempo y suplantación}
+
+En los módulos de validación de los microservicios se reemplazaron las comparaciones de texto tradicionales por funciones de comparación de tiempo constante. Además, se incorporó la validación obligatoria de las firmas criptográficas emitidas por plataformas de terceros (como las pasarelas de pago y los proveedores de mensajería), garantizando la total autenticidad del emisor antes de procesar cualquier transacción.
+
+\newpage
 
 \subsubsection{Fortalecimiento de los contratos de interfaz para interoperabilidad con IA}
 
-Para facilitar la interacción fluida con herramientas externas y agentes de Inteligencia Artificial, se eliminó el uso de estructuras de datos genéricas en los controladores. Todos los datos entrantes y salientes fueron modelados mediante esquemas estrictamente tipados y validados, incluyendo la definición explícita de las respuestas de error y la validación previa de los mensajes asíncronos que ingresan al sistema.
+Para facilitar la interacción fluida con herramientas externas y agentes de Inteligencia Artificial, se eliminó el uso de estructuras de datos genéricas en los controladores. Todos los datos entrantes y salientes fueron modelados mediante esquemas estrictamente tipados, asegurando su compatibilidad. Se agregaron puntos de conexión específicos con datos puros para los monitores de estado y se reemplazaron los mensajes de error técnicos internos por respuestas estandarizadas que no revelan la arquitectura subyacente.
 
 \subsection{Conclusión}
 
-La integración de la herramienta OpenClaw como agente de aseguramiento de calidad demostró ser un activo estratégico para el proyecto. El análisis automatizado no solo permitió detectar fallas de configuración habituales en el desarrollo web, sino que también identificó vulnerabilidades lógicas complejas —como el análisis de tiempo en la validación de seguridad o configuraciones permisivas en canales de eventos— que suelen ser pasadas por alto en las revisiones de código tradicionales. Gracias a estas correcciones, SocioUnido cuenta con una arquitectura robusta, segura y técnicamente preparada para integrarse de forma transparente con futuras plataformas y agentes inteligentes.
+La integración de la herramienta OpenClaw como agente de aseguramiento de calidad demostró ser un activo estratégico para el proyecto. El análisis automatizado no solo permitió detectar fallas de configuración habituales en el desarrollo web, sino que también identificó vulnerabilidades lógicas complejas —como el análisis de tiempo, riesgos de cadena de suministro o configuraciones permisivas en contenedores— que suelen ser pasadas por alto en las revisiones de código tradicionales. Gracias a estas correcciones, SocioUnido cuenta con una arquitectura robusta, segura y técnicamente preparada para integrarse de forma transparente con futuras plataformas y agentes inteligentes.

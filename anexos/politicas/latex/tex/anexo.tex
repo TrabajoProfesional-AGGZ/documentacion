@@ -1,3 +1,41 @@
 \section{Política de privacidad, seguridad, términos y condiciones}
 
-X.
+\subsection{Introducción y alcance legal}
+SocioUnido es una plataforma de software como servicio (SaaS) con enfoque de empresa a empresa (E2E) Por su naturaleza, el ecosistema administra información crítica de instituciones deportivas, datos personales de socios y flujos de transacciones financieras. Para garantizar la integridad operativa y la confianza institucional, SocioUnido adopta los máximos estándares de la industria del software en materia de ciberseguridad, protección de datos y uso ético de Inteligencia Artificial (IA).
+
+En el marco legal de la República Argentina (Ley 25.326 de Protección de Datos Personales) y adoptando lineamientos internacionales (GDPR), SocioUnido actúa exclusivamente como \textbf{Encargado de Tratamiento} de los datos. Las instituciones deportivas (los Clubes) mantienen en todo momento el rol de \textbf{Responsables de Tratamiento}, siendo los dueños absolutos de la información de su padrón societario.
+
+\subsection{Estándares de seguridad de la información}
+La arquitectura de SocioUnido se fundamenta en un modelo de seguridad de Confianza Cero (Zero-Trust), asegurando que ninguna petición asuma permisos por defecto.
+
+\begin{itemize}
+    \item \textbf{Cifrado de extremo a extremo:} Todos los datos transmitidos entre las interfaces (PWA, Panel Web y App de Validación) y los servidores están cifrados en tránsito mediante protocolos TLS 1.3. A nivel base de datos, la información sensible y las credenciales se almacenan con cifrado en reposo utilizando algoritmos de grado militar (AES-256).
+    \item \textbf{Gestión de identidades y accesos (RBAC):} El panel de control administrativo opera bajo un estricto control de acceso basado en roles. Las acciones destructivas o la visualización de métricas financieras requieren autenticación de múltiples factores y están restringidas exclusivamente al personal jerárquico (ej. Tesorería y Presidencia).
+    \item \textbf{Seguridad perimetral y validación sin conexión:} El módulo de Acceso Inteligente (Smart Access) mitiga el riesgo de vulnerabilidades de red mediante algoritmos TOTP (Time-Based One-Time Password). La validación criptográfica en los accesos al estadio se realiza de forma 100\% fuera de línea, impidiendo la intercepción de datos o la saturación de los servidores en eventos de alta concurrencia.
+\end{itemize}
+
+\subsection{Políticas de privacidad y tratamiento de datos}
+El diseño de la plataforma se rige por el principio de \textit{Privacidad desde el Diseño (Privacy by Design)} y la minimización de datos:
+
+\begin{itemize}
+    \item \textbf{Seguridad de datos en la experiencia de usuario (UX/UI):} Las interfaces orientadas al cliente final (PWA) no almacenan información confidencial en el almacenamiento local del dispositivo (Local Storage/Session Storage). La persistencia de las sesiones se gestiona mediante tokens JWT de corta duración y mecanismos anti-falsificación de peticiones a través de sitios cruzados (CSRF).
+    \item \textbf{Anonimización de métricas:} La recolección de datos estadísticos para los paneles de recaudación y los mapas de calor de asistencia se realiza de manera disociada. Los indicadores reflejan comportamientos de masa, imposibilitando la identificación directa de individuos fuera de las consultas administrativas autorizadas.
+    \item \textbf{Auditoría de eventos:} Se mantiene un registro inmutable de transacciones y cambios de permisos de los usuarios administrativos para garantizar la trazabilidad de cualquier alteración en el padrón o en las configuraciones comerciales.
+\end{itemize}
+
+\subsection{Procesamiento de ventas, pagos y pasarelas}
+SocioUnido no procesa ni almacena datos completos de tarjetas de crédito, débito o credenciales bancarias de los socios.
+
+\begin{itemize}
+    \item \textbf{Cumplimiento PCI-DSS:} Toda transacción financiera (pago de cuotas, compra de entradas, alquiler de espacios) es delegada a pasarelas de pago externas de primer nivel (ej. MercadoPago), las cuales cuentan con certificación PCI-DSS. 
+    \item \textbf{Almacenamiento de transacciones:} La plataforma únicamente almacena y gestiona las confirmaciones de estado mediante retrollamadas (webhooks) y registros transaccionales o recibos de caja (tokens de pago) para conciliación contable, aislando completamente a la infraestructura del club del riesgo de fugas de datos financieros.
+\end{itemize}
+
+\subsection{Políticas de uso de Inteligencia Artificial y automatización}
+SocioUnido integra modelos de Inteligencia Artificial (IA) en múltiples capas de su arquitectura para optimizar procesos y predecir comportamientos. Para blindar estas operaciones, se establecen las siguientes directrices:
+
+\begin{itemize}
+    \item \textbf{Asistente conversacional (Telegram):} La atención automatizada a través de Telegram utiliza Procesamiento de Lenguaje Natural (PLN) para la detección de intenciones transaccionales o administrativas. El modelo se alimenta exclusivamente del contexto inmediato de la conversación. No se registran audios en crudo de forma persistente, ni se envían datos personales identificables (PII) o información financiera a motores de LLM públicos externos de terceros para su entrenamiento.
+    \item \textbf{Motor predictivo de morosidad:} El algoritmo de Aprendizaje Automático (Machine Learning) encargado de predecir el riesgo de fuga o abandono del socio se entrena de forma aislada y local. Utiliza datos históricos de asistencia y regularidad de pagos estrictamente anonimizados, sin analizar variables demográficas, garantizando la total ausencia de sesgos algorítmicos.
+    \item \textbf{Auditoría de calidad y seguridad automatizada (OpenClaw):} La revisión continua del código fuente de SocioUnido se encuentra delegada al agente autónomo OpenClaw (soportado por IA de Google Gemini). Este agente opera bajo estrictos protocolos de aislamiento (sandbox). Analiza puramente implementaciones de código, detección de vulnerabilidades lógicas y cumplimiento de interoperabilidad, sin tener acceso, en ninguna circunstancia, a bases de datos de producción, entornos de prueba con datos reales, contraseñas de clientes o metadatos de los clubes asociados.
+\end{itemize}

@@ -183,7 +183,7 @@ A continuación, se presentan los diagramas correspondientes a los niveles de Co
 \newpage
 
 % --- NUEVA SECCIÓN: HEALTHCHECKER ---
-\subsection{Monitoreo y Resiliencia: Servicio de Healthchecker}
+\subsection{Monitoreo y resiliencia: Servicio de Healthchecker}
 
 Para garantizar la alta disponibilidad, observabilidad y resiliencia del ecosistema de \textbf{SocioUnido}, se ha incorporado un nodo dedicado exclusivamente al monitoreo continuo del sistema: el \textbf{Servicio de Healthchecker}. 
 
@@ -199,9 +199,21 @@ El diseño y propósito de este nodo abarca los siguientes puntos críticos:
 
 Desacoplar este componente es una decisión arquitectónica vital; asegura que bajo escenarios de alta concurrencia o ataques de denegación de servicio (DDoS) donde el API Gateway se encuentre comprometido o bajo estrés, el monitoreo transversal del sistema mantenga su capacidad operativa sin verse ralentizado por el tráfico de los usuarios finales.
 
+\newpage
+
+\subsubsection*{Interfaz de administración y control financiero (Frontend)}
+
+Para complementar el monitoreo técnico subyacente, el servicio de Healthchecker integra un panel de control interactivo diseñado como el centro de comando unificado para el equipo de SocioUnido. Esta interfaz consolida tanto la telemetría del sistema como la inteligencia de negocio, sirviendo como el punto de monitoreo central para las necesidades de infraestructura compartida (multitenant) y los nodos aislados por club. Sus tareas críticas abarcan:
+
+\begin{itemize}
+    \item \textbf{Tablero de estado global (Node Status Dashboard):} Permite visualizar en tiempo real la salud, latencia y disponibilidad de absolutamente todos los nodos del ecosistema SocioUnido, facilitando una respuesta inmediata ante fallos en cualquier despliegue.
+    \item \textbf{Auditoría de transacciones y cálculo de comisiones (Fees):} El panel consolida y expone los datos de los volúmenes financieros operados dentro de la aplicación. Al centralizar las ganancias generadas por las transacciones de cada institución, el sistema calcula automáticamente el porcentaje de retribución correspondiente a SocioUnido, según el modelo de negocio de cobro variable transaccional.
+    \item \textbf{Módulo de inteligencia financiera y rentabilidad:} Incorpora una herramienta analítica interactiva (tipo 'calculadora') que permite abstraer y proyectar los costos operativos a nivel macro (global) y a nivel micro (por club específico). Permite el ingreso y cruce de variables de egreso (mantenimiento del servicio, alojamiento de microservicios, bases de datos y gastos misceláneos) con los ingresos fijos y variables. Esto faculta al equipo para analizar el rédito actual, los márgenes de ganancia reales y la viabilidad económica de cada uno de los despliegues en producción.
+\end{itemize}
+
 \begin{figure}[h!]
     \centering
-    \includegraphics[width=0.9\textwidth]{img/healthchecker/Grafico Healthchecker.png}
+    \includegraphics[width=1\textwidth]{img/healthchecker/Grafico Healthchecker.png}
     \caption{Diagrama ilustrativo de funcionamiento del HealthChecker.}
     \label{fig:healthchecker_logico}
 \end{figure}

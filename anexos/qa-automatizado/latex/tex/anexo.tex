@@ -1,3 +1,26 @@
 \section{QA automatizado con agente de OpenClaw}
 
-X.
+\subsection{Introducción y objetivos}
+
+En el marco del desarrollo de SocioUnido, alcanzar la más alta calidad en los estándares de ciberseguridad y de interoperabilidad se ha planteado como un objetivo fundamental e innegociable. En la actualidad, el ecosistema tecnológico experimenta un crecimiento exponencial en el desarrollo de herramientas de Inteligencia Artificial que interactúan directamente con plataformas y productos web. Por este motivo, hacemos un énfasis especial en garantizar la interoperabilidad de nuestro sistema con futuras IAs. Para que SocioUnido se mantenga a la vanguardia de estos avances, resulta clave que la arquitectura, las interfaces y los endpoints estén preparados no solo para usuarios humanos, sino también para integrarse de manera fluida, lógica y segura con agentes autónomos de terceros.
+
+\subsection{Uso de la herramienta OpenClaw}
+
+Para llevar a cabo una validación rigurosa de estos estándares, implementamos \textbf{OpenClaw}, un agente de Inteligencia Artificial diseñado específicamente para el testing automatizado y el QA (Aseguramiento de la calidad) integral de repositorios de código. 
+
+La adopción de OpenClaw se justifica por su capacidad innovadora para realizar auditorías exhaustivas sobre grandes volúmenes de código estructural. A diferencia de las herramientas de análisis estático tradicionales, OpenClaw comprende el contexto del código, identifica vulnerabilidades lógicas complejas y evalúa la preparación del sistema para la automatización, actuando como un auditor experto dedicado exclusivamente a las necesidades de SocioUnido.
+
+\subsection{Definición de tareas y directrices del agente}
+
+La implementación técnica del agente se basó en un marco de instrucciones precisas (prompting) que define su rol como \textit{Experto en QA y Ciberseguridad}. Las directrices configuradas para su análisis auditan estrictamente tres ejes fundamentales:
+
+\begin{itemize}
+    \item \textbf{Seguridad de la implementación:} Se instruye al agente a realizar una búsqueda exhaustiva de vulnerabilidades, haciendo foco en los estándares de la industria (como el OWASP Top 10) y en la prevención de vectores de ataque tanto típicos como atípicos.
+    \item \textbf{Prevención de fuga de datos:} El agente debe asegurar rigurosamente que el código fuente no exponga credenciales, contraseñas, tokens de acceso ni información privada de los usuarios o de la institución. Este punto es considerado crítico, dada la naturaleza del sistema y su enfoque en ser comercializado a terceros.
+    \item \textbf{Preparación para IA y automatización:} Se evalúa meticulosamente si la estructura de los datos y los endpoints del sistema están diseñados garantizando una interacción sin fricciones con futuras automatizaciones e Inteligencias Artificiales externas.
+\end{itemize}
+
+Para optimizar la legibilidad y eficiencia de la auditoría, se le exige al agente un formato de salida estricto. El reporte debe omitir el código limpio y detallar únicamente los archivos que presentan problemas o áreas de mejora, indicando para cada caso: el nombre del archivo, el problema detectado, la justificación de su impacto y la propuesta concreta de solución. En caso de no detectar fallas, el agente está instruido para emitir una única declaración certificando que la implementación cumple con todos los estándares definidos.
+
+\newpage
+

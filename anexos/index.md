@@ -25,4 +25,5 @@ Seleccioná uno de los siguientes anexos para visualizar su contenido:
 * 🧪 **[Innovación](innovacion/)**
 * 📊 **[Métricas SaaS](metricas-saas/)**
 * 📜 **[Política de privacidad, seguridad, términos y condiciones](politicas/)**
+* 🤖 **[QA automatizado con agente de OpenClaw](qa-automatizado/)**
 * 🖼️ **[Representaciones visuales y de marca](representaciones-visuales/)**

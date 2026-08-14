@@ -1,18 +1,24 @@
 ---
 layout: default
-title: "Apartado de Eventos"
+title: "Apartado de eventos"
 parent: "Plataforma web (Panel administrativo)"
 grand_parent: "Guías/Manuales de uso"
 nav_order: 11
 ---
 
-# Apartado de Eventos
+# Apartado de eventos
 
-<a href="manual.pdf" class="btn btn-primary fs-5 mb-4" target="_blank">📥 Descargar Manual Específico (PDF)</a>
+<a href="manual.pdf" class="btn btn-primary fs-5 mb-4" target="_blank">📥 Descargar el manual (PDF)</a>
 
-## Video Tutorial
+## Video tutorial
 
-<!-- Si tenés el link completo del iframe, reemplazá este bloque -->
-<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; height: auto;">
-    <iframe src="https://drive.google.com/file/d/ID_DEL_VIDEO/preview" width="640" height="480" allow="autoplay" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;"></iframe>
+<div style="margin-top: 25px; width: 100%; text-align: center;">
+    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+        <iframe 
+            src="https://drive.google.com/file/d/1sv1lL-2d_Tv-LgDi63X2I1JTorROOmFa/preview" 
+            style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none;" 
+            allow="autoplay; fullscreen">
+        </iframe>
+    </div>
 </div>
+

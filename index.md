@@ -28,3 +28,4 @@ Su propósito es alojar los documentos correspondientes a las distintas instanci
 * **[Presentaciones](presentaciones/):** Material utilizado para exposiciones, reuniones o presentaciones internas (con los tutores), o externas (con posibles clientes, inversores o jurados del trabajo profesional).
 * **[Validación del producto](validacion_producto/):** Entrevistas, sesiones de testeo, feedback de trabajadores de clubes y usuarios reales para validar UX/UI, usabilidad y valor agregado.
 * **[Guías/Manuales de uso](guias_manuales/):** Manuales interactivos y en formato PDF, junto a tutoriales en video para la plataforma web y aplicaciones móviles.
+* **[Métricas de la implementación](metricas.html):** Estadísticas del desarrollo, cantidad de commits, Pull Requests y distribución del trabajo en el equipo.

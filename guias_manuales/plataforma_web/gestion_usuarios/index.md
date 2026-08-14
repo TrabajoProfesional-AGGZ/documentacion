@@ -8,6 +8,8 @@ nav_order: 4
 
 # Apartado de gestión de usuarios administrativos
 
+## Manual
+
 <a href="manual.pdf" class="btn btn-primary fs-5 mb-4" target="_blank">📥 Descargar el manual (PDF)</a>
 
 ## Video tutorial

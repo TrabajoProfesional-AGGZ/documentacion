@@ -8,6 +8,8 @@ nav_order: 1
 
 # Login en la web, nociones básicas y generales
 
+## Manual
+
 <a href="manual.pdf" class="btn btn-primary fs-5 mb-4" target="_blank">📥 Descargar el manual (PDF)</a>
 
 ## Video tutorial

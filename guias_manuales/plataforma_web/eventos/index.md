@@ -8,6 +8,8 @@ nav_order: 11
 
 # Apartado de eventos
 
+## Manual
+
 <a href="manual.pdf" class="btn btn-primary fs-5 mb-4" target="_blank">📥 Descargar el manual (PDF)</a>
 
 ## Video tutorial

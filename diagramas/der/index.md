@@ -2,7 +2,7 @@
 layout: default
 title: Diagramas Entidad-Relación
 parent: Diagramas y esquemas
-nav_order: 4
+nav_order: 2
 ---
 
 # Diagramas Entidad-Relación (DER)

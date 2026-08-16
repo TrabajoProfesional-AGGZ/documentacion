@@ -16,7 +16,7 @@ Muestra la interacción de la plataforma con los distintos actores del ecosistem
 <p align="center">
   <img src="C4 Nivel 1.png" alt="Diagrama C4 Nivel 1: Contexto" width="100%" style="border-radius: 6px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); margin: 15px 0;">
   <br>
-  <em><strong>Figura 1:</strong> Contexto del sistema. Interacción de la plataforma con socios, dirigencia, personal de control y sistemas externos (pasarela de pagos y API de WhatsApp).</em>
+  <em><strong>Figura 1:</strong> Contexto del sistema. Interacción de la plataforma con socios, dirigencia, personal de control y sistemas externos (pasarela de pagos y mensajería).</em>
 </p>
 
 ## Nivel 2: Contenedores
@@ -56,7 +56,7 @@ Estructura responsable de la facturación automatizada, control de cobros recurr
 </p>
 
 ### 🤖 Microservicio de procesamiento de lenguaje natural
-Detalle del motor de IA integrado vía retrollamadas web (webhooks) con la API de WhatsApp para brindar atención automatizada e interactiva a los socios.
+Detalle del motor de IA integrado vía retrollamadas web (webhooks) con la API de Telegram para brindar atención automatizada e interactiva a los socios.
 
 <p align="center">
   <img src="C4 Nivel 3-MS NLP.png" alt="C4 Nivel 3: MS NLP" width="100%" style="border-radius: 6px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); margin: 15px 0;">

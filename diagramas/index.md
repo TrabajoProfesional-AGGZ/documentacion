@@ -14,7 +14,5 @@ Elegí una de las siguientes secciones para explorar los diagramas en detalle:
 
 * 🏛️ **[Modelo C4](c4-model/)**: Vista completa de la arquitectura dividida en Contexto, Contenedores y Componentes de cada microservicio.
 * 💾 **[Diagramas Entidad-Relación (DER)](der/)**: Estructura, lógica y modelo relacional de las bases de datos de los microservicios principales.
-
-- Representaciones Marca.
-
-- Interfaces.
+* 🎨 **[Representaciones de marca](representaciones-marca/)**: Identidad visual del ecosistema SocioUnido (marca blanca) y sus adaptaciones a clubes de ejemplo.
+* 🖥️ **[Interfaces](interfaces/)**: Diseños, flujos y pantallas de las distintas aplicaciones y paneles que componen la plataforma.

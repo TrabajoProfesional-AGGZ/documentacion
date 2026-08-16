@@ -23,7 +23,7 @@ Seleccioná uno de los siguientes anexos para visualizar su contenido:
 * 💡 **[Detalle de todas las ideas exploradas](ideas-exploradas/)**
 * ⚖️ **[Derechos de autor y propiedad intelectual](propiedad-intelectual/)**
 * 🧪 **[Innovación](innovacion/)**
-* 📱 **[Interfaces](interfaz/)**
+* 📱 **[Interfaces](interfaces/)**
 * 📊 **[Métricas SaaS](metricas-saas/)**
 * 📜 **[Política de privacidad, seguridad, términos y condiciones](politicas/)**
 * 🤖 **[QA automatizado con agente de OpenClaw](qa-automatizado/)**

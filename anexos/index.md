@@ -16,7 +16,7 @@ Seleccioná uno de los siguientes anexos para visualizar su contenido:
 
 * ⚽ **[Análisis de clubes y fútbol argentino](analisis-clubes/)**
 * 🎨 **[Análisis de colorimetría y teoría de la Gestalt](colorimetría/)**
-* 🏛️ **[Arquitectura (Modelo C4)](arquitectura/)**
+* 🏛️ **[Arquitectura](arquitectura/)**
 * 🕸️ **[Ciberseguridad](ciberseguridad/)**
 * 📚 **[Conocimientos aplicados](conocimientos/)**
 * 📋 **[Definition of Ready / Definition of Done](dor-dod/)**

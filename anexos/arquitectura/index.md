@@ -1,11 +1,11 @@
 ---
 layout: default
-title: Arquitectura (Modelo C4)
+title: Arquitectura
 parent: Anexos
 nav_order: 3
 ---
 
-# Arquitectura (Modelo C4)
+# Arquitectura
 
 Diagramas documentales de la arquitectura del sistema, siguiendo el modelo C4.
 

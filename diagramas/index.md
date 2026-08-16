@@ -1,12 +1,12 @@
 ---
 layout: default
-title: Diagramas y esquemas
+title: Diagramas, esquemas e interfaces
 nav_order: 6
 has_children: true
 permalink: /diagramas/
 ---
 
-# Diagramas y esquemas
+# Diagramas, esquemas e interfaces
 
 En este espacio se centralizan las representaciones visuales y modelados técnicos de la plataforma **SocioUnido**. El mapeo de la arquitectura permite descomponer el sistema en diferentes niveles de abstracción, facilitando la comprensión de su estructura tanto para decisiones de negocio como para el desarrollo técnico y operativo.
 

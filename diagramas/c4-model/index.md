@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Modelo C4
-parent: Diagramas y esquemas
+parent: Diagramas, esquemas e interfaces
 nav_order: 1
 ---
 

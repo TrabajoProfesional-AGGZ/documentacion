@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Representaciones de marca
-parent: Diagramas y esquemas
+parent: Diagramas, esquemas e interfaces
 nav_order: 3
 ---
 

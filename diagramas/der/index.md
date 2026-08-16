@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Diagramas Entidad-Relación
-parent: Diagramas y esquemas
+parent: Diagramas, esquemas e interfaces
 nav_order: 2
 ---
 

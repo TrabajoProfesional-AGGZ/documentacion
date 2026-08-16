@@ -1,16 +1,19 @@
 \section{Interfaces}
 
+% --- CONFIGURACIÓN DE LOS MARCOS PARA LAS IMÁGENES ---
+\setlength{\fboxsep}{0pt}    % Espacio entre la imagen y el marco (0pt para que quede pegado)
+\setlength{\fboxrule}{0.5pt} % Grosor de la línea del marco (podés cambiarlo a 1pt si lo querés más grueso)
+% -----------------------------------------------------
+
 En esta sección se documentan las distintas interfaces gráficas y conversacionales que componen el ecosistema de \textbf{SocioUnido}, abarcando las soluciones para socios, empleados, personal administrativo y sistemas de control.
 
-Como SocioUnido es una plataforma de \textbf{marca blanca}, los ejemplos a continuación muestran dos escenarios (la versión base/neutra y una versión adaptada). Para ilustrar la adaptabilidad del sistema sin generar rivalidades ni preferencias en el contexto del fútbol argentino, se ha seleccionado al club \textbf{Mamelodi Sundowns} de Sudáfrica como caso de uso. Esto permite demostrar una interfaz 100\% funcional y personalizada manteniendo la neutralidad institucional del proyecto.
+Como SocioUnido es una plataforma de \textbf{marca blanca}, los ejemplos a continuación muestran dos escenarios (la versión base/neutra y una versión adaptada). Para ilustrar la adaptabilidad del sistema sin generar rivalidades ni preferencias en el contexto del fútbol argentino, se ha seleccionado al club \textbf{Mamelodi Sundowns (MSU)} de Sudáfrica como caso de uso. Esto permite demostrar una interfaz 100\% funcional y personalizada manteniendo la neutralidad institucional del proyecto.
 
 \subsection{HealthChecker}
 
-Panel de control dedicado al monitoreo continuo de la infraestructura. Esta interfaz permite al equipo técnico visualizar en tiempo real el estado y la disponibilidad del ecosistema.
-
 \begin{figure}[h!]
     \centering
-    \includegraphics[width=0.9\textwidth]{img/healthchecker/healthchecker.png}
+    \fbox{\includegraphics[width=0.9\textwidth]{img/healthchecker/healthchecker.png}}
     \caption{Vista del Healthchecker. Estado actual de las instancias y servicios desplegados.}
     \label{fig:ui_healthchecker}
 \end{figure}
@@ -19,16 +22,14 @@ Panel de control dedicado al monitoreo continuo de la infraestructura. Esta inte
 
 \subsection{Plataforma web (Panel de gestión)}
 
-La plataforma web es el panel administrativo centralizado orientado a la dirigencia, administración y personal operativo del club. Permite la gestión integral del padrón, métricas financieras, disciplinas y configuración de la tienda.
-
 \subsubsection{Login y autenticación}
 \begin{figure}[h!]
     \centering
-    \textbf{Marca blanca (neutro)} \\ \vspace{0.2cm}
-    \includegraphics[width=0.9\textwidth]{img/plataforma-web/login-neutro.jpeg} \\
+    \textbf{Marca blanca} \\ \vspace{0.2cm}
+    \fbox{\includegraphics[width=0.9\textwidth]{img/plataforma-web/login-neutro.jpeg}} \\
     \vspace{0.8cm}
     \textbf{Mamelodi Sundowns} \\ \vspace{0.2cm}
-    \includegraphics[width=0.9\textwidth]{img/plataforma-web/login-mamelodi.jpeg}
+    \fbox{\includegraphics[width=0.9\textwidth]{img/plataforma-web/login-mamelodi.jpeg}}
     \caption{Comparativa de vistas: Login y autenticación.}
 \end{figure}
 
@@ -37,11 +38,11 @@ La plataforma web es el panel administrativo centralizado orientado a la dirigen
 \subsubsection{Inicio (Home)}
 \begin{figure}[h!]
     \centering
-    \textbf{Marca blanca (neutro)} \\ \vspace{0.2cm}
-    \includegraphics[width=\textwidth]{img/plataforma-web/home-neutro.jpeg} \\
+    \textbf{Marca blanca} \\ \vspace{0.2cm}
+    \fbox{\includegraphics[width=\textwidth]{img/plataforma-web/home-neutro.jpeg}} \\
     \vspace{0.8cm}
     \textbf{Mamelodi Sundowns} \\ \vspace{0.2cm}
-    \includegraphics[width=\textwidth]{img/plataforma-web/home-mamelodi.jpeg}
+    \fbox{\includegraphics[width=\textwidth]{img/plataforma-web/home-mamelodi.jpeg}}
     \caption{Comparativa de vistas: Panel principal (Home).}
 \end{figure}
 
@@ -50,11 +51,11 @@ La plataforma web es el panel administrativo centralizado orientado a la dirigen
 \subsubsection{Métricas y estadísticas}
 \begin{figure}[h!]
     \centering
-    \textbf{Marca blanca (neutro)} \\ \vspace{0.2cm}
-    \includegraphics[width=\textwidth]{img/plataforma-web/metricas-neutro.jpeg} \\
+    \textbf{Marca blanca} \\ \vspace{0.2cm}
+    \fbox{\includegraphics[width=\textwidth]{img/plataforma-web/metricas-neutro.jpeg}} \\
     \vspace{0.8cm}
     \textbf{Mamelodi Sundowns} \\ \vspace{0.2cm}
-    \includegraphics[width=\textwidth]{img/plataforma-web/metricas-mamelodi.jpeg}
+    \fbox{\includegraphics[width=\textwidth]{img/plataforma-web/metricas-mamelodi.jpeg}}
     \caption{Comparativa de vistas: Panel de métricas y estadísticas.}
 \end{figure}
 
@@ -63,11 +64,11 @@ La plataforma web es el panel administrativo centralizado orientado a la dirigen
 \subsubsection{Gestión de socios y perfil específico}
 \begin{figure}[h!]
     \centering
-    \textbf{Padrón general (Mamelodi Sundowns)} \\ \vspace{0.2cm}
-    \includegraphics[width=\textwidth]{img/plataforma-web/socios-mamelodi.jpeg} \\
+    \textbf{Padrón general (MSU)} \\ \vspace{0.2cm}
+    \fbox{\includegraphics[width=\textwidth]{img/plataforma-web/socios-mamelodi.jpeg}} \\
     \vspace{0.8cm}
-    \textbf{Perfil de socio (Mamelodi Sundowns)} \\ \vspace{0.2cm}
-    \includegraphics[width=\textwidth]{img/plataforma-web/socio-especifico-mamelodi.jpeg}
+    \textbf{Perfil de socio (MSU)} \\ \vspace{0.2cm}
+    \fbox{\includegraphics[width=\textwidth]{img/plataforma-web/socio-especifico-mamelodi.jpeg}}
     \caption{Vistas de gestión societaria implementadas para el club de ejemplo.}
 \end{figure}
 
@@ -76,11 +77,11 @@ La plataforma web es el panel administrativo centralizado orientado a la dirigen
 \subsubsection{Gestión de disciplinas y tienda}
 \begin{figure}[h!]
     \centering
-    \textbf{Disciplinas general (Mamelodi Sundowns)} \\ \vspace{0.2cm}
-    \includegraphics[width=\textwidth]{img/plataforma-web/disciplinas-mamelodi.jpeg} \\
+    \textbf{Disciplinas general (MSU)} \\ \vspace{0.2cm}
+    \fbox{\includegraphics[width=\textwidth]{img/plataforma-web/disciplinas-mamelodi.jpeg}} \\
     \vspace{0.8cm}
-    \textbf{Tienda institucional (Mamelodi Sundowns)} \\ \vspace{0.2cm}
-    \includegraphics[width=\textwidth]{img/plataforma-web/tienda-mamelodi.jpeg}
+    \textbf{Tienda institucional (MSU)} \\ \vspace{0.2cm}
+    \fbox{\includegraphics[width=\textwidth]{img/plataforma-web/tienda-mamelodi.jpeg}}
     \caption{Vistas de disciplinas y e-commerce implementadas para el club de ejemplo.}
 \end{figure}
 
@@ -88,129 +89,129 @@ La plataforma web es el panel administrativo centralizado orientado a la dirigen
 
 \subsection{App del socio (PWA)}
 
-Aplicación Web Progresiva diseñada para el usuario final. Centraliza la experiencia del asociado permitiéndole gestionar su perfil, abonar cuotas, y acceder a su carnet digital de manera ágil y con soporte offline.
-
-\subsubsection{Pantalla de acceso (Login)}
+% --- BLOQUE 1: LOGIN SOCIO ---
 \begin{figure}[h!]
     \centering
-    \begin{minipage}{0.45\textwidth}
+    \begin{minipage}{0.26\textwidth}
         \centering
-        \textbf{Marca blanca (neutro)} \\ \vspace{0.2cm}
-        \includegraphics[width=\textwidth]{img/app-socio/login-neutro.jpeg}
-    \end{minipage}\hfill
-    \begin{minipage}{0.45\textwidth}
+        \textbf{Marca blanca} \\ \vspace{0.2cm}
+        \fbox{\includegraphics[width=\textwidth]{img/app-socio/login-neutro.jpg}}
+    \end{minipage}\hspace{0.5cm}
+    \begin{minipage}{0.26\textwidth}
         \centering
         \textbf{Mamelodi Sundowns} \\ \vspace{0.2cm}
-        \includegraphics[width=\textwidth]{img/app-socio/login-mamelodi.jpeg}
+        \fbox{\includegraphics[width=\textwidth]{img/app-socio/login-mamelodi.jpg}}
     \end{minipage}
-    \caption{Comparativa: Pantalla de acceso - App del socio.}
+    \caption{Pantallas de acceso (Login) de la App del Socio.}
+    \label{fig:socio_login}
 \end{figure}
 
-\subsubsection{Inicio (Dashboard del socio)}
+% --- BLOQUE 2: DASHBOARD SOCIO ---
 \begin{figure}[h!]
     \centering
-    \begin{minipage}{0.45\textwidth}
+    \begin{minipage}{0.26\textwidth}
         \centering
-        \textbf{Marca blanca (neutro)} \\ \vspace{0.2cm}
-        \includegraphics[width=\textwidth]{img/app-socio/home-neutro.jpeg}
-    \end{minipage}\hfill
-    \begin{minipage}{0.45\textwidth}
+        \textbf{Marca blanca} \\ \vspace{0.2cm}
+        \fbox{\includegraphics[width=\textwidth]{img/app-socio/home-neutro.jpg}}
+    \end{minipage}\hspace{0.5cm}
+    \begin{minipage}{0.26\textwidth}
         \centering
         \textbf{Mamelodi Sundowns} \\ \vspace{0.2cm}
-        \includegraphics[width=\textwidth]{img/app-socio/home-mamelodi.jpeg}
+        \fbox{\includegraphics[width=\textwidth]{img/app-socio/home-mamelodi.jpg}}
     \end{minipage}
-    \caption{Comparativa: Inicio - App del socio.}
+    \caption{Inicio (Dashboard del socio).}
+    \label{fig:socio_home}
 \end{figure}
 
 \newpage
 
-\subsubsection{Perfil de usuario y pagos}
+% --- BLOQUE 3: PERFIL Y PAGOS SOCIO ---
 \begin{figure}[h!]
     \centering
-    \begin{minipage}{0.45\textwidth}
+    \begin{minipage}{0.3\textwidth}
         \centering
-        \textbf{Perfil (Mamelodi Sundowns)} \\ \vspace{0.2cm}
-        \includegraphics[width=\textwidth]{img/app-socio/perfil-mamelodi.jpeg}
-    \end{minipage}\hfill
-    \begin{minipage}{0.45\textwidth}
+        \textbf{Perfil (MSU)} \\ \vspace{0.2cm}
+        \fbox{\includegraphics[width=\textwidth]{img/app-socio/perfil-mamelodi.jpg}}
+    \end{minipage}\hspace{0.5cm}
+    \begin{minipage}{0.3\textwidth}
         \centering
-        \textbf{Pagos (Mamelodi Sundowns)} \\ \vspace{0.2cm}
-        \includegraphics[width=\textwidth]{img/app-socio/pagos-mamelodi.jpeg}
+        \textbf{Pagos (MSU)} \\ \vspace{0.2cm}
+        \fbox{\includegraphics[width=\textwidth]{img/app-socio/pagos-mamelodi.jpg}}
     \end{minipage}
-    \caption{Vistas de perfil y estado de pagos - App del socio.}
+    \caption{Perfil de usuario y gestión de pagos.}
+    \label{fig:socio_pagos}
 \end{figure}
 
-\subsubsection{Carnet digital (Acceso inteligente)}
+% --- BLOQUE 4: CARNET DIGITAL SOCIO ---
 \begin{figure}[h!]
     \centering
-    \begin{minipage}{0.45\textwidth}
+    \begin{minipage}{0.3\textwidth}
         \centering
-        \textbf{Marca blanca (neutro)} \\ \vspace{0.2cm}
-        \includegraphics[width=\textwidth]{img/app-socio/carnet-neutro.jpeg}
-    \end{minipage}\hfill
-    \begin{minipage}{0.45\textwidth}
+        \textbf{Marca blanca} \\ \vspace{0.2cm}
+        \fbox{\includegraphics[width=\textwidth]{img/app-socio/carnet-neutro.jpg}}
+    \end{minipage}\hspace{0.5cm}
+    \begin{minipage}{0.3\textwidth}
         \centering
         \textbf{Mamelodi Sundowns} \\ \vspace{0.2cm}
-        \includegraphics[width=\textwidth]{img/app-socio/carnet-mamelodi.jpeg}
+        \fbox{\includegraphics[width=\textwidth]{img/app-socio/carnet-mamelodi.jpg}}
     \end{minipage}
-    \caption{Comparativa: Carnet digital - App del socio.}
+    \caption{Carnet digital y acceso inteligente.}
+    \label{fig:socio_carnet}
 \end{figure}
 
 \newpage
 
-\subsection{App del empleado (PWA)}
+\subsection{App de empleados}
 
-Aplicación móvil orientada al personal operativo y de campo del club. Está diseñada para facilitar las tareas cotidianas, la lectura rápida de credenciales y el control de accesos en los molinetes o puntos de entrada institucionales.
-
-\subsubsection{Acceso y panel principal}
+% --- BLOQUE 5: LOGIN Y HOME TRABAJADORES ---
 \begin{figure}[h!]
     \centering
-    \begin{minipage}{0.45\textwidth}
+    \begin{minipage}{0.26\textwidth}
         \centering
-        \textbf{Login (Mamelodi Sundowns)} \\ \vspace{0.2cm}
-        \includegraphics[width=\textwidth]{img/app-trabajadores/login-mamelodi.jpeg}
-    \end{minipage}\hfill
-    \begin{minipage}{0.45\textwidth}
+        \textbf{Acceso (MSU)} \\ \vspace{0.2cm}
+        \fbox{\includegraphics[width=\textwidth]{img/app-trabajadores/login-mamelodi.jpg}}
+    \end{minipage}\hspace{0.5cm}
+    \begin{minipage}{0.26\textwidth}
         \centering
-        \textbf{Home (Mamelodi Sundowns)} \\ \vspace{0.2cm}
-        \includegraphics[width=\textwidth]{img/app-trabajadores/home-mamelodi.jpeg}
+        \textbf{Inicio (MSU)} \\ \vspace{0.2cm}
+        \fbox{\includegraphics[width=\textwidth]{img/app-trabajadores/home-mamelodi.jpg}}
     \end{minipage}
-    \caption{Vistas de acceso y panel principal operativo - App del empleado.}
+    \caption{Pantallas de acceso y menú principal de la App para Empleados.}
+    \label{fig:trabajadores_inicio}
 \end{figure}
 
-\subsubsection{Lector de código QR}
+% --- BLOQUE 6: ESCANEO QR TRABAJADORES ---
 \begin{figure}[h!]
     \centering
-    \begin{minipage}{0.45\textwidth}
+    \begin{minipage}{0.26\textwidth}
         \centering
-        \textbf{Marca blanca (neutro)} \\ \vspace{0.2cm}
-        \includegraphics[width=\textwidth]{img/app-trabajadores/qr-neutro.jpg}
-    \end{minipage}\hfill
-    \begin{minipage}{0.45\textwidth}
+        \textbf{Escáner QR (Neutro)} \\ \vspace{0.2cm}
+        \fbox{\includegraphics[width=\textwidth]{img/app-trabajadores/qr-neutro.jpg}}
+    \end{minipage}\hspace{0.5cm}
+    \begin{minipage}{0.26\textwidth}
         \centering
-        \textbf{Mamelodi Sundowns} \\ \vspace{0.2cm}
-        \includegraphics[width=\textwidth]{img/app-trabajadores/qr-mamelodi.jpg}
+        \textbf{Escáner QR (MSU)} \\ \vspace{0.2cm}
+        \fbox{\includegraphics[width=\textwidth]{img/app-trabajadores/qr-mamelodi.jpg}}
     \end{minipage}
-    \caption{Comparativa: Lector de código QR - App del empleado.}
+    \caption{Módulo de escaneo de QR para control de accesos y validación de carnets.}
+    \label{fig:trabajadores_qr}
 \end{figure}
 
 \newpage
 
 \subsection{Bot conversacional (BotIn)}
 
-\textbf{BotIn} es el asistente virtual de la plataforma, integrado nativamente con Telegram a través del procesamiento de lenguaje natural (NLP). Facilita la autogestión de los socios respondiendo consultas frecuentes, asistiendo en el pago de cuotas y brindando soporte 24/7.
-
 \begin{figure}[h!]
     \centering
     \begin{minipage}{0.45\textwidth}
         \centering
         \textbf{Perfil institucional} \\ \vspace{0.2cm}
-        \includegraphics[width=\textwidth]{img/bot/perfil.jpeg}
-    \end{minipage}\hfill
+        \fbox{\includegraphics[width=\textwidth]{img/bot/perfil.jpeg}}
+    \end{minipage}\hspace{0.5cm}
     \begin{minipage}{0.45\textwidth}
         \centering
         \textbf{Interacción (Chat)} \\ \vspace{0.2cm}
-        \includegraphics[width=\textwidth]{img/bot/chat.jpg}
+        \fbox{\includegraphics[width=\textwidth]{img/bot/chat.jpg}}
     \end{minipage}
     \caption{Vistas del perfil verificado y ejemplo de flujo de mensajes automatizados vía Telegram.}
     \label{fig:bot_conversacional}

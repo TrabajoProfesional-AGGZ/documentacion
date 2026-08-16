@@ -1,17 +1,17 @@
 ---
 layout: default
-title: Diagramas entidad-relación
+title: Diagramas Entidad-Relación
 parent: Diagramas y esquemas
 nav_order: 4
 ---
 
-# Diagramas entidad-relación (DER)
+# Diagramas Entidad-Relación (DER)
 
 La persistencia del ecosistema de **SocioUnido** sigue un enfoque descentralizado mediante bases de datos aisladas por microservicio, asegurando la escalabilidad operativa, la consistencia de datos y el principio de responsabilidad única.
 
 A continuación, se detallan las estructuras del modelo relacional para los repositorios de datos principales:
 
-## 📋 Base de datos de gestión societaria (MS Core)
+## 📋 Base de datos de gestión societaria
 
 Este esquema relacional centraliza el padrón maestro del club deportivo. Administra la información de contacto de los socios, la asignación de categorías, el control de roles administrativos internos de la dirigencia y las reglas de negocio esenciales de la institución.
 
@@ -21,7 +21,7 @@ Este esquema relacional centraliza el padrón maestro del club deportivo. Admini
   <em><strong>Esquema 1:</strong> Modelo lógico de datos encargado del control de identidad, categorías societarias y perfiles del padrón.</em>
 </p>
 
-## 💵 Base de datos de finanzas y facturación (MS Payments)
+## 💵 Base de datos de finanzas y facturación
 
 Esquema especializado en registrar transacciones monetarias. Controla los estados de las facturaciones mensuales, la generación de comprobantes, el historial de pagos efectuados y las firmas de integración con las pasarelas de pago digitales externas.
 
@@ -31,7 +31,7 @@ Esquema especializado en registrar transacciones monetarias. Controla los estado
   <em><strong>Esquema 2:</strong> Modelo de persistencia para el control transaccional, vencimientos de cuotas y conciliación financiera.</em>
 </p>
 
-## 📊 Base de datos de analítica predictiva (MS Analytics & AI)
+## 📊 Base de datos de analítica predictiva
 
 Modelo optimizado para la recopilación histórica de métricas de comportamiento e interacciones. Estructura los conjuntos de datos limpios necesarios para nutrir las tareas asíncronas y los algoritmos predictivos que alertan sobre posibles tendencias de morosidad.
 
@@ -39,4 +39,14 @@ Modelo optimizado para la recopilación histórica de métricas de comportamient
   <img src="MS Analytics & AI - Database.png" alt="DER del microservicio de analítica e IA" width="100%" style="border-radius: 6px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); margin: 15px 0;">
   <br>
   <em><strong>Esquema 3:</strong> Almacenamiento estructurado para logs analíticos, métricas predictivas e históricos de entrenamiento de modelos.</em>
+</p>
+
+## 🎫 Base de datos de acceso inteligente
+
+Esquema responsable de gestionar la validación matemática y el control de ingresos. Almacena de forma segura los secretos criptográficos (TOTP) de cada usuario y registra el historial detallado de accesos, estados y lectores utilizados en los puntos de control del club.
+
+<p align="center">
+  <img src="Ms Acceso - Database.png" alt="DER del microservicio de acceso" width="100%" style="border-radius: 6px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); margin: 15px 0;">
+  <br>
+  <em><strong>Esquema 4:</strong> Modelo de persistencia para el registro de historial de accesos y administración de secretos TOTP.</em>
 </p>

@@ -2,7 +2,7 @@
 layout: default
 title: Colorimetría y Gestalt
 parent: Anexos
-nav_order: 2
+nav_order: 3
 ---
 
 # Análisis de colorimetría y teoría de la Gestalt

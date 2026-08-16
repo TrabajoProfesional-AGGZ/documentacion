@@ -2,7 +2,7 @@
 layout: default
 title: Ideas exploradas
 parent: Anexos
-nav_order: 7
+nav_order: 12
 ---
 
 # Detalle de todas las ideas exploradas

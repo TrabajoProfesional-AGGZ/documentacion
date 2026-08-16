@@ -2,7 +2,7 @@
 layout: default
 title: Innovación
 parent: Anexos
-nav_order: 9
+nav_order: 17
 ---
 
 # Innovación y ruptura del paradigma tecnológico en la gestión deportiva

@@ -2,7 +2,7 @@
 layout: default
 title: Definition of Ready (DoR) y Definition of Done (DoD)
 parent: Anexos
-nav_order: 6
+nav_order: 10
 ---
 
 # Definition of Ready (DoR) y Definition of Done (DoD)

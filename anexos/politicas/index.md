@@ -2,7 +2,7 @@
 layout: default
 title: Política de privacidad, seguridad, términos y condiciones
 parent: Anexos
-nav_order: 12
+nav_order: 20
 ---
 
 # Política de privacidad, seguridad, términos y condiciones

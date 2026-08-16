@@ -2,7 +2,7 @@
 layout: default
 title: Propiedad intelectual
 parent: Anexos
-nav_order: 8
+nav_order: 11
 ---
 
 # Derechos de autor y propiedad intelectual

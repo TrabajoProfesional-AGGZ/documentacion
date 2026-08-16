@@ -1,35 +1,3 @@
-\section{Definition of Ready (DoR) y Definition of Done (DoD)}
+\section{Anexo - Evolución de la solución}
 
-En el marco metodológico ágil (Scrum) adoptado para el desarrollo de SocioUnido, la gestión de la calidad y la trazabilidad del progreso se rigen por dos compuertas de validación fundamentales: la \textit{Definition of Ready} (DoR) y la \textit{Definition of Done} (DoD). Sin embargo, para adaptarse a la estructura organizativa de alta especialización del equipo, estos conceptos se han ajustado para representar hitos de transición precisos dentro del ciclo de vida de cada tarea o historia de usuario.
-
-Este enfoque dual garantiza que ninguna funcionalidad sea integrada al ecosistema principal (rama \texttt{main} o \texttt{production}) sin haber superado tanto la fase de implementación técnica como la auditoría estricta de su responsable de área.
-
-\subsection{Definition of Ready (DoR): Estado de desarrollo completado}
-
-A los fines operativos de este proyecto, el estado \textit{Ready} no hace referencia al momento previo al inicio de una tarea, sino al hito en el cual \textbf{el desarrollo técnico de la misma se da por finalizado por parte del integrante asignado}. 
-
-Para que un componente, módulo o historia de usuario alcance el estado de \textit{Ready} (Listo para ser validado), debe cumplir ineludiblemente con los siguientes requisitos:
-\begin{itemize}
-    \item \textbf{Implementación de la lógica:} El código fuente ha sido escrito en su totalidad y cumple con los requerimientos funcionales descritos en el \textit{ticket} o historia de usuario original.
-    \item \textbf{Pruebas locales (Unitarias):} El desarrollador ha ejecutado y superado las pruebas unitarias en su entorno local, garantizando la ausencia de errores de sintaxis o fallos críticos evidentes de compilación.
-    \item \textbf{Apertura de \textit{Pull Request} (PR):} El código ha sido subido (\textit{pushed}) al repositorio correspondiente y se ha generado una solicitud de integración (PR), disparando los flujos de Integración Continua (como los análisis de SonarCloud y Dependabot descritos en la estrategia de Ciberseguridad).
-\end{itemize}
-Alcanzar la DoR indica que el creador de la tarea considera que su trabajo está concluido. No obstante, el código aún se encuentra aislado o en una rama de desarrollo (\textit{feature branch}) y \textbf{no} se considera terminado.
-
-\newpage
-
-\subsection{Definition of Done (DoD): Validación de completitud y calidad}
-
-La \textit{Definition of Done} (Definición de Terminado) representa el estado final y definitivo de la tarea. Un elemento de la Lista de Pendientes (\textit{Backlog}) solo alcanza el estado \textit{Done} cuando ha superado exitosamente el escrutinio de calidad y \textbf{el responsable principal del área temática involucrada avala su cumplimiento total}.
-
-Esta compuerta de validación se fundamenta en la estructura de distribución de roles definida para SocioUnido, garantizando que el estándar de excelencia sea auditado por el integrante con mayor conocimiento del dominio específico:
-
-\begin{enumerate}
-    \item \textbf{Validación de calidad, documentación y negocio:} A cargo de \textbf{Felipe Ascencio}. Se certifica que la tarea cumpla con los estándares globales de QA (Aseguramiento de Calidad), supere las pruebas de integración (\textit{End-to-End}), no genere regresiones y esté correctamente documentada en los repositorios de \texttt{Just the Docs} y manuales técnicos.
-    \item \textbf{Validación de arquitectura, base de datos e integraciones:} A cargo de \textbf{Lautaro Ghosn}. Se verifica que los cambios respeten el modelado C4, no degraden el rendimiento de PostgreSQL/Redis, y que las integraciones externas (como el flujo con MercadoPago) o interfaces de programación de aplicaciones (APIs) sean seguras y eficientes.
-    \item \textbf{Validación de frontend, \textit{Mobile} y UX/UI:} A cargo de \textbf{Axel Zielonka}. Si la tarea involucra la Aplicación Web Progresiva (PWA) o el panel de control institucional, se audita que la interfaz respete las paletas cromáticas, la teoría de la Gestalt, la responsividad y la experiencia de usuario definida para el socio y el personal del club.
-    \item \textbf{Validación de backend, inteligencia artificial e institucional:} A cargo de \textbf{Martín Guerrero}. Se aprueba la lógica de negocio en el servidor (FastAPI/Go), la precisión algorítmica del motor predictivo de morosidad (\textit{Machine Learning}) y la correcta interpretación de intenciones del asistente conversacional (PLN vía WhatsApp).
-\end{enumerate}
-
-Solo cuando el responsable de área revisa el \textit{Pull Request}, verifica el paso exitoso de los \textit{Quality Gates} automatizados y aprueba explícitamente los cambios (\textit{Approve Review}), la tarea se fusiona con la rama principal y se declara oficialmente como \textbf{\textit{Done}}. Este mecanismo de corresponsabilidad elimina la ambigüedad, previene la introducción de deuda técnica y asegura que cada incremento de la plataforma SocioUnido mantenga la calidad de un software \textit{Enterprise}.
-
+X.

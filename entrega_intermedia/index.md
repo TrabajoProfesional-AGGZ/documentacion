@@ -19,7 +19,7 @@ De esta forma, es posible visualizar el contenido en distintos formatos según l
         📥 Descargar PPTX
     </a>
     <a href="{{ '/entrega_intermedia/presentacion_entrega_intermedia_html/presentacion.html' | relative_url }}" target="_blank" style="display: inline-block; padding: 12px 24px; background-color: #10b981; color: white; text-decoration: none; border-radius: 6px; font-weight: bold; font-size: 14px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
-        🌐 Ver Presentación Web
+        🌐 Ver presentación web
     </a>
 </div>
 

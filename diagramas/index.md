@@ -12,8 +12,7 @@ En este espacio se centralizan las representaciones visuales y modelados técnic
 
 Elegí una de las siguientes secciones para explorar los diagramas en detalle:
 
-* 🏛️ **[Modelo C4](c4-model-original/)**: Vista completa de la arquitectura dividida en Contexto, Contenedores y Componentes de cada microservicio.
-* 🔍 **[Modelo C4 simplificado](c4-model-simplificado/)**: La misma estructura arquitectónica optimizada mediante interfaces de alto nivel simplificadas.
+* 🏛️ **[Modelo C4](c4-model/)**: Vista completa de la arquitectura dividida en Contexto, Contenedores y Componentes de cada microservicio.
 * 🩺 **[HealthChecker](healthchecker/)**: Representación visual completa del funcionamiento y la estructura del 'HealthChecker' del sistema.
 * 💾 **[Diagramas Entidad-Relación (DER)](der/)**: Estructura, lógica y modelo relacional de las bases de datos de los microservicios principales.
 

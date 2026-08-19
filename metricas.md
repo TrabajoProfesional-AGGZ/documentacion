@@ -1,26 +1,26 @@
 ---
 layout: default
 title: Métricas de la implementación
-nav_order: 9
+nav_order: 99
 ---
 
-# 📊 Métricas de la implementación
+# 📊 Métricas de la implementación (Automáticas)
 
-Este espacio está destinado a medir el trabajo, la participación y el progreso del equipo en el desarrollo de la documentación del proyecto. Los siguientes datos combinan métricas en tiempo real conectadas a la API de GitHub con un análisis estático de la distribución del repositorio.
+Este espacio está destinado a medir el trabajo, la participación y el progreso del equipo en el desarrollo de esta documentación. Estos datos se actualizan automáticamente mediante el avance del desarrollo.
 
 ## Resumen del repositorio
 
-* **Actividad de commits:** ![Commits](https://img.shields.io/github/commit-activity/y/trabajoprofesional-aggz/documentacion)
-* **Pull Requests cerrados:** ![PRs](https://img.shields.io/github/issues-pr-closed/trabajoprofesional-aggz/documentacion)
-* **Issues resueltos:** ![Issues](https://img.shields.io/github/issues-closed/trabajoprofesional-aggz/documentacion)
-* **Última versión:** ![Release](https://img.shields.io/github/v/release/trabajoprofesional-aggz/documentacion)
+* **Actividad de commits:** ![Commits](https://img.shields.io/badge/Commits_Totales-161-blue)
+* **Pull Requests cerrados:** ![PRs](https://img.shields.io/badge/PRs_Cerrados-3-purple)
+* **Issues resueltos:** ![Issues](https://img.shields.io/badge/Issues_Resueltos-86-green)
 
 ## Composición del código (Lenguajes)
 
-Basado en el análisis automático del repositorio, la distribución tecnológica de esta documentación es la siguiente:
+Basado en el análisis automático del repositorio, la distribución tecnológica es la siguiente:
 
-* 🟢 **TeX:** 65.7%
-* 🔴 **HTML:** 34.3%
+* ⚪ **TeX:** 68.6%
+* 🟠 **HTML:** 31.4%
+* 🔴 **Ruby:** 0.0%
 
 ## Distribución del trabajo (Contributors)
 
@@ -28,7 +28,7 @@ A continuación se detalla la participación de cada miembro del equipo basándo
 
 | Miembro del equipo (GitHub User) | Commits Totales | Líneas Agregadas (++) | Líneas Eliminadas (--) |
 | :--- | :---: | :---: | :---: |
-| **Ascencio, Felipe Santino (`FelipeAscencio`)** | 131 | 34.010 | 16.397 |
-| **Zielonka, Axel (`axel-zielonka`)** | 11 | 1.437 | 210 |
+| **Ascencio, Felipe Santino** (`FelipeAscencio`) | 150 | 28.756 | 7.225 |
+| **Zielonka, Axel** (`axel-zielonka`) | 11 | 1.437 | 210 |
 
-*(Nota: Cualquier diferencia entre el total de commits del repositorio y la suma de los aportes individuales corresponde a operaciones de mantenimiento automatizado realizadas por herramientas como `dependabot`).*
+*(Nota: Cualquier diferencia entre el total de commits del repositorio y la suma de los aportes individuales corresponde a operaciones de mantenimiento automatizado realizadas por herramientas como dependabot).*

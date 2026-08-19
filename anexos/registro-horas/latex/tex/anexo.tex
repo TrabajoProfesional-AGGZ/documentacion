@@ -4,7 +4,7 @@ El presente anexo detalla la carga horaria invertida por cada integrante del equ
 
 El requisito mínimo exigido por la facultad es de 384 horas, recomendando no exceder un margen del 10\% adicional (422,4 horas). Las aproximadamente 8 horas restantes por integrante han sido reservadas estratégicamente para los ensayos finales que tendrán lugar en los días previos a la defensa oral en el mes de diciembre.
 
-La trazabilidad del esfuerzo se ha dividido en tres grandes fases operativas, detalladas a continuación:
+La trazabilidad del esfuerzo se ha dividido en tres grandes fases operativas:
 
 \subsection{Fase 1: Ideación, viabilidad y anteproyecto (Semanas 1 a 12)}
 
@@ -14,22 +14,22 @@ Durante el primer tramo del proyecto no se aplicó el marco de trabajo \textit{S
 \begin{itemize}
     \item \textbf{Dedicación:} 50 horas por integrante (Acumulado: 50 horas).
     \item \textbf{Actividades globales:} Jornadas de \textit{brainstorming}, exploración de nichos de mercado y aplicación de los marcos analíticos (las ``5 C'' y las ``4 P'') para evaluar 13 ideas de producto, hasta seleccionar a \textbf{SocioUnido}.
-    \item \textbf{Aportes individuales:} Felipe lideró la investigación comercial y documental; Lautaro evaluó alternativas de infraestructura para la solución; Martín analizó la factibilidad de integración de herramientas de inteligencia artificial; y Axel comenzó la investigación de metodologías de interfaz de usuario.
+    \item \textbf{Aportes individuales:} Felipe lideró la investigación comercial y documental; Lautaro evaluó alternativas de infraestructura para la solución; Martín analizó la factibilidad de integración de herramientas de inteligencia artificial; y Axel investigó metodologías de interfaz de usuario.
 \end{itemize}
 
 \textbf{Bloque 2: Definiciones arquitectónicas y anteproyecto (Semanas 7 a 12)}
 \begin{itemize}
     \item \textbf{Dedicación:} 65 horas por integrante (Acumulado: 115 horas).
-    \item \textbf{Actividades globales:} Redacción del anteproyecto formal, diseño del modelo C4, definición del Producto Mínimo Viable (MVP) y configuración inicial del entorno de repositorios en GitHub.
+    \item \textbf{Actividades globales:} Redacción del anteproyecto formal, diseño del modelo C4, definición del Producto Mínimo Viable (MVP) y configuración inicial del entorno en GitHub.
 \end{itemize}
 
 \subsection{Fase 2: Desarrollo del MVP bajo marco ágil (Semanas 13 a 25)}
 
-Esta fase de máxima intensidad se rigió por 13 \textit{sprints} semanales. La distribución de horas refleja fielmente los puntos de historia (\textit{story points}) asignados a cada responsable en el \textit{backlog} oficial del proyecto.
+Esta fase de máxima intensidad se rigió por 13 \textit{sprints} semanales. La distribución de horas refleja fielmente los puntos de historia (\textit{story points}) asignados a cada integrante.
 
 \textbf{Bloque 3: Infraestructura base y plataforma web de gestión (Sprints 1 al 5)}
 \begin{itemize}
-    \item \textbf{Dedicación:} 85 horas por integrante (Acumulado: 200 horas).
+    \item \textbf{Dedicación:} 75 horas por integrante (Acumulado: 190 horas).
     \item \textbf{Aportes individuales:}
     \begin{itemize}
         \item \textbf{Felipe:} Configuración de Datadog, documentación de ceremonias \textit{Scrum}, bitácoras y redacción técnica en JustTheDocs.
@@ -41,7 +41,7 @@ Esta fase de máxima intensidad se rigió por 13 \textit{sprints} semanales. La 
 
 \textbf{Bloque 4: Aplicación móvil y canal conversacional (Sprints 6 al 9)}
 \begin{itemize}
-    \item \textbf{Dedicación:} 70 horas por integrante (Acumulado: 270 horas).
+    \item \textbf{Dedicación:} 60 horas por integrante (Acumulado: 250 horas).
     \item \textbf{Aportes individuales:}
     \begin{itemize}
         \item \textbf{Felipe:} Desarrollo del agente de QA automatizado (OpenClaw), testing integral y documentación de las sesiones de validación de producto.
@@ -53,22 +53,59 @@ Esta fase de máxima intensidad se rigió por 13 \textit{sprints} semanales. La 
 
 \textbf{Bloque 5: Estabilización, auditorías y documentación (Sprints 10 al 13)}
 \begin{itemize}
-    \item \textbf{Dedicación:} 65 horas por integrante (Acumulado: 335 horas).
+    \item \textbf{Dedicación:} 90 horas por integrante (Acumulado: 340 horas).
     \item \textbf{Actividades globales:} Resolución de deudas técnicas auditadas por SonarCloud, \textit{testing} integral (\textit{End-to-End}), grabación y edición de tutoriales de uso y documentación final.
 \end{itemize}
 
-\subsection{Fase 3: Refinamiento, validación y preparación final (Semanas 26 a 37)}
+\subsubsection*{Métricas de rendimiento y constancia del equipo}
+
+A continuación, se exponen los gráficos de gestión que reflejan la constancia y el volumen de trabajo abordado durante el desarrollo del MVP:
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.9\textwidth]{img/burndown.png} 
+    \caption{Métrica Burndown: Puntos pendientes por \textit{sprint}.}
+\end{figure}
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.9\textwidth]{img/burnup.png} 
+    \caption{Métrica Burnup: Puntos completados vs. alcance.}
+\end{figure}
+
+\newpage
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.85\textwidth]{img/velocity.png} 
+    \caption{Velocidad del equipo: Puntos comprometidos vs. completados.}
+\end{figure}
+
+Como se evidencia en los gráficos de gestión, el equipo logró mantener un ritmo de desarrollo sumamente constante a lo largo de las 13 iteraciones. Esta consistencia en la planificación de los \textit{sprints} permitió aprovechar las ventanas temporales favorables (recesos académicos, disponibilidad personal) para escalar la carga de trabajo sin comprometer la estabilidad, garantizando siempre un piso de rendimiento elevado que aseguró la entrega del MVP en tiempo y forma.
+
+\subsection{Fase 3: Refinación, validación y preparación final (Semanas 26 a 37)}
 
 Tras congelar el código del MVP, el equipo abandonó el marco \textit{Scrum} para adoptar un esquema de trabajo flexible, enfocado en el perfeccionamiento del producto de cara a su entrega formal.
 
 \textbf{Bloque 6: Iteración sobre feedback y corrección de errores (Semanas 26 a 31)}
 \begin{itemize}
-    \item \textbf{Dedicación:} 45 horas por integrante (Acumulado: 380 horas).
+    \item \textbf{Dedicación:} 40 horas por integrante (Acumulado: 380 horas).
     \item \textbf{Actividades globales:} Resolución de \textit{bugs} reportados tras las pruebas de usuario, mejoras puntuales en la experiencia e interfaz de usuario (UX/UI), y reuniones adicionales de validación con posibles clientes del sector deportivo para calibrar el enfoque comercial.
 \end{itemize}
 
 \textbf{Bloque 7: Preparación intensiva para la defensa oral (Semanas 32 a 37)}
 \begin{itemize}
     \item \textbf{Dedicación:} 34 horas por integrante (Acumulado: \textbf{414 horas totales}).
-    \item \textbf{Actividades globales:} Refinación final de la documentación entregable. Ensamblaje de las diapositivas para la presentación y ejecución de múltiples ensayos cronometrados para ajustar el guion y el ritmo de la defensa oral.
+    \item \textbf{Actividades globales:} Refinación final de la documentación entregable. Ensamblaje de las diapositivas para la presentación y ejecución de múltiples ensayos cronometrados.
+\end{itemize}
+
+\subsection{Documentación extendida y trazabilidad}
+
+Para profundizar en la distribución granular de las tareas, los rendimientos individuales, las métricas de planificación y el desglose de las ceremonias de \textit{Scrum}, se ha habilitado el acceso a los repositorios documentales oficiales del proyecto:
+
+\begin{itemize}
+    \item \textbf{Scrum:} \href{https://trabajoprofesional-aggz.github.io/scrum/}{https://trabajoprofesional-aggz.github.io/scrum/} \\
+    En este repositorio se encuentra auditado todo lo relacionado a las 13 iteraciones del \textit{sprint} utilizadas para el desarrollo del MVP, permitiendo un desglose absoluto del esfuerzo de ingeniería aplicado.
+    \item \textbf{Bitácora:} \href{https://trabajoprofesional-aggz.github.io/bitacora/}{https://trabajoprofesional-aggz.github.io/bitacora/} \\
+    Contiene los reportes semanales puntuales correspondientes a la totalidad de las 37 semanas que abarcó el ciclo de vida del Trabajo Profesional.
 \end{itemize}

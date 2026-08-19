@@ -30,6 +30,7 @@ Seleccioná uno de los siguientes anexos para visualizar su contenido:
 * 🗺️ **[Épicas de usuario](epicas-usuario/)**
 * ⚠️ **[Errores cometidos y lecciones aprendidas](errores-lecciones/)**
 * 📈 **[Evolución de la solución](evolucion-solucion/)**
+* 🔨 **[Herramientas externas](herramientas-externas/)**
 * 🧪 **[Innovación](innovacion/)**
 * 📱 **[Interfaces](interfaces/)**
 * 📊 **[Métricas SaaS](metricas-saas/)**

@@ -10,7 +10,7 @@ Este espacio está destinado a medir el trabajo, la participación y el progreso
 
 ## Resumen del repositorio
 
-* **Actividad de commits:** ![Commits](https://img.shields.io/badge/Commits_Totales-161-blue)
+* **Actividad de commits:** ![Commits](https://img.shields.io/badge/Commits_Totales-163-blue)
 * **Pull Requests cerrados:** ![PRs](https://img.shields.io/badge/PRs_Cerrados-3-purple)
 * **Issues resueltos:** ![Issues](https://img.shields.io/badge/Issues_Resueltos-86-green)
 
@@ -18,8 +18,9 @@ Este espacio está destinado a medir el trabajo, la participación y el progreso
 
 Basado en el análisis automático del repositorio, la distribución tecnológica es la siguiente:
 
-* ⚪ **TeX:** 68.6%
-* 🟠 **HTML:** 31.4%
+* ⚪ **TeX:** 68.2%
+* 🟠 **HTML:** 31.2%
+* 🔵 **Python:** 0.6%
 * 🔴 **Ruby:** 0.0%
 
 ## Distribución del trabajo (Contributors)
@@ -28,7 +29,7 @@ A continuación se detalla la participación de cada miembro del equipo basándo
 
 | Miembro del equipo (GitHub User) | Commits Totales | Líneas Agregadas (++) | Líneas Eliminadas (--) |
 | :--- | :---: | :---: | :---: |
-| **Ascencio, Felipe Santino** (`FelipeAscencio`) | 150 | 28.756 | 7.225 |
+| **Ascencio, Felipe Santino** (`FelipeAscencio`) | 152 | 28.756 | 7.225 |
 | **Zielonka, Axel** (`axel-zielonka`) | 11 | 1.437 | 210 |
 
 *(Nota: Cualquier diferencia entre el total de commits del repositorio y la suma de los aportes individuales corresponde a operaciones de mantenimiento automatizado realizadas por herramientas como dependabot).*

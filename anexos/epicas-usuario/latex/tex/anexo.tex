@@ -1,3 +1,92 @@
 \section{Anexo - Épicas de usuario}
 
-X.
+A continuación, se detalla la hoja de ruta estratégica del proyecto, estructurada en los 10 Sprints de desarrollo, los cuales configuran el Producto Mínimo Viable (MVP). Esta planificación garantiza entregas de valor continuo, facilitando el testeo temprano y proporcionando un margen de tiempo seguro para imprevistos.
+
+\subsection{Fase 1: Estructura base y plataforma web de gestión}
+
+El objetivo inicial es establecer los cimientos de la arquitectura (microservicios) y habilitar el panel administrativo para la gestión integral del club.
+
+\textbf{Épica 1: Accesos y seguridad}
+\begin{itemize}
+    \item \textbf{Funcionalidad:} Implementación de \textit{login}, registro, baja de usuarios administrativos y gestión de roles.
+    \item \textbf{Propósito:} Proveer un entorno seguro y segmentado para el personal del club, asegurando que cada rol acceda únicamente a la información pertinente a sus funciones.
+    \item \textbf{Criterios de aceptación clave:} Autenticación segura mediante \textit{tokens} JWT, cifrado de contraseñas, validación de permisos en los \textit{endpoints} y registro de auditoría de creación de usuarios.
+\end{itemize}
+
+\textbf{Épica 2: Gestión societaria}
+\begin{itemize}
+    \item \textbf{Funcionalidad:} Consulta integral del socio (estado de cuotas, reservas activas, último inicio de sesión).
+    \item \textbf{Propósito:} Brindar a la administración una vista unificada o "360 grados" del estado de cada afiliado para agilizar la atención y resolución de conflictos.
+    \item \textbf{Criterios de aceptación clave:} Visualización centralizada de datos personales, historial de pagos, estado de morosidad y vinculación con grupos familiares.
+\end{itemize}
+
+\textbf{Épica 3: Gestión operativa}
+\begin{itemize}
+    \item \textbf{Funcionalidad:} ABM (Alta, Baja, Modificación) de reservas, administración de disciplinas y consulta de socios inscriptos.
+    \item \textbf{Propósito:} Digitalizar la reserva de espacios físicos y la organización de actividades deportivas, eliminando el uso de planillas físicas y reduciendo colisiones de horarios.
+    \item \textbf{Criterios de aceptación clave:} Creación de cupos por disciplina, listas de espera automáticas, cancelación de reservas y visualización de grillas horarias.
+\end{itemize}
+
+\textbf{Épica 4: Comunicación y retención}
+\begin{itemize}
+    \item \textbf{Funcionalidad:} Configuración y envío de alertas a socios y publicación de noticias institucionales.
+    \item \textbf{Propósito:} Mantener a la masa societaria informada y comprometida, reduciendo la fricción comunicacional y fomentando la participación activa en la vida del club.
+    \item \textbf{Criterios de aceptación clave:} Envío de notificaciones \textit{push}, publicación de noticias con soporte multimedia y segmentación de alertas por categoría de socio o estado de deuda.
+\end{itemize}
+
+\newpage
+
+\textbf{Épica 5: Dashboard analítico}
+\begin{itemize}
+    \item \textbf{Funcionalidad:} Presentación de métricas de recaudación, morosidad, accesos, uso de espacios, además de métricas predictivas de fidelización mediante IA.
+    \item \textbf{Propósito:} Otorgar a la tesorería y a la comisión directiva herramientas de inteligencia de negocios para la toma de decisiones basada en datos empíricos.
+    \item \textbf{Criterios de aceptación clave:} Gráficos interactivos de ingresos mensuales, cálculo del porcentaje de morosidad, detección temprana de socios en riesgo de abandono (\textit{churn rate}) y reportes de ocupación de instalaciones.
+\end{itemize}
+
+\subsection{Fase 2: Aplicación móvil e Inteligencia Artificial}
+
+Una vez estabilizado el panel web, el enfoque se traslada a la interfaz de usuario final, permitiendo la autogestión de los socios y herramientas de control para los empleados en campo.
+
+\textbf{Épica 6: Perfil y autogestión}
+\begin{itemize}
+    \item \textbf{Funcionalidad:} \textit{Login} de socios, recuperación de contraseñas, edición de perfil, gestión de reservas propias y visualización de estado de deuda y credencial digital.
+    \item \textbf{Propósito:} Empoderar al socio brindándole autonomía total sobre su cuenta, reduciendo la carga administrativa en las sedes físicas del club.
+    \item \textbf{Criterios de aceptación clave:} Acceso seguro (incluyendo biometría), visualización del código QR dinámico para acceso, descarga de comprobantes y presentación digital de formularios o aptos médicos.
+\end{itemize}
+
+\textbf{Épica 7: Reservas y deportes}
+\begin{itemize}
+    \item \textbf{Funcionalidad:} Consulta e inscripción a disciplinas, vista de espacios compartidos y gestión de listas de espera.
+    \item \textbf{Propósito:} Facilitar la participación del socio en las actividades del club mediante un proceso de inscripción transparente y ágil.
+    \item \textbf{Criterios de aceptación clave:} Exploración de grilla de actividades, inscripción con un clic, notificaciones de disponibilidad de cupos e historial de reservas pasadas.
+\end{itemize}
+
+\textbf{Épica 8: Pagos}
+\begin{itemize}
+    \item \textbf{Funcionalidad:} Integración de pasarela para el abono de cuotas, reservas de espacios, cuotas de disciplinas y compra de entradas a eventos.
+    \item \textbf{Propósito:} Centralizar y automatizar el flujo de caja del club, ofreciendo al socio múltiples medios de pago digitales de forma segura.
+    \item \textbf{Criterios de aceptación clave:} Integración exitosa con la API de Mercado Pago, actualización instantánea del estado financiero tras la confirmación (\textit{webhook}), y generación de recibos digitales.
+\end{itemize}
+
+\newpage
+
+\textbf{Épica 9: Novedades}
+\begin{itemize}
+    \item \textbf{Funcionalidad:} Visualización del \textit{feed} de noticias del club e interacción con la tienda oficial de productos (\textit{merchandising}).
+    \item \textbf{Propósito:} Consolidar la aplicación como el principal canal de información institucional y abrir una nueva vía de monetización a través del comercio electrónico.
+    \item \textbf{Criterios de aceptación clave:} Carga rápida de imágenes, catálogo de productos con control de \textit{stock} y carrito de compras integrado.
+\end{itemize}
+
+\textbf{Épica 10: Rol empleado}
+\begin{itemize}
+    \item \textbf{Funcionalidad:} \textit{Login} específico para el personal de control, manejo de perfil y escaneo de códigos QR para la validación de accesos al estadio.
+    \item \textbf{Propósito:} Blindar las instalaciones contra el fraude (préstamo de carnets) y agilizar los ingresos en escenarios de alta concurrencia.
+    \item \textbf{Criterios de aceptación clave:} Escaneo óptico de alta velocidad, validación criptográfica de \textit{tokens} (TOTP) de manera 100\% \textit{offline} y sincronización asíncrona de los registros de acceso.
+\end{itemize}
+
+\textbf{Épica 11: Canal conversacional}
+\begin{itemize}
+    \item \textbf{Funcionalidad:} Implementación del bot conversacional (\textbf{BotIn}) para responder consultas frecuentes y envío proactivo de alertas.
+    \item \textbf{Propósito:} Ofrecer atención automatizada 24/7 mediante plataformas de mensajería masiva (como Telegram), reduciendo el volumen de consultas telefónicas.
+    \item \textbf{Criterios de aceptación clave:} Interpretación del lenguaje natural, respuestas coherentes sobre horarios o disciplinas, y capacidad de reenviar notificaciones generadas desde el panel de control.
+\end{itemize}

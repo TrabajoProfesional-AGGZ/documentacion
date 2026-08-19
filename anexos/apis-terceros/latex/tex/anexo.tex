@@ -1,3 +1,27 @@
 \section{Anexo - APIs de terceros}
 
-X.
+Para garantizar la escalabilidad, seguridad y confiabilidad de la plataforma \textbf{SocioUnido}, el sistema se integra con servicios de terceros de probada trayectoria en la industria. Estas integraciones permiten delegar responsabilidades críticas (como el procesamiento de transacciones financieras y la mensajería automatizada) a plataformas especializadas que cumplen con los más altos estándares internacionales. A continuación, se detallan las principales API utilizadas en la arquitectura del proyecto:
+
+\subsection{Mercado Pago (Procesamiento de pagos)}
+
+\textbf{Uso en el sistema:} La API de Mercado Pago se utiliza como la pasarela de pagos central del microservicio de finanzas. Es la encargada de procesar los cobros de cuotas sociales, venta de entradas, abonos y alquiler de instalaciones. Además, el sistema consume sus \textit{webhooks} (notificaciones IPN) para actualizar de manera asíncrona y automática el estado de las transacciones en la base de datos del club.
+
+\textbf{Implementación técnica:} La integración se realiza a través del SDK oficial para Python (\texttt{mercadopago.SDK}). El \textit{backend} genera "preferencias de pago" (Checkout Pro) que redirigen al usuario a un entorno seguro, y expone un \textit{endpoint} dedicado (\texttt{/api/v1/pagos/webhook}) que escucha los cambios de estado (aprobado, pendiente, rechazado). Una vez verificado el pago, orquesta la comunicación con el microservicio central para habilitar los servicios del socio.
+
+\textbf{Justificación de la elección:} Se evaluaron múltiples alternativas en la industria, pero la elección de Mercado Pago se fundamenta en sus rigurosos estándares de ciberseguridad (cumplimiento PCI-DSS, tokenización de tarjetas y prevención de fraude impulsada por inteligencia artificial) y su altísima confiabilidad y tasa de disponibilidad. Adicionalmente, y como factor estratégico decisivo, \textbf{Mercado Pago se está convirtiendo en el estándar y dominador principal del pago móvil en Argentina y la región}. Al integrar la pasarela que aspira a tener (y actualmente posee) la mayor base de usuarios, SocioUnido minimiza la fricción en el proceso de cobro: la gran mayoría de los hinchas ya tienen la aplicación instalada, confían en ella y la utilizan cotidianamente, garantizando así un mayor índice de conversión.
+
+\subsection{Telegram bot API (Asistente conversacional "BotIn")}
+
+\textbf{Uso en el sistema:} La API de Telegram es el motor tecnológico detrás de \textbf{BotIn}, el asistente conversacional interactivo del club. Se utiliza para ofrecer una interfaz omnicanal donde los socios pueden realizar consultas de forma accesible sobre disciplinas, instalaciones, noticias institucionales, etcétera. Asimismo, actúa como el canal de difusión masivo para el envío de notificaciones y alertas a los usuarios registrados.
+
+\textbf{Implementación técnica:} Se integra mediante la librería asíncrona \texttt{python-telegram-bot} dentro del microservicio propio del bot. La arquitectura captura los mensajes del usuario, normaliza el lenguaje (procesando mayúsculas, acentos y comandos) y los deriva a los \textit{handlers} correspondientes para su resolución. Paralelamente, persiste los identificadores únicos de sesión (\texttt{chat\_id}) en una base de datos embebida para posibilitar el envío de comunicados asíncronos desde la dirigencia.
+
+\textbf{Justificación de la elección:} A la hora de seleccionar la plataforma conversacional, Telegram destacó por sobre otras opciones debido a su arquitectura abierta, gratuita y de enorme flexibilidad técnica. Se priorizó por sus elevados estándares de seguridad, cifrado \textit{end-to-end} y confiabilidad estructural, además de su excelente soporte para operaciones asíncronas de alto rendimiento en Python. Esto permite a SocioUnido brindar una experiencia de usuario rápida, robusta y libre de fricciones, sin someter a los clubes a los altos costos operativos y restricciones estrictas de plantillas que imponen otras alternativas comerciales (como la API oficial de WhatsApp).
+
+\subsection{Resend (Envío de correos electrónicos transaccionales)}
+
+\textbf{Uso en el sistema:} La API de Resend se utiliza como el servicio de mensajería electrónica oficial del microservicio de gestión. Es la responsable de despachar notificaciones críticas de forma automatizada a los socios, tales como confirmaciones de registro, comprobantes de pago de cuotas, envío de entradas digitales y confirmación de reservas de instalaciones.
+
+\textbf{Implementación técnica:} La integración se realiza de forma asíncrona dentro del \textit{backend}. El sistema orquesta la construcción de plantillas de correo en formato HTML con los datos dinámicos del usuario y consume los servicios de Resend mediante la inyección de una clave de autenticación (\texttt{RESEND\_API\_KEY}) configurada de forma segura en las variables de entorno. Esto permite desacoplar la lógica de envío del procesamiento principal, evitando cuellos de botella en la base de datos.
+
+\textbf{Justificación de la elección:} Se seleccionó Resend frente a proveedores tradicionales (como SendGrid o Amazon SES) debido a su enfoque moderno y orientado a la experiencia del desarrollador. La plataforma destaca por su altísima tasa de entregabilidad (minimizando la probabilidad de que los comunicados institucionales caigan en la bandeja de \textit{spam}), su baja latencia y su facilidad de integración en entornos nativos de Python. Esto garantiza que las comunicaciones que resultan sensibles y de carácter inmediato para el usuario, lleguen al socio de manera instantánea y altamente confiable.

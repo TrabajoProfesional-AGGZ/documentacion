@@ -103,7 +103,7 @@
 \includegraphics[width=12cm]{img/logos/logo}
 \vspace{0.2cm}
 
-{ \huge \bfseries Anexo - Bugs\\[0.1cm]}      % Título
+{ \huge \bfseries Anexo - Seguimiento y gestión de errores (Bugs)\\[0.1cm]}      % Título
 \includegraphics[width=12cm]{img/logos/logo-socio-alt} \\ [0.4cm]
 {\large "Porque el club es de los socios, y la gestión es de SocioUnido"} \\ [0.2cm]
 \normalsize{Plataforma inteligente que centraliza la gestión administrativa de los clubes, optimizando el uso de espacios compartidos, previniendo la morosidad y asegurando los accesos al estadio.}

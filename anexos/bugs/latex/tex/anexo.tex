@@ -1,3 +1,26 @@
-\section{Anexo - Bugs}
+\section{Anexo - Seguimiento y gestión de errores (Bugs)}
 
-X.
+La complejidad arquitectónica de \textbf{SocioUnido}, basada en múltiples microservicios interconectados y diversas interfaces de usuario, requiere un mecanismo de control de calidad sumamente riguroso. Para garantizar la estabilidad del producto y la rápida resolución de incidencias, la organización adoptó un enfoque profesional de seguimiento de errores (\textit{bug tracking}) centralizado íntegramente en \textbf{GitHub Projects}.
+
+\subsection{El ecosistema de GitHub Projects}
+
+En lugar de utilizar herramientas externas y desconectadas del código fuente, se optó por desplegar un tablero de control unificado dentro de la misma organización de GitHub donde residen los repositorios del proyecto. Esta decisión arquitectónica y metodológica aporta beneficios sustanciales para el ciclo de vida del desarrollo:
+
+\begin{itemize}
+    \item \textbf{Trazabilidad absoluta:} Al estar integrado nativamente, cada error reportado (\textit{issue}) se vincula directamente con los repositorios afectados, las ramas de desarrollo y los \textit{Pull Requests} específicos que solucionan el problema. Esto elimina la fricción de sincronizar plataformas de terceros.
+    \item \textbf{Flujo de trabajo visual (Tablero Kanban):} El tablero organiza el ciclo de vida de los errores en columnas lógicas (Por clasificar, Listo, En progreso, En revisión, Terminado). Esto proporciona una vista panorámica del estado de salud del sistema, permitiendo al equipo identificar rápidamente qué incidencias están bloqueando despliegues críticos.
+    \item \textbf{Criterios de clasificación y triaje:} Se implementó un sistema de etiquetado y evaluación estructurado. Cada \textit{bug} registrado en el panel no es solo una tarea, sino una entidad que cuenta con:
+    \begin{itemize}
+        \item \textbf{Prioridad (\textit{Priority}):} Clasificada en Urgente, Alta, Media y Baja (\textit{Urgent, High, Medium, Low}), determinando el orden de resolución.
+        \item \textbf{Esfuerzo o tamaño (\textit{Size}):} Medido en tallas (XS, S, M, L) para estimar la carga cognitiva y el tiempo de desarrollo necesario para la corrección.
+        \item \textbf{Asignación de responsables:} Delegación clara del problema a uno o varios miembros del equipo, evitando la dilución de responsabilidades.
+    \end{itemize}
+\end{itemize}
+
+\subsection{Gestión proactiva e integración de auditorías}
+
+El sistema de seguimiento no se alimenta únicamente de los errores detectados de forma manual durante las sesiones de uso exploratorio. Una parte fundamental del flujo de trabajo consiste en la captura y gestión de las vulnerabilidades y refactorizaciones sugeridas por herramientas de análisis estático y agentes de inteligencia artificial.
+
+Durante las fases de estabilización de código, todas las correcciones estructurales exigidas por \textbf{SonarCloud} y los reportes de seguridad generados por el agente automatizado \textbf{OpenClaw} fueron transformadas en \textit{issues} de alta prioridad e ingresadas al tablero. Este nivel de integración demuestra un proceso de aseguramiento de calidad (QA) maduro: las auditorías no quedan como meros informes en PDF o terminales, sino que se convierten en tareas accionables, asignadas, estimadas y resueltas dentro del flujo de trabajo diario del equipo.
+
+En conclusión, la adopción de GitHub Projects como centro de comando para la gestión de incidencias dotó al proyecto de un estándar corporativo, permitiendo resolver eficientemente decenas de \textit{bugs} críticos, visuales y de rendimiento, asegurando así que el producto final entregado sea robusto, predecible y altamente funcional.

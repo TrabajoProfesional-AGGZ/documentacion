@@ -1,3 +1,48 @@
 \section{Anexo - Errores cometidos y lecciones aprendidas}
 
-X.
+El desarrollo de \textbf{SocioUnido}, ejecutado a lo largo de 13 \textit{sprints} bajo el marco de trabajo ágil \textit{Scrum}, permitió una evolución continua del producto. Sin embargo, este proceso iterativo no estuvo exento de obstáculos. La identificación, gestión y resolución de estos desvíos constituyeron una fuente invaluable de madurez técnica y metodológica para el equipo. A continuación, se detallan los riesgos materializados, los errores de planificación y las lecciones positivas extraídas durante el ciclo de vida del proyecto.
+
+\subsection{Riesgos previstos que se materializaron}
+
+\textbf{1. Curva de aprendizaje y concurrencia asíncrona}
+\begin{itemize}
+    \item \textbf{Contexto:} Se preveía que la adopción de ciertos componentes del \textit{stack} tecnológico requeriría tiempo de adaptación.
+    \item \textbf{Materialización:} La implementación de procesos asíncronos en FastAPI para manejar simultáneamente los \textit{webhooks} de Mercado Pago y las peticiones del \textit{bot} de Telegram generó cuellos de botella en la base de datos por el mal manejo de las sesiones (conexiones no liberadas).
+    \item \textbf{Lección:} Se evidenció la necesidad de realizar pruebas de carga y estrés en etapas más tempranas. Se estandarizó el uso de gestores de contexto asíncronos para la base de datos, resolviendo el bloqueo y mejorando la estabilidad.
+\end{itemize}
+
+\textbf{2. Dificultades en la migración de datos heredados}
+\begin{itemize}
+    \item \textbf{Contexto:} Era sabido que los clubes manejaban su información preexistente con baja formalidad.
+    \item \textbf{Materialización:} Al simular la carga masiva del padrón de socios, el equipo se encontró con datos severamente corruptos (fechas inválidas, correos duplicados, documentos incompletos) que rompían las reglas de integridad de la base de datos relacional.
+    \item \textbf{Lección:} Nunca se debe confiar en la pureza de los datos externos. Como contramedida, se desarrolló un \textit{script} de sanitización e importación tolerante a fallos, capaz de limpiar la información e informar los registros omitidos sin detener todo el proceso de migración.
+\end{itemize}
+
+\subsection{Riesgos no previstos y errores de estimación}
+
+\textbf{1. Subestimación en el entrenamiento del modelo de lenguaje (PLN)}
+\begin{itemize}
+    \item \textbf{El error:} Se estimó que la integración del \textit{bot} conversacional en Telegram tomaría un único \textit{sprint}, asumiendo que el procesamiento de lenguaje natural comprendería fácilmente las consultas de los usuarios.
+    \item \textbf{El impacto:} En las pruebas de campo, el modelo fallaba constantemente al intentar procesar el argot local, abreviaturas o el tono informal propios del ser humano. Esto obligó a dedicar un \textit{sprint} adicional exclusivamente a reentrenar y refinar el reconocimiento de intenciones.
+    \item \textbf{Lección:} La interacción humano-computadora requiere un margen de tolerancia mucho mayor en la planificación. Las interfaces conversacionales deben ser probadas con usuarios reales (no solo por desarrolladores) desde su concepción.
+\end{itemize}
+
+\newpage
+
+\textbf{2. Desvíos en el diseño responsivo del \textit{dashboard}}
+\begin{itemize}
+    \item \textbf{El error:} El panel administrativo fue diseñado inicialmente bajo el supuesto de que sería utilizado exclusivamente desde computadoras de escritorio en las oficinas de administración del club.
+    \item \textbf{El impacto:} Durante la validación temprana, se reveló que muchos usuarios operan en movimiento desde tabletas o teléfonos celulares. Hubo que refactorizar gran parte de las vistas web en el quinto \textit{sprint} para garantizar una experiencia verdaderamente responsiva.
+    \item \textbf{Lección:} Nunca se debe asumir el contexto de uso de un usuario sin validarlo previamente. La estrategia \textit{mobile-first} (móvil primero) debe aplicarse a todas las interfaces, incluso a las de carácter administrativo o de uso interno.
+\end{itemize}
+
+\subsection{Aciertos y lecciones positivas}
+
+\textbf{1. Adopción estricta de la arquitectura de microservicios}\\
+La decisión de dividir el sistema en dominios independientes (club, pagos, \textit{bot}, accesos, analítica) demostró ser un acierto absoluto. Cuando el servicio de pagos presentó problemas temporales de latencia en el entorno de pruebas, el resto de la plataforma (como la reserva de espacios o el ingreso al estadio) continuó funcionando sin interrupciones. Esta tolerancia a fallos validó empíricamente la solidez de la arquitectura elegida.
+
+\textbf{2. Automatización temprana (CI/CD)}\\
+Configurar las tuberías de integración y despliegue continuo (junto con las herramientas de análisis de código estático) desde el segundo \textit{sprint} representó una inversión de tiempo que se recuperó con creces. Esta práctica eliminó por completo los problemas de compatibilidad manual, asegurando que la rama principal de código siempre fuera desplegable y estuviera auditada contra errores críticos antes de llegar a producción.
+
+\textbf{3. La comunicación como núcleo del trabajo ágil}\\
+El cumplimiento estricto de las ceremonias de \textit{Scrum} (especialmente las retrospectivas) permitió que el equipo sincerara sus bloqueos técnicos a tiempo. La rotación de tareas y la asistencia cruzada entre los responsables de \textit{front-end} y \textit{back-end} fomentaron un conocimiento integral del ecosistema, demostrando que la cohesión humana y la transparencia son tan importantes como la excelencia técnica para el éxito del proyecto.

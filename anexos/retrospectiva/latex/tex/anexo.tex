@@ -8,7 +8,7 @@ Desde su concepción, SocioUnido fue tratado como un producto real destinado a c
 
 \begin{itemize}
     \item \textbf{Canal de YouTube:} Se creó el canal oficial de la plataforma (\url{https://www.youtube.com/@SocioUnido}), el cual funciona como el centro de medios principal. Actualmente aloja los videos de validación del producto con clientes reales, las presentaciones académicas intermedias y la totalidad de los videotutoriales de uso de la plataforma.
-    \item \textbf{Página publicitaria (Landing Page):} Pila fundamental para nuestra imagen como marca, se desarrolló e implementó una web comercial oficial con dominio propio, diseñada para la captación y conversión de clientes (\url{\textcolor{blue}{URL A CONFIRMAR}}).
+    \item \textbf{Página publicitaria (Landing Page):} Pilar fundamental para nuestra imagen como marca, se desarrolló e implementó una web comercial oficial con dominio propio, diseñada para la captación y conversión de clientes (\url{\textcolor{blue}{URL A CONFIRMAR}}).
 \end{itemize}
 
 El enfoque comercial de SocioUnido no es teórico; fue validado de forma empírica y constante gracias a las iteraciones guiadas por nuestros tutores, y posteriormente refinado mediante reuniones de validación con trabajadores de clubes reales y encuestas de usabilidad a socios y usuarios finales.
@@ -19,17 +19,18 @@ Absolutamente toda la implementación técnica, lógica y documental del Trabajo
 
 La magnitud del proyecto exigió una arquitectura sumamente distribuida, componiéndose de \textbf{27 repositorios y 2 proyectos Kanban}.
 
-\subsubsection*{Gestión ágil y control de incidencias (Proyectos Kanban)}
+\subsubsection{Gestión ágil y control de incidencias (Proyectos Kanban)}
 \begin{itemize}
     \item \textbf{Centro de monitoreo de tareas:} Tablero estructurado bajo la metodología Kanban que rigió la ejecución de los 13 \textit{sprints} de desarrollo. Permitió gestionar el \textit{backlog} de manera dinámica, asignando responsables, pesos (esfuerzo) y prioridades a cada historia de usuario.
     \item \textbf{Centro de monitoreo de bugs:} Espacio homólogo dedicado exclusivamente a la detección, seguimiento y resolución de errores (\textit{bugs}) y deudas técnicas reportadas por los auditores automáticos (SonarCloud/OpenClaw).
 \end{itemize}
 
-\subsubsection*{Repositorios privados (Lógica de negocio e infraestructura)}
+\subsubsection{Repositorios privados (Lógica de negocio e infraestructura)}
 Con el fin de resguardar la propiedad intelectual, la seguridad criptográfica y los derechos de autor de las implementaciones subyacentes, los repositorios \textit{back-end} se mantienen en carácter privado. Sin embargo, \textbf{ante cualquier requerimiento académico, de evaluación o interés técnico justificado, el equipo está totalmente a disposición para otorgar los accesos correspondientes} (contactando a los correos que figuran en la carátula de este documento).
 
 Cabe destacar que el código fuente de estos repositorios está documentado internamente siguiendo los más altos estándares y buenas prácticas (\textit{self-documenting code}), garantizando que futuros desarrolladores puedan comprender la lógica del sistema de forma clara y completa.
 
+\subsubsection*{Detalle de los repositorios privados}
 \begin{itemize}
     \item \texttt{microservicio-club}: Gestiona la lógica central (socios, disciplinas, reservas y eventos).
     \item \texttt{microservicio-pagos}: Orquesta las transacciones financieras y pasarelas externas.
@@ -43,16 +44,8 @@ Cabe destacar que el código fuente de estos repositorios está documentado inte
     \item \texttt{toolkit-financiero}: Herramientas de cálculo, proyección y análisis comercial de la solución.
 \end{itemize}
 
-\subsubsection*{Repositorios públicos (Interfaces y portales documentales)}
+\subsubsection{Repositorios públicos (Interfaces y portales documentales)}
 La totalidad de las interfaces cliente y la documentación asociada a los repositorios privados se mantienen en carácter público para demostrar la transparencia, alcance y arquitectura del proyecto sin comprometer credenciales sensibles.
-
-\textbf{Interfaces gráficas (\textit{Front-end}):} \\
-Dentro de estos repositorios reside no solo el código, sino también su propia página documental (JustTheDocs) que expone las vistas y maquetas del sistema.
-\begin{itemize}
-    \item \texttt{plataforma-web}: Panel de administración (\textit{dashboard}) para los directivos del club.
-    \item \texttt{aplicacion}: Aplicación móvil (PWA) interactiva para los socios.
-    \item \texttt{control-de-accesos}: Aplicación móvil (PWA) para el escaneo de QRs por parte de los empleados.
-\end{itemize}
 
 \textbf{Portales documentales de la arquitectura (\textit{Back-end}):} \\
 Para cada microservicio privado existe un repositorio espejo terminado en \texttt{-doc}. Estos alojan portales generados con JustTheDocs que explican exhaustivamente la arquitectura del servicio original: diagramas de contexto, justificación de \textit{stack} tecnológico, métricas automáticas de implementación (actividad de \textit{commits}, lenguajes, contribuciones) y el listado de \textit{endpoints} públicos para integraciones externas.
@@ -67,6 +60,24 @@ Para cada microservicio privado existe un repositorio espejo terminado en \textt
     \item \texttt{healthchecker-doc}
 \end{itemize}
 
+\textbf{Interfaces gráficas (\textit{Front-end}):} \\
+Dentro de estos repositorios reside no solo el código, sino también su propia página documental (JustTheDocs) que además de tener los mismos apartados que las anteriores. También expone algunas vistas principales del sistema.
+\begin{itemize}
+    \item \texttt{plataforma-web}: Panel de administración (\textit{dashboard}) para los directivos del club.
+    \item \texttt{aplicacion}: Aplicación móvil (PWA) interactiva para los socios.
+    \item \texttt{control-de-accesos}: Aplicación móvil (PWA) para el escaneo de QRs por parte de los empleados.
+\end{itemize}
+
+\textbf{Repositorios documentales / Páginas de gestión global} \\
+En estos repositorios se almacena integramente información documental relacionada a la totalidad del desarrollo del Trabajo Profesional.
+\begin{itemize}
+    \item \texttt{.github}: Centro neurálgico que conecta todos los repositorios, resumiendo el producto y presentando al equipo.
+    \item \texttt{scrum}: Documentación profunda de las ceremonias, métricas y evolución de los 13 \textit{sprints} de desarrollo.
+    \item \texttt{bitacora}: Reportes detallados del avance a lo largo de las 37 semanas del proyecto.
+    \item \texttt{ideas-productos}: El proceso creativo y analítico (5Cs, 4Ps) de las 13 ideas primigenias evaluadas.
+    \item \texttt{documentacion}: El repositorio maestro que compila todos los entregables académicos.
+\end{itemize}
+
 \subsection{El inmenso valor documental del proyecto}
 
 El hito más destacable de SocioUnido, a la par de su impresionante alcance tecnológico y su sólido rendimiento bajo el marco \textit{Scrum} (ver Anexo - Registro de horas PPS), es su aporte documental. Se han construido \textbf{16 páginas plenamente documentales con JustTheDocs} que abarcan el Trabajo Profesional de punta a punta:
@@ -74,14 +85,7 @@ El hito más destacable de SocioUnido, a la par de su impresionante alcance tecn
 \begin{itemize}
     \item \textbf{8 páginas} detallando la arquitectura de los microservicios, \textit{gateway} y monitor de salud.
     \item \textbf{3 páginas} exponiendo las interfaces visuales (Plataforma web y PWAs).
-    \item \textbf{5 páginas de gestión global:}
-    \begin{itemize}
-        \item \texttt{.github}: Centro neurálgico que conecta todos los repositorios, resumiendo el producto y presentando al equipo.
-        \item \texttt{scrum}: Documentación profunda de las ceremonias, métricas y evolución de los 13 \textit{sprints} de desarrollo.
-        \item \texttt{bitacora}: Reportes detallados del avance a lo largo de las 37 semanas del proyecto.
-        \item \texttt{ideas-productos}: El proceso creativo y analítico (5Cs, 4Ps) de las 13 ideas primigenias evaluadas.
-        \item \texttt{documentacion}: El repositorio maestro que compila todos los entregables académicos.
-    \end{itemize}
+    \item \textbf{5 páginas} de gestión global.
 \end{itemize}
 
 Particularmente, el repositorio \texttt{documentacion} aloja una vasta cantidad de material complementario generado durante estos meses de trabajo:
@@ -90,9 +94,9 @@ Particularmente, el repositorio \texttt{documentacion} aloja una vasta cantidad 
     \item Evidencia de la validación del producto (entrevistas a trabajadores y encuestas de usabilidad).
     \item El Informe Final definitivo.
     \item Múltiples redacciones de discursos comerciales (\textit{Pitch / Elevator Pitch}) adaptados a clientes, inversores y académicos.
-    \item Desarrollo de la identidad visual: Marca, logotipos, íconos (\textit{marca blanca} y simulando clubes reales).
+    \item Desarrollo de la identidad visual: Marca, logotipos, íconos (\textit{marca blanca} y simulaciones).
     \item Diagramas del Modelo C4 (arquitectura de sistemas) y diagramas DER (capa de datos).
-    \item Más de \textbf{25 anexos} formales analizando múltiples aristas técnicas, legales y de gestión del sistema.
+    \item Más de \textbf{25 anexos} formales analizando múltiples aristas técnicas, legales y de gestión.
     \item Decenas de videotutoriales explicativos de la plataforma y las aplicaciones, acompañados por sus respectivos manuales de uso en formato texto.
 \end{itemize}
 

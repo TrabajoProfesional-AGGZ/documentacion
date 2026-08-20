@@ -1,3 +1,88 @@
-\section{Anexo - Herramientas externas}
+\section{Anexo - Herramientas externas y tecnologías utilizadas}
 
-X.
+El presente anexo detalla el \textit{stack} tecnológico y las herramientas externas implementadas a lo largo de todas las fases del Trabajo Profesional. De acuerdo con los lineamientos de ética y rigor académico, se justifica la elección de cada componente basándose en criterios técnicos, económicos (priorizando la gratuidad y el acceso libre u \textit{open-source}) y su estandarización en la industria actual del desarrollo de \textit{software}.
+
+Asimismo, se incluye la declaración de responsabilidad respecto al uso de Inteligencia Artificial Generativa (IAG) por parte de cada integrante del equipo.
+
+\textit{Nota: Es importante destacar que las integraciones con servicios externos (Mercado Pago, Telegram, etc.) se detallan en profundidad en el Anexo específico de ``APIs de Terceros''.}
+
+\subsection{Lenguajes de programación y estilos}
+
+\begin{itemize}
+    \item \textbf{Python:} Lenguaje principal del \textit{back-end}. Se eligió por su versatilidad, su ecosistema inigualable para el análisis de datos (vital para el microservicio de analíticas) y su velocidad para desarrollar reglas de negocio complejas de forma mantenible.
+    \item \textbf{JavaScript / JSX:} Utilizado para el \textit{front-end}. Se seleccionó por ser el estándar absoluto de la web moderna, permitiendo agilidad en la codificación combinando sintaxis moderna con CSS.
+    \item \textbf{Go (Golang):} Lenguaje subyacente del \textit{API Gateway} (KrakenD). Su uso garantiza capacidades de concurrencia masiva, permitiendo manejar miles de peticiones por segundo con un consumo de recursos ínfimo.
+    \item \textbf{HTML y CSS Modular:} Se utilizó CSS tradicional apoyado en variables (\textit{tokens}) para facilitar la tematización de ``marca blanca'', requerida para adaptar la identidad visual a distintos clubes sin reescribir lógica.
+    \item \textbf{LaTeX:} Seleccionado para la redacción de la documentación académica final debido a su superioridad tipográfica y su estándar innegable en la publicación de documentos formales de ingeniería.
+    \item \textbf{Ruby:} Utilizado subyacentemente para la generación de las páginas estáticas documentales mediante \textit{JustTheDocs}.
+\end{itemize}
+
+\subsection{Frameworks, librerías y arquitectura}
+
+\begin{itemize}
+    \item \textbf{FastAPI:} \textit{Framework} web de Python seleccionado por su altísimo rendimiento asíncrono. Permitió estructurar múltiples controladores de forma limpia y autogenerar la documentación interactiva (Swagger/OpenAPI) fundamental para la interconexión de servicios.
+    \item \textbf{React + Vite:} Elegidos para el \textit{front-end} (plataforma administrativa y PWA) por su ecosistema maduro basado en componentes reutilizables. Vite reemplazó a Webpack por su velocidad de compilación ultrarrápida (HMR), optimizando los tiempos de desarrollo.
+    \item \textbf{KrakenD:} Seleccionado como \textit{API Gateway} por ser puramente declarativo (\textit{stateless}). Permitió centralizar la seguridad y enrutar las peticiones hacia los microservicios escalando linealmente sin generar cuellos de botella en bases de datos.
+    \item \textbf{SQLAlchemy y Alembic:} Estándar de la industria en Python para el modelado relacional masivo (ORM) y la ejecución controlada de migraciones sobre los esquemas de bases de datos de forma segura e incremental.
+    \item \textbf{Pytest:} Adoptado como marco de pruebas unitarias y asíncronas por su ecosistema y el uso de \textit{fixtures}, garantizando que las interacciones entre los múltiples submódulos del club no generen efectos secundarios indeseados antes de los despliegues.
+\end{itemize}
+
+\subsection{Bases de datos, caché y despliegue}
+
+\begin{itemize}
+    \item \textbf{Neon (PostgreSQL):} Seleccionado como Sistema de Gestión de Bases de Datos (SGBD) relacional \textit{serverless} en la nube. Se priorizó por su compatibilidad nativa con PostgreSQL, su separación de cómputo y almacenamiento, y su generosa capa gratuita ideal para el desarrollo de proyectos universitarios sin incurrir en costos de alojamiento.
+    \item \textbf{Redis:} Utilizado como agente de mensajes (\textit{message broker}) y caché temporal. Fundamental en el ecosistema analítico, permitió encolar y procesar eventos de manera asíncrona, desacoplando cargas pesadas del flujo principal de la aplicación.
+    \item \textbf{Firebase:} Integrado como plataforma de servicios en la nube para resolver dos necesidades críticas de manera ágil. Por un lado, mediante \textit{Firebase Authentication} se delegó la gestión del ciclo de vida de las contraseñas, la recuperación de cuentas y la emisión de tokens seguros, lo cual exime al sistema de almacenar contraseñas en texto plano y eleva significativamente el nivel de seguridad de la plataforma. Por otro lado, se implementó \textit{Firebase Cloud Messaging} para proveer notificaciones \textit{push} en tiempo real a los dispositivos de los socios.
+    \item \textbf{Docker y Docker Compose:} Herramientas de contenerización indispensables en nuestra arquitectura. Nos permiten aislar cada microservicio de forma independiente y garantizar una paridad técnica exacta entre los entornos de desarrollo, \textit{staging} y producción.
+    \item \textbf{Make:} Utilizado para la orquestación y automatización mediante \textit{Makefiles}, simplificando la ejecución rápida de contenedores y rutinas de \textit{testing} desde la línea de comandos.
+    \item \textbf{Vercel y Render:} Plataformas de computación en la nube (\textit{Cloud Computing}) seleccionadas para el \textit{hosting}. Vercel fue empleado por su optimización superior y despliegue continuo nativo para \textit{front-ends} basados en Vite/React. Por su parte, Render fue utilizado para la ejecución ininterrumpida de los contenedores Docker del \textit{back-end}. Ambas se eligieron por su robusta oferta de capa gratuita e integración perfecta con el flujo de CI/CD.
+\end{itemize}
+
+\subsection{Herramientas de gestión, análisis de código y diseño}
+
+\begin{itemize}
+    \item \textbf{Git y GitHub:} Control de versiones y alojamiento de repositorios seleccionados por ser el estándar predominante de la industria. Su elección brindó control absoluto sobre los flujos de colaboración, gestión de revisiones cruzadas (\textit{Pull Requests}) e integración con múltiples herramientas de terceros.
+    \item \textbf{GitHub Actions:} Motor integrado para flujos de Integración y Despliegue Continuo (CI/CD). Fue preferido sobre opciones como Jenkins o Travis CI por la nula configuración de servidores externos y su ejecución automatizada sobre la propia infraestructura de GitHub.
+    \item \textbf{SonarCloud y OpenClaw:} Plataformas de análisis de código estático (SAST) y aseguramiento de calidad (QA). Se utilizaron como auditores imparciales para garantizar la seguridad del código, evaluar la cobertura de \textit{tests}, minimizar la deuda técnica y prevenir la exposición accidental de información crítica antes de llegar a producción.
+    \item \textbf{Dependabot:} Herramienta nativa de GitHub implementada para la protección proactiva de dependencias en el ecosistema. Se eligió por su capacidad de escanear ininterrumpidamente los repositorios en busca de vulnerabilidades conocidas (CVEs) en librerías de terceros y generar automáticamente \textit{Pull Requests} con las actualizaciones de seguridad, reduciendo drásticamente el tiempo de remediación.
+    \item \textbf{Figma:} Empleado para la construcción interactiva de prototipos y \textit{wireframes} (UX/UI). Elegido por su interfaz colaborativa en tiempo real, permitiendo previsualizar y afinar la experiencia del usuario final minimizando refactorizaciones durante la programación web.
+    \item \textbf{JustTheDocs:} Tema estructural basado en Jekyll. Adoptado para conformar portales web de documentación técnica sumamente veloces, navegables y públicos que centralizan la información sobre implementaciones, \textit{Scrum}, hojas de ruta y bitácoras semanales del proyecto.
+\end{itemize}
+
+\newpage
+
+\subsection{Declaración de uso de Inteligencia Artificial Generativa (IAG)}
+
+En cumplimiento estricto de las directivas y consideraciones de ética profesional de la Facultad de Ingeniería de la UBA, este apartado declara el empleo de plataformas de Inteligencia Artificial Generativa (IAG) e infraestructuras de Grandes Modelos de Lenguaje (LLMs) durante el ciclo de vida del Trabajo Profesional.
+
+Se deja asentada constancia explícita de que estas herramientas operaron exclusivamente bajo roles de asistencia técnica (resolución de \textit{debugging} complejo, consultas semánticas, aceleración de tareas repetitivas [\textit{boilerplate}] y soporte en la organización documental de \textit{LaTeX}). \textbf{Todo el código generado fue sometido a revisiones cruzadas severas; cada estudiante del equipo se responsabiliza, asimila en profundidad y garantiza la auditoría técnica de los desarrollos aplicados}, asegurando su idoneidad para ser defendidos durante las instancias de evaluación.
+
+El desglose del entorno informático e IAG reportado de manera individual por los integrantes es el siguiente:
+
+\vspace{0.3cm}
+
+\noindent \textbf{Ascencio, Felipe Santino} \\
+\textit{Entorno de desarrollo:} VS Code. \\
+\textit{Modelos de asistencia IAG:} Gemini (Google). \\
+\textit{Aplicación principal:} Empleada de forma continua para agilizar y optimizar los tiempos de desarrollo. Sus casos de uso abarcaron la optimización ortográfica de la documentación técnica, la diagramación de formatos estructurados de LaTeX y la asistencia como motor de búsqueda avanzado para esquemas de aseguramiento de calidad (QA). Adicionalmente, Gemini se integró como el motor LLM subyacente para el funcionamiento del agente de QA automatizado (OpenClaw), habiendo liderado personalmente el desarrollo de dicho agente y el seteo de sus políticas de seguridad y validación.
+
+\vspace{0.3cm}
+
+\noindent \textbf{Ghosn, Lautaro Gabriel} \\
+\textit{Entornos y herramientas:} VS Code, Notepad++, Neon SGBD, pgAdmin. Despliegues en Render y Vercel. \\
+\textit{Modelos de asistencia IAG:} Gemini (Google) y ChatGPT (OpenAI). \\
+\textit{Aplicación principal:} Utilizada fuertemente para agilizar los tiempos de desarrollo y optimizar el rendimiento operativo. Sirvió como apoyo en la configuración de infraestructuras en la nube, consultas sobre arquitectura de microservicios y generación rápida de comandos de despliegue.
+
+\vspace{0.3cm}
+
+\noindent \textbf{Guerrero, Martín} \\
+\textit{Entornos y herramientas:} VS Code, Neon SGBD. Despliegues en Render. \\
+\textit{Modelos de asistencia IAG:} Claude (Anthropic) y Gemini (Google). \\
+\textit{Aplicación principal:} Incorporada para optimizar los tiempos de desarrollo y acelerar la codificación. Brindó asistencia en consultas sobre asincronía en redes, apoyo iterativo para la integración y refinación del flujo de procesamiento de lenguaje natural inherente al servicio conversacional del sistema, y soporte sintáctico en Python.
+
+\vspace{0.3cm}
+
+\noindent \textbf{Zielonka, Axel} \\
+\textit{Entornos y herramientas:} VS Code, Neon SGBD. Despliegues en Vercel y Render. \\
+\textit{Modelos de asistencia IAG:} Claude Code (vía Interfaz de Línea de Comandos - CLI), Claude (Anthropic), ChatGPT (OpenAI) y Gemini (Google). \\
+\textit{Aplicación principal:} Aplicada estratégicamente para agilizar los tiempos de desarrollo de forma masiva. Permitió el \textit{debugging} ágil de componentes de \textit{React}, facilitó la asistencia directa mediante terminal para la refactorización de estilos, y proveyó soporte generalizado en el maquetado de manuales técnicos para las interfaces de usuario.

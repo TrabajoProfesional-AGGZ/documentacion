@@ -1,3 +1,108 @@
 \section{Metodología aplicada}
 
-X.
+\subsection{El marco de desarrollo incremental y adaptativo}
+
+La complejidad del ecosistema modular de \textit{SocioUnido} exigió la adopción de una metodología de trabajo que garantizara un ciclo de vida de desarrollo de \textit{software} altamente estructurado, auditable y capaz de adaptarse dinámicamente a los requerimientos técnicos identificados en el análisis del dominio deportivo argentino. En consonancia con lo establecido por el reglamento, el proyecto se rigió bajo un enfoque iterativo e incremental basado en el marco de trabajo ágil \textit{Scrum}. Este paradigma metodológico permitió fragmentar un alcance tecnológico masivo en incrementos funcionales de valor integrados de forma continua, asegurando que la arquitectura del sistema se mantuviera estable y operable a lo largo de las diversas fases del proyecto.
+
+\subsection{Evolución y transiciones metodológicas a lo largo de las 37 semanas}
+
+El ciclo de vida del Trabajo Profesional se extendió a lo largo de un período neto de 37 semanas cronológicas. Sin embargo, la dinámica del trabajo en equipo y la naturaleza de las tareas académicas y técnicas obligaron a realizar transiciones metodológicas estratégicas, abandonando la linealidad del marco \textit{Scrum} en aquellas fases donde su aplicación resultaba ineficiente o contraproducente para los objetivos específicos de ingeniería :
+
+\begin{enumerate}
+    \item \textbf{Fase 1: Ideación, viabilidad y anteproyecto (semanas 1 a 12)}: Durante este período inicial, el equipo no aplicó el marco de trabajo \textit{Scrum} debido a que el esfuerzo se centró en la exploración del mercado deportivo, la aplicación de los marcos analíticos de las 5 C y las 4 P para la evaluación y descarte de las 13 ideas preliminares de negocio, y el diseño de la topología preliminar de servicios bajo el modelo de arquitectura C4. La dinámica de trabajo se rigió por jornadas asíncronas de investigación comercial, reuniones semanales de debate y la posterior redacción y entrega del documento de anteproyecto formal.
+    \item \textbf{Fase 2: Desarrollo del producto mínimo viable bajo Scrum (semanas 13 a 25)}: Esta fase de máxima intensidad de desarrollo y codificación del \textit{software} se gobernó de forma estricta por el marco ágil \textit{Scrum} a lo largo de un ciclo cerrado de trece \textit{sprints} de una semana de duración cada uno. La cadencia semanal fue elegida para acelerar los ciclos de retroalimentación interna, permitiendo que al cierre de cada iteración el equipo dispusiera de un incremento funcional del sistema completamente verificado y desplegado en los entornos de pruebas previas a producción (\textit{staging}).
+    \item \textbf{Fase 3: Refinación, validación final y cierre (semanas 26 a 37)}: Tras congelar el código del producto mínimo viable (\textit{MVP}), el equipo abandonó de forma consciente el marco \textit{Scrum} para adoptar un esquema de trabajo sumamente flexible basado en incidentes (\textit{issue-driven}) y tableros visuales \textit{Kanban}. Esta transición permitió canalizar de manera eficiente las correcciones de errores (\textit{bugs}) surgidas de las pruebas cualitativas de usuario, aplicar las recomendaciones estéticasla, instrumentar la auditoría metodológica de calidad final y preparar el material de soporte para la defensa oral académica ante el tribunal examinador.
+\end{enumerate}
+
+\subsection{Distribución definitiva de roles y especialización del equipo de ingeniería}
+
+Para blindar la ejecución del Trabajo Profesional, la estructura organizativa de \textit{SocioUnido} se fundamentó en la asignación de responsabilidades principales y áreas de soberanía (\textit{ownership}). Si bien los cuatro integrantes del equipo se involucraron activamente de forma transversal en todas las fases del ciclo de vida del \textit{software}, la designación de un líder especializado por área garantizó que cada componente contara con un control de calidad y auditoría interna rigurosa antes de su fusión a la rama principal de código.
+
+Al contrastar la ejecución final con lo planificado originalmente en la propuesta de anteproyecto, se produjo un cambio de roles crítico entre dos de los integrantes del equipo de ingeniería, justificado por la especialización técnica y la optimización de los flujos de trabajo :
+
+\begin{itemize}
+    \item \textbf{Ascencio, Felipe Santino}: Se desempeñó como responsable de control de calidad (\textit{QA}), documentación técnica, desarrollo de negocio y preventa. Lideró la planificación y ejecución de las baterías de pruebas funcionales y de aceptación, la definición metodológica de los criterios de calidad del proceso, la redacción de los documentos técnicos y el diseño de los simuladores interactivos de retorno de inversión (\textit{ROI}) para la validación comercial frente a los clubes pioneros (\textit{early adopters}).
+    \item \textbf{Ghosn, Lautaro Gabriel}: Ejerció el rol de responsable de arquitectura, producto, bases de datos e integraciones del sistema. Tuvo a su cargo el diseño y mantenimiento de la topología distribuida de microservicios, el modelado relacional e incremental de las bases de datos de Postgres en la nube, el diseño e instrumentación de las firmas y contratos de las interfaces de programación de aplicaciones (\textit{APIs}) y la priorización del Product Backlog general.
+    \item \textbf{Guerrero, Martín}: Asumió el rol de responsable de la capa lógica de servidor (\textit{backend}), inteligencia artificial y relaciones institucionales sectoriales. Es importante señalar que este rol había sido asignado en el anteproyecto a Axel ; sin embargo, Martín asumió estas responsabilidades para centralizar con éxito la implementación física de los microservicios en Python y FastAPI, la lógica de seguridad criptográfica del servidor, el entrenamiento y calibración del motor analítico de morosidad y la orquestación asíncrona del asistente conversacional (BotIn) sobre la API de Telegram.
+    \item \textbf{Zielonka, Axel}: Asumió las funciones de responsable de interfaces de usuario (\textit{front-end}), experiencia/interfaz de usuario (\textit{UX/UI}) e identidad de marca, ejerciendo adicionalmente el rol fundamental de \textit{scrum master} durante la Fase 2 del desarrollo. En el anteproyecto, esta responsabilidad visual pertenecía a Martín. Axel lideró de forma destacada el desarrollo integral del panel web de administración web, la maquetación responsiva de las aplicaciones web progresivas (\textit{PWA}) para socios y empleados de control, el diseño de prototipos de alta fidelidad centrados en usabilidad y el estudio de diseño de marca blanca adaptativo basado en colorimetría y las leyes de la Gestalt. Como \textit{scrum master}, custodió el cumplimiento de las ceremonias ágiles y facilitó la remoción de bloqueos técnicos del equipo.
+\end{itemize}
+
+\subsection{Garantías de calidad y completitud: Definition of Ready (DoR) y Definition of Done (DoD)}
+
+Para mitigar la introducción de deuda técnica y asegurar que los incrementos funcionales del ecosistema mantuvieran estándares de nivel productivo, la gestión del flujo de tareas se rigió de forma estricta por dos compuertas de validación fundamentales: la \textit{Definition of Ready} (DoR) y la \textit{Definition of Done} (DoD), las cuales fueron ajustadas para representar hitos de transición precisos dentro de un equipo con alta especialización técnica.
+
+\subsubsection{Definition of Ready (DoR): Estado de desarrollo completado}
+
+A los fines metodológicos de este proyecto, el estado de listo (\textit{Ready}) no hace referencia al momento previo al inicio de una tarea en el tablero, sino al hito formal en el cual el desarrollador asignado da por finalizada la construcción técnica de un componente en su entorno de aislamiento local. Para que una historia de usuario alcance la DoR y sea presentada para revisión, debe cumplir ineludiblemente con los siguientes tres requisitos técnicos :
+
+\begin{enumerate}
+    \item \textbf{Implementación completa de la lógica}: El código fuente correspondiente ha sido escrito en su totalidad, satisfaciendo de manera estricta todos los requerimientos funcionales descritos en la ficha técnica del ticket original.
+    \item \textbf{Verificación local unitaria}: El desarrollador ha ejecutado y superado las pruebas unitarias locales pertinentes utilizando el marco de trabajo \textit{Pytest}, garantizando la nula presencia de errores de sintaxis o fallos de ejecución evidentes en el microservicio modificado.
+    \item \textbf{Apertura de solicitud de integración (Pull Request - PR)}: El código local es subido al repositorio de GitHub correspondiente y se formaliza un Pull Request dirigido a la rama de desarrollo, desencadenando la ejecución automática de las canalizaciones de integración continua (\textit{CI/CD}).
+\end{enumerate}
+
+\subsubsection{Definition of Done (DoD): Validación de completitud y calidad}
+
+La \textit{Definition of Done} (Definición de Terminado) representa el estado final, cerrado e irreversible de una tarea o requerimiento en el flujo de trabajo. Un elemento de la lista de tareas pendientes (\textit{backlog}) solo se declara formalmente como \textit{Done} cuando ha superado exitosamente el escrutinio de calidad automatizado y el responsable de área temático correspondiente valida e instrumenta de forma explícita la fusión del Pull Request hacia la rama principal (\textit{main}) del repositorio :
+
+\begin{itemize}
+    \item \textbf{Validación de control de calidad}: A cargo de Felipe Santino Ascencio. Se encarga de comprobar que la funcionalidad responda a los criterios de aceptación lógicos pactados con los interesados, que se adjunte la documentación técnica correspondiente y que la cobertura de pruebas unitarias y de integración se sitúe por encima del umbral de calidad requerido.
+    \item \textbf{Validación de arquitectura, bases de datos e integraciones}: A cargo de Lautaro Gabriel Ghosn. Verifica que las modificaciones del código fuente respeten los principios de diseño de microservicios, el API Gateway KrakenD y el esquema transaccional relacional, asegurando la óptima interoperabilidad y la integridad referencial de los datos de SocioUnido.
+    \item \textbf{Validación de front-end, Mobile y UX/UI}: A cargo de Axel Zielonka. Examina que las interfaces en la PWA y en el panel web administrativo cumplan de forma rigurosa con la paleta tipográfica y los lineamientos de diseño neutros y adaptativos para marca blanca detallados en el estudio estético corporativo del club Mamelodi Sundowns.
+    \item \textbf{Validación de backend, inteligencia artificial e institucional}: A cargo de Martín Guerrero. Aprueba la corrección matemática de la lógica de servicios asíncronos de FastAPI, la precisión analítica del motor de regularización y la correcta interpretación de intenciones conversacionales por parte de la API de Telegram en el bot conversacional.
+\end{itemize}
+
+Solo cuando se superan estas revisiones cruzadas y se obtiene la aprobación formal en el repositorio (\textit{Approve Review}), el Pull Request es fusionado, considerándose la historia de usuario oficialmente como \textit{Done}.
+
+\subsection{Gestión visual del alcance y control de errores mediante GitHub Projects}
+
+Para dar soporte metodológico a la ejecución distribuida del proyecto, el equipo prescindió del uso de herramientas tradicionales de terceros para centralizar de manera integral toda la gestión administrativa, de tareas y control de incidentes dentro del ecosistema de la organización de GitHub de \textit{SocioUnido}. El seguimiento y administración del alcance y los errores se dividió en dos tableros visuales especializados creados bajo la plataforma \textit{GitHub Projects} :
+
+\begin{enumerate}
+    \item \textbf{Tablero de seguimiento del Backlog y Sprints}: Un tablero visual dinámico de tipo \textit{Scrumban} que permitía priorizar los requerimientos funcionales refinados por el responsable de producto, estimar la complejidad en puntos de historia e instrumentar las ceremonias de planificación semanal de cada \textit{sprint} durante la Fase 2 del desarrollo.
+    \item \textbf{Tablero de gestión y control de incidentes (Bug Tracking Board)}: Un panel dedicado exclusivamente al reporte, categorización y resolución ágil de errores de código. Todas las inconsistencias detectadas en las fases de estabilización, las alertas automáticas de vulnerabilidad reportadas por el agente OpenClaw y las incidencias lógicas señaladas por SonarCloud eran transformadas inmediatamente en tarjetas (\textit{issues}) de alta prioridad dentro de este tablero.
+\end{enumerate}
+
+Para evitar la acumulación de deuda técnica y garantizar una distribución equitativa del esfuerzo de ingeniería, el equipo implementó un protocolo sistemático de resolución de incidentes: durante las ceremonias de sincronización semanales de \textit{Scrum}, el equipo revisaba conjuntamente el tablero de errores. Cada incidente era evaluado formalmente, clasificándose de acuerdo a su nivel de severidad y criticidad operativa, y era asignado de inmediato al responsable de área correspondiente. Este mecanismo impidió que las tareas de depuración quedaran postergadas, integrándolas de forma armónica en el flujo de trabajo diario y balanceando de forma continua la carga operativa de cada integrante.
+
+\subsection{Control de versiones y topología descentralizada de repositorios}
+
+Como plataforma para el desarrollo colaborativo y el control de versiones del código fuente de \textit{SocioUnido}, se seleccionó GitHub. Su elección se fundamentó en la robustez de sus flujos de trabajo colaborativos y en el aprovechamiento de las licencias institucionales académicas provistas por la Facultad de Ingeniería de la Universidad de Buenos Aires. 
+
+Dada la arquitectura descentralizada basada en microservicios, el control del código fuente de SocioUnido se estructuró a través de un esquema multirepositorio alojado en la organización privada del equipo, compuesto por los siguientes repositorios clave para el producto mínimo viable:
+
+\begin{itemize}
+    \item \textbf{\texttt{plataforma-web}}: Repositorio del panel web administrativo de escritorio diseñado para la tesorería del club, desarrollado en React con Vite.
+    \item \textbf{\texttt{aplicacion}}: Repositorio de la aplicación web progresiva (\textit{PWA}) adaptativa de autogestión para los socios y empleados de control.
+    \item \textbf{\texttt{gateway}}: Código declarativo de configuración y enrutamiento perimetral de la puerta de enlace de aplicaciones basada en el motor de alto rendimiento KrakenD.
+    \item \textbf{\texttt{healthchecker}}: Repositorio del sensor de observabilidad e interactividad para el monitoreo de nodos y conciliación contable de tarifas comerciales.
+    \item \texttt{\textbf{ms-club}} / \texttt{\textbf{ms-pagos}} / \texttt{\textbf{ms-acceso}} / \texttt{\textbf{ms-autenticacion}} / \texttt{\textbf{ms-analiticas}} / \texttt{\textbf{ms-bot-conversacional}}: Repositorios completamente independientes y desacoplados correspondientes al código de cada microservicio del ecosistema.
+    \item \textbf{\texttt{scrum}}: Repositorio que documenta y audita de manera pública las métricas de velocidad, burndown, burnup y las actas de las 13 iteraciones semanales del ciclo ágil.
+    \item \textbf{\texttt{bitacora}}: Repositorio público que consolida los reportes puntuales de avance de cada una de las 37 semanas cronológicas de duración del Trabajo Profesional.
+    \item \textbf{\texttt{.github}}: Repositorio que actúa como la torre de control y visualización unificada del proyecto, exponiendo a través de un README central dinámico el estado de salud, badges y reportes consolidados de calidad de cada componente del ecosistema.
+\end{itemize}
+
+\subsection{Automatización de tareas mediante canalizaciones de integración y despliegue continuo (CI/CD)}
+
+La velocidad de entrega y la estabilidad del ecosistema se garantizaron mediante la automatización completa de los flujos de compilación, verificación y despliegue de \textit{software} utilizando la herramienta de automatización integrada \textit{GitHub Actions}. La adopción de esta tecnología eliminó la necesidad de configurar servidores de automatización externos complejos, ejecutando las tuberías directamente sobre la infraestructura del proveedor de manera integrada con cada Pull Request.
+
+Las canalizaciones lógicas de integración continua (\textit{CI}) implementaron una estrategia de barreras de calidad automáticas (\textit{Quality Gates}) que impedían la fusión de código defectuoso a las ramas principales: al abrir un Pull Request, el flujo disparaba de forma automática las rutinas de formateo de código, verificaba que no existieran fallos de sintaxis o empaquetado, ejecutaba la batería completa de pruebas unitarias asíncronas con \textit{Pytest} y computaba el porcentaje de cobertura de código (\textit{code coverage}). 
+
+Solo si el código fuente superaba con éxito el 100\% de las pruebas de aserción automatizadas y la cobertura de los tests se mantenía por encima del umbral fijado en el plan de calidad, la compuerta de integración habilitaba el botón de fusión para el responsable de área.
+
+Una vez aprobada y fusionada la rama de desarrollo de forma asíncrona, se activaban automáticamente las canalizaciones de despliegue continuo (\textit{CD}) para actualizar en tiempo real los entornos productivos elásticos en la nube :
+\begin{itemize}
+    \item Las interfaces de usuario de *frontend* (\texttt{plataforma-web} y \texttt{aplicacion}) se compilaban y alojaban de manera directa sobre la plataforma de computación elástica \textit{Vercel}, aprovechando su alta optimización para aplicaciones React.
+    \item Los componentes de *backend* (\textit{API Gateway} y la suite de microservicios) se empaquetaban en contenedores de infraestructura ligera mediante imágenes Docker y se desplegaban de manera ininterrumpida sobre la plataforma de servicios en la nube \textit{Render}.
+\end{itemize}
+
+\subsection{Inspección profunda y ciberseguridad continua: Dependabot y SonarCloud}
+
+Para asegurar que SocioUnido se mantuviera en el estado del arte de la ciberseguridad y la ingeniería de \textit{software}, el ciclo de vida de desarrollo incorporó un enfoque proactivo de DevSecOps, integrando herramientas de análisis estático y de protección de cadena de suministro en cada repositorio de la organización :
+
+\begin{itemize}
+    \item \textbf{Monitoreo continuo de dependencias (Dependabot)}: Al estar basados en lenguajes como Python y Node.js, los microservicios dependen de una amplia red de paquetes y librerías de terceros susceptibles a brechas de seguridad y exposiciones públicas de vulnerabilidades (CVEs). Para neutralizar este riesgo de forma automatizada, se configuró Dependabot de manera transversal en todos los repositorios. La herramienta escanea ininterrumpidamente los manifiestos de dependencias, cruza los datos con bases de datos globales de vulnerabilidades actualizadas en tiempo real y, al detectar una brecha, genera de manera autónoma un Pull Request con la actualización exacta a la versión segura mínima, garantizando la paridad con la suite de pruebas automatizadas del pipeline de CI antes de su fusión.
+    \item \textbf{Análisis estático de código estricto (SonarCloud)}: Mientras que Dependabot auditaba el código de terceros, la calidad de la lógica de negocio propia desarrollada por los estudiantes se sometió al análisis estático de caja blanca mediante la integración directa de SonarCloud como motor de SAST (Static Application Security Testing). En cada ejecución, SonarCloud analizaba la complejidad ciclomática del código, identificaba puntos propicios a fallos de desbordamiento, detectaba la presencia de código muerto o duplicaciones, y auditaba la cobertura de código de los Pull Requests. Los badges de control del estado de SonarCloud de cada microservicio se expusieron de manera dinámica en el repositorio central \texttt{.github}, conformando una torre de control transparente y auditable que garantizaba que ninguna pieza de código fuera integrada con deuda técnica acumulada.
+\end{itemize}
+
+Finalmente, cabe destacar que la distribución granular de las tareas asociadas a cada iteración semanal de la Fase 2, así como el desglose pormenorizado de las horas académicas consumidas por cada integrante a lo largo del desarrollo de la plataforma, se encuentran profundamente detallados y expuestos mediante gráficos de rendimiento en el Capítulo 8 y el Capítulo 13 del presente documento.

@@ -9,7 +9,7 @@
 
 El ecosistema de \textbf{SocioUnido} se ha diseñado e implementado como una solución de ingeniería de \textit{software} modular y distribuida bajo la modalidad de \textit{software} como servicio (\textit{SaaS}) de marca blanca, orientada a unificar la administración social y el control transaccional de los clubes deportivos. La plataforma no opera de manera monolítica, sino que distribuye sus responsabilidades funcionales a lo largo de un conjunto de interfaces adaptativas de usuario, un canal conversacional cognitivo y una robusta infraestructura de \textit{backend} basada en microservicios independientes.
 
-El alcance funcional implementado en el producto abarca los siguientes componentes operativos:
+\subsubsection{Interfaces operativas del ecosistema}
 
 \begin{itemize}
     \item \textbf{Panel web administrativo}: Entorno de escritorio destinado a la comisión directiva y al personal de tesorería del club, que permite la gestión centralizada del padrón de socios, disciplinas, aranceles, cobros, reserva de espacios, auditorías de accesos e indicadores de recaudación.
@@ -263,6 +263,8 @@ La visualización de la plataforma se modela mediante el estándar del modelo C4
     \item \textbf{Nivel 2 (Contenedores)}: Detalla la separación física de las interfaces de usuario de \textit{frontend} (aplicaciones web y móviles progresivas desarrolladas con React) respecto a la capa de \textit{backend}, la cual se compone del portal de enlace de aplicaciones o puerta de enlace de API (\textit{API gateway}) basado en KrakenD, la suite de microservicios y la base de datos transaccional en la nube.
 \end{enumerate}
 
+\subsubsection{Diagramas de nivel 1 (Contexto) y nivel 2 (Contenedores)}
+
 \begin{figure}[h!]
     \centering
     \fbox{\includegraphics[width=\textwidth]{img/arquitectura/c1_contexto.jpg}}
@@ -289,14 +291,16 @@ El flujo de comunicación dentro de la red interna de SocioUnido se encuentra ri
     \item \textbf{Integración y webhooks asíncronos}: Para mitigar la latencia en transacciones financieras complejas, SocioUnido se apoya en una arquitectura orientada a eventos. Por ejemplo, al procesar un pago de cuota mediante la API de Mercado Pago, el microservicio de pagos recibe un llamado asíncrono (\textit{webhook}) de confirmación por parte de la pasarela de pagos. Este evento se encola en una caché rápida distribuida (implementada mediante Redis) para que el microservicio core actualice la base de datos sin obligar al socio a esperar en pantalla la sincronización transaccional de forma síncrona.
 \end{itemize}
 
+\newpage
+
+\subsubsection{Diagrama de flujos de comunicación}
+
 \begin{figure}[h!]
     \centering
     \fbox{\includegraphics[width=\textwidth]{img/arquitectura/diagrama.jpg}}
     \caption{Flujo de enrutamiento y protocolos de comunicación síncrona y asíncrona entre clientes, puerta de enlace de aplicaciones y microservicios.}
     \label{fig:comunicacion_servicios}
 \end{figure}
-
-\newpage
 
 \subsubsection{Catálogo y responsabilidades de los microservicios}
 
@@ -306,6 +310,7 @@ El núcleo de la solución se desglosa en un catálogo de microservicios aislado
     \item \textbf{Puerta de enlace de API (API Gateway - gateway)}: Desarrollado sobre el motor declarativo de \textit{KrakenD}. Al ser el punto de entrada unificado y público del ecosistema, este componente está programado internamente en Go (\textit{Golang}), lo que garantiza una concurrencia masiva capaz de procesar miles de peticiones por segundo con un consumo mínimo de memoria. Su arquitectura es estrictamente sin estado (\textit{stateless}) y se encarga de interceptar todas las peticiones entrantes desde los clientes de \textit{frontend}, validar de manera centralizada la firma y vigencia de los tokens \textit{JWT} emitidos por Firebase, aplicar políticas estrictas de limitación de tasa (\textit{rate limiting}) para evitar abusos o ataques de denegación de servicio, y enrutar de forma segura el tráfico limpio hacia los microservicios correspondientes de la red interna.
     \item \textbf{Microservicio central (Core - microservicio-club)}: Desarrollado en Python con FastAPI. Es el encargado de procesar la lógica de negocio central del club, abarcando la creación de categorías de socios, el manejo del padrón societario, el control de las inscripciones a disciplinas deportivas y la orquestación del calendario de reserva de instalaciones.
     \item \textbf{Microservicio de pagos (microservicio-pagos)}: Construido en Python con FastAPI. Gestiona las integraciones directas con las pasarelas transaccionales de Mercado Pago y los correos automatizados mediante Resend. Es el encargado de recibir notificaciones de cobro y conciliar el flujo contable.
+    \newpage
     \item \textbf{Microservicio de acceso inteligente (microservicio-acceso)}: Desarrollado en Python utilizando el \textit{framework} FastAPI. La persistencia transaccional y el control de las migraciones se gestionan mediante el mapeador objeto-relacional (\textit{ORM}) SQLAlchemy y Alembic respectivamente, permitiendo un modelado de base de datos robusto y un versionado de esquemas incremental para las tablas de accesos y secretos. El aseguramiento de la calidad de la lógica de validación de contraseñas de un solo uso basadas en tiempo (\textit{TOTP}) se realiza de forma continua utilizando el entorno de pruebas Pytest mediante accesorios (\textit{fixtures}) modulares. Por último, la paridad absoluta entre entornos se garantiza mediante la contenerización del servicio con Docker y Docker Compose.
     \item \textbf{Microservicio de autenticación (microservicio-autenticacion)}: Desarrollado en Python. Administra el ciclo de vida de los accesos y roles (socios, empleados, administradores, directores). Delega la administración física de contraseñas de manera segura en Firebase Authentication, encapsulando y emitiendo vales web seguros para la autorización perimetral del sistema.
     \item \textbf{Microservicio conversacional (microservicio-bot-conversacional)}: Desarrollado en Python utilizando la biblioteca de llamadas asíncronas de la API de Telegram. Se ejecuta mediante un proceso continuo de consulta activa (\textit{polling}) que captura las interacciones conversacionales de los usuarios, normaliza los textos libres y se conecta internamente con la API de core para procesar consultas de disciplinas, reservas o links de pago rápidos sin fricciones operativas.
@@ -345,3 +350,11 @@ En estrecha relación con el rendimiento, la interfaz y los flujos de trabajo fu
 
 La capacidad del sistema para integrarse con actores y sistemas externos se centró estratégicamente en dos frentes de expansión futura. En primer lugar, la aplicación está estructurada para facilitar la interacción directa con modelos de inteligencia artificial y agentes autónomos; ante el actual superciclo de innovación tecnológica, resulta indispensable contar con interfaces preparadas por si esta modalidad se consolida como el estándar masivo de interacción. En segundo lugar, el diseño contempla la futura integración a nivel de \textit{hardware} (como la conexión con molinetes y controles de acceso físicos) para agilizar y blindar de forma definitiva el ingreso a los recintos deportivos.
 
+\newpage
+
+\subsection{Impacto de las Prácticas Profesionales Supervisadas (PPS)}La consolidación de \textbf{SocioUnido} como un producto de alto estándar técnico y comercial es el resultado directo de la aplicación de los conocimientos adquiridos durante las Prácticas Profesionales Supervisadas (PPS) correspondientes a la asignatura Emprendimientos Basados en Tecnología 2 y su materia precursora. Esta base metodológica, forjada durante el trayecto formativo en la Facultad de Ingeniería de la Universidad de Buenos Aires (FIUBA), fue determinante para escalar el proyecto más allá de un simple prototipo, transformándolo en un ecosistema integral preparado para competir en el mercado real de la gestión deportiva.  El éxito en la ejecución de este Trabajo Profesional se apoya en los siguientes pilares derivados de dichas prácticas:\begin{itemize}
+    \item \textbf{Visión comercial y validación empírica:} Desde su concepción, el sistema fue tratado como un producto real, respaldado por la creación de una identidad de marca, una página publicitaria de captación y un canal oficial de medios. Además, su enfoque funcional se validó de forma empírica y constante mediante iteraciones, reuniones con trabajadores de clubes reales y encuestas de usabilidad orientadas a los usuarios finales.
+    \item \textbf{Gestión ágil y control de calidad:} La organización del equipo se estructuró de manera profesional bajo el marco \textit{Scrum} y la metodología Kanban. Esto permitió gestionar el desarrollo continuo del producto a lo largo de 13 \textit{sprints}, priorizar historias de usuario y monitorear proactivamente la resolución de errores (\textit{bugs}), esfuerzo que quedó documentado en el registro de horas de las PPS.
+    \item \textbf{Análisis de viabilidad y proyecciones de inversión:} Aplicando las herramientas analíticas de formulación de proyectos, se elaboró un estudio económico-financiero para evaluar las inversiones iniciales requeridas, los costos operativos de la infraestructura en la nube y la escalabilidad del modelo de negocio. Este análisis permitió estructurar la sustentabilidad del ecosistema bajo un esquema comercial de \textit{software} como servicio (B2B SaaS), garantizando su viabilidad en el mercado real de la gestión deportiva.
+    \item \textbf{Estrategia legal y protección de la propiedad intelectual:} Para resguardar el valor tecnológico del producto (arquitecturas distribuidas, algoritmos de inteligencia artificial y validación criptográfica), se definió un marco legal robusto adoptando la licencia \textit{PolyForm Noncommercial License 1.0.0}. Esta decisión estratégica protege los derechos de explotación comercial exclusiva del equipo desarrollador frente a terceros, garantizando de manera simultánea que el código fuente permanezca abierto, auditable y accesible para fomentar la revisión entre pares dentro del ámbito académico de la universidad.
+\end{itemize}

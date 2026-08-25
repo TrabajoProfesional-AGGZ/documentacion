@@ -49,35 +49,25 @@ Asimismo, se incluyen las integraciones operativas con servicios de terceros y l
 
 \subsection{Ciberseguridad y calidad de código}
 
-La ciberseguridad y la integridad estructural del código fuente representan pilares no negociables en la arquitectura de SocioUnido. Dado que la plataforma opera como un ecosistema integral de gestión para clubes de fútbol, procesando flujos financieros (cobro de cuotas, venta de entradas), información personal sensible del padrón de socios (PII) y gestionando controles de acceso físicos masivos, cualquier vulnerabilidad o fallo arquitectónico podría resultar en fugas de capital, interrupciones operativas severas o daños reputacionales irreparables para las instituciones.
+La ciberseguridad y la integridad estructural del código fuente representan pilares no negociables en la arquitectura de SocioUnido. Dado que la plataforma procesa flujos financieros e información personal sensible (PII), cualquier vulnerabilidad podría resultar en interrupciones operativas o daños reputacionales irreparables. Como se detalló en el apartado metodológico, el ciclo de vida del desarrollo incorpora un enfoque proactivo de DevSecOps. A continuación se justifica la elección de las herramientas externas que hacen posible esta barrera de seguridad.
 
-Para garantizar la máxima fiabilidad a todos los niveles, el ciclo de vida del desarrollo de software de SocioUnido incorpora un enfoque proactivo de DevSecOps. Este paradigma trasciende la simple revisión manual, implementando herramientas de análisis estático, escaneo continuo de dependencias y monitoreo centralizado de calidad, asegurando que la seguridad sea un atributo inherente desde la fase de codificación hasta el despliegue en producción.
+\subsubsection{Protección proactiva de dependencias: Dependabot}
 
-\subsubsection{Protección proactiva de dependencias: implementación de Dependabot}
+Tal como se introdujo previamente, el ecosistema descentralizado de SocioUnido se apoya en una vasta red de librerías de terceros (el \textit{supply chain} de software), las cuales suelen ser el vector de ataque principal. 
 
-En el ecosistema moderno de desarrollo de software, especialmente en arquitecturas basadas en microservicios, los proyectos dependen de una vasta y compleja red de librerías y paquetes de terceros (el \textit{supply chain} de software). Estas dependencias, fundamentales para la agilidad del desarrollo, son frecuentemente el vector de ataque principal para la inyección de vulnerabilidades conocidas (CVEs - \textit{Common Vulnerabilities and Exposures}).
+Se eligió la herramienta nativa \textbf{Dependabot} para mitigar este riesgo debido a su capacidad de operar como un auditor incansable. Su elección se justifica fundamentalmente por la reducción drástica del tiempo medio de remediación (MTTR): al detectar una vulnerabilidad (CVE), no solo alerta al equipo, sino que genera automáticamente un \textit{Pull Request} (PR) con el parche exacto. Al combinarse con nuestra integración continua (CI), permite fusionar (\textit{merge}) actualizaciones críticas con total confianza y sin romper la lógica de negocio.
 
-Para mitigar este riesgo de forma automatizada, la organización de GitHub de SocioUnido integra \textbf{Dependabot} en la totalidad de sus repositorios de desarrollo. La vitalidad de esta herramienta reside en su capacidad para actuar como un auditor de seguridad continuo e incansable:
+\subsubsection{Inspección y calidad centralizada: SonarCloud}
+
+Mientras Dependabot asegura el código de terceros, la integridad del código \textit{propio} exige un análisis de caja blanca de extrema profundidad. Se seleccionó \textbf{SonarCloud} como motor principal de Análisis Estático de Código (SAST) por tres capacidades estratégicas que superan ampliamente a la revisión manual:
 
 \begin{itemize}
-    \item \textbf{Monitoreo continuo:} Dependabot escanea ininterrumpidamente los manifiestos de dependencias (tales como \texttt{Gemfile.lock}, \texttt{package-lock.json}, o \texttt{requirements.txt} dependiendo del microservicio) cruzando las versiones utilizadas contra bases de datos globales de vulnerabilidades actualizadas en tiempo real.
-    \item \textbf{Resolución automatizada:} Al detectar que un microservicio de SocioUnido (por ejemplo, el módulo de pagos o el de autenticación) está utilizando una versión de una librería con una brecha de seguridad pública, Dependabot no solo alerta al equipo, sino que genera automáticamente un \textit{Pull Request} (PR) proponiendo la actualización exacta a la versión mínima segura. Esto reduce el tiempo medio de remediación (MTTR) de días a horas.
-    \item \textbf{Mantenimiento de la estabilidad:} Al combinarse con nuestra integración continua (CI), cada PR generado por Dependabot dispara automáticamente la batería de pruebas unitarias y de integración. Esto garantiza que la actualización de seguridad no rompa la lógica de negocio ni genere regresiones, permitiendo al equipo fusionar (\textit{merge}) con total confianza.
+    \item \textbf{Bloqueo preventivo (\textit{Quality Gates}):} Identifica patrones peligrosos (como inyecciones SQL o lógicas criptográficas débiles) y bloquea automáticamente el despliegue a producción si el código no cumple con los umbrales de seguridad definidos.
+    \item \textbf{Control de deuda técnica:} Evalúa la mantenibilidad del software detectando \textit{code smells} y alta complejidad ciclomática, cuantificando el esfuerzo de refactorización necesario para mantener un sistema escalable.
+    \item \textbf{Trazabilidad panorámica:} Permite consolidar las métricas de todos los repositorios descentralizados en un único repositorio especial (\texttt{.github}). Esto crea una torre de control centralizada e invaluable para auditar la salud global del ecosistema sin fragmentar la información.
 \end{itemize}
 
-\subsubsection{Inspección y calidad centralizada: el rol estratégico de SonarCloud}
-
-Mientras que Dependabot audita el código de terceros, la integridad, seguridad y mantenibilidad del código \textit{propio} desarrollado por el equipo requiere un análisis de caja blanca de extrema profundidad. Para este propósito, SocioUnido ha integrado \textbf{SonarCloud} como su motor principal de análisis estático de código (SAST) y control de calidad.
-
-La implementación de SonarCloud es vital para el proyecto por tres motivos fundamentales:
-
-\begin{enumerate}
-    \item \textbf{Detección temprana de vulnerabilidades lógicas y \textit{security hotspots}:} Durante el flujo de integración continua (activado vía GitHub Actions en cada \textit{commit} o \textit{Pull Request}), SonarCloud analiza el código en busca de patrones peligrosos, fallos de inyección (SQLi, XSS), exposición accidental de credenciales o lógicas criptográficas débiles. Al identificar un riesgo, bloquea el despliegue mediante un \textit{Quality Gate} fallido, impidiendo que el código vulnerable llegue al entorno de producción.
-    \item \textbf{Control de deuda técnica y \textit{code smells}:} Más allá de la seguridad pura, el sistema evalúa la mantenibilidad del software. Identifica código duplicado, lógicas excesivamente complejas (alta complejidad ciclomática) y desviaciones de los estándares de la industria (\textit{code smells}). Esto cuantifica la ``deuda técnica'' en horas de remediación, permitiendo al equipo de desarrollo priorizar la refactorización y mantener un código base limpio y escalable, fundamental para la posterior integración con los sistemas físicos de los estadios.
-    \item \textbf{Trazabilidad a través del repositorio \texttt{.github}:} La arquitectura descentralizada de SocioUnido (múltiples microservicios, front-ends, APIs) presenta el desafío de la fragmentación de la información. Para resolver esto, hemos configurado un repositorio central especial denominado \texttt{.github}. Este repositorio actúa como la \textbf{torre de control y visualización centralizada} del proyecto. Mediante archivos \texttt{README} dinámicos y tableros integrados en \texttt{.github}, el equipo expone los \textit{badges} (insignias) y reportes consolidados de SonarCloud para \textit{todos} los repositorios involucrados. Esta vista panorámica es invaluable, ya que permite a cualquier miembro del equipo (o auditor externo) verificar de un vistazo el estado global de salud del ecosistema completo, así como profundizar en las métricas particulares (errores, vulnerabilidades, cobertura de pruebas) de un microservicio específico sin necesidad de navegar por múltiples paneles aislados.
-\end{enumerate}
-
-En conclusión, la sinergia entre el escaneo de dependencias (Dependabot), la auditoría profunda de código fuente (SonarCloud) y la orquestación centralizada (repositorio \texttt{.github}) conforma una barrera de defensa profunda. Esta metodología exhaustiva garantiza que la plataforma SocioUnido no solo responda eficientemente a las necesidades funcionales de los clubes, sino que lo haga sobre cimientos arquitectónicos resilientes, auditables y ciberseguros.
+En conclusión, la sinergia entre el escaneo automatizado de Dependabot, la auditoría profunda de SonarCloud y su orquestación centralizada conforma una metodología exhaustiva que garantiza cimientos arquitectónicos resilientes y ciberseguros.
 
 \newpage
 

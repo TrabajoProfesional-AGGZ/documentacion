@@ -1,3 +1,97 @@
 \section{Estado del arte}
 
-X.
+\subsection{El paradigma tradicional de gestión deportiva y el \textit{status quo}}
+
+El mercado de soluciones informáticas destinadas a la administración de instituciones deportivas en la República Argentina se ha caracterizado históricamente por un profundo conservadurismo metodológico y tecnológico. Las herramientas utilizadas por la inmensa mayoría de las comisiones directivas de clubes de mediana y pequeña envergadura evidencian un rezago estructural frente a las transformaciones digitales observadas en otras industrias de servicios masivos. El denominado \textit{status quo} operativo se asienta sobre tres metodologías tradicionales que limitan severamente el control y el crecimiento institucional:
+
+\begin{enumerate}
+    \item \textbf{Gestión analógica y descentralizada}: El uso de planillas impresas físicas en papel para el control diario de las instalaciones, actas manuales para el registro de los libros de socios y la conciliación contable presencial en ventanillas de tesorería centralizadas. Este enfoque no solo es propenso a errores humanos sistemáticos y pérdidas físicas de información, sino que demanda una asignación desproporcionada de horas-hombre en tareas administrativas rutinarias de escaso valor agregado.
+    \item \textbf{Soporte en herramientas ofimáticas genéricas}: El empleo de planillas de cálculo (como Microsoft Excel) operadas de forma aislada por los coordinadores de cada disciplina deportiva. La fragmentación de los datos impide consolidar un padrón único de socios, lo que genera inconsistencias críticas de información (como socios dados de baja que continúan asistiendo a actividades, o viceversa) y anula cualquier capacidad de análisis financiero global en tiempo real.
+    \item \textbf{Credenciales de identificación vulnerables}: La emisión de carnets de plástico físicos basados en tecnología de cloruro de polivinilo (\textit{PVC}) con códigos de barras estáticos o bandas magnéticas heredadas. Estos soportes físicos presentan una alta susceptibilidad al desgaste material, la pérdida y, fundamentalmente, la falsificación o préstamo no autorizado. Esta práctica facilita el acceso de personas con cuotas sociales inactivas, consolidando una morosidad silenciosa y exponiendo la seguridad física y lógica del club durante eventos de alta concurrencia.
+\end{enumerate}
+
+Las pocas instituciones que han implementado sistemas de software locales suelen depender de arquitecturas monolíticas locales instaladas en computadoras físicas dentro de las sedes. Estas soluciones exigen una inversión inicial significativa en infraestructura de servidores, sistemas de refrigeración y copias de seguridad manuales, además de someter al club a altos costos fijos de mantenimiento técnico y soporte especializado, lo cual resulta económicamente inviable para las finanzas de las asociaciones civiles de las categorías de ascenso.
+
+\newpage
+
+\subsection{Análisis crítico de los competidores actuales (caso de referencia: Global.fan)}
+
+Para evaluar la validez técnica y comercial de SocioUnido en el ámbito de la ingeniería de software aplicada, resulta indispensable contrastar su propuesta de valor frente a las plataformas de gestión deportiva que dominan el mercado del fútbol argentino profesional. El principal caso de referencia local es la plataforma Global.fan, considerada el competidor más representativo de la industria.
+
+El análisis de arquitectura y alcance funcional de estos sistemas comerciales revela limitaciones estructurales críticas desde la perspectiva de la resiliencia tecnológica y el valor proactivo del software:
+
+\begin{itemize}
+    \item \textbf{Naturaleza reactiva de la información (sistemas \textit{CRUD} básicos)}: Los competidores del mercado operan esencialmente como bases de datos estáticas basadas en un esquema de creación, lectura, actualización y borrado (\textit{CRUD}). Estos sistemas dependen exclusivamente de la proactividad del usuario administrador o del socio para registrar un dato o gatillar una consulta. Carecen por completo de capas analíticas inteligentes que procesen los flujos de datos históricos para anticipar comportamientos, limitando la toma de decisiones a reportes históricos emitidos de manera posterior al hecho consumado (\textit{ex post}).
+    \item \textbf{Gestión de morosidad pasiva}: Ante la falta de pago de la cuota social, los sistemas vigentes se limitan a generar un listado estático de morosos. La institución deportiva debe iniciar manualmente campañas de cobranza tardías sobre usuarios que ya se encuentran desvinculados emocional y financieramente del club. No existen mecanismos preventivos que detecten de forma temprana el riesgo latente de abandono (\textit{churn rate}), cuando la probabilidad de recuperación del socio y del capital es estadísticamente superior.
+    \item \textbf{Absoluta dependencia de conectividad perimetral}: Los sistemas dinámicos de acceso digital implementados por competidores comerciales utilizan códigos \textit{QR} variables que se actualizan de forma constante en la aplicación del usuario. No obstante, para validar la legitimidad de dicho código en las puertas de acceso al estadio, el dispositivo lector o molinete perimetral debe realizar una petición de red (\textit{online}) en tiempo real contra los servidores centrales de la plataforma en la nube. En escenarios de aglomeración masiva, el colapso sistemático de las celdas de telefonía móvil de cuarta y quinta generación (4G/5G) impide la comunicación de red, bloqueando los puntos de escaneo. Esto obliga a la dirigencia deportiva a liberar las puertas por motivos de seguridad civil, anulando la eficacia del sistema de accesos y posibilitando el ingreso de personas no autorizadas o morosas.
+    \item \textbf{Aislamiento funcional e interfaces cerradas}: Los sistemas comerciales obligan al socio a descargar aplicaciones nativas pesadas, registrar nuevas cuentas, recordar contraseñas adicionales y navegar por plataformas ajenas a sus hábitos digitales diarios. Esta fricción en la experiencia de usuario incrementa la tasa de deserción en los flujos de autogestión y pago de cuotas. Asimismo, sus arquitecturas cerradas impiden la interoperabilidad con canales de mensajería masiva o asistentes conversacionales externos, centralizando la atención en oficinas físicas presenciales con horarios restringidos.
+    \item \textbf{Enfoque comercial sesgado a la élite deportiva}: Las plataformas existentes basan su modelo de negocio en la captación agresiva de los clubes de primera división de gran envergadura institucional. La complejidad operativa de sus despliegues de hardware propietario en estadios y las altas tarifas de configuración inicial (\textit{setup fees}) margina por completo a los clubes del ascenso metropolitano, el ascenso federal y las ligas regionales del interior, profundizando la brecha tecnológica y de seguridad en el fútbol local.
+\end{itemize}
+
+\newpage
+
+\subsection{Matriz comparativa de especificaciones técnicas}
+
+El cuadro \ref{tab:matriz_competidores} sintetiza de forma estructurada las diferencias tecnológicas y arquitectónicas existentes entre el paradigma dominante en el mercado, el \textit{status quo} analógico y el ecosistema modular de SocioUnido.
+
+\begin{table}[H]
+\centering
+\small
+\begin{tabularx}{\textwidth}{l >{\raggedright\arraybackslash}X >{\raggedright\arraybackslash}X >{\raggedright\arraybackslash}X}
+\toprule
+\textbf{Característica} & \textbf{Estado tradicional} & \textbf{Competidores actuales} & \textbf{SocioUnido} \\
+\midrule
+\textbf{Naturaleza del sistema} & Analógica y basada en papel. & Administrativa y reactiva (modelo \textit{CRUD} básico). & Predictiva, cognitiva y proactiva. \\
+\addlinespace
+\textbf{Gestión de morosidad} & Manual mediante revisión de planillas físicas. & Reportes estáticos posteriores a la consolidación de la deuda. & Predictiva mediante algoritmos de aprendizaje automático (\textit{machine learning}). \\
+\addlinespace
+\textbf{Control de accesos} & Carnets físicos de plástico con código estático. & Códigos \textit{QR} dependientes de conectividad de red (\textit{online}). & Criptografía \textit{TOTP} dinámica con validación matemática 100\% fuera de línea (\textit{offline}). \\
+\addlinespace
+\textbf{Canal de atención} & Presencial en la secretaría administrativa de la sede. & Aplicación móvil nativa propietaria o portal web cerrado. & Omnicanalidad cognitiva vía Telegram Bot API con procesamiento de lenguaje natural (\textit{PLN}). \\
+\addlinespace
+\textbf{Infraestructura y coste} & Servidores locales monolíticos instalados en el club. & Sistemas en la nube costosos dirigidos a primera división. & \textit{SaaS} elástico de marca blanca adaptado para el ascenso metropolitano y federal. \\
+\bottomrule
+\end{tabularx}
+\caption{Matriz comparativa entre SocioUnido y las alternativas del mercado.}
+\label{tab:matriz_competidores}
+\end{table}
+
+\subsection{Ejes de innovación y disrupción tecnológica de SocioUnido}
+
+SocioUnido rompe disruptivamente con el estado de la técnica al introducir un ecosistema de ingeniería de software proactivo, descentralizado y cognitivo. La plataforma no opera como un mero registro pasivo del estado actual del club deportivo, sino que se anticipa a los eventos financieros y operativos mediante la aplicación de conceptos que redefinen los estándares de la industria local. 
+
+El carácter innovador y de vanguardia de la solución se consolida sobre cuatro ejes de alta ingeniería informática:
+
+\subsubsection{1. Control de accesos descentralizado y tolerante a fallos de red (\textit{smart access offline})}
+La disrupción fundamental en materia de ciberseguridad perimetral es la eliminación absoluta de la dependencia de conectividad de red durante la validación de ingresos. El módulo de acceso inteligente de SocioUnido implementa un algoritmo criptográfico basado en contraseñas de un solo uso basadas en tiempo (\textit{TOTP}, por sus siglas en inglés, \textit{time-based one-time password}), estructurado de la siguiente forma:
+
+\begin{itemize}
+    \item \textbf{Generación aislada en la interfaz del usuario}: La aplicación web progresiva (\textit{PWA}) del socio genera un código \textit{QR} dinámico que encripta de forma segura una semilla única de identidad y un sello de tiempo. Este proceso matemático se ejecuta localmente en el dispositivo celular del socio sin consumir datos móviles, permitiendo su correcto funcionamiento en escenarios de bloqueo total de red o incluso con el dispositivo en modo avión.
+    \item \textbf{Validación perimetral desacoplada}: El personal de control, utilizando la aplicación operativa del club instalada en terminales móviles estándar, escanea el código \textit{QR}. 
+    \item \textbf{Mitigación del fraude mediante protocolos \textit{anti-replay}}: Para impedir la duplicación de accesos o el préstamo de carnets mediante capturas de pantalla, cada código \textit{QR} posee una validez física estricta. Adicionalmente, el microservicio de acceso de SocioUnido interactúa con una caché distribuida en memoria (implementada mediante \textit{Redis}) que almacena y rechaza de manera instantánea cualquier intento de reingreso que presente un token ya procesado dentro de la ventana de tiempo activa.
+\end{itemize}
+
+\subsubsection{2. Control analítico y proactivo de la morosidad}
+A diferencia de los sistemas tradicionales que operan de manera pasiva y tardía, SocioUnido introduce un enfoque analítico y proactivo para la contención de la morosidad societaria. La plataforma integra un módulo especializado de inteligencia de negocios que procesa de manera continua la información de pagos y asistencias del club:
+
+\begin{itemize}
+    \item \textbf{Monitoreo automatizado de comportamiento}: El subsistema analiza de manera regular el historial de pagos y el registro físico de accesos del socio. Esto permite identificar de forma automática patrones de inactividad o retrasos incipientes en el pago de la cuota social, alertando a la administración antes de que la deuda se consolide críticamente.
+    \item \textbf{Tableros de control proactivos}: A través del panel web centralizado, las autoridades del club visualizan métricas clave de salud financiera y alertas parametrizadas. Esto permite segmentar al padrón de socios según su nivel de regularidad, facilitando la toma de decisiones basada en datos reales de uso y recaudación.
+    \item \textbf{Campañas automáticas de regularización}: Una vez detectada una desviación en el comportamiento de pago o asistencia, el sistema permite disparar de forma proactiva recordatorios y facilidades transaccionales a través de canales digitales integrados, reduciendo drásticamente la tasa de abandono de los socios mediante gestiones oportunas.
+\end{itemize}
+
+\subsubsection{3. Interacción cognitiva sin fricción: asistente conversacional (BotIn)}
+Para superar la tasa de rebote asociada a la descarga e instalación de aplicaciones nativas complejas en poblaciones deportivas heterogéneas, SocioUnido incorpora a su ecosistema un robot conversacional (\textit{bot}) inteligente denominado BotIn, desarrollado sobre la API oficial de Telegram:
+
+\begin{itemize}
+    \item \textbf{Procesamiento de lenguaje natural sin rigidez}: El microservicio conversacional utiliza arquitecturas avanzadas de orquestación cognitiva (como \textit{LangChain}) para comprender el lenguaje cotidiano, coloquial e informal de los socios, superando los rígidos esquemas jerárquicos de botones de las opciones numéricas tradicionales.
+    \item \textbf{Orquestación y cobro dinámico}: Cuando un socio interactúa con el bot (por ejemplo, enviando mensajes como ``Hola, quiero pagar las cuotas que debo'' o ``¿qué canchas hay libres esta tarde?''), el motor reconoce la intención del usuario (\textit{intent recognition}), extrae los parámetros contextuales, consulta en tiempo real el microservicio de gestión contable central y devuelve de manera inmediata un enlace dinámico de pago integrado con la pasarela transaccional de Mercado Pago, o bien confirma una reserva. Esto reduce la fricción operativa a cero y digitaliza transacciones complejas en segundos desde el canal de comunicación nativo del usuario.
+\end{itemize}
+
+\subsubsection{4. Arquitectura adaptativa de marca blanca para la democratización del fútbol regional}
+El diseño arquitectónico definitivo de SocioUnido se rige por un principio de adaptabilidad estética y económica enfocado en dotar a las comisiones directivas de las herramientas que tradicionalmente pertenecieron a los clubes de élite:
+
+\begin{itemize}
+    \item \textbf{Infraestructura elástica en la nube}: Al desplegar la plataforma bajo un modelo \textit{SaaS} multiinquilino (\textit{multi-tenant}) distribuido mediante contenedores y unificado por un portal de enlace de aplicaciones de alto rendimiento (\textit{KrakenD API gateway}), se suprime por completo la necesidad de inversiones iniciales en hardware local o mantenimiento especializado por parte del club deportivo.
+    \item \textbf{Marca blanca visualmente neutra y adaptativa}: Para posibilitar la comercialización masiva del \textit{software} de forma transparente a múltiples instituciones deportivas clientes sin generar sesgos, rivalidades institucionales o fricciones cromáticas, SocioUnido adopta un diseño visual base estrictamente acromático (escala de grises neutros). Las interfaces se personalizan y adaptan dinámicamente mediante hojas de estilo dinámicas que inyectan los colores corporativos, escudos e identidad institucional de cada club una vez consolidada la suscripción, garantizando un posicionamiento corporativo óptimo para cada cliente. Para obtener un análisis exhaustivo y detallado sobre la justificación teórica de esta paleta cromática acromática, su comportamiento adaptativo y la aplicación sistemática de las leyes de la Gestalt en nuestras interfaces, se puede consultar el \textbf{'Anexo E'} de este documento.
+\end{itemize}

@@ -1,3 +1,308 @@
 \section{Solución implementada}
 
-X.
+% --- CONFIGURACIÓN DE LOS MARCOS PARA LAS IMÁGENES ---
+\setlength{\fboxsep}{0pt}    % Espacio entre la imagen y el marco (0pt para que quede pegado)
+\setlength{\fboxrule}{0.5pt} % Grosor de la línea del marco
+% -----------------------------------------------------
+
+\subsection{Descripción general y alcance del ecosistema}
+
+El ecosistema de \textbf{SocioUnido} se ha diseñado e implementado como una solución de ingeniería de \textit{software} modular y distribuida bajo la modalidad de \textit{software} como servicio (\textit{SaaS}) de marca blanca, orientada a unificar la administración social y el control transaccional de los clubes deportivos. La plataforma no opera de manera monolítica, sino que distribuye sus responsabilidades funcionales a lo largo de un conjunto de interfaces adaptativas de usuario, un canal conversacional cognitivo y una robusta infraestructura de \textit{backend} basada en microservicios independientes.
+
+El alcance funcional implementado en el producto abarca los siguientes componentes operativos:
+\begin{itemize}
+    \item \textbf{Panel web administrativo}: Entorno de escritorio destinado a la comisión directiva y al personal de tesorería del club, que permite la gestión centralizada del padrón de socios, disciplinas, aranceles, cobros, reserva de espacios, auditorías de accesos e indicadores de recaudación.
+    \item \textbf{Aplicación web progresiva (\textit{PWA}) para el socio}: Interfaz liviana y adaptativa que corre de forma fluida en teléfonos móviles, permitiendo al socio consultar su estado de cuenta, reservar instalaciones, inscribirse a actividades, pagar cuotas mediante pasarelas transaccionales y generar su credencial digital dinámica.
+    \item \textbf{Asistente conversacional interactivo (BotIn)}: Robot conversacional integrado con la API de Telegram que, mediante procesamiento de lenguaje natural (\textit{PLN}), interactúa de forma asíncrona con el socio para simplificar consultas rutinarias y canalizar flujos de pago sin fricción de descarga.
+    \item \textbf{Aplicación web progresiva (\textit{PWA}) para el personal de control}: Interfaz optimizada para escaneo rápido utilizada por los empleados del club apostados en los accesos del estadio, encargada de leer las credenciales del socio y procesar la validación.
+\end{itemize}
+
+\subsection{Interfaces gráficas e identidad visual adaptativa (marca blanca)}
+
+En esta sección se documentan las distintas interfaces gráficas y conversacionales que componen el ecosistema de \textbf{SocioUnido}, abarcando las soluciones para socios, empleados, personal administrativo y sistemas de control.
+
+Como SocioUnido es una plataforma de \textbf{marca blanca}, los ejemplos a continuación muestran dos escenarios (la versión base o neutra y una versión adaptada). Para ilustrar la adaptabilidad del sistema sin generar rivalidades ni preferencias en el contexto del fútbol argentino, se ha seleccionado al club \textbf{Mamelodi Sundowns (MSU)} de Sudáfrica como caso de uso. Esto permite demostrar una interfaz 100\% funcional y personalizada manteniendo la neutralidad institucional del proyecto.
+
+\newpage
+
+\subsection{HealthChecker}
+
+\begin{figure}[h!]
+    \centering
+    \fbox{\includegraphics[width=0.85\textwidth]{img/healthchecker/healthchecker1.png}}
+    \caption{Estado actual de las instancias y servicios desplegados.}
+    \label{fig:ui_healthchecker1}
+\end{figure}
+
+\begin{figure}[h!]
+    \centering
+    \fbox{\includegraphics[width=0.85\textwidth]{img/healthchecker/healthchecker2.png}}
+    \caption{Métricas de facturación de los clubes en el ecosistema.}
+    \label{fig:ui_healthchecker2}
+\end{figure}
+
+\begin{figure}[h!]
+    \centering
+    \fbox{\includegraphics[width=0.85\textwidth]{img/healthchecker/healthchecker3.png}}
+    \caption{Herramientas para realizar análisis comerciales y proyecciones.}
+    \label{fig:ui_healthchecker3}
+\end{figure}
+
+\newpage
+
+\subsection{Plataforma web (Panel de gestión)}
+
+\subsubsection{Login y autenticación}
+\begin{figure}[h!]
+    \centering
+    \textbf{Marca blanca} \\ \vspace{0.2cm}
+    \fbox{\includegraphics[width=0.9\textwidth]{img/plataforma-web/login-neutro.jpeg}} \\
+    \vspace{0.8cm}
+    \textbf{Mamelodi Sundowns} \\ \vspace{0.2cm}
+    \fbox{\includegraphics[width=0.9\textwidth]{img/plataforma-web/login-mamelodi.jpeg}}
+    \caption{Comparativa de vistas: Login y autenticación.}
+\end{figure}
+
+\newpage
+
+\subsubsection{Inicio (Home)}
+\begin{figure}[h!]
+    \centering
+    \textbf{Marca blanca} \\ \vspace{0.2cm}
+    \fbox{\includegraphics[width=\textwidth]{img/plataforma-web/home-neutro.jpeg}} \\
+    \vspace{0.8cm}
+    \textbf{Mamelodi Sundowns} \\ \vspace{0.2cm}
+    \fbox{\includegraphics[width=\textwidth]{img/plataforma-web/home-mamelodi.jpeg}}
+    \caption{Comparativa de vistas: Panel principal (Home).}
+\end{figure}
+
+\newpage
+
+\subsubsection{Métricas y estadísticas}
+\begin{figure}[h!]
+    \centering
+    \textbf{Marca blanca} \\ \vspace{0.2cm}
+    \fbox{\includegraphics[width=\textwidth]{img/plataforma-web/metricas-neutro.jpeg}} \\
+    \vspace{0.8cm}
+    \textbf{Mamelodi Sundowns} \\ \vspace{0.2cm}
+    \fbox{\includegraphics[width=\textwidth]{img/plataforma-web/metricas-mamelodi.jpeg}}
+    \caption{Comparativa de vistas: Panel de métricas y estadísticas.}
+\end{figure}
+
+\newpage
+
+\subsubsection{Gestión de socios y perfil específico}
+\begin{figure}[h!]
+    \centering
+    \textbf{Padrón general (MSU)} \\ \vspace{0.2cm}
+    \fbox{\includegraphics[width=\textwidth]{img/plataforma-web/socios-mamelodi.jpeg}} \\
+    \vspace{0.8cm}
+    \textbf{Perfil de socio (MSU)} \\ \vspace{0.2cm}
+    \fbox{\includegraphics[width=\textwidth]{img/plataforma-web/socio-especifico-mamelodi.jpeg}}
+    \caption{Vistas de gestión societaria implementadas para el club de ejemplo.}
+\end{figure}
+
+\newpage
+
+\subsubsection{Gestión de disciplinas y tienda}
+\begin{figure}[h!]
+    \centering
+    \textbf{Disciplinas general (MSU)} \\ \vspace{0.2cm}
+    \fbox{\includegraphics[width=\textwidth]{img/plataforma-web/disciplinas-mamelodi.jpeg}} \\
+    \vspace{0.8cm}
+    \textbf{Tienda institucional (MSU)} \\ \vspace{0.2cm}
+    \fbox{\includegraphics[width=\textwidth]{img/plataforma-web/tienda-mamelodi.jpeg}}
+    \caption{Vistas de disciplinas y e-commerce implementadas para el club de ejemplo.}
+\end{figure}
+
+\newpage
+
+\subsection{App del socio (PWA)}
+
+% --- BLOQUE 1: LOGIN SOCIO ---
+\begin{figure}[h!]
+    \centering
+    \begin{minipage}{0.28\textwidth}
+        \centering
+        \textbf{Marca blanca} \\ \vspace{0.2cm}
+        \fbox{\includegraphics[width=\textwidth]{img/app-socio/login-neutro.jpg}}
+    \end{minipage}\hspace{0.5cm}
+    \begin{minipage}{0.28\textwidth}
+        \centering
+        \textbf{Mamelodi Sundowns} \\ \vspace{0.2cm}
+        \fbox{\includegraphics[width=\textwidth]{img/app-socio/login-mamelodi.jpg}}
+    \end{minipage}
+    \caption{Pantallas de acceso (Login) de la App del Socio.}
+    \label{fig:socio_login}
+\end{figure}
+
+% --- BLOQUE 2: DASHBOARD SOCIO ---
+\begin{figure}[h!]
+    \centering
+    \begin{minipage}{0.28\textwidth}
+        \centering
+        \textbf{Marca blanca} \\ \vspace{0.2cm}
+        \fbox{\includegraphics[width=\textwidth]{img/app-socio/home-neutro.jpg}}
+    \end{minipage}\hspace{0.5cm}
+    \begin{minipage}{0.28\textwidth}
+        \centering
+        \textbf{Mamelodi Sundowns} \\ \vspace{0.2cm}
+        \fbox{\includegraphics[width=\textwidth]{img/app-socio/home-mamelodi.jpg}}
+    \end{minipage}
+    \caption{Inicio (Dashboard del socio).}
+    \label{fig:socio_home}
+\end{figure}
+
+\newpage
+
+% --- BLOQUE 3: PERFIL Y PAGOS SOCIO ---
+\begin{figure}[h!]
+    \centering
+    \begin{minipage}{0.3\textwidth}
+        \centering
+        \textbf{Perfil (MSU)} \\ \vspace{0.2cm}
+        \fbox{\includegraphics[width=\textwidth]{img/app-socio/perfil-mamelodi.jpg}}
+    \end{minipage}\hspace{0.5cm}
+    \begin{minipage}{0.3\textwidth}
+        \centering
+        \textbf{Pagos (MSU)} \\ \vspace{0.2cm}
+        \fbox{\includegraphics[width=\textwidth]{img/app-socio/pagos-mamelodi.jpg}}
+    \end{minipage}
+    \caption{Perfil de usuario y gestión de pagos.}
+    \label{fig:socio_pagos}
+\end{figure}
+
+% --- BLOQUE 4: CARNET DIGITAL SOCIO ---
+\begin{figure}[h!]
+    \centering
+    \begin{minipage}{0.3\textwidth}
+        \centering
+        \textbf{Marca blanca} \\ \vspace{0.2cm}
+        \fbox{\includegraphics[width=\textwidth]{img/app-socio/carnet-neutro.jpg}}
+    \end{minipage}\hspace{0.5cm}
+    \begin{minipage}{0.3\textwidth}
+        \centering
+        \textbf{Mamelodi Sundowns} \\ \vspace{0.2cm}
+        \fbox{\includegraphics[width=\textwidth]{img/app-socio/carnet-mamelodi.jpg}}
+    \end{minipage}
+    \caption{Carnet digital y acceso inteligente.}
+    \label{fig:socio_carnet}
+\end{figure}
+
+\newpage
+
+\subsection{App de empleados (PWA)}
+
+% --- BLOQUE 5: LOGIN Y HOME TRABAJADORES ---
+\begin{figure}[h!]
+    \centering
+    \begin{minipage}{0.28\textwidth}
+        \centering
+        \textbf{Acceso (MSU)} \\ \vspace{0.2cm}
+        \fbox{\includegraphics[width=\textwidth]{img/app-trabajadores/login-mamelodi.jpg}}
+    \end{minipage}\hspace{0.5cm}
+    \begin{minipage}{0.28\textwidth}
+        \centering
+        \textbf{Inicio (MSU)} \\ \vspace{0.2cm}
+        \fbox{\includegraphics[width=\textwidth]{img/app-trabajadores/home-mamelodi.jpg}}
+    \end{minipage}
+    \caption{Pantallas de acceso y menú principal de la App para Empleados.}
+    \label{fig:trabajadores_inicio}
+\end{figure}
+
+% --- BLOQUE 6: ESCANEO QR TRABAJADORES ---
+\begin{figure}[h!]
+    \centering
+    \begin{minipage}{0.28\textwidth}
+        \centering
+        \textbf{Marca blanca} \\ \vspace{0.2cm}
+        \fbox{\includegraphics[width=\textwidth]{img/app-trabajadores/qr-neutro.jpg}}
+    \end{minipage}\hspace{0.5cm}
+    \begin{minipage}{0.28\textwidth}
+        \centering
+        \textbf{Mamelodi Sundowns} \\ \vspace{0.2cm}
+        \fbox{\includegraphics[width=\textwidth]{img/app-trabajadores/qr-mamelodi.jpg}}
+    \end{minipage}
+    \caption{Módulo de escaneo de QR para control de accesos y validación de carnets.}
+    \label{fig:trabajadores_qr}
+\end{figure}
+
+\newpage
+
+\subsection{Bot conversacional (BotIn)}
+
+\begin{figure}[h!]
+    \centering
+    \begin{minipage}{0.45\textwidth}
+        \centering
+        \textbf{Perfil institucional} \\ \vspace{0.2cm}
+        \fbox{\includegraphics[width=\textwidth]{img/bot/perfil.jpeg}}
+    \end{minipage}\hspace{0.5cm}
+    \begin{minipage}{0.45\textwidth}
+        \centering
+        \textbf{Interacción (Chat)} \\ \vspace{0.2cm}
+        \fbox{\includegraphics[width=\textwidth]{img/bot/chat.jpg}}
+    \end{minipage}
+    \caption{Vistas del perfil verificado y ejemplo de flujo de mensajes automatizados vía Telegram.}
+    \label{fig:bot_conversacional}
+\end{figure}
+
+
+\subsection{Arquitectura técnica del sistema y modelo C4}
+
+La arquitectura de SocioUnido se rige por un paradigma orientado a microservicios desacoplados, adoptando el principio de responsabilidad única en cada componente y la segregación de persistencia de datos. Este diseño arquitectónico garantiza la escalabilidad horizontal, la tolerancia a fallos parciales y la flexibilidad para inyectar actualizaciones de código sin interrumpir el funcionamiento global del ecosistema.
+
+\subsubsection{Estructura general de componentes y su interrelación (niveles C1 y C2)}
+
+La visualización de la plataforma se modela mediante el estándar del modelo C4, permitiendo mapear los componentes del sistema con niveles incrementales de abstracción:
+
+\begin{enumerate}
+    \item \textbf{Nivel 1 (Contexto)}: Representa la interacción de SocioUnido con los actores humanos del sistema (socio, dirigencia y personal de control perimetral) y las entidades o plataformas externas (la pasarela transaccional de Mercado Pago, la plataforma de mensajería Telegram y los servicios auxiliares de envío de correos).
+    \item \textbf{Nivel 2 (Contenedores)}: Detalla la separación física de las interfaces de usuario de *frontend* (aplicaciones web y móviles progresivas desarrolladas con React) respecto a la capa de *backend*, la cual se compone del portal de enlace de aplicaciones o puerta de enlace de API (\textit{API gateway}) basado en KrakenD, la suite de microservicios y la base de datos transaccional en la nube.
+\end{enumerate}
+
+% =====================================================================
+% [INSERTAR AQUÍ DIAGRAMAS C1 Y C2 SIMPLIFICADOS]
+% (Por ejemplo: diagramas de contexto y diagramas de contenedores)
+% =====================================================================
+
+
+\subsubsection{Mecanismos de comunicación interservicio e integración perimetral}
+
+El flujo de comunicación dentro de la red interna de SocioUnido se encuentra rigurosamente orquestado para evitar acoplamientos rígidos y asegurar que la congestión de un nodo no degrade el rendimiento de los demás:
+
+\begin{itemize}
+    \item \textbf{Puerta de enlace perimetral (KrakenD API Gateway)}: Actúa como el único punto de entrada unificado y público del sistema. El \textit{gateway} es estrictamente declarativo y sin estado (\textit{stateless}). Se encarga de interceptar todas las peticiones HTTPS provenientes de los clientes (*frontends* y *PWAs*), validar centralizadamente la legitimidad de las firmas de los vales web JSON (tokens *JWT* de autenticación emitidos por Firebase) y aplicar políticas de limitación de tasa (\textit{rate limiting}) para repeler ataques de denegación de servicio. Posteriormente, enruta las peticiones limpias de forma interna hacia los microservicios correspondientes.
+    \item \textbf{Comunicación síncrona vía REST/HTTP}: Para flujos transaccionales inmediatos que exigen una respuesta de datos en tiempo real (como la autenticación de usuarios o la consulta activa de deudas para emitir un pago en el panel de control de la sede), los microservicios interactúan directamente mediante llamadas síncronas bajo el protocolo REST utilizando formatos JSON.
+    \item \textbf{Integración y webhooks asíncronos}: Para mitigar la latencia en transacciones financieras complejas, SocioUnido se apoya en una arquitectura orientada a eventos. Por ejemplo, al procesar un pago de cuota mediante la API de Mercado Pago, el microservicio de pagos recibe un llamado asíncrono (\textit{webhook}) de confirmación por parte de la pasarela de pagos. Este evento se encola en una caché rápida distribuida (implementada mediante Redis) para que el microservicio core actualice la base de datos sin obligar al socio a esperar en pantalla la sincronización transaccional de forma síncrona.
+\end{itemize}
+
+% =====================================================================
+% [INSERTAR AQUÍ DIAGRAMA DE COMUNICACIÓN MICROSERVICIOS / API GATEWAY]
+% =====================================================================
+
+
+\subsubsection{Catálogo y responsabilidades de los microservicios}
+
+El núcleo de la solución se desglosa en un catálogo de microservicios aislados, desplegados en contenedores independientes que manejan sus propias bases de datos transaccionales de Neon (PostgreSQL serverless en la nube) u otros esquemas adaptados:
+
+\begin{enumerate}
+    \item \textbf{Microservicio central (Core - microservicio-club)}: Desarrollado en Python con FastAPI. Es el encargado de procesar la lógica de negocio central del club, abarcando la creación de categorías de socios, el manejo del padrón societario, el control de las inscripciones a disciplinas deportivas y la orquestación del calendario de reserva de instalaciones.
+    \item \textbf{Microservicio de pagos (microservicio-pagos)}: Construido en Python con FastAPI. Gestiona las integraciones directas con las pasarelas transaccionales de Mercado Pago y los correos automatizados mediante Resend. Es el encargado de recibir notificaciones de cobro y conciliar el flujo contable.
+    \item \textbf{Microservicio de acceso inteligente (microservicio-acceso)}: Desarrollado en Go (\textit{Golang}). Al ser un componente altamente crítico que debe procesar ráfagas concurrentes de escaneos ópticos en las puertas del estadio, se seleccionó Go por su alta velocidad de compilación, bajo consumo de memoria y eficiente concurrencia nativa. Gestiona las semillas criptográficas y procesa la lógica para la validación perimetral de los códigos de acceso dinámicos.
+    \item \textbf{Microservicio de autenticación (microservicio-autenticacion)}: Administra el ciclo de vida de los accesos y roles (socios, empleados, administradores, directores). Delega la administración física de contraseñas de manera segura en Firebase Authentication, encapsulando y emitiendo vales web seguros para la autorización perimetral del sistema.
+    \item \textbf{Microservicio conversacional (microservicio-bot-conversacional)}: Desarrollado en Python utilizando la biblioteca de llamadas asíncronas de la API de Telegram. Se ejecuta mediante un proceso continuo de consulta activa (\textit{polling}) que captura las interacciones conversacionales de los usuarios, normaliza los textos libres y se conecta internamente con la API de core para procesar consultas de disciplinas, reservas o links de pago rápidos sin fricciones operativas.
+    \item \textbf{Microservicio de analíticas (microservicio-analiticas)}: Procesa los tableros analíticos y los reportes consolidados para la dirigencia del club. Integra un almacenamiento rápido en caché mediante Redis para optimizar la latencia en las consultas financieras masivas agregadas.
+    \item \textbf{Servicio de observabilidad (Healthchecker)}: Nodo sensor independiente y desacoplado del API Gateway, que vigila continuamente la disponibilidad física y lógica de todos los microservicios desplegados. Si se detecta un fallo, el panel de monitoreo expone visualmente el nodo degradado para facilitar la resiliencia proactiva del sistema de marca blanca.
+\end{enumerate}
+
+\subsection{Atributos de calidad y resiliencia arquitectónica}
+
+El diseño de SocioUnido se estructuró siguiendo criterios rigurosos de ingeniería de \textit{software} detallados en los anexos técnicos, priorizando cuatro atributos de calidad no funcionales clave:
+
+\begin{itemize}
+    \item \textbf{Seguridad y confidencialidad}: La seguridad lógica se garantiza mediante el principio de defensa profunda. Las contraseñas de los usuarios nunca se guardan en texto plano en la base de datos central, delegando el hashing y tokens de acceso en Firebase Auth. Toda petición de APIs se valida mediante firmas asimétricas con tokens JWT. Adicionalmente, el microservicio de acceso de SocioUnido interactúa con la caché rápida distribuida de Redis para implementar un protocolo contra ataques de repetición (\textit{anti-replay}), rechazando de manera instantánea cualquier intento de reingreso que presente un código QR TOTP ya utilizado dentro de la ventana de tiempo activa.
+    \item \textbf{Escalabilidad}: La topología de microservicios multiinquilino (\textit{multi-tenant}) desacoplados y el uso de bases de datos serverless (Neon PostgreSQL) permiten escalar el cómputo y el almacenamiento de forma elástica en la nube. Esto asegura que la adición de nuevos clubes clientes o picos transaccionales no degraden el tiempo de respuesta.
+    \item \textbf{Disponibilidad y resiliencia}: El diseño del control de accesos se enfoca en tolerar fallos perimetrales severos. Al dotar a la PWA del socio con capacidades de generación de códigos QR TOTP dinámicos de forma matemática local, se anula la dependencia de la señal de red móvil celular del usuario. Ante una caída total del proveedor celular, el socio siempre dispone de su credencial activa para mostrarla en el punto de ingreso.
+    \item \textbf{Rendimiento y eficiencia}: El empleo de API Gateway declarativos y la implementación de un microservicio crítico de accesos programado nativamente en Go garantizan tiempos de respuesta mínimos (latencia de sub-segundo en el procesamiento de transacciones), optimizando el flujo físico de personas y previniendo colas e incidentes en las instalaciones del club.
+\end{itemize}

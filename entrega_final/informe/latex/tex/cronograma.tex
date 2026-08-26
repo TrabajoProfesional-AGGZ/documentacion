@@ -1,3 +1,53 @@
 \section{Cronograma de las actividades realizadas}
 
-X.
+Como se detalló en el apartado metodológico, el proceso de construcción de \textbf{SocioUnido} transitó por diferentes enfoques (desde la ideación analítica hasta el desarrollo iterativo bajo \textit{Scrum} y la estabilización mediante \textit{Kanban}). Para orquestar esta transición sin perder el control sobre el ciclo de vida del \textit{software}, el equipo implementó prácticas rigurosas de gestión que aseguraron la entrega de valor, la mitigación de riesgos y la transparencia documental.
+
+\subsection{Gestión del alcance, estimaciones e indicadores}
+
+La definición de las funcionalidades del Producto Mínimo Viable (MVP) se originó a partir del mapeo de historias de usuario (\textit{User Story Mapping}), simulando los recorridos de los distintos actores (socios, tesoreros, personal de accesos, etcétera). 
+
+\begin{itemize}
+    \item \textbf{Estimaciones:} El alcance de cada iteración se alimentó de una lista de requerimientos dinámica (\textit{Product Backlog}). Durante la Fase 2, cada historia de usuario fue evaluada por el equipo mediante técnicas de \textit{Planning Poker}, asignando Puntos de Historia (\textit{Story Points}) basados en su complejidad técnica y esfuerzo, no en horas lineales.
+    \item \textbf{Indicadores de gestión:} El control de los tiempos y la velocidad del equipo se monitoreó a través de gráficos de trabajo pendiente (\textit{Burndown Charts}), gráficos de trabajo completado (\textit{Burnup Charts}) y métricas de velocidad (\textit{Velocity}), los cuales se exponen en detalle en la sección de aportes individuales.
+\end{itemize}
+
+\subsection{Hitos de avance y entregables}
+
+El avance del proyecto no se midió por porcentaje de código escrito, sino por la consolidación de entregables funcionales. Los hitos clave que marcaron el progreso fueron:
+
+\begin{itemize}
+    \item Aprobación del diseño arquitectónico (Modelo C4) y despliegue de infraestructura en la nube.
+    \item Despliegue del Panel de Control (Dashboard web) para directivos.
+    \item Despliegue de la Aplicación Web Progresiva (PWA) y su integración con el microservicio de acceso inteligente (TOTP) para ambos roles de uso.
+    \item Sincronización del procesamiento de pagos (Mercado Pago) y puesta en marcha del asistente conversacional (BotIn).
+    \item Auditoría de ciberseguridad superada y cierre de la documentación técnica final.
+\end{itemize}
+
+\subsection{Gestión de riesgos, calidad y estrategia de pruebas}
+
+La gestión de la calidad operativa se abordó desde dos frentes simultáneos:
+
+\begin{itemize}
+    \item \textbf{Calidad del proceso y riesgos técnicos:} Se previno la acumulación de deuda técnica y vulnerabilidades mediante la integración de auditorías automatizadas (Como SonarCloud) en las tuberías de Integración y Despliegue Continuo (CI/CD). Cualquier \textit{Pull Request} que no superara los umbrales de seguridad y mantenibilidad era bloqueado automáticamente.
+    \item \textbf{Estrategia de pruebas:} Se implementó una ``Pirámide de Pruebas''. Los desarrolladores fueron responsables de crear pruebas unitarias automatizadas para aislar la lógica de sus microservicios. Posteriormente, se ejecutaron pruebas de integración automatizadas para verificar la comunicación entre APIs, y pruebas de extremo a extremo (E2E) manuales y semiautomatizadas para validar flujos críticos (como el cobro de una cuota o la validación de un QR sin conexión).
+\end{itemize}
+
+\subsection{Reuniones y comunicación con interesados}
+
+Para mantener la alineación del proyecto, se estableció un esquema de comunicación segmentado:
+
+\begin{itemize}
+    \item \textbf{Sincronización interna (Equipo):} Durante los \textit{sprints}, el equipo adaptó las reuniones diarias (\textit{Daily Stand-ups}) a formatos asíncronos y sincronizaciones periódicas para destrabar bloqueos, sumado a las ceremonias formales de Planificación (\textit{Sprint Planning}) y Retrospectiva al inicio y fin de cada iteración.
+    \item \textbf{Seguimiento académico (Tutores):} Se llevaron a cabo reuniones semanales ininterrumpidas con los tutores del proyecto para recibir \textit{feedback} y aplicar puntos de mejora. Adicionalmente, estos espacios sirvieron para incorporar conceptos propios del ámbito corporativo y ensayar las exposiciones de cara a la defensa final.
+    \item \textbf{Comunicación externa (Clubes y terceros):} Se establecieron contactos puntuales y no periódicos con personal administrativo y directivo de clubes reales. El objetivo de estas interacciones fue ejecutar validaciones de producto en etapas clave, demostrando la utilidad práctica de la solución y relevando retroalimentación directa del mercado.
+\end{itemize}
+
+\subsection{Estrategia de documentación del sistema}
+
+Dada la magnitud de la arquitectura distribuida, la documentación se trató como un entregable de igual criticidad que el propio código fuente, dividiéndose en tres ejes principales:
+
+\begin{itemize}
+    \item \textbf{Documentación técnica y de diseño:} Centralizada en portales web autogenerados con \textit{JustTheDocs}. Incluye los diagramas de arquitectura, las justificaciones del \textit{stack} tecnológico y la especificación interactiva de las APIs RESTful (Swagger/OpenAPI) de todos los microservicios.
+    \item \textbf{Documentación funcional:} Manuales de usuario, videotutoriales explicativos de la plataforma y guías operativas orientadas al personal administrativo, garantizando la correcta adopción del sistema por parte de las instituciones deportivas.
+    \item \textbf{Artefactos de gestión (Bitácoras):} Registro formal de todas las decisiones arquitectónicas y metodológicas tomadas. A través del repositorio de Bitácoras, se dejó constancia semanal de los acuerdos alcanzados con los tutores y el estado de avance del cronograma.
+\end{itemize}

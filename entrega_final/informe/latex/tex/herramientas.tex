@@ -117,7 +117,7 @@ Para garantizar la escalabilidad, seguridad y confiabilidad de la plataforma \te
 
 \subsubsection{Cloudinary (almacenamiento y gestión de archivos multimedia)}
 
-\textbf{Uso en el sistema:} La API de Cloudinary se emplea como la plataforma centralizada para el alojamiento, gestión y entrega de todos los recursos multimedia estáticos y dinámicos de la plataforma. Esto incluye las fotografías de perfil de los socios para el carnet digital, los escudos institucionales de los clubes, imágenes de las instalaciones y posibles comprobantes.
+\textbf{Uso en el sistema:} La API de Cloudinary se emplea como la plataforma centralizada para el alojamiento, gestión y entrega de todos los recursos multimedia estáticos y dinámicos de la plataforma. Esto incluye las fotografías de perfil de los socios para el carnet digital, imágenes de las instalaciones y posibles comprobantes.
 
 \textbf{Implementación técnica:} La integración se maneja utilizando el SDK oficial. Para garantizar la seguridad y no exponer credenciales, el \textit{back-end} genera firmas de autenticación temporal (\textit{signed uploads}) que permiten la subida directa de los archivos hacia los \textit{buckets} de Cloudinary. Una vez alojado el recurso, el servicio devuelve una URL segura y optimizada que es la que finalmente se persiste en nuestra base de datos relacional (Neon).
 

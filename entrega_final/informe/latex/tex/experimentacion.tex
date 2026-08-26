@@ -1,3 +1,152 @@
-\section{Experimentación y/o validación}
+\section{Experimentación, validación y control de calidad}
 
-X.
+Para garantizar la robustez, seguridad y fiabilidad de la plataforma \textbf{SocioUnido}, se ejecutó una estrategia integral de pruebas a lo largo de todo el ciclo de desarrollo. Este plan de validación certificó que el sistema cumple con la totalidad de los requerimientos funcionales y no funcionales especificados en las etapas tempranas del proyecto.
+
+\subsection{Roles, responsabilidades y grado de automatización}
+
+La especificación, diseño y supervisión del plan de pruebas estuvo a cargo del \textbf{Responsable de Control de Calidad (QA)}. Su rol consistió en definir los casos de prueba, configurar los entornos de automatización y ejecutar las pruebas manuales exploratorias. En concordancia con las prácticas ágiles, los desarrolladores de cada módulo (\textit{front-end, back-end, IA}) fueron responsables de escribir y mantener las pruebas unitarias de su propia implementación.
+
+La estrategia adoptó un enfoque de ``Pirámide de Pruebas'', priorizando un alto grado de automatización en las capas inferiores para agilizar la Integración y Despliegue Continuo (CI/CD), reservando las pruebas manuales para la validación de usabilidad y flujos complejos:
+
+\begin{itemize}
+    \item \textbf{Pruebas unitarias (automatizadas):} Se validó el correcto funcionamiento de funciones y métodos aislados utilizando \textit{frameworks} estándar de la industria, integrados directamente en los repositorios.
+    \item \textbf{Pruebas de integración (automatizadas):} Se verificó la correcta comunicación entre los microservicios, la base de datos relacional y las API de terceros (pasarelas de pago, Resend y Telegram).
+    \item \textbf{Pruebas de extremo a extremo [End-to-End] (semiautomatizadas):} Se simularon flujos completos de usuario (por ejemplo, el pago de una cuota desde la PWA del socio hasta su reflejo en el panel de control administrativo).
+\end{itemize}
+
+\subsection{Validación funcional y no funcional}
+
+El conjunto de pruebas funcionales se centró en auditar los módulos principales (\textit{core}) del ecosistema:
+
+\begin{itemize}
+    \item \textbf{Gestión administrativa:} Verificación de los flujos de creación, lectura, actualización y borrado (CRUD) del padrón de socios, y la correcta renderización de métricas.
+    \item \textbf{Procesamiento de pagos:} Validación de la conciliación de pagos y webhooks con pasarelas externas.
+    \item \textbf{Asistente conversacional (PLN):} Pruebas de caja negra sobre el bot de Telegram (``BotIn''), inyectando frases de intención variada (texto formal, informal, modismos) para validar la precisión del reconocimiento de lenguaje natural.
+    \item \textbf{Acceso inteligente [Smart Access] (TOTP):} Comprobación rigurosa del algoritmo criptográfico y evaluación de la correctitud de su funcionamiento offline.
+\end{itemize}
+
+A nivel no funcional, la plataforma fue sometida a pruebas de rendimiento simulando picos extremos de tráfico para asegurar la estabilidad durante los días de partido. Asimismo, se verificó la compatibilidad multiplataforma de las interfaces web y móviles, y se auditó el cifrado de datos en reposo y en tránsito.
+
+\subsection{Validación con usuarios finales y UX/UI}
+
+Considerando que la usabilidad y la adecuación al mercado son pilares vitales para la adopción masiva del sistema, se ejecutó una etapa de validación participativa orientada a medir la satisfacción real de los usuarios. Que al hincha le resulte intuitiva la aplicación y al trabajador del club le aporte soluciones prácticas son factores críticos de éxito.
+
+\begin{itemize}
+    \item \textbf{Validación de producto con clubes:} Se llevaron a cabo reuniones con personal administrativo y directivo de diferentes instituciones para presentarles el producto y exponer sus valores agregados. El objetivo central de estos encuentros fue obtener \textit{feedback} directo sobre la utilidad real de la solución, relevar puntos de mejora y analizar las principales diferencias competitivas de SocioUnido frente a las plataformas de gestión preexistentes en el mercado.
+    \item \textbf{Validación masiva mediante Google Forms:} Se distribuyeron encuestas estructuradas a una muestra significativa de socios finales (\textit{beta-testers}) luego de que interactuaran con la aplicación móvil (PWA). Este formulario recolectó métricas precisas sobre la intuición del diseño, la usabilidad y la fluidez de los procesos dentro de la aplicación. El \textit{feedback} obtenido fue un insumo crítico que permitió refinar la interfaz y garantizar una experiencia de usuario (UX/UI) de altísima calidad antes del despliegue final.
+\end{itemize}
+
+Toda la documentación ampliada, el registro de las reuniones y los resultados métricos correspondientes a este proceso de validación se encuentran detallados de forma pública en el siguiente enlace: \url{https://trabajoprofesional-aggz.github.io/documentacion/validacion_producto/}
+
+\subsection{QA automatizado con agente de OpenClaw}
+
+En el marco del desarrollo de SocioUnido, alcanzar la más alta calidad en los estándares de ciberseguridad y de interoperabilidad se planteó como un objetivo innegociable. Para que el ecosistema se mantenga a la vanguardia, resulta clave que la arquitectura y los \textit{endpoints} estén preparados no solo para usuarios humanos, sino también para integrarse de manera fluida y segura con agentes autónomos de terceros e Inteligencias Artificiales.
+
+Para llevar a cabo una validación rigurosa, se implementó \textbf{OpenClaw}, un agente de IA diseñado específicamente para el \textit{testing} automatizado y el QA integral de repositorios. Su adopción se justifica por su capacidad para comprender el contexto del código e identificar vulnerabilidades lógicas complejas.
+
+\subsubsection{Directrices del agente}
+
+La implementación técnica del agente se basó en un marco de instrucciones precisas (\textit{prompting}) que auditan estrictamente tres ejes fundamentales:
+\begin{itemize}
+    \item \textbf{Seguridad de la implementación:} Búsqueda exhaustiva de vulnerabilidades, haciendo foco en los estándares de la industria (OWASP Top 10) y prevención de vectores de ataque.
+    \item \textbf{Prevención de fuga de datos:} Asegurar rigurosamente que el código fuente no exponga credenciales, tokens de acceso ni información privada de los usuarios.
+    \item \textbf{Preparación para IA y automatización:} Evaluar si la estructura de los datos está diseñada para garantizar una interacción sin fricciones con futuras automatizaciones.
+\end{itemize}
+
+\subsubsection{Resultados obtenidos}
+
+A continuación, se detalla el análisis exhaustivo de seguridad realizado por OpenClaw sobre los repositorios principales que conforman la arquitectura de SocioUnido.
+
+\newpage
+
+\noindent \textbf{Aplicación móvil PWA (Socios)}
+\begin{itemize}
+    \item \textbf{Fuga de información sensible:} Se identificó que, ante fallos inesperados, el componente capturador de errores exponía la traza completa del sistema (\textit{stack trace}) en pantalla.
+    \item \textbf{Manipulación de rutas API:} Se detectó una concatenación directa e insegura de parámetros en peticiones HTTP, dejando abierta la posibilidad de alterar rutas (\textit{Path Traversal}).
+    \item \textbf{Gestión de encabezados de autorización:} El módulo de peticiones enviaba encabezados con valores nulos al navegar de forma anónima.
+    \item \textbf{Exposición de datos y tokens:} El contexto global registraba en consola información personal y tokens de notificaciones.
+    \item \textbf{Configuración de entorno.}
+    \item \textbf{Metadatos de idioma en documentos que confunden a agentes de IA.}
+\end{itemize}
+
+\noindent \textbf{Aplicación móvil PWA (Trabajadores)}
+\begin{itemize}
+    \item \textbf{Fuga de información sensible:} Exposición de la traza completa del sistema en pantalla ante fallos.
+    \item \textbf{Gestión de encabezados:} Envío de encabezados nulos en navegación anónima.
+    \item \textbf{Políticas de seguridad inexistentes:} Carencia de políticas de restricción de contenido.
+\end{itemize}
+
+\noindent \textbf{API Gateway}
+\begin{itemize}
+    \item \textbf{Elevación de privilegios:} Módulos sensibles carecían de verificación de permisos.
+    \item \textbf{Ausencia de límites de tráfico:} Rutas sin restricción de peticiones por minuto.
+    \item \textbf{Privilegios máximos en contenedores:} Ejecución del servicio bajo el usuario \texttt{root}.
+    \item \textbf{Desactivación de validación de llaves:} Descarga insegura de llaves criptográficas.
+\end{itemize}
+
+\noindent \textbf{Microservicio de accesos}
+\begin{itemize}
+    \item \textbf{Almacenamiento en texto plano:} Las semillas secretas para los códigos dinámicos (TOTP) se almacenaban sin cifrado.
+    \item \textbf{Fuga de tokens en registros.}
+    \item \textbf{Valores predeterminados rígidos.}
+    \item \textbf{Políticas de origen cruzado ausentes.}
+\end{itemize}
+
+\noindent \textbf{Microservicio de analíticas}
+\begin{itemize}
+    \item \textbf{Procesamiento deficiente de mensajes:} Lectura asíncrona sin validación de estructura.
+    \item \textbf{Autenticación vulnerable (Timing Attack):} Verificación de tokens mediante comparaciones de texto convencionales.
+    \item \textbf{Contratos de interfaz incompletos.}
+\end{itemize}
+
+\noindent \textbf{Microservicio de autenticación}
+\begin{itemize}
+    \item \textbf{Políticas de contraseñas laxas:} Permisividad de claves demasiado cortas en el registro.
+    \item \textbf{Estructuras genéricas:} Uso de diccionarios sin tipo, impidiendo esquemas claros para IA.
+\end{itemize}
+
+\newpage
+
+\noindent \textbf{Microservicio de bot conversacional (PLN)}
+\begin{itemize}
+    \item \textbf{Falta de validación de firmas:} Ausencia de verificación criptográfica de las peticiones del proveedor (Telegram/Meta).
+    \item \textbf{Exposición de datos en servidor:} Registros en consola de mensajes.
+    \item \textbf{Caídas por datos invalidos:} Excepciones críticas ante mensajes con formatos inesperados.
+\end{itemize}
+
+\noindent \textbf{Microservicio de gestión del club (Core)}
+\begin{itemize}
+    \item \textbf{Exposición de arquitectura interna:} Devolución de errores crudos revelando la estructura de las tablas de la base de datos.
+    \item \textbf{Inconsistencia en contratos de datos:} Múltiples salidas de información con fallas de validación de esquemas.
+\end{itemize}
+
+\noindent \textbf{Microservicio de pagos}
+\begin{itemize}
+    \item \textbf{Omisión de autenticación en cobros:} Punto de acceso principal sin validación de clave interna.
+    \item \textbf{Ausencia de verificación en webhooks:} Falta de validación de la firma criptográfica.
+    \item \textbf{Inseguridad en intermediario de eventos:} Conexión a Redis con validación SSL/TLS.
+    \item \textbf{Gestión de credenciales:} Claves secretas débiles y expuestas en archivos de migración.
+\end{itemize}
+
+\noindent \textbf{Panel administrativo web}
+\begin{itemize}
+    \item \textbf{Exposición de credenciales.}
+    \item \textbf{Sobrecarga de memoria:} Descarga del padrón completo de socios sin paginación.
+    \item \textbf{Vulnerabilidad XSS:} Inyección de enlaces e imágenes sin sanitización previa.
+    \item \textbf{Manipulación de rutas (Path Traversal):} Identificadores dinámicos no codificados.
+\end{itemize}
+
+\subsubsection{Acciones tomadas y refactorización}
+
+Las observaciones del agente automatizado impulsaron una refactorización integral en todos los módulos de la aplicación:
+
+\begin{itemize}
+    \item \textbf{Cifrado y credenciales:} Se eliminaron contraseñas por defecto y claves en el código, cifrando las semillas TOTP con algoritmos simétricos.
+    \item \textbf{Auditoría de dependencias:} Se exigieron librerías certificadas para mitigar ataques a la cadena de suministro.
+    \item \textbf{Sanitización y paginación:} Se aplicaron políticas CSP, codificación de parámetros y paginación del lado del servidor, previniendo fugas masivas de datos.
+    \item \textbf{Concurrencia y privilegios:} Se integraron bloqueos de hilos en servicios compartidos y se aislaron los contenedores ejecutándolos sin privilegios administrativos (\texttt{root}).
+    \item \textbf{Protección criptográfica:} Se adoptaron comparaciones de tiempo constante (mitigando \textit{Timing Attacks}) y se forzó la validación de firmas en \textit{webhooks}.
+    \item \textbf{Contratos para IA:} Se tiparon estrictamente los esquemas, estandarizando las respuestas de error para no revelar la arquitectura interna.
+\end{itemize}
+
+En conclusión, las exhaustivas auditorías de OpenClaw y sus posteriores correcciones dotaron a SocioUnido de una infraestructura robusta, cibersegura y preparada para integrarse sin fricciones con futuras plataformas y agentes inteligentes.

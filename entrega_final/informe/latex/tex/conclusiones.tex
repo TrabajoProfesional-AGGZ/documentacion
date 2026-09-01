@@ -23,9 +23,9 @@ Con el fin de resguardar la propiedad intelectual, la seguridad criptográfica y
     \item \texttt{microservicio-analiticas}: Calcula y distribuye métricas y proyecciones de morosidad.
     \item \texttt{microservicio-bot-conversacional}: Contiene la lógica asíncrona del bot de Telegram.
     \item \texttt{gateway}: \textit{API Gateway} que unifica y protege el acceso a la red interna.
-    \item \texttt{healthchecker}: Monitor de disponibilidad global del ecosistema y de los clubes clientes.
     \item \texttt{openclaw}: Agente de QA especializado para testing intensivo de ciberseguridad.
     \item \texttt{toolkit-financiero}: Herramientas de cálculo, proyección y análisis comercial.
+    \item \texttt{makefile-local}: Herramienta auxiliar para levantar el ecosistema completo de forma local.
 \end{itemize}
 
 \subsubsection{Repositorios públicos (Interfaces y portales documentales)}
@@ -34,7 +34,7 @@ La totalidad de las interfaces cliente y la documentación asociada a los reposi
 
 \textbf{Portales documentales de la arquitectura (\textit{Back-end}):} Para cada microservicio privado existe un repositorio espejo terminado en \texttt{-doc}. Estos alojan portales generados con JustTheDocs que explican exhaustivamente la arquitectura del servicio original: diagramas de contexto, justificación tecnológica, métricas de implementación y el listado de \textit{endpoints} públicos:
 \begin{itemize}
-    \item \texttt{microservicio-club-doc}, \texttt{microservicio-pagos-doc}, \texttt{microservicio-autenticacion-doc}, \texttt{microservicio-acceso-doc}, \texttt{microservicio-analiticas-doc}, \\ \texttt{microservicio-bot-conversacional-doc}, \texttt{gateway-doc}, \texttt{healthchecker-doc}.
+    \item \texttt{microservicio-club-doc}, \texttt{microservicio-pagos-doc}, \texttt{microservicio-autenticacion-doc}, \texttt{microservicio-acceso-doc}, \texttt{microservicio-analiticas-doc}, \\ \texttt{microservicio-bot-conversacional-doc} y \texttt{gateway-doc}.
 \end{itemize}
 
 \textbf{Interfaces gráficas (\textit{Front-end}):} Exponen el código y sus propias páginas documentales con vistas principales del sistema.
@@ -42,6 +42,7 @@ La totalidad de las interfaces cliente y la documentación asociada a los reposi
     \item \texttt{plataforma-web}: Panel de administración (\textit{dashboard}) para los directivos.
     \item \texttt{aplicacion}: Aplicación móvil (PWA) interactiva para los socios.
     \item \texttt{control-de-accesos}: Aplicación móvil (PWA) para el escaneo de QRs por parte de empleados.
+    \item \texttt{healthchecker}: Monitor de disponibilidad global del ecosistema y de los clubes clientes (Este microservicio también tiene una funcionalidad vital en la \textbf{Arquitectura/Back-end} dentro del ecosistema, pero cuya implementación pública no expone detalles de implementación críticos que requieran cambiar la accesibilidad del repositorio).
 \end{itemize}
 
 \textbf{Repositorios documentales / Páginas de gestión global:}

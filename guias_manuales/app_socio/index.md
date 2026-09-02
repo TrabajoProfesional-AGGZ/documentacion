@@ -10,13 +10,12 @@ nav_order: 2
 
 Seleccioná un apartado para visualizar la guía correspondiente:
 
-* **[Procesos de registro de socio](registro/):** Pasos para que un socio valide su identidad y acceda a la app.
-* **[Login en la app, nociones básicas y generales](login/):** Ingreso y primeros pasos en la aplicación.
-* **[Home (Explorando funcionalidades, vistas y atajos)](home/):** Pantalla principal de la app del socio.
-* **[Apartado de carnet](carnet/):** Visualización y uso del carnet digital.
+* **[Apartado de carnet](carnet/):** Visualización del código QR personal, datos del socio y uso del carnet para el control de acceso a las instalaciones según el estado de pagos.
 * **[Apartado de cuotas y pagos](cuotas/):** Consulta de estado de cuenta y pago de obligaciones.
-* **[Apartado de reservas](reservas/):** Solicitud de turnos para instalaciones.
-* **[Apartado de tienda](tienda/):** Compra de artículos de merchandising o indumentaria.
-* **[Apartado de actividades y entradas](actividades/):** Inscripción a disciplinas y acceso a eventos.
-* **[Apartado de trámites](tramites/):** Gestión de solicitudes administrativas a distancia.
-* **[Apartado de noticias](noticias/):** Lectura de las últimas novedades del club.
+* **[Apartado de reservas](reservas/):** Exploración de instalaciones, solicitud de turnos para espacios gratuitos y arancelados, y proceso de pago mediante Mercado Pago para la confirmación de la rese
+* **[Apartado de tienda](tienda/):** Exploración del catálogo de productos, selección de artículos y cantidades, proceso de pago mediante Mercado Pago y visualización del historial en mis compras.
+* **[Apartado de trámites](tramites/):** Carga de nuevos trámites (como el certificado de apto médico), adjunto de archivos y seguimiento del estado de aprobación (en revisión y aprobado).
+* **[Compra y gestión de entradas a eventos](entradas/):** Exploración de eventos disponibles, detalle de la actividad, proceso de reserva y pago (vía Mercado Pago), y visualización de las entradas adquiridas.
+* **[Inscripción y gestión de actividades](actividades/):** Exploración de disciplinas disponibles según categoría de socio, detalle de sedes y aranceles, y registro de inscripciones con su respectiva facturación.
+* **[Login en la app, nociones básicas y generales](login/):** Inicio de sesión, visualización de datos en la pantalla principal (categoría y estado financiero), acceso al perfil y cambio de contraseña.
+* **[Procesos de registro de socio](registro/):** Proceso de configuración de cuenta para socios existentes, validación de identidad mediante documento y registro de credenciales de acceso.

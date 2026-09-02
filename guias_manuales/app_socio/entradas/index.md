@@ -1,12 +1,12 @@
 ---
 layout: default
-title: "Apartado de noticias"
+title: "Compra y gestión de entradas a eventos"
 parent: "Aplicación móvil PWA (Para socios)"
 grand_parent: "Guías/Manuales de uso"
-nav_order: 10
+nav_order: 3
 ---
 
-# Apartado de noticias
+# Compra y gestión de entradas a eventos
 
 ## Manual
 

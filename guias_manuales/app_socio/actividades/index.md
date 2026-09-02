@@ -1,12 +1,12 @@
 ---
 layout: default
-title: "Apartado de actividades y entradas"
+title: "Inscripción y gestión de actividades"
 parent: "Aplicación móvil PWA (Para socios)"
 grand_parent: "Guías/Manuales de uso"
 nav_order: 8
 ---
 
-# Apartado de actividades y entradas
+# Inscripción y gestión de actividades
 
 ## Manual
 

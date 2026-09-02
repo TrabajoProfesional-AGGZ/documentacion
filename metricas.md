@@ -10,7 +10,7 @@ Este espacio está destinado a medir el trabajo, la participación y el progreso
 
 ## Resumen del repositorio
 
-* **Actividad de commits:** ![Commits](https://img.shields.io/badge/Commits_Totales-217-blue)
+* **Actividad de commits:** ![Commits](https://img.shields.io/badge/Commits_Totales-218-blue)
 * **Pull Requests cerrados:** ![PRs](https://img.shields.io/badge/PRs_Cerrados-2-purple)
 * **Issues resueltos:** ![Issues](https://img.shields.io/badge/Issues_Resueltos-98-green)
 
@@ -30,6 +30,6 @@ A continuación se detalla la participación de cada miembro del equipo basándo
 | Miembro del equipo (GitHub User) | Commits Totales | Líneas Agregadas (++) | Líneas Eliminadas (--) |
 | :--- | :---: | :---: | :---: |
 | **Ascencio, Felipe Santino** (`FelipeAscencio`) | 206 | 36.385 | 9.199 |
-| **Zielonka, Axel** (`axel-zielonka`) | 11 | 1.437 | 210 |
+| **Zielonka, Axel** (`axel-zielonka`) | 12 | 1.451 | 210 |
 
 *(Nota: Cualquier diferencia entre el total de commits del repositorio y la suma de los aportes individuales corresponde a operaciones de mantenimiento automatizado realizadas por herramientas como dependabot).*

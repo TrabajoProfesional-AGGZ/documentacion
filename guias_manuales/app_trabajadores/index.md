@@ -10,6 +10,5 @@ nav_order: 3
 
 Seleccioná un apartado para visualizar la guía correspondiente:
 
-* **[Login en la app, nociones básicas y generales](login/):** Ingreso para el personal del club.
-* **[Home (Explorando funcionalidades, vistas y atajos)](home/):** Pantalla principal de la app del trabajador.
-* **[Funcionalidad y uso del lector QR](lector_qr/):** Herramienta para escaneo de carnets y validación de accesos/reservas.
+* **[Configuración de cuenta y gestión de perfil](login/):** Configuración inicial de los datos del empleado (legajo, DNI y correo) y opciones del perfil (cambio de contraseña y cierre de sesión).
+* **[Funcionalidad y uso del lector QR](lector_qr/):** Control de acceso físico mediante escaneo de código QR en molinetes, con validación automática de estado (socio activo o moroso).

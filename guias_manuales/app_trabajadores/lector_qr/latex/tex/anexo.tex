@@ -1,3 +1,11 @@
 \section{Manual (Aplicación empleados) - Funcionalidad y uso del lector QR}
 
-X.
+El lector QR de la aplicación para empleados funciona como una herramienta de control de acceso físico, ideal para la gestión de ingresos mediante un molinete. Al escanear el código QR de un socio, el sistema valida automáticamente su estado financiero para determinar si se permite o rechaza el acceso a las instalaciones.
+
+\subsection{Validación de accesos según el estado del socio}
+Durante el proceso de escaneo, pueden presentarse dos escenarios distintos dependiendo de la situación del usuario:
+
+\begin{itemize}
+    \item \textbf{Socio activo:} Al escanear el QR de un socio que se encuentra al día con sus pagos, el sistema aprueba la validación y permite el acceso correctamente.
+    \item \textbf{Socio moroso:} Si se intenta escanear el código de un socio que registra deuda, el sistema rechaza automáticamente el acceso, indicando la falta de pago como el motivo de la denegación.
+\end{itemize}

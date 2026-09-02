@@ -1,12 +1,12 @@
 ---
 layout: default
-title: "Login en la app, nociones básicas y generales"
+title: "Configuración de cuenta y gestión de perfil"
 parent: "Aplicación móvil PWA (Para empleados)"
 grand_parent: "Guías/Manuales de uso"
 nav_order: 1
 ---
 
-# Login en la app, nociones básicas y generales
+# Configuración de cuenta y gestión de perfil
 
 ## Manual
 

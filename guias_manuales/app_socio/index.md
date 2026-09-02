@@ -11,7 +11,7 @@ nav_order: 2
 Seleccioná un apartado para visualizar la guía correspondiente:
 
 * **[Apartado de carnet](carnet/):** Visualización del código QR personal, datos del socio y uso del carnet para el control de acceso a las instalaciones según el estado de pagos.
-* **[Apartado de cuotas y pagos](cuotas/):** Consulta de estado de cuenta y pago de obligaciones.
+* **[Apartado de cuotas y pagos](cuotas/):** Visualización de cuotas pendientes y vencidas, proceso de pago a través de Mercado Pago y regularización automática del estado financiero.
 * **[Apartado de reservas](reservas/):** Exploración de instalaciones, solicitud de turnos para espacios gratuitos y arancelados, y proceso de pago mediante Mercado Pago para la confirmación de la rese
 * **[Apartado de tienda](tienda/):** Exploración del catálogo de productos, selección de artículos y cantidades, proceso de pago mediante Mercado Pago y visualización del historial en mis compras.
 * **[Apartado de trámites](tramites/):** Carga de nuevos trámites (como el certificado de apto médico), adjunto de archivos y seguimiento del estado de aprobación (en revisión y aprobado).

@@ -3,7 +3,7 @@ layout: default
 title: "Apartado de tienda"
 parent: "Plataforma web (Panel administrativo)"
 grand_parent: "Guías/Manuales de uso"
-nav_order: 10
+nav_order: 8
 ---
 
 # Apartado de tienda

@@ -3,7 +3,7 @@ layout: default
 title: "Apartado de métricas"
 parent: "Plataforma web (Panel administrativo)"
 grand_parent: "Guías/Manuales de uso"
-nav_order: 5
+nav_order: 6
 ---
 
 # Apartado de métricas

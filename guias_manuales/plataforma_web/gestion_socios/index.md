@@ -3,7 +3,7 @@ layout: default
 title: "Apartado de gestión de socios"
 parent: "Plataforma web (Panel administrativo)"
 grand_parent: "Guías/Manuales de uso"
-nav_order: 3
+nav_order: 4
 ---
 
 # Apartado de gestión de socios

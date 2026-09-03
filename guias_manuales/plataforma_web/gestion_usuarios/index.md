@@ -3,7 +3,7 @@ layout: default
 title: "Apartado de gestión de usuarios administrativos"
 parent: "Plataforma web (Panel administrativo)"
 grand_parent: "Guías/Manuales de uso"
-nav_order: 4
+nav_order: 5
 ---
 
 # Apartado de gestión de usuarios administrativos

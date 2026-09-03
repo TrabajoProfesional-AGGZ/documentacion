@@ -3,7 +3,7 @@ layout: default
 title: "Apartado de noticias"
 parent: "Plataforma web (Panel administrativo)"
 grand_parent: "Guías/Manuales de uso"
-nav_order: 8
+nav_order: 7
 ---
 
 # Apartado de noticias

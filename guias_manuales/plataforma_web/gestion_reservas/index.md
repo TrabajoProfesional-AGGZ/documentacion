@@ -3,7 +3,7 @@ layout: default
 title: "Apartado de gestión de reservas e instalaciones"
 parent: "Plataforma web (Panel administrativo)"
 grand_parent: "Guías/Manuales de uso"
-nav_order: 6
+nav_order: 3
 ---
 
 # Apartado de gestión de reservas e instalaciones

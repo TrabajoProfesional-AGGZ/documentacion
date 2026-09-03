@@ -3,7 +3,7 @@ layout: default
 title: "Funcionalidad y uso del lector QR"
 parent: "Aplicación móvil PWA (Para empleados)"
 grand_parent: "Guías/Manuales de uso"
-nav_order: 3
+nav_order: 2
 ---
 
 # Funcionalidad y uso del lector QR

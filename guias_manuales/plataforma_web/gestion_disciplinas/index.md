@@ -3,7 +3,7 @@ layout: default
 title: "Apartado de gestión de disciplinas"
 parent: "Plataforma web (Panel administrativo)"
 grand_parent: "Guías/Manuales de uso"
-nav_order: 7
+nav_order: 2
 ---
 
 # Apartado de gestión de disciplinas

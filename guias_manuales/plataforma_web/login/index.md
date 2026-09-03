@@ -3,7 +3,7 @@ layout: default
 title: "Login en la web, nociones básicas y generales"
 parent: "Plataforma web (Panel administrativo)"
 grand_parent: "Guías/Manuales de uso"
-nav_order: 1
+nav_order: 9
 ---
 
 # Login en la web, nociones básicas y generales

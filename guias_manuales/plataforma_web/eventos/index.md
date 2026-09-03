@@ -3,7 +3,7 @@ layout: default
 title: "Apartado de eventos"
 parent: "Plataforma web (Panel administrativo)"
 grand_parent: "Guías/Manuales de uso"
-nav_order: 11
+nav_order: 1
 ---
 
 # Apartado de eventos

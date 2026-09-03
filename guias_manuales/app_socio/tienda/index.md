@@ -3,7 +3,7 @@ layout: default
 title: "Apartado de tienda"
 parent: "Aplicación móvil PWA (Para socios)"
 grand_parent: "Guías/Manuales de uso"
-nav_order: 7
+nav_order: 4
 ---
 
 # Apartado de tienda

@@ -3,7 +3,7 @@ layout: default
 title: "Procesos de registro de socio"
 parent: "Aplicación móvil PWA (Para socios)"
 grand_parent: "Guías/Manuales de uso"
-nav_order: 1
+nav_order: 9
 ---
 
 # Procesos de registro de socio

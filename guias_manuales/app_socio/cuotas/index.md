@@ -3,7 +3,7 @@ layout: default
 title: "Apartado de cuotas y pagos"
 parent: "Aplicación móvil PWA (Para socios)"
 grand_parent: "Guías/Manuales de uso"
-nav_order: 5
+nav_order: 2
 ---
 
 # Apartado de cuotas y pagos

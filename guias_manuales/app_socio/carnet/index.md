@@ -3,7 +3,7 @@ layout: default
 title: "Apartado de carnet"
 parent: "Aplicación móvil PWA (Para socios)"
 grand_parent: "Guías/Manuales de uso"
-nav_order: 4
+nav_order: 1
 ---
 
 # Apartado de carnet

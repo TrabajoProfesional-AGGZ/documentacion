@@ -3,7 +3,7 @@ layout: default
 title: "Compra y gestión de entradas a eventos"
 parent: "Aplicación móvil PWA (Para socios)"
 grand_parent: "Guías/Manuales de uso"
-nav_order: 3
+nav_order: 6
 ---
 
 # Compra y gestión de entradas a eventos

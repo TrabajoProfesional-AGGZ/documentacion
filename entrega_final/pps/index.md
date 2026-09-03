@@ -2,7 +2,7 @@
 layout: default
 title: Constancias PPS
 parent: Entrega final
-nav_order: 2
+nav_order: 1
 ---
 
 # Constancias de Prácticas Profesionales Supervisadas

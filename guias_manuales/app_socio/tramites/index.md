@@ -3,7 +3,7 @@ layout: default
 title: "Apartado de trámites"
 parent: "Aplicación móvil PWA (Para socios)"
 grand_parent: "Guías/Manuales de uso"
-nav_order: 9
+nav_order: 5
 ---
 
 # Apartado de trámites

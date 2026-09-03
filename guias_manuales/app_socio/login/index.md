@@ -3,7 +3,7 @@ layout: default
 title: "Login en la app, nociones básicas y generales"
 parent: "Aplicación móvil PWA (Para socios)"
 grand_parent: "Guías/Manuales de uso"
-nav_order: 2
+nav_order: 8
 ---
 
 # Login en la app, nociones básicas y generales

@@ -3,7 +3,7 @@ layout: default
 title: "Inscripción y gestión de actividades"
 parent: "Aplicación móvil PWA (Para socios)"
 grand_parent: "Guías/Manuales de uso"
-nav_order: 8
+nav_order: 7
 ---
 
 # Inscripción y gestión de actividades

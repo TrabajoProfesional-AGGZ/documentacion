@@ -2,7 +2,7 @@
 layout: default
 title: Informe final
 parent: Entrega final
-nav_order: 2
+nav_order: 3
 ---
 
 # Informe final

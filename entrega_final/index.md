@@ -12,5 +12,6 @@ En esta sección se consolida toda la documentación y presentaciones correspond
 Podés navegar por los distintos apartados utilizando el menú lateral o los siguientes enlaces:
 
 - 🎓 **[Constancias PPS]({{ '/entrega_final/pps/' | relative_url }})**: Certificados de las Prácticas Profesionales Supervisadas del equipo.
+- 🎤 **[Defensa final]({{ '/entrega_final/defensa/' | relative_url }})**: Presentación utilizada ante el jurado y grabación de la exposición.
 - 📄 **[Informe final]({{ '/entrega_final/informe/' | relative_url }})**: Documentación técnica consolidada y manuales de usuario.
 - 💼 **[Kit de entrega]({{ '/entrega_final/kit_de_entrega/' | relative_url }})**: Ficha ejecutiva, long paper y demostración (Pitch) del MVP.

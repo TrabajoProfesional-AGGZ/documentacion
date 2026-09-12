@@ -2,7 +2,7 @@
 layout: default
 title: Kit de entrega
 parent: Entrega final
-nav_order: 3
+nav_order: 4
 ---
 
 # Kit de entrega

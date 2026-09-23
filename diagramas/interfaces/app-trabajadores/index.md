@@ -13,30 +13,43 @@ Aplicación móvil orientada al personal operativo y de campo del club. Está di
 
 ## 🔐 Acceso de personal (Login)
 
-### Marca blanca (Neutro)
+<div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
+  <div style="text-align: center;">
+    <h4>Marca blanca (Neutro)</h4>
+    <img src="login_neutro.jpeg" alt="Login Neutro" style="width: 100%; max-width: 300px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);" />
+  </div>
+  <div style="text-align: center;">
+    <h4>Inter Miami CF</h4>
+    <img src="login_miami.jpeg" alt="Login Inter Miami CF" style="width: 100%; max-width: 300px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);" />
+  </div>
+</div>
 
-<img src="login-neutro.jpeg" width="100%" style="border-radius: 6px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); margin-bottom: 20px;">
-
-### Mamelodi Sundowns
-
-<img src="login-mamelodi.jpeg" width="100%" style="border-radius: 6px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+<hr>
 
 ## 🏠 Panel principal operativo
 
-### Marca blanca (Neutro)
+<div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
+  <div style="text-align: center;">
+    <h4>Marca blanca (Neutro)</h4>
+    <img src="home_neutro.jpeg" alt="Home Neutro" style="width: 100%; max-width: 300px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);" />
+  </div>
+  <div style="text-align: center;">
+    <h4>Inter Miami CF</h4>
+    <img src="home_miami.jpeg" alt="Home Inter Miami CF" style="width: 100%; max-width: 300px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);" />
+  </div>
+</div>
 
-<img src="home-neutro.jpeg" width="100%" style="border-radius: 6px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); margin-bottom: 20px;">
-
-### Mamelodi Sundowns
-
-<img src="home-mamelodi.jpeg" width="100%" style="border-radius: 6px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+<hr>
 
 ## 📷 Lector de código QR
 
-### Marca blanca (Neutro)
-
-<img src="qr-neutro.jpg" width="100%" style="border-radius: 6px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); margin-bottom: 20px;">
-
-### Mamelodi Sundowns
-
-<img src="qr-mamelodi.jpg" width="100%" style="border-radius: 6px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+<div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
+  <div style="text-align: center;">
+    <h4>Marca blanca (Neutro)</h4>
+    <img src="qr_neutro.jpeg" alt="Lector QR Neutro" style="width: 100%; max-width: 300px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);" />
+  </div>
+  <div style="text-align: center;">
+    <h4>Inter Miami CF</h4>
+    <img src="qr_miami.jpeg" alt="Lector QR Inter Miami CF" style="width: 100%; max-width: 300px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);" />
+  </div>
+</div>

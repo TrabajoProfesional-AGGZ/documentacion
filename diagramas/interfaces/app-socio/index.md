@@ -13,50 +13,73 @@ Aplicación Web Progresiva diseñada para el usuario final. Centraliza la experi
 
 ## 🔐 Pantalla de acceso (Login)
 
-### Marca blanca (Neutro)
+<div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
+  <div style="text-align: center;">
+    <h4>Marca blanca (Neutro)</h4>
+    <img src="login_neutro.jpeg" alt="Login Neutro" style="width: 100%; max-width: 300px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);" />
+  </div>
+  <div style="text-align: center;">
+    <h4>Inter Miami CF</h4>
+    <img src="login_miami.jpeg" alt="Login Inter Miami CF" style="width: 100%; max-width: 300px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);" />
+  </div>
+</div>
 
-<img src="login-neutro.jpeg" width="100%" style="border-radius: 6px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); margin-bottom: 20px;">
-
-### Mamelodi Sundowns
-
-<img src="login-mamelodi.jpeg" width="100%" style="border-radius: 6px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+<hr>
 
 ## 🏠 Inicio (Dashboard del socio)
 
-### Marca blanca (Neutro)
+<div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
+  <div style="text-align: center;">
+    <h4>Marca blanca (Neutro)</h4>
+    <img src="home_neutro.jpeg" alt="Home Neutro" style="width: 100%; max-width: 300px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);" />
+  </div>
+  <div style="text-align: center;">
+    <h4>Inter Miami CF</h4>
+    <img src="home_miami.jpeg" alt="Home Inter Miami CF" style="width: 100%; max-width: 300px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);" />
+  </div>
+</div>
 
-<img src="home-neutro.jpeg" width="100%" style="border-radius: 6px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); margin-bottom: 20px;">
-
-### Mamelodi Sundowns
-
-<img src="home-mamelodi.jpeg" width="100%" style="border-radius: 6px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+<hr>
 
 ## 👤 Perfil de usuario
 
-### Marca blanca (Neutro)
+<div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
+  <div style="text-align: center;">
+    <h4>Marca blanca (Neutro)</h4>
+    <img src="perfil_neutro.jpeg" alt="Perfil Neutro" style="width: 100%; max-width: 300px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);" />
+  </div>
+  <div style="text-align: center;">
+    <h4>Inter Miami CF</h4>
+    <img src="perfil_miami.jpeg" alt="Perfil Inter Miami CF" style="width: 100%; max-width: 300px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);" />
+  </div>
+</div>
 
-<img src="perfil-neutro.jpeg" width="100%" style="border-radius: 6px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); margin-bottom: 20px;">
-
-### Mamelodi Sundowns
-
-<img src="perfil-mamelodi.jpeg" width="100%" style="border-radius: 6px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+<hr>
 
 ## 💳 Estado de pagos y cuotas
 
-### Marca blanca (Neutro)
+<div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
+  <div style="text-align: center;">
+    <h4>Marca blanca (Neutro)</h4>
+    <img src="pagos_neutro.jpeg" alt="Pagos Neutro" style="width: 100%; max-width: 300px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);" />
+  </div>
+  <div style="text-align: center;">
+    <h4>Inter Miami CF</h4>
+    <img src="pagos_miami.jpeg" alt="Pagos Inter Miami CF" style="width: 100%; max-width: 300px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);" />
+  </div>
+</div>
 
-<img src="pagos-neutro.jpeg" width="100%" style="border-radius: 6px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); margin-bottom: 20px;">
-
-### Mamelodi Sundowns
-
-<img src="pagos-mamelodi.jpeg" width="100%" style="border-radius: 6px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+<hr>
 
 ## 🎫 Carnet digital (Acceso inteligente)
 
-### Marca blanca (Neutro)
-
-<img src="carnet-neutro.jpeg" width="100%" style="border-radius: 6px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); margin-bottom: 20px;">
-
-### Mamelodi Sundowns
-
-<img src="carnet-mamelodi.jpeg" width="100%" style="border-radius: 6px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+<div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
+  <div style="text-align: center;">
+    <h4>Marca blanca (Neutro)</h4>
+    <img src="carnet_neutro.jpeg" alt="Carnet Neutro" style="width: 100%; max-width: 300px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);" />
+  </div>
+  <div style="text-align: center;">
+    <h4>Inter Miami CF</h4>
+    <img src="carnet_miami.jpeg" alt="Carnet Inter Miami CF" style="width: 100%; max-width: 300px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);" />
+  </div>
+</div>

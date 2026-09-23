@@ -11,7 +11,7 @@ has_children: true
 En esta sección se documentan las distintas interfaces gráficas y conversacionales que componen el ecosistema de **SocioUnido**, abarcando las soluciones para socios, empleados, personal administrativo y sistemas de control.
 
 > 💡 **Nota sobre las representaciones visuales:**
-> Como SocioUnido es una plataforma de **marca blanca**, los ejemplos a continuación muestran dos escenarios (la versión base/neutra y una versión adaptada). Para ilustrar la adaptabilidad del sistema sin generar rivalidades ni preferencias en el contexto del fútbol argentino, se ha seleccionado al club **Mamelodi Sundowns** de Sudáfrica como caso de uso. Esto permite demostrar una interfaz 100% funcional y personalizada manteniendo la neutralidad institucional del proyecto.
+> Como SocioUnido es una plataforma de **marca blanca**, los ejemplos a continuación muestran dos escenarios (la versión base/neutra y una versión adaptada). Para ilustrar la adaptabilidad del sistema sin generar rivalidades ni preferencias en el contexto del fútbol argentino, se ha seleccionado al club **Inter Miami CF** de Estados Unidos como caso de uso. Esto permite demostrar una interfaz 100% funcional y personalizada manteniendo la neutralidad institucional del proyecto.
 
 Seleccioná una de las siguientes interfaces para ver su detalle:
 

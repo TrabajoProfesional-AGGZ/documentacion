@@ -17,9 +17,9 @@ La plataforma web es el panel administrativo centralizado orientado a la dirigen
 
 <img src="login-neutro.jpeg" width="100%" style="border-radius: 6px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); margin-bottom: 20px;">
 
-### Mamelodi Sundowns
+### Inter Miami CF
 
-<img src="login-mamelodi.jpeg" width="100%" style="border-radius: 6px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+<img src="login_miami.jpeg" width="100%" style="border-radius: 6px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
 
 ## 🏠 Inicio (Home)
 
@@ -27,9 +27,9 @@ La plataforma web es el panel administrativo centralizado orientado a la dirigen
 
 <img src="home-neutro.jpeg" width="100%" style="border-radius: 6px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); margin-bottom: 20px;">
 
-### Mamelodi Sundowns
+### Inter Miami CF
 
-<img src="home-mamelodi.jpeg" width="100%" style="border-radius: 6px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+<img src="home_miami.jpeg" width="100%" style="border-radius: 6px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
 
 ## 📈 Métricas y estadísticas
 
@@ -37,9 +37,9 @@ La plataforma web es el panel administrativo centralizado orientado a la dirigen
 
 <img src="metricas-neutro.jpeg" width="100%" style="border-radius: 6px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); margin-bottom: 20px;">
 
-### Mamelodi Sundowns
+### Inter Miami CF
 
-<img src="metricas-mamelodi.jpeg" width="100%" style="border-radius: 6px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+<img src="metricas_miami.jpeg" width="100%" style="border-radius: 6px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
 
 ## 📋 Gestión de socios (Padrón general)
 
@@ -47,19 +47,19 @@ La plataforma web es el panel administrativo centralizado orientado a la dirigen
 
 <img src="socios-neutro.jpeg" width="100%" style="border-radius: 6px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); margin-bottom: 20px;">
 
-### Mamelodi Sundowns
+### Inter Miami CF
 
-<img src="socios-mamelodi.jpeg" width="100%" style="border-radius: 6px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+<img src="socios_miami.jpeg" width="100%" style="border-radius: 6px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
 
 ## 👤 Perfil de socio específico
 
 ### Marca blanca (Neutro)
 
-<img src="socio-especifico-neutro.jpeg" width="100%" style="border-radius: 6px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); margin-bottom: 20px;">
+<img src="socio-neutro.jpeg" width="100%" style="border-radius: 6px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); margin-bottom: 20px;">
 
-### Mamelodi Sundowns
+### Inter Miami CF
 
-<img src="socio-especifico-mamelodi.jpeg" width="100%" style="border-radius: 6px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+<img src="socio_miami.jpeg" width="100%" style="border-radius: 6px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
 
 ## ⚽ Gestión de disciplinas (General)
 
@@ -67,19 +67,19 @@ La plataforma web es el panel administrativo centralizado orientado a la dirigen
 
 <img src="disciplinas-neutro.jpeg" width="100%" style="border-radius: 6px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); margin-bottom: 20px;">
 
-### Mamelodi Sundowns
+### Inter Miami CF
 
-<img src="disciplinas-mamelodi.jpeg" width="100%" style="border-radius: 6px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+<img src="disciplinas_miami.jpeg" width="100%" style="border-radius: 6px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
 
 ## 🏋️ Disciplina específica
 
 ### Marca blanca (Neutro)
 
-<img src="disciplinas-especifica-neutro.jpeg" width="100%" style="border-radius: 6px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); margin-bottom: 20px;">
+<img src="disciplina-neutro.jpeg" width="100%" style="border-radius: 6px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); margin-bottom: 20px;">
 
-### Mamelodi Sundowns
+### Inter Miami CF
 
-<img src="disciplinas-especifica-mamelodi.jpeg" width="100%" style="border-radius: 6px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+<img src="disciplinas_miami.jpeg" width="100%" style="border-radius: 6px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
 
 ## 🛒 Tienda institucional
 
@@ -87,6 +87,6 @@ La plataforma web es el panel administrativo centralizado orientado a la dirigen
 
 <img src="tienda-neutro.jpeg" width="100%" style="border-radius: 6px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); margin-bottom: 20px;">
 
-### Mamelodi Sundowns
+### Inter Miami CF
 
-<img src="tienda-mamelodi.jpeg" width="100%" style="border-radius: 6px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+<img src="tienda_miami.jpeg" width="100%" style="border-radius: 6px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">

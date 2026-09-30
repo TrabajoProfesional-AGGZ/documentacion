@@ -68,6 +68,8 @@ Teníamos la solución técnica, pero antes de escribir la primera línea de có
 
 Para contarles cómo analizamos este escenario y el universo de clubes que descubrimos, los dejo con Axel.
 
+\vspace{2 cm}
+
 \textit{5:30 Felipe}
 
 \newpage
@@ -78,7 +80,7 @@ Para contarles cómo analizamos este escenario y el universo de clubes que descu
 
 Para que todo este ecosistema tenga sentido, primero tuvimos que dimensionar la situación.
 
-Para nosotros era clave adoptar la visión de Marcus Dantus, reconocido inversor, empresario y gran referente del emprendedurismo en Latinoamérica, quien tiene una regla de oro: "No te avientes a hacer algo sin validarlo antes, sin saber que hay un mercado para ello".
+Para nosotros era clave adoptar la visión de Marcus Dantus, reconocido inversor, empresario y gran referente del emprendedurismo en Latinoamérica, quien tiene una regla de oro: 'No te avientes a hacer algo sin validarlo antes, sin saber que hay un mercado para ello'.
 
 Entender la importancia de esta premisa fue fundamental para el equipo, porque no queríamos construir software basándonos en suposiciones, sino que necesitábamos tener la certeza de que el producto iba a resolver una urgencia real de la industria.
 
@@ -114,27 +116,35 @@ Para lograr que instituciones tan tradicionales adopten este cambio, la clave no
 
 Y justamente para asegurar esa adopción sin fricciones, sabíamos que teníamos que salir de las pantallas y llevar el sistema al terreno.
 
-Llevamos a cabo sesiones de validación directa con los clubes, destacándose nuestro encuentro con Martín Fernando Rubino, trabajador del Club Atlético Talleres de Remedios de Escalada. En esta sesión de \textit{feedback} logramos confirmar empíricamente que los tres pilares de nuestra solución atacaban directamente sus problemas diarios.
+Validamos nuestra solución empíricamente mediante sesiones de \textit{feedback} con Martín Fernando Rubino (Club Atlético Talleres de Remedios de Escalada) y a través del desarrollo de nuestras PPS en el Club Ciudad de Buenos Aires, bajo la guía de la Lic. Verónica Montagnini y el Dr. Gustavo Breitbart, confirmando que nuestros tres pilares resuelven sus problemáticas diarias.
 
-Pero el mayor valor de esta reunión fue que nos permitió descubrir nuevos agregados de valor y mejorar la priorización de las funcionalidades según las urgencias operativas del club.
+Pero el mayor valor de estas sesiones fue que nos permitieron descubrir nuevos agregados de valor y mejorar la priorización de las funcionalidades según las urgencias operativas del club.
 
 Sin embargo, la validación no podía ser únicamente institucional. También organizamos sesiones de prueba y encuestas con usuarios reales que oficiaron de socios. Ellos probaron la aplicación móvil y nos dieron la retroalimentación necesaria para iterar y pulir la usabilidad y todo el entorno UX/UI, garantizando que cualquier persona, sin importar su edad, profesión o nivel de digitalización, pueda utilizarla con la menor curva de aprendizaje posible.
 
 Tener un mercado enorme es una oportunidad, pero tener un producto validado empíricamente tanto por el trabajador del club como por el hincha en la tribuna es lo que lo convierte en una solución definitiva.
 
-\subsection{Slide 10 (Las 4 interfaces del ecosistema) - 1:30 minutos}
+\subsection{Slide 10 (Las interfaz web) - 30 segundos}
 
 Toda esta validación nos dejó una lección clara: el sistema no podía ser un bloque monolítico y complejo. Tenía que adaptarse al contexto exacto de cada persona que interactúa con el club. 
 
 Por eso, diseñamos el ecosistema dividiéndolo en cuatro interfaces específicas:
+
 Primero, el \textbf{Panel Web Administrativo}: Es el centro de comando para la dirigencia y tesorería, donde visualizan todas las métricas, controlan la masa societaria y gestionan las instalaciones.
+
+\subsection{Slide 11 (Interfaces móviles) - 1 minuto}
+
 Segundo, la \textbf{App del Socio}: Es el club en el bolsillo del hincha. Desde acá pagan su cuota, reservan su turno para jugar al tenis, generan su carnet digital para entrar a la cancha, se enteran de las novedades y hasta compran productos de la tienda oficial.
+
 Tercero, la \textbf{App de Control}: Una interfaz ultra simplificada para el personal de seguridad en las puertas del estadio, diseñada exclusivamente para escanear y validar accesos a máxima velocidad.
+
 Y cuarto, la \textbf{Omnicanalidad con BotIn}: Para aquel usuario que no quiere descargar nada o no se lleva bien con las aplicaciones, integramos un asistente conversacional vía Telegram que resuelve todo lo que necesite el socio por chat.
 
 Hasta ahora tenemos las interfaces listas y validadas, pero sostener miles de transacciones y escaneos en simultáneo requiere un motor de nivel corporativo.
 
 A continuación, Martín nos va a explicar la ingeniería y la innovación que corre por detrás de estas múltiples interfaces.
+
+\vspace{2 cm}
 
 \textit{5:30 Axel}
 
@@ -142,7 +152,7 @@ A continuación, Martín nos va a explicar la ingeniería y la innovación que c
 
 \section{Martín (Arquitectura e innovación)}
 
-\subsection{Slide 11 (Frases de Drew Crisp) - 45 segundos}
+\subsection{Slide 12 (Frases de Drew Crisp) - 45 segundos}
 
 Para entender hacia dónde va la tendencia de innovación en la industria, nos paramos en las declaraciones de Drew Crisp, Vicepresidente Sénior de Digital del Liverpool FC. Él resume esta visión corporativa en dos conceptos fundamentales:
 
@@ -153,7 +163,7 @@ Para entender hacia dónde va la tendencia de innovación en la industria, nos p
 
 Para alcanzar estos estándares que marca el fútbol de primer nivel, las innovaciones tecnológicas son una pieza clave. Por eso, en SocioUnido superamos los simples sistemas de registro y desarrollamos herramientas proactivas:
 
-\subsection{Slide 12 (Innovación y visión de mercado) - 1:30 minutos}
+\subsection{Slide 13 (Innovación y visión de mercado) - 1:30 minutos}
 
 \begin{itemize}
     \item \textbf{Control de morosidad inteligente:} Definimos KPIs transaccionales que disparan alertas automáticas a la tesorería antes de que la deuda sea irrecuperable, automatizando la regularización.
@@ -162,11 +172,11 @@ Para alcanzar estos estándares que marca el fútbol de primer nivel, las innova
     \item \textbf{Acceso Inteligente:} Nuestra mayor innovación para combatir el colapso de las redes en los estadios mediante un algoritmo criptográfico TOTP (Contraseñas de un solo uso basadas en el tiempo).
 \end{itemize}
 
-Quiero ser muy claro en cómo funciona este último punto: \textbf{el que opera 100\% offline es el celular del socio}. El carnet digital no le pide datos al servidor; en su lugar, el dispositivo calcula un token cada 30 segundos usando un secreto compartido y la hora actual. El hincha puede estar en "Modo Avión" y su código sigue siendo matemáticamente válido. Paralelamente, el servidor calcula el mismo número, permitiendo que el lector del empleado —que sí está conectado a la red del club— lo valide al instante. De esta forma, erradicamos el fraude y las filas sin depender jamás de la señal móvil del usuario.
+Quiero ser muy claro en cómo funciona este último punto: \textbf{el que opera 100\% offline es el celular del socio}. El carnet digital no le pide datos al servidor; en su lugar, el dispositivo calcula un token cada 30 segundos usando un secreto compartido y la hora actual. El hincha puede estar en 'Modo Avión' y su código sigue siendo matemáticamente válido. Paralelamente, el servidor calcula el mismo número, permitiendo que el lector del empleado —que sí está conectado a la red del club— lo valide al instante. De esta forma, erradicamos el fraude y las filas sin depender jamás de la señal móvil del usuario.
 
 \newpage
 
-\subsection{Slide 13 (Arquitectura de microservicios e integraciones) - 2:30 minutos}
+\subsection{Slide 14 (Arquitectura de microservicios e integraciones) - 2:30 minutos}
 
 Todo este nivel de procesamiento requiere una arquitectura robusta, escalable y tolerante a fallos. Por eso, desplegamos SocioUnido bajo un modelo SaaS apoyado en una \textbf{topología de microservicios en la nube}.
 
@@ -190,7 +200,7 @@ Para la capa de persistencia, no usamos un monolito. Cada microservicio es dueñ
 
 \newpage
 
-\subsection{Slide 14 (Atributos de calidad) - 1:40 minutos}
+\subsection{Slide 15 (Atributos de calidad) - 1:40 minutos}
 
 Toda esta fragmentación de servicios nos lleva a nuestro punto clave: Si un módulo individual falla, el resto del club sigue operando con total normalidad. 
 
@@ -206,13 +216,15 @@ Esta es la ingeniería que soporta a SocioUnido. Pero sabemos perfectamente que 
 
 Dicho esto, nos podrías detallar como diseñamos la identidad de marca y la estrategia de monetización Lautaro.
 
+\vspace{2 cm}
+
 \textit{6:25 Martín}
 
 \newpage
 
 \section{Lautaro (Negocio, monetización e identidad)}
 
-\subsection{Slide 15 (Marca blanca y teoría de la Gestalt) - 1:35 minutos}
+\subsection{Slide 16 (Marca blanca y teoría de la Gestalt) - 1:35 minutos}
 
 Obvio, vamos a ello.
 
@@ -220,13 +232,13 @@ Cuando nos sentamos a diseñar cómo se iba a ver SocioUnido, nos enfrentamos a 
 
 La respuesta fue desarrollar un modelo estricto de \textbf{Marca Blanca}. Pero no lo hicimos al azar; fundamentamos toda nuestra interfaz en la Teoría del Color y las leyes de la percepción de la Gestalt.
 
-Construimos un entorno base utilizando una paleta estrictamente acromática: blancos, negros y grises. Psicológicamente, esta ausencia de colores saturados transmite transparencia financiera y actúa como nuestro "lienzo en blanco". Esta es nuestra cara comercial. Nos permite presentar el producto a cualquier dirigencia sin que el sistema haga ruido visual o genere rivalidades inconscientes.
+Construimos un entorno base utilizando una paleta estrictamente acromática: blancos, negros y grises. Psicológicamente, esta ausencia de colores saturados transmite transparencia financiera y actúa como nuestro 'lienzo en blanco'. Esta es nuestra cara comercial. Nos permite presentar el producto a cualquier dirigencia sin que el sistema haga ruido visual o genere rivalidades inconscientes.
 
 Pero una vez que el club adquiere la plataforma, este lienzo neutro desaparece para ellos. El ecosistema inyecta dinámicamente los colores y escudos oficiales de la institución. Apoyados en la \textbf{Ley de Similitud}, teñimos todos los llamados a la acción y elementos clave con su paleta corporativa.
 
 De esta forma, logramos dos cosas fundamentales: por un lado, cuando el hincha abre la aplicación en su teléfono, interactúa directamente con la pasión y la identidad de su equipo; y por el otro, cuando el empleado o el directivo abren el panel web de gestión, afianzan su sentido de pertenencia institucional trabajando todos los días sobre una plataforma que visualmente es 100\% de su propio club.
 
-\subsection{Slide 16 (Estrategia de penetración - Go-To-Market) - 1:10 minutos}
+\subsection{Slide 17 (Estrategia de penetración - Go-To-Market) - 1:10 minutos}
 
 Teniendo el producto adaptado, debíamos definir nuestra estrategia de distribución o \textit{Plaza}. Al ser un sistema 100\% \textit{Cloud-based}, nuestro despliegue es inmediato.
 
@@ -238,9 +250,9 @@ Nuestra Fase 2 de expansión a largo plazo utilizará los casos de éxito, el au
 
 \newpage
 
-\subsection{Slide 17 (Modelo de monetización, precios y marketplace CPA) - 1:55 minutos}
+\subsection{Slide 18 (Modelo de monetización, precios y marketplace CPA) - 1:55 minutos}
 
-Atacar este mercado requiere un esquema de precios que acompañe la realidad de los clubes. Por eso, implementamos un \textit{Pricing} Basado en el Valor, estructurado en tres componentes que se "pagan solos" con el dinero que el club recupera:
+Atacar este mercado requiere un esquema de precios que acompañe la realidad de los clubes. Por eso, implementamos un \textit{Pricing} Basado en el Valor, estructurado en tres componentes que se 'pagan solos' con el dinero que el club recupera:
 
 \begin{itemize}
     \item \textbf{Setup Fee (Costo de configuración):} Para los \textit{Early Adopters} o clientes pioneros, la digitalización inicial está bonificada al 100\%. A cambio, el club nos aporta personal para acelerar la migración de datos y se compromete a realizar \textit{co-marketing} para darnos visibilidad. A futuro, este costo será variable según el volumen del padrón societario.
@@ -250,7 +262,7 @@ Atacar este mercado requiere un esquema de precios que acompañe la realidad de 
 
 Diseñar estas múltiples vías de monetización no es solo una ventaja financiera para nosotros, es una decisión estratégica para generar confianza. Al diversificar nuestros ingresos entre un abono fijo accesible, un variable por éxito y pauta publicitaria, estamos diluyendo el riesgo operativo para ambas partes. Le demostramos a la dirigencia que si ellos no crecen, nosotros tampoco; pero si el club potencia su recaudación, ganamos todos. Es el escenario de \textit{win-win} definitivo que cualquier tesorería necesita escuchar para abrirnos las puertas.
 
-\subsection{Slide 18 (Proyección financiera) - 1:20 minutos}
+\subsection{Slide 19 (Proyección financiera) - 1:20 minutos}
 
 ¿Qué significan estas vías de monetización en números reales? 
 
@@ -262,54 +274,56 @@ Y lo más importante: este cálculo contempla únicamente a 10 clubes. Nos deja 
 
 Pero, tal como les anticipamos en el primer minuto de esta defensa, hoy no venimos a contarles una idea, venimos a demostrarles ingeniería real aplicada. Así que ahora, vamos a pasar directamente a nuestras pantallas para que vean exactamente cómo el ecosistema de SocioUnido funciona en vivo.
 
+\vspace{2 cm}
+
 \textit{6:00 Lautaro}
 
 \newpage
 
 \section{Equipo completo (Demo en Vivo)}
 
-\subsection{Slide 19 (Demostración) - 14:00 minutos en total}
+\subsection{Slide 20 (Demostración) - 14:00 minutos en total}
 
 \textit{(Transición: La pantalla principal pasa a mostrar el celular/computadora de los chicos proyectado en vivo. Axel toma el centro del escenario, con tono relajado pero corporativo).}
 
 \textbf{[Escena 1: La oficina del club] - Axel (Tiempo aprox: 3:30 min)}
 
 \textbf{(Axel)}
-"Bienvenidos al Inter de Miami. Para esta demostración, yo voy a tomar el rol del gerente general del club. 
+'Bienvenidos al Inter de Miami. Para esta demostración, yo voy a tomar el rol del gerente general del club. 
 \textit{(Axel proyecta el Panel Web Administrativo)} 
 Como ven, desde mi oficina tengo el control absoluto. En mi tablero principal veo que la recaudación viene bien, pero el motor predictivo de SocioUnido me alerta que hay varios socios en riesgo de morosidad. 
 
-Para incentivar la recaudación, voy a aprovechar que jugamos un partido clave este domingo. Desde la pestaña de 'Eventos', creo el partido en segundos, le asigno un cupo a la tribuna, y presiono publicar. Listo, el evento ya está disponible para toda nuestra masa societaria. Veamos cómo lo recibe un socio estándar."
+Para incentivar la recaudación, voy a aprovechar que jugamos un partido clave este domingo. Desde la pestaña de 'Eventos', creo el partido en segundos, le asigno un cupo a la tribuna, y presiono publicar. Listo, el evento ya está disponible para toda nuestra masa societaria. Veamos cómo lo recibe un socio estándar.'
 
 \textbf{[Escena 2: El socio tecnológico] - Lautaro (Tiempo aprox: 4:00 min)}
 
 \textit{(Lautaro da un paso al frente, proyectando la pantalla de su celular. Tiene un tono tranquilo y práctico).}
 
 \textbf{(Lautaro)}
-"Soy un socio activo del club. Estoy en mi casa y me acaba de llegar una notificación push: \textit{'¡Se habilitó la reserva para el partido del domingo!'}. 
+'Soy un socio activo del club. Estoy en mi casa y me acaba de llegar una notificación push: \textit{'¡Se habilitó la reserva para el partido del domingo!'}. 
 \textit{(Abre la App del Socio)}
 Entro a mi aplicación de SocioUnido. Voy directo a la sección de eventos y trato de reservar mi entrada... 
 \textit{(La pantalla muestra una alerta roja)}
 ¡Epa! 'Acción denegada'. El sistema me avisa que tengo la cuota de este mes vencida. En otro momento, esto significaría tener que ir hasta la secretaría del club en horario laboral para pagar. Pero con la app, voy a la sección de 'Pagos', selecciono la cuota adeudada, y pago directamente con Mercado Pago.
 \textit{(Simula el pago)}
-Listo. Pago aprobado. El sistema ya actualizó mi estado. Ahora sí, vuelvo al evento, reservo mi entrada, y ya tengo mi QR dinámico habilitado."
+Listo. Pago aprobado. El sistema ya actualizó mi estado. Ahora sí, vuelvo al evento, reservo mi entrada, y ya tengo mi QR dinámico habilitado.'
 
 \textbf{[Escena 3: El socio tradicional] - Martín (Tiempo aprox: 3:30 min)}
 
 \textit{(Martín entra en escena, actuando como un señor un poco más mayor, frustrado con la tecnología. Se acerca a Lautaro).}
 
 \textbf{(Martín)}
-"Che, Lautaro, yo también quiero ir a la cancha el domingo, pero me compré un teléfono nuevo y no me acuerdo la contraseña de la aplicación. Yo con estas cosas me mareo, no quiero instalar nada nuevo."
+'Che, Lautaro, yo también quiero ir a la cancha el domingo, pero me compré un teléfono nuevo y no me acuerdo la contraseña de la aplicación. Yo con estas cosas me mareo, no quiero instalar nada nuevo.'
 
 \textbf{(Lautaro)}
-"No te hagas problema, Martín. El club habilitó a BotIn. Entrá a tu Telegram, que ya lo tenés instalado, y hablale como si fuera una persona."
+'No te hagas problema, Martín. El club habilitó a BotIn. Entrá a tu Telegram, que ya lo tenés instalado, y hablale como si fuera una persona.'
 
 \textbf{(Martín)}
 \textit{(Proyecta su pantalla abriendo Telegram)}
-"A ver... le voy a mandar un mensaje: \textit{'Hola, quiero pagar mi cuota atrasada'}."
+'A ver... le voy a mandar un mensaje: \textit{'Hola, quiero pagar mi cuota atrasada'}.'
 \textit{(El bot responde instantáneamente con un saludo, confirmando la intención y enviando el link de pago de Mercado Pago).}
 \textbf{(Martín)}
-"¡Qué maravilla! Hago clic, pago con MercadoPago.. y listo, el bot me acaba de confirmar que ya estoy al día. Nos vemos en la cancha."
+'¡Qué maravilla! Hago clic, pago con MercadoPago.. y listo, el bot me acaba de confirmar que ya estoy al día. Nos vemos en la cancha.'
 
 \newpage
 
@@ -318,41 +332,49 @@ Listo. Pago aprobado. El sistema ya actualizó mi estado. Ahora sí, vuelvo al e
 \textit{(Cambio de escenario: Axel se mueve a un costado, saca un celular o tablet y ahora actúa como el empleado de seguridad en los molinetes. Proyecta la App de Control. Lautaro y Martín se ponen en fila frente a él).}
 
 \textbf{(Axel)}
-"Llegó el domingo. Ya no estoy en la oficina, soy el empleado de seguridad en la puerta del estadio. Tengo la App de Control lista para escanear."
+'Llegó el domingo. Ya no estoy en la oficina, soy el empleado de seguridad en la puerta del estadio. Tengo la App de Control lista para escanear.'
 
 \textit{(Lautaro y Martín pasan, Axel les escanea sus celulares. Se escucha un sonido de 'Beep' y la pantalla de Axel se pone en verde con un 'Acceso Permitido').}
 
 \textit{(De repente, entra Felipe a escena. Entra eufórico, vestido con la camiseta del club, saltando un poco y sumándose a la fila).}
 
 \textbf{(Felipe)}
-"¡Vengo del barrio de Florida, barrio de murga y carnaval, te juro que en los malos momentos, siempre te voy a acompañar! Eee Lau, ¿Cómo andás? Hoy hay que ganar eh."
+'¡Vengo del barrio de Florida, barrio de murga y carnaval, te juro que en los malos momentos, siempre te voy a acompañar! Eee Lau, ¿Cómo andás? Hoy hay que ganar eh.'
 
 \textbf{(Lautaro)}
-"¡Felipe! ¡Qué locura esa camiseta titular! El otro día fui hasta la sede del club para comprármela y me dijeron que no había más stock."
+'¡Felipe! ¡Qué locura esa camiseta titular! El otro día fui hasta la sede del club para comprármela y me dijeron que no había más stock.'
 
 \textbf{(Felipe)}
-"¡Ah, te dormiste! Yo me avivé. Entré a la Tiendita en la app de SocioUnido la semana pasada, la pagué por ahí y me la dejaron reservada. Pasé a retirarla sin hacer fila." \textit{(Este diálogo valida cómo la app potencia la monetización de merchandising y activos).}
+'¡Ah, te dormiste! Yo me avivé. Entré a la Tiendita en la app de SocioUnido la semana pasada, la pagué por ahí y me la dejaron reservada. Pasé a retirarla sin hacer fila.' \textit{(Este diálogo valida cómo la app potencia la monetización de merchandising y activos).}
 
 \textbf{(Felipe)}
 \textit{(Mira su celular y hace un gesto de frustración)}
-"Uy, mira vos... me quiero morir, me quedé sin datos. Me colgué en pagar Tuenti y me lo cortaron justo ahora."
+'Uy, mira vos... me quiero morir, me quedé sin datos. Me colgué en pagar Tuenti y me lo cortaron justo ahora.'
 \textit{(Felipe muestra su celular al jurado y pone visiblemente el teléfono en 'Modo Avión').}
-"Estoy completamente offline. Pero no pasa nada, abro mi app de SocioUnido, voy a mi carnet digital..."
+'Estoy completamente offline. Pero no pasa nada, abro mi app de SocioUnido, voy a mi carnet digital...'
 \textit{(La pantalla de Felipe genera el código QR perfectamente, la barra de tiempo del TOTP va bajando).}
-"Como ven, mi celular sigue generando el token criptográfico sin un solo mega de internet."
+'Como ven, mi celular sigue generando el token criptográfico sin un solo mega de internet.'
 
 \textit{(Felipe le acerca el celular a Axel. Axel lo escanea).}
 \textit{(Se escucha el 'Beep'. Pantalla verde: 'Acceso Permitido').}
 
 \textbf{(Martín)}
 \textit{(Se da vuelta hacia el jurado, retomando su tono formal y ejecutivo de preventa).}
-"Señores, esto que acaban de ver no es una simulación en video. Acabamos de erradicar la morosidad silenciosa recuperando dos cuotas vencidas sin intervención humana, monetizamos el merchandising del club y, lo más importante, validamos un ingreso al estadio con el dispositivo del socio totalmente desconectado de la red. Tres problemas, una única solución."
+'Señores, esto que acaban de ver no es una simulación en video. Acabamos de erradicar la morosidad silenciosa recuperando dos cuotas vencidas sin intervención humana, monetizamos el merchandising del club y, lo más importante, validamos un ingreso al estadio con el dispositivo del socio totalmente desconectado de la red. Tres problemas, una única solución.'
+
+\vspace{2 cm}
 
 \textit{4:30 Axel}
 
+\vspace{1 cm}
+
 \textit{2:00 Felipe}
 
+\vspace{1 cm}
+
 \textit{4:10 Lautaro}
+
+\vspace{1 cm}
 
 \textit{3:35 Martín}
 
@@ -360,7 +382,7 @@ Listo. Pago aprobado. El sistema ya actualizó mi estado. Ahora sí, vuelvo al e
 
 \section{Felipe (Cierre)}
 
-\subsection{Slide 20 (Hoja de ruta) - 45 segundos}
+\subsection{Slide 21 (Hoja de ruta) - 45 segundos}
 
 Como bien dice Martín, y acaban de presenciar en esta demostración, SocioUnido no es una idea en un pizarrón; es un ecosistema totalmente funcional, integrado y validado.
 
@@ -374,7 +396,7 @@ Pero la innovación no se detiene en este Producto Mínimo Viable. Ya estamos tr
     \item \textbf{Desarrollo de aplicaciones Nativas para Android e iOS.}
 \end{itemize}
 
-\subsection{Slide 21 (Entonces ¿Por qué SocioUnido?) - 5 segundos}
+\subsection{Slide 22 (Entonces ¿Por qué SocioUnido?) - 5 segundos}
 
 Y ahora sí, respondamos la pregunta que hicimos al comienzo.
 
@@ -382,7 +404,7 @@ Y ahora sí, respondamos la pregunta que hicimos al comienzo.
 
 \newpage
 
-\subsection{Slide 22 (Los porqué de SocioUnido) - 1:30 minutos}
+\subsection{Slide 23 (Los porqué de SocioUnido) - 1:30 minutos}
 
 \begin{itemize}
     \item Porque está conformado por un equipo del mas alto nivel con experiencia real en la industria tecnológica.
@@ -403,12 +425,14 @@ Y ahora sí, respondamos la pregunta que hicimos al comienzo.
     \item Porque democratiza y lleva tecnología de Primera División a todas las categorías del fútbol argentino.
 \end{itemize}
 
-\subsection{Slide 23 (Cierre) - 10 segundos}
+\subsection{Slide 24 (Cierre) - 10 segundos}
 
 ¿Y saben por qué más?
 
-"Porque el club es de los socios, y la gestión es de SocioUnido".
+'Porque el club es de los socios, y la gestión es de SocioUnido'.
 
 Muchas gracias por su atención.
+
+\vspace{2 cm}
 
 \textit{2:30 Felipe}

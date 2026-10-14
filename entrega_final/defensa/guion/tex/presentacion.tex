@@ -96,8 +96,6 @@ SocioUnido es perfectamente escalable a otro tipo de instituciones. Si expandimo
 
 Pasamos a hablar de un \textbf{mercado objetivo ampliado de casi 31.000 clientes potenciales}. Un ecosistema gigante compuesto por unos 480 clubes de fútbol regionales, más de 21.500 clubes sociales y casi 9.000 barrios privados o countries que hoy administran a sus comunidades de forma ineficiente y necesitan una solución como la nuestra.
 
-\newpage
-
 \subsection{Slide 9 (Nivel de digitalización)}
 
 Pero, ¿cuál es el nivel de digitalización real de este mercado? 
@@ -107,11 +105,11 @@ Si observamos al líder actual y principal competidor del sector comercial, la p
 ¿Qué nos dice este dato?
 Que hoy, en Argentina, hay más de \textbf{120 clubes} de alta competitividad que siguen operando a ciegas. Son instituciones que manejan la pasión y los ingresos de miles de personas utilizando cuadernos de actas, planillas de Excel aisladas y carnets de plástico totalmente vulnerables al fraude.
 
+\newpage
+
 Esa es la oportunidad real de mercado. Nuestro foco inicial no está en pelear por la élite; apuntamos a democratizar la tecnología en la inmensa base de la pirámide de las otras tres categorías, entregándoles herramientas de primer nivel a clubes que hoy sufren el rezago tecnológico.
 
 Para lograr que instituciones tan tradicionales adopten este cambio, la clave no es solo desarrollar un buen back-end, es construir una interfaz que elimine por completo la fricción.
-
-\newpage
 
 \subsection{Slides 10 y 11 (Validación del producto)}
 
@@ -164,8 +162,6 @@ Entre ellas encontramos:
 
 Queremos ser muy claro en cómo funciona este último punto: \textbf{el que opera 100\% offline es el celular del socio}. El carnet digital no le pide datos al servidor; en su lugar, el dispositivo calcula un token cada 30 segundos usando un secreto compartido y la hora actual. El hincha puede estar en 'Modo Avión' y su código sigue siendo matemáticamente válido. Paralelamente, el servidor calcula el mismo número, permitiendo que el lector del empleado —que sí está conectado a la red del club— lo valide al instante. De esta forma, erradicamos el fraude y las filas sin depender jamás de la señal móvil del usuario.
 
-\newpage
-
 \subsection{Slide 17 (Arquitectura de microservicios e integraciones)}
 
 Todo este nivel de procesamiento requiere una arquitectura robusta, escalable y tolerante a fallos. Por eso, desplegamos SocioUnido bajo un modelo SaaS apoyado en una \textbf{topología de microservicios en la nube}.
@@ -180,6 +176,8 @@ Dentro de la capa lógica de negocio, separamos las responsabilidades en microse
     \item \textbf{Microservicio Analíticas:} Procesa la información masiva para alimentar métricas fundamentales en los tableros gerenciales.
 \end{itemize}
 
+\newpage
+
 A esto le sumamos dos integraciones estratégicas que definen nuestro modelo de negocio:
 \begin{itemize}
     \item Por un lado, el \textbf{Microservicio de Pagos}. Decidimos integrarlo exclusivamente con \textbf{Mercado Pago}. Esto no fue una elección al azar: Actualmente es el estándar indiscutido de la industria financiera en la región. Al utilizar la aplicación que ya controla las finanzas diarias de los usuarios, reducimos la fricción a cero y garantizamos la máxima confianza transaccional al momento de conciliar cualquier tipo de pago.
@@ -191,8 +189,6 @@ Para la capa de persistencia, no usamos un monolito. Cada microservicio es dueñ
 \subsection{Slide 18 (Arquitectura de microservicios e integraciones)}
 
 TBC.
-
-\newpage
 
 \subsection{Slide 19 (Atributos de calidad)}
 
@@ -212,7 +208,7 @@ Dicho esto, nos podrías detallar como diseñamos la identidad de marca y la est
 
 \newpage
 
-\section{Lautaro (Metodología, negocio, monetización e identidad)}
+\section{Lautaro (Metodología, negocio y monetización)}
 
 \subsection{Slide 20 (Metodologia)}
 
@@ -380,32 +376,23 @@ Y ahora sí, respondamos la pregunta que hicimos al comienzo.
 
 ¿Por qué SocioUnido?
 
-\newpage
-
 \subsection{Slide 29 (Los porqué de SocioUnido)}
 
 \begin{itemize}
-    \item Porque está conformado por un equipo del mas alto nivel con experiencia real en la industria tecnológica.
-    \item Porque no somos solo desarrolladores, sino hinchas que entendemos la pasión y las necesidades del fútbol.
-    \item Porque soluciona los problemas reales que tienen los clubes.
-    \item Porque ataca de raíz la fuga silenciosa de capitales en las instituciones deportivas.
-    \item Porque transforma la cobranza reactiva en prevención proactiva.
+    \item Porque soluciona los problemas reales de los clubes.
+    \item Porque no somos solo desarrolladores, sino hinchas que entienden las necesidades de los clubes.
     \item Porque erradica de forma definitiva el fraude perimetral y el préstamo de carnets físicos.
-    \item Porque convierte las canchas y espacios ociosos en nuevas vías de financiamiento constante.
     \item Porque no nos basamos en suposiciones, sino que lo validamos en el terreno con trabajadores y socios reales.
-    \item Porque visibiliza y atiende a un inmenso mercado en el ascenso y el interior que la competencia ignora.
-    \item Porque se adapta al usuario a través de cuatro interfaces pensadas para eliminar cualquier tipo de fricción.
-    \item Porque garantiza una atención omnicanal 24/7 a través de nuestro asistente BotIn.
-    \item Porque logramos una innovación real validando accesos 100\% offline mediante criptografía de última generación.
-    \item Porque está construido sobre una arquitectura de microservicios en la nube altamente escalable.
-    \item Porque aplica un modelo estricto de Marca Blanca para que cada club y cada hincha sienta la plataforma como propia.
-    \item Porque nuestro modelo de negocio diluye los riesgos y asegura fidelización con los clubes.
-    \item Porque democratiza y lleva tecnología de Primera División a todas las categorías del fútbol argentino.
+    \item Porque visibiliza y atiende a un inmenso mercado en toda la región que la competencia ignora.
+    \item Porque se adapta a cada usuario a través de cuatro interfaces diseñadas para eliminar cualquier tipo de fricción.
+    \item Porque logramos una innovación real validando accesos 100\% offline mediante a criptografía de última generación.
+    \item Porque aplicamos un impecable modelo de marca blanca para que cada club, y cada hincha sienta la plataforma como propia.
+    \item Porque democratiza y lleva tecnología de primera división a todas las categorías del deporte regional.
 \end{itemize}
 
-\subsection{Slide 30 (Cierre)}
-
 ¿Y saben por qué más?
+
+\subsection{Slide 30 (Cierre)}
 
 'Porque el club es de los socios, y la gestión es de SocioUnido'.
 

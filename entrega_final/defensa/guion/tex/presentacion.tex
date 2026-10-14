@@ -186,9 +186,21 @@ A esto le sumamos dos integraciones estratégicas que definen nuestro modelo de 
 
 Para la capa de persistencia, no usamos un monolito. Cada microservicio es dueño de sus propios datos utilizando clústeres relacionales en la nube. Y para complementar el ecosistema, utilizamos \textbf{Cloudinary} para archivos multimedia, \textbf{Resend} para correos, y un nodo \textbf{Healthchecker} implementado por nosotros mismos, que nos brinda herramientas de observabilidad para monitorear la salud de cada servicio en cualquier momento.
 
-\subsection{Slide 18 (Arquitectura de microservicios e integraciones)}
+\subsection{Slide 18 (Tecnologías pilares de SocioUnido)}
 
-TBC.
+Para materializar esta arquitectura en tiempos récord, seleccionamos un \textit{stack} basado en cinco tecnologías pilares:
+
+\begin{itemize}
+    \item \textbf{El lengauje de programación Go} Utilizado en el motor de nuestro punto de entrada para procesar miles de peticiones concurrentes por segundo con un consumo mínimo de recursos.
+    \item \textbf{El lenguaje de programación Python:} El corazón de nuestro Back-end, donde desarrollamos la lógica de los microservicios, la criptografía del acceso offline y los motores de inteligencia artificial.
+    \item \textbf{El marco de trabajo React:} Empleado para construir interfaces rápidas, modulares y adaptativas, tanto en el Panel Web Administrativo como en nuestras aplicaciones móviles progresivas.
+    \item \textbf{El marco de trabajo Just the Docs:} Nuestra herramienta para generar los 16 portales web de documentación técnica e interactiva de cada repositorio.
+    \item \textbf{El lenguaje de programación documental LaTeX:} El estándar con el que maquetamos y redactamos toda la documentación formal y entregables del proyecto.
+\end{itemize}
+
+La elección de estas cinco herramientas no fue casual. Las elegimos porque ya contábamos con experiencia previa dominándolas, porque son los estándares más utilizados hoy en la industria y porque sus ecosistemas nos permitieron agilizar al máximo el desarrollo del MVP, garantizando además una enorme capacidad de adaptación para integrar futuras tecnologías y nuevas funcionalidades.
+
+\newpage
 
 \subsection{Slide 19 (Atributos de calidad)}
 
@@ -202,27 +214,45 @@ Esta resiliencia no es casualidad; es el resultado de haber priorizado desde el 
     \item \textbf{Interoperabilidad:} Finalmente, estructuramos la plataforma pensando en el futuro. Ya estamos preparados para la interacción directa con modelos de inteligencia artificial y, en una segunda etapa, para la integración a nivel de hardware, conectando nuestro ecosistema directamente con los molinetes físicos de los estadios.
 \end{itemize}
 
-Esta es la ingeniería que soporta a SocioUnido. Pero sabemos perfectamente que la arquitectura más robusta del mundo no sirve de nada si la institución no siente la plataforma como propia, y si el modelo de negocio detrás no es rentable y escalable.
+Esta es la ingeniería que soporta a SocioUnido. Pero llevar un sistema de esta magnitud a la realidad requirió una metodología de trabajo implacable, una fuerte gestión de riesgos y un modelo de negocio rentable.
 
-Dicho esto, nos podrías detallar como diseñamos la identidad de marca y la estrategia de monetización Lautaro.
+Dicho esto, Lautaro, ¿Nos podrías contar cómo estructuramos este camino y nuestra estrategia comercial?
 
 \newpage
 
 \section{Lautaro (Metodología, negocio y monetización)}
 
-\subsection{Slide 20 (Metodologia)}
+\subsection{Slide 20 (Metodología)}
 
-TBC.
+Para construir un ecosistema de esta envergadura sin perder el foco, dividimos las 38 semanas de trabajo en tres grandes etapas:
+
+\begin{itemize}
+    \item \textbf{Primero, la fase de Búsqueda de Producto:} Antes de escribir código, exploramos y evaluamos 13 ideas preliminares utilizando rigurosamente las matrices de análisis de las \textbf{5 C} y las \textbf{4 P}. SocioUnido fue el proyecto mejor puntuado en absolutamente todas las instancias de validación.
+    \item \textbf{Segundo, el Desarrollo del MVP y Validación:} Pasamos a la ejecución técnica bajo la metodología ágil \textbf{Scrum}, completando \textbf{13 sprints semanales} de desarrollo continuo. Una vez consolidado el Producto Mínimo Viable, salimos a validarlo directamente en el terreno con los clubes reales que mencionamos previamente, iterando el sistema sobre necesidades operativas concretas.
+    \item \textbf{Y tercero, la fase de Cierre y Defensa Final:} Donde congelamos las funcionalidades principales para abocarnos a las auditorías finales de calidad, la redacción de todos los entregables académicos requeridos y la preparación integral de esta exposición.
+\end{itemize}
 
 \subsection{Slide 21 (Riesgos)}
 
-TBC.
+Ahora bien, transitar estas tres etapas nos exigió hacer un análisis exhaustivo de riesgos desde el día cero, donde destacamos dos frentes principales.
+
+Por un lado, los \textbf{riesgos previstos} desde la planificación:
+\begin{itemize}
+    \item \textbf{La coordinación y disponibilidad del equipo:} Los cuatro trabajamos y cursábamos en simultáneo, por lo que organizar la distribución de tareas y reuniones sin generar cuellos de botella era crítico.
+    \item \textbf{El cambio de cuatrimestre:} Sabíamos que el paso de un cuatrimestre a otro iba a alterar por completo las horas disponibles de cada uno en base al cambio de materias, obligándonos a reorganizarnos a mitad de camino.
+    \item \textbf{La complejidad del bot con Procesamiento de Lenguaje Natural:} Estimábamos de antemano que implementar y entrenar el modelo para entender consultas informales de los socios nos iba a demandar un tiempo extra de desarrollo.
+\end{itemize}
+
+Y justamente sobre este último punto surgió nuestro principal \textbf{riesgo imprevisto}:
+\begin{itemize}
+    \item En un principio comenzamos desarrollando el bot conversacional en \textbf{WhatsApp}. Sin embargo, nos dimos cuenta de que para este MVP presentaba muchísimas trabas a nivel de desarrollo y, a futuro, un costo de funcionamiento mucho más grande para los clubes. Por eso, optamos por migrar a \textbf{Telegram} para solucionar ambos problemas de raíz.
+\end{itemize}
+
+\newpage
 
 \subsection{Slide 22 (Marca blanca y teoría de la Gestalt)}
 
-Obvio, vamos a ello.
-
-Cuando nos sentamos a diseñar cómo se iba a ver SocioUnido, nos enfrentamos a un desafío enorme: ¿cómo creamos una única plataforma que sirva para todos los clubes sin generar rechazo por los colores institucionales rivales?
+Superados estos desafíos operativos y de gestión, cuando nos sentamos a diseñar cómo se iba a ver SocioUnido, nos enfrentamos a un desafío enorme: ¿cómo creamos una única plataforma que sirva para todos los clubes sin generar rechazo por los colores institucionales rivales?
 
 La respuesta fue desarrollar un modelo estricto de \textbf{Marca Blanca}. Pero no lo hicimos al azar; fundamentamos toda nuestra interfaz en la Teoría del Color y las leyes de la percepción de la Gestalt.
 

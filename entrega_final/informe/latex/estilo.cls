@@ -21,6 +21,10 @@
 \RequirePackage[utf8]{inputenc}
 \RequirePackage{csquotes}
 
+\makeatletter
+\renewcommand{\l@subsection}{\@dottedtocline{2}{2.0em}{4.2em}}
+\renewcommand{\l@subsubsection}{\@dottedtocline{3}{3.0em}{5.2em}}
+\makeatother
 
 \RequirePackage{tikz}
 

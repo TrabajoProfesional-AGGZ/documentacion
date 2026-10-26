@@ -127,7 +127,8 @@
     \large
     \renewcommand{\arraystretch}{2} % Hace las filas más altas
     \begin{tabular}{ccc}
-        \textbf{Jefe de Cátedra} & Mg. Ing. Carlos Fontela & cfontela@fi.uba.ar \\
+        \textbf{Jefes de cátedra} & Mg. Ing. Carlos Fontela & cfontela@fi.uba.ar \\
+        \textbf{} & Ing. Leandro Ferrigno & lferrigno@fi.uba.ar \\
         \textbf{Tutor} & Mg. Ing. Gabriel Piñeiro & gpineiro@fi.uba.ar \\
         \textbf{Cotutor} & Ing. Agustín Perrotta  & aperrotta@fi.uba.ar
     \end{tabular}
